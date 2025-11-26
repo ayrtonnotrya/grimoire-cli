@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.env
+.venv/
+env/
+venv/
+
+# Distribution / Build
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project Specific - Generated Data
+chroma_db/
+
+# OS
+.DS_Store
+Thumbs.db

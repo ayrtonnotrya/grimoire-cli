@@ -1,0 +1,82 @@
+# Ancient Greek Love Magic
+
+**Author(s):** Christopher A. Faraone
+**Category:** Esotericism and Occultism, Classical Studies
+**Keywords:** Ancient Greek magic, Love magic, Erotic magic, Philia magic, Agoge spells, Binding spells, Curse tablets, Pharmaka, Iunx, Kestos himas, Gender in magic, Social construction of gender, Greek religion, Ritual studies, PGM, Sympathetic magic
+
+## Central Thesis
+Faraone's central thesis is that ancient Greek love magic was not a monolithic practice but comprised two distinct, gender-based categories: 'erôs magic' (used predominantly by men to induce uncontrollable sexual passion in women, often via aggressive, curse-like rituals) and 'philia magic' (used primarily by women or social inferiors to foster affection, calm anger, or maintain existing relationships in men, often via healing or protective charms). This taxonomy reveals how gender, power dynamics, and social status were constructed and negotiated through magical practice in ancient Greece, challenging the traditional view of love charms as undifferentiated data.
+
+## Structure and Content
+### Introduction
+This chapter introduces the ubiquity and banality of love magic in ancient Greece, seen in literary texts from Xenophon to later incantations. Faraone defines the scope of 'ancient Greek' and 'love magic,' proposing a new bipolar taxonomy for spells based on the desired outcome (erôs vs. philia) and the gender/social status of practitioners and victims. He argues for a synchronic and comparative approach, integrating literary allusions with non-literary evidence (papyri, curse tablets, gemstones) across a broad chronological and geographical range, acknowledging Near Eastern influences while identifying continuous Greek traditions.
+
+### Spells for Inducing Uncontrollable Passion (Erôs)
+This chapter delves into 'erôs magic,' primarily used by men to induce uncontrollable sexual passion in women. Faraone argues that erôs was often conceived as a pathological disease, leading to erotic magic being functionally equivalent to a curse. Practical mechanics include binding effigies (e.g., clay dolls pierced with pins), burning rituals (empura) to inflict pain and 'burn' the victim with desire, and invoking chthonic spirits/demons to compel the victim to leave their home. Mythic examples like Jason's iunx and Hippomenes' apples are reinterpreted as forms of erôs magic, demonstrating its violent and compelling nature designed to overcome resistance.
+
+### Spells for Inducing Affection (Philia)
+This chapter examines 'philia magic,' typically used by women or social inferiors to induce affection or lessen anger in men. These spells, unlike erôs magic, are associated with docility and amiability rather than violent passion, often aligning with healing or protective magic. Key devices include Aphrodite's kestos himas (a magical belt), amulets, facial ointments, and love potions (philtra). Faraone discusses Deianeira's mistaken use of a love potion and the 'subversive' cast of philia magic, as it allows socially subordinate individuals to exert control over male superiors by manipulating their thumos (spirit, will, anger) and sexual desire, potentially leading to emasculation.
+
+### Some Final Thoughts on History, Gender, and Desire
+This concluding chapter traces the historical development of agoge spells from Aphrodite to the restless dead, highlighting a shift in invoked deities and an enduring tradition. Faraone analyzes 'anomalies' in his gendered taxonomy, arguing that gender in love magic is often socially constructed. Courtesans, for example, employ aggressive erôs magic because their economic autonomy makes them 'male' in certain social contexts. The book also introduces the 'misandrist model' of Greek culture, where men are seen as 'naturally' wild and passionate, requiring control by chaste women, contrasting with the more common misogynist view. This fluidity reflects situational gender roles in ancient Greek society.
+
+## Key Concepts
+- **Love Magic:** A set of practical devices and rituals used by the Greeks in their day-to-day lives to control or otherwise influence supernaturally the forces of nature, animals, or other human beings, specifically aiming to instill or maintain various forms of desire and affection in another person.
+- **Erôs Magic:** A category of love magic primarily used by men to instill violent, uncontrollable sexual passion (erôs) in women, with the explicit goal of sexual intercourse. Characterized by torture, binding, and compelling the victim to leave her home and come to the practitioner. Often linked conceptually and practically to cursing rituals.
+- **Philia Magic:** A category of love magic primarily used by women or socially subordinate individuals (e.g., freedmen) to maintain or increase affection (philia), friendship, or reduce anger in men (husbands, superiors). These spells aim for docility and amiability, often employing amulets, ointments, and potions, and conceptually align with healing and protective magic.
+- **Agoge (pl. agogai):** Derived from the verb 'agein' ('to lead, to drive'), this handbook rubric designates an erotic spell that uses various means to torture or discomfort a (usually female) victim until she is forced to leave her home and come to the practitioner. Its narrative mimics the transfer of a bride from her natal home to her husband's.
+- **Katadesmos (pl. katadesmoi):** A binding spell, typically inscribed on lead or wax tablets, rolled, pierced with a nail, and deposited in an underground place (grave, well). Its focus is on restraining the victim, used in love magic to prevent rivals from having sex or to compel the target of an erôs spell.
+- **Philtron (pl. philtra):** Originally a magic spell that creates 'philia' (affection); later used more generally to designate any kind of magic spell or potion. Often liquid, given to drink, and associated with philia magic to make men more affectionate or docile.
+- **Iunx (pl. iugges):** A salacious bird and a type of agoge spell where the bird is tied to a wheel and tortured (e.g., with whips and fire). Through 'persuasive analogy,' its natural lubricity and madness are transferred to the (female) victim, compelling her with desire. Can also refer more generally to an 'erotic spell' or spinning devices.
+- **Kestos Himas:** Aphrodite’s magical 'perforated strap' in the Iliad, which she lends to Hera. It is endowed with 'enchantments (thelktÁria): love (philotÁs), desire (himeros), and whispered endearment.' Worn by women, it makes them sexually attractive to men and can stop anger and quarrels, exemplifying philia magic.
+- **Ousia:** A technical term for the 'material' or 'stuff' used in magical spells to precisely target the victim. This typically includes personal items like hair, fingernails, or bits of clothing from the intended recipient.
+- **Empuron (pl. empura):** Literally an 'in-the-fire spell,' this is a type of agoge spell that involves burning herbs, spices, or other materials (often linked symbolically to the victim’s body or soul) to inflame the victim with passion and desire, compelling them to the practitioner.
+- **Misandrist Model:** An alternative cultural assumption, supported by evidence from love magic, positing that men are 'naturally' wild, passionate, and difficult to control, requiring sedating or binding by chaste and thoughtful women. This contrasts with the more commonly studied misogynist model which views women as naturally lascivious.
+
+## Practical System
+The practical system of Ancient Greek Love Magic, as elucidated by Faraone, operates on a dualistic principle tied to desired outcome and social positioning: Erôs Magic and Philia Magic. Both systems utilize sympathetic magic, verbal incantations (logoi), and ritual actions (praxis) to achieve their aims. Erôs magic is aggressive and compelling, seeking to 'drive' or 'lead' the victim, while Philia magic is conciliatory and binding, seeking to 'calm' or 'bind' the victim's anger or will. The efficacy of the magic is believed to stem from invoking various deities (Aphrodite, Hecate, Selene, Helios, chthonic gods, restless dead) and manipulating materials through 'persuasive analogy'.
+
+**Tools:**
+- Clay/wax effigies
+- Pins (often copper)
+- Torture wheels
+- Fire
+- Iunx birds
+- Apples, quinces, pomegranates
+- Herbs (myrrh, sulfur, deadly carrot)
+- Live lizards
+- Lead tablets
+- Amulets (silver, gold, gemstones)
+- Knotted cords (gazelle tendons, hemp, wool)
+- Enchanted oils/ointments
+- Potions (wine, oleander, cyclamen, mandrake, struchnos manikos, blister beetles)
+- Deities (Aphrodite, Eros, Hecate, Selene, Helios, Pluto, Kore Persephone, Anubis)
+- Restless dead (ahoroi)
+- Personal items (hair, clothing bits - ousia)
+
+**Rituals:**
+- Erôs Magic (primarily male-initiated, for women):
+- 1. Effigy binding and torture: Creating clay/wax figurines of the victim, binding their limbs, and piercing them with pins in specific spots (head, eyes, ears, solar plexus, genitals) to inflict pain and compel remembrance of the practitioner.
+- 2. Burning spells (empura): Incinerating herbs (e.g., myrrh), spices, or personal effects of the victim on a fire, often in specific locations (steambath, rooftop), with incantations to make the victim 'burn' with passion or 'melt' with desire.
+- 3. Iunx spells: Binding a 'salacious' bird (iunx) to a wheel and torturing it with whips or fire to transfer the bird's madness and sexual hunger to the victim via sympathetic magic.
+- 4. Apple spells: Enchanting apples or other seeded fruits (quinces, pomegranates) with incantations and either presenting or throwing them at the victim, intended to stimulate erotic desire upon acceptance/consumption.
+- 5. Invocation of hostile spirits: Calling upon chthonic gods, restless dead (ahoroi), or specific demons to harass, torment, or induce insomnia in the victim, forcing them to abandon loyalties and come to the practitioner.
+- Philia Magic (primarily female-initiated or by social inferiors, for men):
+- 1. Amuletic charms: Wearing or carrying enchanted objects like the kestos himas (magical belt), rings (gold, silver), or gemstones inscribed with invocations to increase personal charisma, foster affection, or calm male anger.
+- 2. Ointment spells: Anointing the face or body with enchanted oils (e.g., myrrh, herbs) while reciting prayers to 'charm' or 'attract' goodwill from others, especially male superiors or husbands.
+- 3. Love potions (philtra): Administering concoctions (herbal extracts, wine, specific substances like cyclamen, mandrake, oleander) in small doses to a male target to make him more gentle, cheerful, affectionate, or sexually aroused, without his explicit knowledge. Higher doses were understood to cause enervation, madness, or death.
+- 4. Knotted cords: Weaving cords from materials like gazelle tendons, hemp, and red wool, tying them into knots while reciting incantations, then wearing them around the waist or on garments to bind a husband's anger and make him more loving.
+
+## Relevant Quotes
+> "And Socrates, making light of his own laziness, said: 'But it is not at all easy, Theodote, for me to get free, for much business, both private and public, keeps me busy. And I have also got my girlfriends (philai), who neither day nor night allow me to escape from them, since they are learning both love potions (philtra) and incantations (epÃidai) from me.' 'Indeed, do you also know how to do these things, Socrates?' she said. 'Why else,' he said, 'do you think that Apollodorus here and Antisthenes never leave me? And why do you think that Cebes and Simmias come from Thebes? Know well that these things do not happen without many love potions (philtra), incantations (epÃidai), and iunx spells (iugges).'" (p. 1-2)
+
+> "Rouse yourself for me and go into every place, into every quarter, into every house, and bind Ptolemais, she whom Aias bore, the daughter of Horigenes . . . Lead Ptolemais, whom Aias bore, the daughter of Horigenes, to me. Prevent her from eating and drinking until she comes to me, Sarapammon, whom Area bore, and do not allow her to have experience with another man, except me alone. Drag her by her hair, by her guts, until she does not stand aloof from me . . . and until I hold her obedient for the whole time of my life, loving me, desiring me, and telling me what she is thinking." (p. 41-42)
+
+> "Now give me affection (philotÁs) and desire (himeros), with which you subdue all the gods and mortal men, since I am about to go to the ends of the generous earth to see Oceanus, the source of the gods, and mother Tethys . . . I shall go to visit them and shall stop their ceaseless quarrels, since now for a long time they have stayed apart from each other and from their marriage bed, since bitter anger (cholos) has fallen upon their hearts. If I could with words persuade their dear hearts and bring them back to their bed to be merged in love (philotÁti) with each other, forever would I be called dear by them and compassionate." (p. 97)
+
+> "Although Theophrastus does not explain why these narcotics have such a range of effects, the analogy with wine suggests that as the dose of the drug increased, so did the sedative and toxic effects. This direct relationship between increasing dosage and the movement from erotic playfulness to death is in fact explicitly documented in Theophrastus’ description of yet another narcotic herb, which he calls struchnos manikos: 'Of this a drachm in weight is given if the victim is to become playful (paizein) and think himself a fine fellow, two drachms if he is to go mad and see visions, three drachms if he is to be permanently mad . . . and four if it is to kill him.'" (p. 127)
+
+## Critical Analysis
+**Relevance:** Faraone's work is profoundly relevant to the fields of Western Esotericism and Occultism as it re-grounds the study of ancient Greek magic in its social, historical, and gendered contexts, moving beyond simplistic 'superstition' narratives. By meticulously classifying love magic into 'erôs' (compulsive passion) and 'philia' (affection/control) categories, he provides a nuanced framework that highlights the operative mechanics and distinct ritual aims. This approach allows for a deeper understanding of the functional differences between spells, tracing their cultural influences (e.g., Near Eastern parallels) and historical continuity. His analysis of the social construction of gender within magical practices (e.g., courtesans adopting 'male' aggressive magic) offers critical insights into ancient societal norms and challenges modern scholarly biases, making it a foundational text for understanding the role of magic as a practical technology in ancient life.
+
+**Target Audience:** The target audience for this book includes academic scholars and students of classical antiquity, ancient Greek religion, ritual studies, gender studies, and the history of magic. While Faraone aims for accessibility for the 'generally educated person' without Greek language familiarity, the depth of his analysis, philological precision, and extensive engagement with primary sources also make it indispensable for professional scholars in these fields. Practicing occultists or esotericists interested in the historical and cultural origins of magical traditions, particularly those involving love and binding spells, would find it highly informative for contextualizing their own practices.
