@@ -50,8 +50,11 @@ def search(query: str, n: int = typer.Option(5, help="Number of results")):
         document = results['documents'][0][i]
         chunk_type = metadata.get('chunk_type', 'Unknown').replace('_', ' ').title()
         
+        full_path = config.summaries_dir / metadata.get('filename')
+        
         console.print(f"\n[bold blue]{i+1}. {metadata.get('title', 'Unknown Title')}[/bold blue] (Score: {distance:.4f})")
-        console.print(f"[cyan]{chunk_type}[/cyan] | File: {metadata.get('filename')}")
+        console.print(f"[cyan]{chunk_type}[/cyan]")
+        console.print(f"Full Summary: {full_path.absolute()}")
         console.print(f"[italic]{document[:300]}...[/italic]")
 
 
