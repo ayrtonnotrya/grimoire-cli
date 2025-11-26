@@ -135,10 +135,7 @@ def generate_summary(pdf_path: Path):
                 
             console.print(f"[bold green]JSON Summary saved to {json_path}[/bold green]")
 
-            # Save Markdown
-            md_path = config.summaries_dir / f"summary_{pdf_path.name}.md"
-            save_summary_as_markdown(summary_data, md_path)
-            console.print(f"[bold green]Markdown Summary saved to {md_path}[/bold green]")
+            console.print(f"[bold green]JSON Summary saved to {json_path}[/bold green]")
 
         except Exception as e:
              console.print(f"[red]Failed to parse/save response: {e}[/red]")
@@ -147,51 +144,7 @@ def generate_summary(pdf_path: Path):
     except Exception as e:
         console.print(f"[red]Generation failed: {e}[/red]")
 
-def save_summary_as_markdown(summary: BookSummary, output_path: Path):
-    """Converts BookSummary to Markdown and saves it."""
-    md_content = f"# {summary.header.title}\n\n"
-    md_content += f"**Author(s):** {', '.join(summary.header.authors)}\n"
-    md_content += f"**Category:** {summary.header.category}\n"
-    md_content += f"**Keywords:** {', '.join(summary.header.keywords)}\n\n"
-    
-    md_content += "## Central Thesis\n"
-    md_content += f"{summary.central_thesis}\n\n"
-    
-    md_content += "## Structure and Content\n"
-    for chapter in summary.structure_content:
-        md_content += f"### {chapter.chapter_title}\n"
-        md_content += f"{chapter.summary}\n\n"
-        
-    md_content += "## Key Concepts\n"
-    for concept in summary.key_concepts:
-        md_content += f"- **{concept.term}:** {concept.definition}\n"
-    md_content += "\n"
-    
-    if summary.practical_system:
-        md_content += "## Practical System\n"
-        md_content += f"{summary.practical_system.description}\n\n"
-        if summary.practical_system.tools:
-            md_content += "**Tools:**\n"
-            for tool in summary.practical_system.tools:
-                md_content += f"- {tool}\n"
-            md_content += "\n"
-        if summary.practical_system.rituals:
-            md_content += "**Rituals:**\n"
-            for ritual in summary.practical_system.rituals:
-                md_content += f"- {ritual}\n"
-            md_content += "\n"
-            
-    md_content += "## Relevant Quotes\n"
-    for quote in summary.relevant_quotes:
-        page_str = f" (p. {quote.page})" if quote.page else ""
-        md_content += f"> \"{quote.text}\"{page_str}\n\n"
-        
-    md_content += "## Critical Analysis\n"
-    md_content += f"**Relevance:** {summary.critical_analysis.relevance}\n\n"
-    md_content += f"**Target Audience:** {summary.critical_analysis.target_audience}\n"
-    
-    with open(output_path, "w") as f:
-        f.write(md_content)
+
 
 def index_summaries():
     """Reads all summary files and indexes them in ChromaDB."""
