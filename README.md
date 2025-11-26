@@ -10,6 +10,20 @@ Grimoire is a powerful CLI tool for managing your digital library of magic books
 
 ## Installation
 
+### Option 1: Using pipx (Recommended)
+
+This is the easiest way to install and run Grimoire globally without managing dependencies manually.
+
+```bash
+# Install directly from GitHub
+pipx install git+https://github.com/ayrtonnotrya/grimoire-cli.git
+
+# Run
+grimoire init
+```
+
+### Option 2: Using Poetry (For Development)
+
 1.  **Install Dependencies**:
     ```bash
     poetry install
