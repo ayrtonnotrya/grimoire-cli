@@ -1,7 +1,7 @@
 import typer
 from rich.console import Console
 from grimoire.config import config
-from grimoire import core
+from grimoire import core, db
 
 app = typer.Typer(help="Grimoire: Magic Book Summarization and Search Tool")
 console = Console()
@@ -37,7 +37,7 @@ def process(
 def search(query: str, n: int = typer.Option(5, help="Number of results")):
     """Search the library."""
     console.print(f"Searching for: {query}")
-    results = core.db.query_documents(query, n_results=n)
+    results = db.query_documents(query, n_results=n)
     
     # Results structure: {'ids': [[]], 'distances': [[]], 'metadatas': [[]], 'documents': [[]]}
     if not results['ids'] or not results['ids'][0]:
@@ -46,12 +46,13 @@ def search(query: str, n: int = typer.Option(5, help="Number of results")):
 
     for i, doc_id in enumerate(results['ids'][0]):
         metadata = results['metadatas'][0][i]
-        distance = results['distances'][0][i] if results['distances'] else "N/A"
-        # document = results['documents'][0][i] # snippet
+        distance = results['distances'][0][i] if results['distances'] else 0.0
+        document = results['documents'][0][i]
+        chunk_type = metadata.get('chunk_type', 'Unknown').replace('_', ' ').title()
         
-        console.print(f"\n[bold blue]{i+1}. {metadata.get('source', doc_id)}[/bold blue] (Distance: {distance})")
-        console.print(f"File: {metadata.get('filename')}")
-        # console.print(f"Snippet: {document[:200]}...") # Optional
+        console.print(f"\n[bold blue]{i+1}. {metadata.get('title', 'Unknown Title')}[/bold blue] (Score: {distance:.4f})")
+        console.print(f"[cyan]{chunk_type}[/cyan] | File: {metadata.get('filename')}")
+        console.print(f"[italic]{document[:300]}...[/italic]")
 
 
 if __name__ == "__main__":
