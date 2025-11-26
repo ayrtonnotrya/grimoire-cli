@@ -42,10 +42,10 @@ def parse_library_list(file_path: Path) -> list[Path]:
 
 def check_summary_exists(pdf_name: str) -> bool:
     """Checks if a summary file already exists for the given PDF."""
-    summary_path = config.summaries_dir / f"summary_{pdf_name}.md"
+    summary_path = config.summaries_dir / f"summary_{pdf_name}.json"
     return summary_path.exists()
 
-def process_library(list_file_path: str):
+def process_library(list_file_path: str, verbose: bool = False):
     """Main processing function."""
     file_path = Path(list_file_path)
     
@@ -65,7 +65,8 @@ def process_library(list_file_path: str):
     for pdf_path in pdf_paths:
         pdf_name = pdf_path.name
         if check_summary_exists(pdf_name):
-            console.print(f"[yellow]Skipping existing summary for: {pdf_name}[/yellow]")
+            if verbose:
+                console.print(f"[yellow]Skipping existing summary for: {pdf_name}[/yellow]")
             continue
         
         console.print(f"[green]Processing: {pdf_name}[/green]")
@@ -135,8 +136,6 @@ def generate_summary(pdf_path: Path):
                 
             console.print(f"[bold green]JSON Summary saved to {json_path}[/bold green]")
 
-            console.print(f"[bold green]JSON Summary saved to {json_path}[/bold green]")
-
         except Exception as e:
              console.print(f"[red]Failed to parse/save response: {e}[/red]")
              console.print(f"Raw text: {response.text[:500]}...")
@@ -146,7 +145,7 @@ def generate_summary(pdf_path: Path):
 
 
 
-def index_summaries():
+def index_summaries(verbose: bool = False):
     """Reads all summary files and indexes them in ChromaDB."""
     from grimoire import db
     summaries_dir = config.summaries_dir
@@ -169,6 +168,14 @@ def index_summaries():
     for file_path in files:
         # Extract PDF name from summary filename: summary_X.json -> X
         pdf_name = file_path.name.replace("summary_", "").replace(".json", "")
+        
+        if db.document_exists(file_path.name):
+            if verbose:
+                console.print(f"[yellow]Skipping already indexed: {pdf_name}[/yellow]")
+            continue
+        
+        if verbose:
+            console.print(f"[blue]Indexing: {pdf_name}[/blue]")
         
         try:
             with open(file_path, "r") as f:
@@ -227,7 +234,7 @@ def index_summaries():
 
     try:
         if documents:
-            db.add_documents(documents, metadatas, ids)
+            db.add_documents(documents, metadatas, ids, verbose=verbose)
             console.print(f"[bold green]Successfully indexed {len(documents)} chunks from {len(files)} books.[/bold green]")
         else:
             console.print("[yellow]No documents to index.[/yellow]")

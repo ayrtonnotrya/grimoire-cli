@@ -22,7 +22,7 @@
     You will be prompted for:
     -   Gemini API Key
     -   Path to your library root (optional)
-    -   Path to save summaries (default: `./fichamentos`)
+    -   Path to save summaries (default: `./summaries`)
 
 ## Usage
 

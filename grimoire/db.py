@@ -43,9 +43,15 @@ def get_collection():
         embedding_function=embedding_fn
     )
 
-def add_documents(documents: list[str], metadatas: list[dict], ids: list[str]):
+def add_documents(documents: list[str], metadatas: list[dict], ids: list[str], verbose: bool = False):
     collection = get_collection()
-    collection.add(
+    
+    if verbose:
+        from rich.console import Console
+        console = Console()
+        console.print(f"[blue]Generating embeddings for {len(documents)} chunks...[/blue]")
+        
+    collection.upsert(
         documents=documents,
         metadatas=metadatas,
         ids=ids
@@ -75,4 +81,58 @@ def query_documents(query_text: str, n_results: int = 5):
         n_results=n_results
     )
     return results
+
+def document_exists(filename: str) -> bool:
+    """Checks if a document with the given filename exists in the collection."""
+    collection = get_collection()
+    # We only need to check if any document exists with this filename in metadata
+    results = collection.get(
+        where={"filename": filename},
+        limit=1
+    )
+    return len(results['ids']) > 0
+
+def remove_duplicates() -> int:
+    """Removes duplicate documents from the collection based on content hash."""
+    collection = get_collection()
+    all_docs = collection.get()
+    
+    if not all_docs['ids']:
+        return 0
+        
+    # Map (content, chunk_type, title) -> list of IDs
+    content_map = {}
+    
+    for i, doc_id in enumerate(all_docs['ids']):
+        content = all_docs['documents'][i]
+        metadata = all_docs['metadatas'][i]
+        
+        # Create a unique signature for the content
+        # We use content + chunk_type + title to be safe
+        key = (
+            content,
+            metadata.get('chunk_type', ''),
+            metadata.get('title', '')
+        )
+        
+        if key not in content_map:
+            content_map[key] = []
+        content_map[key].append(doc_id)
+        
+    ids_to_delete = []
+    
+    for key, ids in content_map.items():
+        if len(ids) > 1:
+            # Sort IDs to ensure deterministic behavior (keep the first one)
+            # You might want to keep the one that matches the current filename format if possible,
+            # but simple sorting is usually enough for pure duplicates.
+            ids.sort()
+            
+            # Keep the first one, delete the rest
+            ids_to_delete.extend(ids[1:])
+            
+    if ids_to_delete:
+        collection.delete(ids=ids_to_delete)
+        
+    return len(ids_to_delete)
 

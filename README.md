@@ -1,6 +1,6 @@
 # Grimoire CLI
 
-Grimoire is a powerful CLI tool for managing your digital library of magic books. It automates the creation of structured summaries (fichamentos) using Google's Gemini 2.5 Flash model and enables semantic search over your library using ChromaDB.
+Grimoire is a powerful CLI tool for managing your digital library of magic books. It automates the creation of structured summaries using Google's Gemini 2.5 Flash model and enables semantic search over your library using ChromaDB.
 
 ## Features
 

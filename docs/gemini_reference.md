@@ -55,7 +55,7 @@ response = client.models.generate_content(
 )
 ```
 
-## 3. Structured Outputs (Fichamento Format)
+## 3. Structured Outputs
 To ensure the summary follows a strict format, use **Structured Outputs** with Pydantic.
 
 > **More details**: [Structured Outputs](genai/structured_outputs.md)
