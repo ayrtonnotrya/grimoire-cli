@@ -15,7 +15,7 @@ DEFAULT_CONFIG = {
     "paths": {
         "library_root": "",
         "summaries_dir": "./summaries",
-        "db_dir": "./chroma_db"
+        "db_dir": "~/.local/share/grimoire/chroma_db"
     }
 }
 
@@ -46,15 +46,15 @@ class Config:
 
     @property
     def summaries_dir(self) -> Path:
-        return Path(self._config["paths"]["summaries_dir"]).expanduser()
+        return Path(self._config["paths"]["summaries_dir"]).expanduser().resolve()
 
     @summaries_dir.setter
     def summaries_dir(self, value: str):
-        self._config["paths"]["summaries_dir"] = value
+        self._config["paths"]["summaries_dir"] = str(Path(value).expanduser().resolve())
 
     @property
     def db_dir(self) -> Path:
-        return Path(self._config["paths"]["db_dir"]).expanduser()
+        return Path(self._config["paths"]["db_dir"]).expanduser().resolve()
     
     @property
     def model_name(self) -> str:

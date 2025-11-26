@@ -3,6 +3,7 @@ from rich.console import Console
 from grimoire.config import config
 from grimoire import core, db
 import json
+from pathlib import Path
 
 app = typer.Typer(help="Grimoire: Magic Book Summarization and Search Tool")
 console = Console()
@@ -16,7 +17,12 @@ def init():
     config.gemini_api_key = api_key
     
     summaries_dir = typer.prompt("Enter directory to save summaries", default="./summaries")
-    config.summaries_dir = summaries_dir
+    # Resolve to absolute path immediately
+    abs_summaries_dir = str(Path(summaries_dir).expanduser().resolve())
+    config.summaries_dir = abs_summaries_dir
+    
+    # Ensure DB parent directory exists
+    config.db_dir.parent.mkdir(parents=True, exist_ok=True)
     
     config.save()
     console.print(f"[bold green]Configuration saved to {config.CONFIG_FILE}[/bold green]")
