@@ -6,8 +6,11 @@ from grimoire.config import config
 import time
 import threading
 import random
+from grimoire.logger import logger
 
 DB_LOCK = threading.Lock()
+_CLIENT = None
+_CLIENT_LOCK = threading.Lock()
 
 class GeminiEmbeddingFunction(EmbeddingFunction):
     def __call__(self, input: Documents) -> Embeddings:
@@ -55,8 +58,12 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
     model = "gemini-embedding-001"
     
     # Process in batches of 100 to respect rate limits
-    batch_size = 99
-    delay_seconds = 61
+    # Process in batches of 5 to respect rate limits (30k TPM)
+    # 5 chunks * ~1000 chars/chunk ~= 1-2k tokens per batch.
+    # With 4 threads, max 8k tokens if all hit at once.
+    # 100 RPM limit is safe (1 request per 5 chunks).
+    batch_size = 5
+    delay_seconds = 2 # Small delay just to be nice
     
     embeddings = []
     total_texts = len(texts)
@@ -71,13 +78,14 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
         
         for attempt in range(max_retries):
             try:
-                for text in batch:
-                    result = client.models.embed_content(
-                        model=model,
-                        contents=text,
-                        config={'task_type': 'RETRIEVAL_DOCUMENT'}
-                    )
-                    embeddings.append(result.embeddings[0].values)
+                # Batch embedding call
+                result = client.models.embed_content(
+                    model=model,
+                    contents=batch,
+                    config={'task_type': 'RETRIEVAL_DOCUMENT'}
+                )
+                for embedding in result.embeddings:
+                    embeddings.append(embedding.values)
                 break # Success, exit retry loop
             except (errors.ClientError, errors.ServerError) as e:
                 # Check for 429 (Too Many Requests) or 503 (Service Unavailable)
@@ -85,12 +93,16 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
                     raise e
                 
                 if attempt == max_retries - 1:
-                    raise e
+                    masked_key = f"...{api_key[-4:]}"
+                    raise RuntimeError(f"{e} (Key: {masked_key})") from e
                 
                 # Exponential backoff with jitter
                 delay = (base_delay * (2 ** attempt)) + (random.random() * 0.5)
-                # print(f"Rate limit hit. Retrying in {delay:.2f}s...") # Optional: log to stderr
+                logger.warning(f"Rate limit hit for key ...{api_key[-4:]}. Retrying in {delay:.2f}s... Error: {e}")
                 time.sleep(delay)
+                
+                # If this was the last attempt, we want to make sure the error message includes the key
+                # But we re-raise above. Let's wrap the re-raise to add info.
         
         # Add delay between batches
         if batch_end < total_texts:
@@ -99,9 +111,14 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
     return embeddings
 
 def get_db_client():
-    db_dir = config.db_dir
-    db_dir.mkdir(parents=True, exist_ok=True)
-    return chromadb.PersistentClient(path=str(db_dir))
+    global _CLIENT
+    if _CLIENT is None:
+        with _CLIENT_LOCK:
+            if _CLIENT is None:
+                db_dir = config.db_dir
+                db_dir.mkdir(parents=True, exist_ok=True)
+                _CLIENT = chromadb.PersistentClient(path=str(db_dir))
+    return _CLIENT
 
 def get_collection():
     client = get_db_client()

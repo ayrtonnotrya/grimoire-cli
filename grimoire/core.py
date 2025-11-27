@@ -3,8 +3,8 @@ import concurrent.futures
 from pathlib import Path
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 from rich.panel import Panel
-from rich.table import Table
 from rich.console import Console
+from grimoire.logger import logger
 from google import genai
 from google.genai import types
 from grimoire.config import config
@@ -239,7 +239,9 @@ def index_summaries(verbose: bool = False):
                         if verbose or result["status"] == "error" or result.get("path_updated"):
                              _print_index_result(progress.console, result)
                     except Exception as e:
-                        progress.console.print(f"[red]Critical worker error: {e}[/red]")
+                        error_msg = f"Critical worker error: {e}"
+                        progress.console.print(f"[red]{error_msg}[/red]")
+                        logger.error(error_msg, exc_info=True)
         else:
             for file_path in files:
                 result = _index_single_book(file_path, api_keys[0])
@@ -269,10 +271,29 @@ def _print_index_result(console, result):
         # Highlight specific errors
         error_msg = result['message']
         if "429" in error_msg or "ResourceExhausted" in error_msg:
-             error_msg = f"[bold red]Rate Limit Exceeded (Retried)[/bold red]"
+             base_msg = "[bold red]Rate Limit Exceeded (Retried)[/bold red]"
+             if "(Key:" in error_msg:
+                 # Extract key part safely
+                 try:
+                     key_part = error_msg.split("(Key:")[-1].split(")")[0].strip()
+                     error_msg = f"{base_msg} [yellow](Key: {key_part})[/yellow]"
+                 except:
+                     error_msg = base_msg
+             else:
+                 error_msg = base_msg
         msg += f" | {error_msg}"
         
     console.print(msg)
+    
+    # Log result to file
+    log_msg = f"{result['status'].upper()}: {result['file']}"
+    if result.get("message"):
+        log_msg += f" - {result['message']}"
+    
+    if result["status"] == "error":
+        logger.error(log_msg)
+    else:
+        logger.info(log_msg)
 
 def _index_single_book(file_path: Path, api_key: str) -> dict:
     from grimoire import db
