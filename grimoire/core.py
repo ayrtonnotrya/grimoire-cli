@@ -183,10 +183,18 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
             return {"status": "success", "file": pdf_path.name, "message": f"Saved to {json_path.name}"}
 
         except Exception as e:
-             return {"status": "error", "file": pdf_path.name, "message": f"Failed to parse/save response: {e}"}
+             error_msg = f"Failed to parse/save response: {e}"
+             logger.error(error_msg, exc_info=True)
+             return {"status": "error", "file": pdf_path.name, "message": error_msg}
 
     except Exception as e:
-        return {"status": "error", "file": pdf_path.name, "message": f"Generation failed: {e}"}
+        error_msg = f"Generation failed: {e}"
+        if "429" in str(e) or "ResourceExhausted" in str(e):
+             masked_key = f"...{api_key[-4:]}"
+             error_msg = f"Rate Limit Exceeded (Key: {masked_key})"
+        
+        logger.error(f"Error processing {pdf_path.name}: {e}", exc_info=True)
+        return {"status": "error", "file": pdf_path.name, "message": error_msg}
 
 
 

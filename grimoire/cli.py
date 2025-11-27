@@ -59,49 +59,59 @@ def search(
     if not json_output:
         console.print(f"Searching for: {query}")
         
-    results = db.query_documents(query, n_results=n)
-    
-    # Results structure: {'ids': [[]], 'distances': [[]], 'metadatas': [[]], 'documents': [[]]}
-    if not results['ids'] or not results['ids'][0]:
+    try:
+        results = db.query_documents(query, n_results=n)
+        
+        # Results structure: {'ids': [[]], 'distances': [[]], 'metadatas': [[]], 'documents': [[]]}
+        if not results['ids'] or not results['ids'][0]:
+            if json_output:
+                print("[]")
+            else:
+                console.print("[yellow]No results found.[/yellow]")
+            return
+
+        output_data = []
+
+        for i, doc_id in enumerate(results['ids'][0]):
+            metadata = results['metadatas'][0][i]
+            distance = results['distances'][0][i] if results['distances'] else 0.0
+            document = results['documents'][0][i]
+            chunk_type = metadata.get('chunk_type', 'Unknown').replace('_', ' ').title()
+            
+            # Use full_path from metadata if available, otherwise fallback to constructing it
+            stored_path = metadata.get('full_path')
+            if stored_path:
+                full_path = Path(stored_path)
+            else:
+                full_path = config.summaries_dir / metadata.get('filename')
+
+            
+            if json_output:
+                output_data.append({
+                    "title": metadata.get('title', 'Unknown Title'),
+                    "score": distance,
+                    "chunk_type": chunk_type,
+                    "filename": metadata.get('filename'),
+                    "full_path": str(full_path.absolute()),
+                    "snippet": document
+                })
+            else:
+                console.print(f"\n[bold blue]{i+1}. {metadata.get('title', 'Unknown Title')}[/bold blue] (Score: {distance:.4f})")
+                console.print(f"[cyan]{chunk_type}[/cyan]")
+                console.print(f"Full Summary: {full_path.absolute()}")
+                console.print(f"[italic]{document}[/italic]")
+
+        if json_output:
+            print(json.dumps(output_data, indent=2))
+    except Exception as e:
+        console.print(f"[bold red]Search failed:[/bold red] {e}")
+        console.print(f"[dim]Check logs for details.[/dim]")
         if json_output:
             print("[]")
         else:
             console.print("[yellow]No results found.[/yellow]")
         return
 
-    output_data = []
-
-    for i, doc_id in enumerate(results['ids'][0]):
-        metadata = results['metadatas'][0][i]
-        distance = results['distances'][0][i] if results['distances'] else 0.0
-        document = results['documents'][0][i]
-        chunk_type = metadata.get('chunk_type', 'Unknown').replace('_', ' ').title()
-        
-        # Use full_path from metadata if available, otherwise fallback to constructing it
-        stored_path = metadata.get('full_path')
-        if stored_path:
-            full_path = Path(stored_path)
-        else:
-            full_path = config.summaries_dir / metadata.get('filename')
-
-        
-        if json_output:
-            output_data.append({
-                "title": metadata.get('title', 'Unknown Title'),
-                "score": distance,
-                "chunk_type": chunk_type,
-                "filename": metadata.get('filename'),
-                "full_path": str(full_path.absolute()),
-                "snippet": document
-            })
-        else:
-            console.print(f"\n[bold blue]{i+1}. {metadata.get('title', 'Unknown Title')}[/bold blue] (Score: {distance:.4f})")
-            console.print(f"[cyan]{chunk_type}[/cyan]")
-            console.print(f"Full Summary: {full_path.absolute()}")
-            console.print(f"[italic]{document}[/italic]")
-
-    if json_output:
-        print(json.dumps(output_data, indent=2))
 
 @app.command()
 def deduplicate():
