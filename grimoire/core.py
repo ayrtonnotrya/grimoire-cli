@@ -73,12 +73,17 @@ def process_library(list_file_path: str, verbose: bool = False):
 
     # Filter out PDFs that already have summaries
     pdfs_to_process = []
+    skipped_count = 0
     for pdf_path in pdf_paths:
         if check_summary_exists(pdf_path.name):
+             skipped_count += 1
              if verbose:
                 console.print(f"[yellow]Skipping existing summary for: {pdf_path.name}[/yellow]")
              continue
         pdfs_to_process.append(pdf_path)
+
+    if skipped_count > 0:
+        console.print(f"[yellow]Skipped {skipped_count} existing summaries.[/yellow]")
 
     if not pdfs_to_process:
         console.print("[green]No new books to process.[/green]")
@@ -106,15 +111,13 @@ def process_library(list_file_path: str, verbose: bool = False):
                 for future in concurrent.futures.as_completed(futures):
                     result = future.result()
                     progress.advance(task_id)
-                    if verbose or result["status"] == "error":
-                        _print_process_result(progress.console, result)
+                    _print_process_result(progress.console, result)
         else:
             # Sequential Processing
             for pdf_path in pdfs_to_process:
                 result = generate_summary(pdf_path, api_keys[0])
                 progress.advance(task_id)
-                if verbose or result["status"] == "error":
-                    _print_process_result(progress.console, result)
+                _print_process_result(progress.console, result)
 
 def _print_process_result(console, result):
     color = "green" if result["status"] == "success" else "red"
@@ -164,6 +167,24 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
             config={
                 'response_mime_type': 'application/json',
                 'response_schema': BOOK_SUMMARY_SCHEMA,
+                'safety_settings': [
+                    types.SafetySetting(
+                        category='HARM_CATEGORY_HATE_SPEECH',
+                        threshold='BLOCK_NONE',
+                    ),
+                    types.SafetySetting(
+                        category='HARM_CATEGORY_DANGEROUS_CONTENT',
+                        threshold='BLOCK_NONE',
+                    ),
+                    types.SafetySetting(
+                        category='HARM_CATEGORY_SEXUALLY_EXPLICIT',
+                        threshold='BLOCK_NONE',
+                    ),
+                    types.SafetySetting(
+                        category='HARM_CATEGORY_HARASSMENT',
+                        threshold='BLOCK_NONE',
+                    ),
+                ]
             }
         )
         

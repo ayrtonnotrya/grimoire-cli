@@ -31,6 +31,9 @@ def setup_logger(name="grimoire"):
         # Add handler to logger
         logger.addHandler(file_handler)
         
+    # Prevent propagation to root logger (which might have console handlers)
+    logger.propagate = False
+        
     return logger
 
 # Global logger instance

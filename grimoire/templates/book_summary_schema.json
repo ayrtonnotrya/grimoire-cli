@@ -1,0 +1,136 @@
+{
+  "type": "object",
+  "properties": {
+    "header": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "category": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "title",
+        "authors",
+        "category",
+        "keywords"
+      ]
+    },
+    "central_thesis": {
+      "type": "string"
+    },
+    "structure_content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chapter_title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "chapter_title",
+          "summary"
+        ]
+      }
+    },
+    "key_concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "term",
+          "definition"
+        ]
+      }
+    },
+    "practical_system": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rituals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "description"
+      ]
+    },
+    "relevant_quotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "page": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    "critical_analysis": {
+      "type": "object",
+      "properties": {
+        "relevance": {
+          "type": "string"
+        },
+        "target_audience": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "relevance",
+        "target_audience"
+      ]
+    }
+  },
+  "required": [
+    "header",
+    "central_thesis",
+    "structure_content",
+    "key_concepts",
+    "relevant_quotes",
+    "critical_analysis"
+  ]
+}
