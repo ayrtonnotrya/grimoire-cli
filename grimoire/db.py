@@ -54,6 +54,9 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
 
 def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
     """Generates embeddings for a list of texts using a specific API key."""
+    if api_key in config.exhausted_keys:
+        raise RuntimeError("API Key exhausted (Daily Limit)")
+
     client = genai.Client(api_key=api_key)
     model = "gemini-embedding-001"
     
@@ -94,6 +97,12 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
                 
                 if attempt == max_retries - 1:
                     masked_key = f"...{api_key[-4:]}"
+                    
+                    # Check for Daily Limit
+                    if "RequestsPerDay" in str(e) or "Daily" in str(e):
+                        config.exhausted_keys.add(api_key)
+                        raise RuntimeError(f"Daily Rate Limit Exceeded (Key: {masked_key})") from e
+                    
                     raise RuntimeError(f"{e} (Key: {masked_key})") from e
                 
                 # Exponential backoff with jitter

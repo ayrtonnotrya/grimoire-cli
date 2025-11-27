@@ -22,6 +22,7 @@ DEFAULT_CONFIG = {
 class Config:
     def __init__(self):
         self._config = self._load_config()
+        self.exhausted_keys = set()
 
     def _load_config(self) -> Dict[str, Any]:
         if not CONFIG_FILE.exists():

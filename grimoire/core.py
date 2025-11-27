@@ -135,6 +135,9 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
     if not api_key:
         return {"status": "error", "file": pdf_path.name, "message": "Gemini API Key not provided."}
 
+    if api_key in config.exhausted_keys:
+        return {"status": "skipped", "file": pdf_path.name, "message": "API Key exhausted (Daily Limit)"}
+
     client = genai.Client(api_key=api_key)
     
     try:
@@ -212,7 +215,13 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
         error_msg = f"Generation failed: {e}"
         if "429" in str(e) or "ResourceExhausted" in str(e):
              masked_key = f"...{api_key[-4:]}"
-             error_msg = f"Rate Limit Exceeded (Key: {masked_key})"
+             
+             # Check for Daily Limit
+             if "RequestsPerDay" in str(e) or "Daily" in str(e):
+                 config.exhausted_keys.add(api_key)
+                 error_msg = f"Daily Rate Limit Exceeded (Key: {masked_key}) - Key disabled for session"
+             else:
+                 error_msg = f"Rate Limit Exceeded (Key: {masked_key})"
         
         logger.error(f"Error processing {pdf_path.name}: {e}", exc_info=True)
         return {"status": "error", "file": pdf_path.name, "message": error_msg}
@@ -237,12 +246,34 @@ def index_summaries(verbose: bool = False):
     metadatas = []
     ids = []
 
-    console.print(f"Found {len(files)} summaries. Indexing with parental chunking...")
+    console.print(f"Found {len(files)} summaries. Checking index status...")
 
     api_keys = config.gemini_api_keys
     if not api_keys:
          console.print("[red]Error: Gemini API Key not configured.[/red]")
          return
+
+    # Pre-calculate stats
+    already_indexed = 0
+    to_index = []
+    
+    for file_path in files:
+        if db.document_exists(file_path.name):
+            # Check if path needs updating
+            stored_path = db.get_document_path(file_path.name)
+            full_path = str(file_path.absolute())
+            if stored_path != full_path:
+                to_index.append(file_path) # Needs update
+            else:
+                already_indexed += 1
+        else:
+            to_index.append(file_path)
+
+    console.print(f"Total: {len(files)} | Indexed: {already_indexed} | To Index: {len(to_index)}")
+    
+    if not to_index:
+        console.print("[green]All summaries are already indexed.[/green]")
+        return
 
     with Progress(
         SpinnerColumn(),
@@ -251,14 +282,14 @@ def index_summaries(verbose: bool = False):
         TaskProgressColumn(),
         console=console
     ) as progress:
-        task_id = progress.add_task("Indexing...", total=len(files))
+        task_id = progress.add_task("Indexing...", total=len(to_index))
 
         if len(api_keys) > 1:
             with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
                 futures = []
-                for i, file_path in enumerate(files):
-                    key = api_keys[i % len(api_keys)]
-                    futures.append(executor.submit(_index_single_book, file_path, key))
+                for file_path in to_index:
+                    # Pass ALL keys to the worker, let it manage retries
+                    futures.append(executor.submit(_index_single_book, file_path, api_keys))
                 
                 for future in concurrent.futures.as_completed(futures):
                     try:
@@ -272,8 +303,8 @@ def index_summaries(verbose: bool = False):
                         progress.console.print(f"[red]{error_msg}[/red]")
                         logger.error(error_msg, exc_info=True)
         else:
-            for file_path in files:
-                result = _index_single_book(file_path, api_keys[0])
+            for file_path in to_index:
+                result = _index_single_book(file_path, api_keys)
                 progress.advance(task_id)
                 progress.refresh()
                 if verbose or result["status"] == "error" or result.get("path_updated"):
@@ -324,11 +355,18 @@ def _print_index_result(console, result):
     else:
         logger.info(log_msg)
 
-def _index_single_book(file_path: Path, api_key: str) -> dict:
+def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     from grimoire import db
+    import random
     
     # Extract PDF name from summary filename: summary_X.json -> X
     pdf_name = file_path.name.replace("summary_", "").replace(".json", "")
+
+    # Filter out exhausted keys
+    available_keys = [k for k in api_keys if k not in config.exhausted_keys]
+    
+    if not available_keys:
+        return {"status": "skipped", "file": pdf_name, "message": "All API Keys exhausted (Daily Limit)"}
     
     # Calculate absolute path for the summary file
     full_path = str(file_path.absolute())
@@ -403,12 +441,36 @@ def _index_single_book(file_path: Path, api_key: str) -> dict:
 
     try:
         if documents:
-            # Generate embeddings in parallel (outside the lock)
-            embeddings = db.generate_embeddings(documents, api_key)
+            # Retry Loop for Embeddings
+            last_error = None
             
-            # Add documents with pre-calculated embeddings (inside the lock)
-            db.add_documents(documents, metadatas, ids, embeddings=embeddings)
-            return {"status": "success", "file": pdf_name, "chunks": len(documents)}
+            while available_keys:
+                # Pick a key (randomly to distribute load)
+                current_key = random.choice(available_keys)
+                
+                try:
+                    # Generate embeddings in parallel (outside the lock)
+                    embeddings = db.generate_embeddings(documents, current_key)
+                    
+                    # Add documents with pre-calculated embeddings (inside the lock)
+                    db.add_documents(documents, metadatas, ids, embeddings=embeddings)
+                    return {"status": "success", "file": pdf_name, "chunks": len(documents)}
+                
+                except RuntimeError as e:
+                    # Check if it was a daily limit error (already handled in db.py adding to exhausted_keys)
+                    if "Daily Rate Limit Exceeded" in str(e):
+                        # Key is already in exhausted_keys, remove from local available list
+                        if current_key in available_keys:
+                            available_keys.remove(current_key)
+                        last_error = e
+                        continue # Try next key
+                    else:
+                        # Other error, fail immediately
+                        raise e
+            
+            # If we exited the loop, it means we ran out of keys
+            return {"status": "skipped", "file": pdf_name, "message": f"All keys exhausted. Last error: {last_error}"}
+
         else:
             return {"status": "skipped", "file": pdf_name, "message": "No documents to index"}
     except Exception as e:
