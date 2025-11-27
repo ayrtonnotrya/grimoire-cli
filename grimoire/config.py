@@ -37,8 +37,17 @@ class Config:
             toml.dump(self._config, f)
 
     @property
+    def gemini_api_keys(self) -> list[str]:
+        keys = self._config["gemini"]["api_key"]
+        if not keys:
+            return []
+        return [k.strip() for k in keys.split("|") if k.strip()]
+
+    @property
     def gemini_api_key(self) -> str:
-        return self._config["gemini"]["api_key"]
+        # Return the first key for backward compatibility or default usage
+        keys = self.gemini_api_keys
+        return keys[0] if keys else ""
 
     @gemini_api_key.setter
     def gemini_api_key(self, value: str):

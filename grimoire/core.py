@@ -1,4 +1,5 @@
 import os
+import concurrent.futures
 from pathlib import Path
 from rich.console import Console
 from google import genai
@@ -62,21 +63,50 @@ def process_library(list_file_path: str, verbose: bool = False):
     pdf_paths = parse_library_list(file_path)
     console.print(f"Found {len(pdf_paths)} PDFs.")
 
-    for pdf_path in pdf_paths:
-        pdf_name = pdf_path.name
-        if check_summary_exists(pdf_name):
-            if verbose:
-                console.print(f"[yellow]Skipping existing summary for: {pdf_name}[/yellow]")
-            continue
-        
-        console.print(f"[green]Processing: {pdf_name}[/green]")
-        generate_summary(pdf_path)
-
-def generate_summary(pdf_path: Path):
-    """Generates a summary for the given PDF using Gemini."""
-    api_key = config.gemini_api_key
-    if not api_key:
+    api_keys = config.gemini_api_keys
+    if not api_keys:
         console.print("[red]Error: Gemini API Key not configured. Run 'grimoire init'.[/red]")
+        return
+
+    # Filter out PDFs that already have summaries
+    pdfs_to_process = []
+    for pdf_path in pdf_paths:
+        if check_summary_exists(pdf_path.name):
+             if verbose:
+                console.print(f"[yellow]Skipping existing summary for: {pdf_path.name}[/yellow]")
+             continue
+        pdfs_to_process.append(pdf_path)
+
+    if not pdfs_to_process:
+        console.print("[green]No new books to process.[/green]")
+        return
+
+    # Parallel Processing
+    if len(api_keys) > 1:
+        console.print(f"[bold blue]Processing {len(pdfs_to_process)} books with {len(api_keys)} workers...[/bold blue]")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+            futures = []
+            for i, pdf_path in enumerate(pdfs_to_process):
+                # Round-robin assignment of keys
+                key = api_keys[i % len(api_keys)]
+                futures.append(executor.submit(generate_summary, pdf_path, key))
+            
+            # Wait for completion
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    future.result()
+                except Exception as e:
+                    console.print(f"[red]Worker failed: {e}[/red]")
+    else:
+        # Sequential Processing
+        for pdf_path in pdfs_to_process:
+            console.print(f"[green]Processing: {pdf_path.name}[/green]")
+            generate_summary(pdf_path, api_keys[0])
+
+def generate_summary(pdf_path: Path, api_key: str):
+    """Generates a summary for the given PDF using Gemini."""
+    if not api_key:
+        console.print("[red]Error: Gemini API Key not provided.[/red]")
         return
 
     client = genai.Client(api_key=api_key)
@@ -165,93 +195,125 @@ def index_summaries(verbose: bool = False):
 
     console.print(f"Found {len(files)} summaries. Indexing with parental chunking...")
 
-    for file_path in files:
-        # Extract PDF name from summary filename: summary_X.json -> X
-        pdf_name = file_path.name.replace("summary_", "").replace(".json", "")
-        
-        # Calculate absolute path for the summary file
-        full_path = str(file_path.absolute())
+    api_keys = config.gemini_api_keys
+    if not api_keys:
+         console.print("[red]Error: Gemini API Key not configured.[/red]")
+         return
 
-        if db.document_exists(file_path.name):
-            # Check if path needs updating
-            stored_path = db.get_document_path(file_path.name)
-            if stored_path != full_path:
-                if verbose:
-                    console.print(f"[yellow]Updating path for: {pdf_name}[/yellow]")
-                    console.print(f"  Old: {stored_path}")
-                    console.print(f"  New: {full_path}")
-                db.update_document_path(file_path.name, full_path)
-            elif verbose:
-                console.print(f"[yellow]Skipping already indexed: {pdf_name}[/yellow]")
-            continue
-        
-        if verbose:
-            console.print(f"[blue]Indexing: {pdf_name}[/blue]")
-        
-        try:
-            with open(file_path, "r") as f:
-                data = json.load(f)
-                summary = BookSummary(**data)
-        except Exception as e:
-            console.print(f"[red]Failed to load {file_path}: {e}[/red]")
-            continue
-
-        # Common Metadata (Parental)
-        base_metadata = {
-            "source": pdf_name,
-            "filename": file_path.name,
-            "full_path": str(file_path.absolute()),
-            "title": summary.header.title,
-            "authors": ", ".join(summary.header.authors),
-            "category": summary.header.category,
-            "keywords": ", ".join(summary.header.keywords)
-        }
-
-        # Chunk 1: Central Thesis
-        documents.append(f"Central Thesis: {summary.central_thesis}")
-        metadatas.append({**base_metadata, "chunk_type": "central_thesis"})
-        ids.append(f"{pdf_name}_thesis")
-
-        # Chunk 2: Structure/Chapters
-        for i, chapter in enumerate(summary.structure_content):
-            content = f"Chapter: {chapter.chapter_title}\n{chapter.summary}"
-            documents.append(content)
-            metadatas.append({**base_metadata, "chunk_type": "chapter", "chapter_title": chapter.chapter_title})
-            ids.append(f"{pdf_name}_chapter_{i}")
-
-        # Chunk 3: Key Concepts
-        for i, concept in enumerate(summary.key_concepts):
-            content = f"Concept: {concept.term}\nDefinition: {concept.definition}"
-            documents.append(content)
-            metadatas.append({**base_metadata, "chunk_type": "concept", "term": concept.term})
-            ids.append(f"{pdf_name}_concept_{i}")
-
-        # Chunk 4: Practical System
-        if summary.practical_system:
-            content = f"Practical System: {summary.practical_system.description}\n"
-            if summary.practical_system.tools:
-                content += f"Tools: {', '.join(summary.practical_system.tools)}\n"
-            if summary.practical_system.rituals:
-                content += f"Rituals: {', '.join(summary.practical_system.rituals)}"
+    if len(api_keys) > 1:
+        console.print(f"[bold blue]Indexing with {len(api_keys)} workers...[/bold blue]")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+            futures = []
+            for i, file_path in enumerate(files):
+                key = api_keys[i % len(api_keys)]
+                futures.append(executor.submit(_index_single_book, file_path, key, verbose))
             
-            documents.append(content)
-            metadatas.append({**base_metadata, "chunk_type": "practical_system"})
-            ids.append(f"{pdf_name}_practical")
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    future.result()
+                except Exception as e:
+                    console.print(f"[red]Indexing worker failed: {e}[/red]")
+    else:
+        for file_path in files:
+            _index_single_book(file_path, api_keys[0], verbose)
 
-        # Chunk 5: Critical Analysis
-        content = f"Critical Analysis:\nRelevance: {summary.critical_analysis.relevance}\nTarget Audience: {summary.critical_analysis.target_audience}"
+def _index_single_book(file_path: Path, api_key: str, verbose: bool):
+    from grimoire import db
+    
+    # Extract PDF name from summary filename: summary_X.json -> X
+    pdf_name = file_path.name.replace("summary_", "").replace(".json", "")
+    
+    # Calculate absolute path for the summary file
+    full_path = str(file_path.absolute())
+
+    if db.document_exists(file_path.name):
+        # Check if path needs updating
+        stored_path = db.get_document_path(file_path.name)
+        if stored_path != full_path:
+            if verbose:
+                console.print(f"[yellow]Updating path for: {pdf_name}[/yellow]")
+                console.print(f"  Old: {stored_path}")
+                console.print(f"  New: {full_path}")
+            db.update_document_path(file_path.name, full_path)
+        elif verbose:
+            console.print(f"[yellow]Skipping already indexed: {pdf_name}[/yellow]")
+        return
+    
+    if verbose:
+        console.print(f"[blue]Indexing: {pdf_name}[/blue]")
+    
+    try:
+        with open(file_path, "r") as f:
+            data = json.load(f)
+            summary = BookSummary(**data)
+    except Exception as e:
+        console.print(f"[red]Failed to load {file_path}: {e}[/red]")
+        return
+
+    documents = []
+    metadatas = []
+    ids = []
+
+    # Common Metadata (Parental)
+    base_metadata = {
+        "source": pdf_name,
+        "filename": file_path.name,
+        "full_path": str(file_path.absolute()),
+        "title": summary.header.title,
+        "authors": ", ".join(summary.header.authors),
+        "category": summary.header.category,
+        "keywords": ", ".join(summary.header.keywords)
+    }
+
+    # Chunk 1: Central Thesis
+    documents.append(f"Central Thesis: {summary.central_thesis}")
+    metadatas.append({**base_metadata, "chunk_type": "central_thesis"})
+    ids.append(f"{pdf_name}_thesis")
+
+    # Chunk 2: Structure/Chapters
+    for i, chapter in enumerate(summary.structure_content):
+        content = f"Chapter: {chapter.chapter_title}\n{chapter.summary}"
         documents.append(content)
-        metadatas.append({**base_metadata, "chunk_type": "critical_analysis"})
-        ids.append(f"{pdf_name}_analysis")
+        metadatas.append({**base_metadata, "chunk_type": "chapter", "chapter_title": chapter.chapter_title})
+        ids.append(f"{pdf_name}_chapter_{i}")
+
+    # Chunk 3: Key Concepts
+    for i, concept in enumerate(summary.key_concepts):
+        content = f"Concept: {concept.term}\nDefinition: {concept.definition}"
+        documents.append(content)
+        metadatas.append({**base_metadata, "chunk_type": "concept", "term": concept.term})
+        ids.append(f"{pdf_name}_concept_{i}")
+
+    # Chunk 4: Practical System
+    if summary.practical_system:
+        content = f"Practical System: {summary.practical_system.description}\n"
+        if summary.practical_system.tools:
+            content += f"Tools: {', '.join(summary.practical_system.tools)}\n"
+        if summary.practical_system.rituals:
+            content += f"Rituals: {', '.join(summary.practical_system.rituals)}"
+        
+        documents.append(content)
+        metadatas.append({**base_metadata, "chunk_type": "practical_system"})
+        ids.append(f"{pdf_name}_practical")
+
+    # Chunk 5: Critical Analysis
+    content = f"Critical Analysis:\nRelevance: {summary.critical_analysis.relevance}\nTarget Audience: {summary.critical_analysis.target_audience}"
+    documents.append(content)
+    metadatas.append({**base_metadata, "chunk_type": "critical_analysis"})
+    ids.append(f"{pdf_name}_analysis")
 
     try:
         if documents:
-            db.add_documents(documents, metadatas, ids, verbose=verbose)
-            console.print(f"[bold green]Successfully indexed {len(documents)} chunks from {len(files)} books.[/bold green]")
+            # Generate embeddings in parallel (outside the lock)
+            embeddings = db.generate_embeddings(documents, api_key)
+            
+            # Add documents with pre-calculated embeddings (inside the lock)
+            db.add_documents(documents, metadatas, ids, embeddings=embeddings, verbose=verbose)
+            console.print(f"[bold green]Successfully indexed {len(documents)} chunks from {pdf_name}.[/bold green]")
         else:
-            console.print("[yellow]No documents to index.[/yellow]")
+            console.print(f"[yellow]No documents to index for {pdf_name}.[/yellow]")
     except Exception as e:
-        console.print(f"[red]Indexing failed: {e}[/red]")
+        console.print(f"[red]Indexing failed for {pdf_name}: {e}[/red]")
 
 
 
