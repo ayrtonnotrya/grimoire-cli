@@ -94,14 +94,6 @@ def get_collection():
 def add_documents(documents: list[str], metadatas: list[dict], ids: list[str], embeddings: list[list[float]] = None, verbose: bool = False):
     collection = get_collection()
     
-    if verbose:
-        from rich.console import Console
-        console = Console()
-        if embeddings:
-             console.print(f"[blue]Adding {len(documents)} documents with pre-calculated embeddings...[/blue]")
-        else:
-             console.print(f"[blue]Generating embeddings for {len(documents)} chunks...[/blue]")
-        
     with DB_LOCK:
         collection.upsert(
             documents=documents,

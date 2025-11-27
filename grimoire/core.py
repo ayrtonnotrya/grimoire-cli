@@ -1,6 +1,9 @@
 import os
 import concurrent.futures
 from pathlib import Path
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+from rich.panel import Panel
+from rich.table import Table
 from rich.console import Console
 from google import genai
 from google.genai import types
@@ -81,45 +84,61 @@ def process_library(list_file_path: str, verbose: bool = False):
         console.print("[green]No new books to process.[/green]")
         return
 
-    # Parallel Processing
-    if len(api_keys) > 1:
-        console.print(f"[bold blue]Processing {len(pdfs_to_process)} books with {len(api_keys)} workers...[/bold blue]")
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
-            futures = []
-            for i, pdf_path in enumerate(pdfs_to_process):
-                # Round-robin assignment of keys
-                key = api_keys[i % len(api_keys)]
-                futures.append(executor.submit(generate_summary, pdf_path, key))
-            
-            # Wait for completion
-            for future in concurrent.futures.as_completed(futures):
-                try:
-                    future.result()
-                except Exception as e:
-                    console.print(f"[red]Worker failed: {e}[/red]")
-    else:
-        # Sequential Processing
-        for pdf_path in pdfs_to_process:
-            console.print(f"[green]Processing: {pdf_path.name}[/green]")
-            generate_summary(pdf_path, api_keys[0])
+    console.print(f"[bold blue]Processing {len(pdfs_to_process)} books...[/bold blue]")
 
-def generate_summary(pdf_path: Path, api_key: str):
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TaskProgressColumn(),
+        console=console
+    ) as progress:
+        task_id = progress.add_task("Summarizing...", total=len(pdfs_to_process))
+        
+        # Parallel Processing
+        if len(api_keys) > 1:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+                futures = []
+                for i, pdf_path in enumerate(pdfs_to_process):
+                    key = api_keys[i % len(api_keys)]
+                    futures.append(executor.submit(generate_summary, pdf_path, key))
+                
+                for future in concurrent.futures.as_completed(futures):
+                    result = future.result()
+                    progress.advance(task_id)
+                    if verbose or result["status"] == "error":
+                        _print_process_result(progress.console, result)
+        else:
+            # Sequential Processing
+            for pdf_path in pdfs_to_process:
+                result = generate_summary(pdf_path, api_keys[0])
+                progress.advance(task_id)
+                if verbose or result["status"] == "error":
+                    _print_process_result(progress.console, result)
+
+def _print_process_result(console, result):
+    color = "green" if result["status"] == "success" else "red"
+    icon = "✓" if result["status"] == "success" else "✗"
+    
+    console.print(
+        Panel(
+            f"[{color}]{icon} {result['file']}[/{color}]\n[dim]{result['message']}[/dim]",
+            border_style=color
+        )
+    )
+
+def generate_summary(pdf_path: Path, api_key: str) -> dict:
     """Generates a summary for the given PDF using Gemini."""
     if not api_key:
-        console.print("[red]Error: Gemini API Key not provided.[/red]")
-        return
+        return {"status": "error", "file": pdf_path.name, "message": "Gemini API Key not provided."}
 
     client = genai.Client(api_key=api_key)
     
-    console.print(f"Reading {pdf_path.name}...")
     try:
         with open(pdf_path, "rb") as f:
             pdf_data = f.read()
     except Exception as e:
-        console.print(f"[red]Failed to read file: {e}[/red]")
-        return
-
-    console.print("Generating summary...")
+        return {"status": "error", "file": pdf_path.name, "message": f"Failed to read file: {e}"}
 
     # Load prompt
     # Try to find it in the package templates directory
@@ -127,8 +146,7 @@ def generate_summary(pdf_path: Path, api_key: str):
     prompt_path = current_dir / "templates" / "book_summary_prompt.md"
     
     if not prompt_path.exists():
-         console.print(f"[red]Prompt file not found at {prompt_path}[/red]")
-         return
+         return {"status": "error", "file": pdf_path.name, "message": f"Prompt file not found at {prompt_path}"}
     
     with open(prompt_path, "r") as f:
         prompt_text = f.read()
@@ -151,8 +169,6 @@ def generate_summary(pdf_path: Path, api_key: str):
         
         # Parse JSON
         try:
-            # response.parsed might be a dict now, or None if we used a dict schema?
-            # Let's rely on response.text and parse it ourselves to be safe and robust.
             summary_text = response.text
             summary_dict = json.loads(summary_text)
             summary_data = BookSummary(**summary_dict)
@@ -164,14 +180,13 @@ def generate_summary(pdf_path: Path, api_key: str):
             with open(json_path, "w") as f:
                 f.write(summary_data.model_dump_json(indent=2))
                 
-            console.print(f"[bold green]JSON Summary saved to {json_path}[/bold green]")
+            return {"status": "success", "file": pdf_path.name, "message": f"Saved to {json_path.name}"}
 
         except Exception as e:
-             console.print(f"[red]Failed to parse/save response: {e}[/red]")
-             console.print(f"Raw text: {response.text[:500]}...")
+             return {"status": "error", "file": pdf_path.name, "message": f"Failed to parse/save response: {e}"}
 
     except Exception as e:
-        console.print(f"[red]Generation failed: {e}[/red]")
+        return {"status": "error", "file": pdf_path.name, "message": f"Generation failed: {e}"}
 
 
 
@@ -200,24 +215,57 @@ def index_summaries(verbose: bool = False):
          console.print("[red]Error: Gemini API Key not configured.[/red]")
          return
 
-    if len(api_keys) > 1:
-        console.print(f"[bold blue]Indexing with {len(api_keys)} workers...[/bold blue]")
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
-            futures = []
-            for i, file_path in enumerate(files):
-                key = api_keys[i % len(api_keys)]
-                futures.append(executor.submit(_index_single_book, file_path, key, verbose))
-            
-            for future in concurrent.futures.as_completed(futures):
-                try:
-                    future.result()
-                except Exception as e:
-                    console.print(f"[red]Indexing worker failed: {e}[/red]")
-    else:
-        for file_path in files:
-            _index_single_book(file_path, api_keys[0], verbose)
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TaskProgressColumn(),
+        console=console
+    ) as progress:
+        task_id = progress.add_task("Indexing...", total=len(files))
 
-def _index_single_book(file_path: Path, api_key: str, verbose: bool):
+        if len(api_keys) > 1:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+                futures = []
+                for i, file_path in enumerate(files):
+                    key = api_keys[i % len(api_keys)]
+                    futures.append(executor.submit(_index_single_book, file_path, key))
+                
+                for future in concurrent.futures.as_completed(futures):
+                    result = future.result()
+                    progress.advance(task_id)
+                    if verbose or result["status"] == "error" or result.get("path_updated"):
+                         _print_index_result(progress.console, result)
+        else:
+            for file_path in files:
+                result = _index_single_book(file_path, api_keys[0])
+                progress.advance(task_id)
+                if verbose or result["status"] == "error" or result.get("path_updated"):
+                     _print_index_result(progress.console, result)
+
+def _print_index_result(console, result):
+    if result["status"] == "skipped":
+        return
+
+    color = "green" if result["status"] == "success" else "red"
+    if result.get("path_updated"):
+        color = "yellow"
+        
+    icon = "✓"
+    if result["status"] == "error":
+        icon = "✗"
+    elif result.get("path_updated"):
+        icon = "↻"
+
+    msg = f"[{color}]{icon} {result['file']}[/{color}]"
+    if result.get("chunks"):
+        msg += f" | {result['chunks']} chunks"
+    if result.get("message"):
+        msg += f" | {result['message']}"
+        
+    console.print(msg)
+
+def _index_single_book(file_path: Path, api_key: str) -> dict:
     from grimoire import db
     
     # Extract PDF name from summary filename: summary_X.json -> X
@@ -230,25 +278,17 @@ def _index_single_book(file_path: Path, api_key: str, verbose: bool):
         # Check if path needs updating
         stored_path = db.get_document_path(file_path.name)
         if stored_path != full_path:
-            if verbose:
-                console.print(f"[yellow]Updating path for: {pdf_name}[/yellow]")
-                console.print(f"  Old: {stored_path}")
-                console.print(f"  New: {full_path}")
             db.update_document_path(file_path.name, full_path)
-        elif verbose:
-            console.print(f"[yellow]Skipping already indexed: {pdf_name}[/yellow]")
-        return
-    
-    if verbose:
-        console.print(f"[blue]Indexing: {pdf_name}[/blue]")
+            return {"status": "success", "file": pdf_name, "path_updated": True, "message": "Path updated"}
+        
+        return {"status": "skipped", "file": pdf_name}
     
     try:
         with open(file_path, "r") as f:
             data = json.load(f)
             summary = BookSummary(**data)
     except Exception as e:
-        console.print(f"[red]Failed to load {file_path}: {e}[/red]")
-        return
+        return {"status": "error", "file": pdf_name, "message": f"Failed to load: {e}"}
 
     documents = []
     metadatas = []
@@ -308,12 +348,12 @@ def _index_single_book(file_path: Path, api_key: str, verbose: bool):
             embeddings = db.generate_embeddings(documents, api_key)
             
             # Add documents with pre-calculated embeddings (inside the lock)
-            db.add_documents(documents, metadatas, ids, embeddings=embeddings, verbose=verbose)
-            console.print(f"[bold green]Successfully indexed {len(documents)} chunks from {pdf_name}.[/bold green]")
+            db.add_documents(documents, metadatas, ids, embeddings=embeddings)
+            return {"status": "success", "file": pdf_name, "chunks": len(documents)}
         else:
-            console.print(f"[yellow]No documents to index for {pdf_name}.[/yellow]")
+            return {"status": "skipped", "file": pdf_name, "message": "No documents to index"}
     except Exception as e:
-        console.print(f"[red]Indexing failed for {pdf_name}: {e}[/red]")
+        return {"status": "error", "file": pdf_name, "message": str(e)}
 
 
 
