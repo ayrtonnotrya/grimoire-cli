@@ -1,0 +1,136 @@
+{
+  "header": {
+    "title": "The Complete Magician's Tables",
+    "authors": [
+      "Stephen Skinner"
+    ],
+    "category": "Western Esotericism, Occultism, Magic, Qabalah, Hermeticism, Grimoire Traditions, Correspondences",
+    "keywords": [
+      "Magic",
+      "Qabalah",
+      "Kabbalah",
+      "Golden Dawn",
+      "Liber 777",
+      "Correspondences",
+      "Angels",
+      "Demons",
+      "Astrology",
+      "Alchemy",
+      "Grimoires",
+      "Enochian",
+      "Tarot",
+      "Pagan Pantheons",
+      "Gematria",
+      "Isopsephy",
+      "Taoism",
+      "Buddhism",
+      "Sacred Geometry",
+      "Metrology",
+      "Timeline",
+      "Christianity",
+      "Judaism",
+      "Islam"
+    ]
+  },
+  "central_thesis": "This book aims to be the most complete tabular set of magical correspondences, expanding upon and correcting previous works like Aleister Crowley's Liber 777. It synthesizes material from ancient magical texts, Grimoires, and diverse mystical traditions, presenting it in a more logical and accessible structure for practitioners. The central thesis is that a deep understanding and accurate tabulation of correspondences form the fundamental basis of operative magic, allowing practitioners to attune rituals and understand the underlying structure of occult thought and external reality.",
+  "structure_content": [
+    {
+      "chapter_title": "Acknowledgements",
+      "summary": "Acknowledges key inspirations and collaborators in the creation of the volume, including Adam McLean and David Rankine. Mentions the cover illustration from Peter Apian's Astronomicum Caesareum (1540)."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "Outlines the book's purpose to expand and correct Crowley's Liber 777, integrating a broader range of grimoire traditions and esoteric systems. Emphasizes the fundamental role of correspondences in magic and communication. Details the author's decision to re-order tables using a Zodiac, Elements, and Planets (ZEP) system, rather than strictly following the Tree of Life Paths, to improve logical grouping. Discusses historical figures like Agrippa, Mathers, and Crowley, and addresses controversies such as the Tarot's origins and Hebrew letter attributions. Explains transliteration conventions for various languages used in the tables."
+    },
+    {
+      "chapter_title": "The Tables (A-Z)",
+      "summary": "The main body of the book, organized alphabetically by subject (A through Z). Each section contains multiple tables detailing correspondences within specific esoteric disciplines. These include comprehensive lists for Angels (Biblical, Enochian, Grimoire), Buddhist and Vedic/Hindu Meditation, Christian and Islamic mysticism, Dr. John Dee's Enochian magic, Emblems and Alchemy, Feng Shui and Chinese Taoist magic, Geomancy, Astrological Heavens (Zodiac, Planets, Houses, Decans, Mansions, Fixed Stars), Kabbalistic concepts (Tree of Life, Four Worlds, Qliphoth), various Alphabets and Gematria/Isopsephy values, Natural Magic (Animals, Plants, Stones, Perfumes), magical Orders/Grades (Golden Dawn, Masonic, OTO), Pagan Pantheons (Middle Eastern, Egyptian, Greek, Roman, Celtic, Asian, African, Central American), Questing/Chivalry, Rainbow Colour Scales, Sacred Geometry, Tarot (Major and Minor Arcana, historical analysis), Uniform Timelines of key figures, Yi Jing, and Zones of the Mind, Body, and Soul. Each table serves as a practical reference for specific magical attributes and their relationships."
+    },
+    {
+      "chapter_title": "The Commentary",
+      "summary": "Provides in-depth explanations, historical context, and critical analysis for selected tables and concepts introduced in the main 'Tables' section. It clarifies the sources, rectifies common errors or 'blinds' found in previous works, and offers guidance on the practical application and interpretation of the correspondences. For instance, it details the derivation of angel names, the astrological implications of decans, the various Tree of Life formats, and the historical evolution of Tarot symbolism. It also covers the biographies of influential authors and key works that contributed to the book's content."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Correspondences",
+      "definition": "The fundamental principle in magic recognizing an implicit interdependence of all things, where different entities (e.g., colors, gods, planets, Sephiroth) are conceptually tied together in 'chains of correspondence' to enable communication and operative magic."
+    },
+    {
+      "term": "Tree of Life (Kabbalah)",
+      "definition": "A central diagram in Kabbalah, composed of 10 Sephiroth (spheres) and 22 Paths, serving as a core structural reference for organizing and understanding various esoteric attributes. The book differentiates between Gra, Lurianic, and Golden Dawn versions, highlighting the Lurianic model for its logical arrangement of elements, planets, and zodiacal signs."
+    },
+    {
+      "term": "ZEP Order",
+      "definition": "The book's primary organizational principle, grouping correspondences by Zodiac, Elements, and Planets, rather than the sequential Path numbering of the Tree of Life. This approach is adopted to present information more naturally and logically, making symbolic groupings and patterns more apparent."
+    },
+    {
+      "term": "Gematria/Isopsephy",
+      "definition": "Practices of numerical mysticism where letters of an alphabet are assigned numerical values, allowing words to be translated into numbers. These numerical totals are then used to infer deeper meanings, establish connections between concepts, and verify the accuracy of magical names and attributions. Isopsephy is the Greek equivalent of Hebrew Gematria."
+    },
+    {
+      "term": "Grimoires",
+      "definition": "Historical texts of practical magic containing catalogues of spirits (angels, demons), instructions for their evocation, and corresponding magical tools, timing, and seals. The book draws extensively from grimoire traditions like the Lemegeton, Liber Juratus, and Abramelin to provide comprehensive lists of entities and methods."
+    },
+    {
+      "term": "Enochian Magic",
+      "definition": "A complex system of angel magic developed by Dr. John Dee and Edward Kelley in the late 16th century, involving specific angelic names, sigils (e.g., Sigillum Dei Aemeth), and tabular devices derived from angelic communications."
+    },
+    {
+      "term": "Tarot as Emblem Sets",
+      "definition": "A critical re-evaluation of the Tarot's origins, proposing that the Major Arcana are not ancient Egyptian but rather a compilation of various medieval emblem sets (e.g., Astrological, Christian Virtues, Liberal Arts Curriculum, Estates of Man), distinct from unified occult systems often attributed to them."
+    },
+    {
+      "term": "Planetary Dignities",
+      "definition": "An astrological concept describing the inherent strength or weakness of a planet when placed in specific zodiacal signs. These dignities include Rulership (strongest), Exaltation, Detriment (weakened), and Fall (most weakened), influencing how a planet's energy manifests."
+    }
+  ],
+  "practical_system": {
+    "description": "The book itself functions as a comprehensive practical system by providing a meticulously organized and corrected compendium of correspondences. It is not a step-by-step ritual manual but rather the essential reference for constructing and understanding operative magic across various traditions. By tabulating the 'chains of correspondence' (e.g., linking planets to colors, herbs, spirits, metals, and ritual timing), it enables the practitioner to design, execute, and attune rituals effectively, ensuring that all elements align with the desired magical current or entity. The author's emphasis on correcting traditional attributions and re-ordering for logical consistency provides a more reliable foundation for magical work.",
+    "tools": [
+      "Angelic names and functions (e.g., Enochian, Shem ha-Mephorash, Grimoire angels)",
+      "Demonic names, ranks, and powers (e.g., Goetia, Grimoirium Verum demons)",
+      "Hebrew, Greek, Arabic, Latin, and other alphabets with their numerical values (for Gematria/Isopsephy and sigil creation)",
+      "Zodiacal signs, planets, elements, and their corresponding attributes (e.g., colors, metals, plants, animals, perfumes)",
+      "Magical images and seals (e.g., Sigillum Dei Aemeth, Splendor Solis emblems, geomantic figures)",
+      "Psalms (for invocatory and protective purposes)",
+      "Planetary squares and their key numbers (for sigil generation)",
+      "Qabalistic Tree of Life diagrams and associated divine names, archangels, and hierarchies",
+      "Metrological conversion factors (for precise measurements in magical construction)"
+    ],
+    "rituals": [
+      "Grimoire-based evocations (e.g., using Shem ha-Mephorash angels, Goetic demons, Olympic Spirits)",
+      "Astrological magic (e.g., talismans crafted under specific planetary dignities, decan rulerships, and fixed star influences)",
+      "Qabalistic pathworking and meditations (using Tree of Life attributions, divine names, and angelic hierarchies)",
+      "Elemental magic (invoking or working with elemental spirits and their corresponding attributes)",
+      "Rituals requiring specific timing (planetary hours, seasonal quarters, lunar mansions)",
+      "Consecration of magical equipment (using appropriate Psalms and elemental attributions)"
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "The most complete set of Magic, Kabbalistic, Angelic, Astrologic, Alchemic, Demonic, Geomantic, Grimoire, Gematria, I Ching, Tarot, Pagan Pantheon, Plant, Perfume and Character Correspondences in more than 777 tables",
+      "page": "1"
+    },
+    {
+      "text": "I do not claim that this book is definitive, just that it pushes the boundaries of magic further than they have previously been pushed.",
+      "page": "10"
+    },
+    {
+      "text": "Correspondences not only form the basis of communication, but they are also the basis of magic.",
+      "page": "10"
+    },
+    {
+      "text": "In this book, I have mostly ignored the order of the 32+2 Paths, and have instead gone back to the traditional building blocks of esoteric classification using the Zodiac, Elements, and Planets.",
+      "page": "17"
+    },
+    {
+      "text": "When you are freed of this erroneous misconception [Tarot's Egyptian origin], then the Tarot reveals that it is in fact a splendidly constructed mediaeval emblem pack, a series of archetypal designs that were rich with symbolic meaning to the members of Renaissance society.",
+      "page": "19"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This book is highly relevant for both academic research and practical application within Western Esotericism and Occultism. It serves as an unparalleled comprehensive reference work, clarifying complex systems of correspondences across a vast array of traditions (Qabalah, Grimoires, Astrology, Alchemy, Eastern systems). Skinner's critical approach, including historical contextualization, rectification of 'blinds,' and a revised organizational structure (ZEP order), significantly enhances the theoretical soundness and practical utility of the material. It challenges long-held misconceptions, particularly regarding Tarot origins and attribution methodologies, making it a valuable tool for serious students and practitioners seeking accuracy and depth beyond superficial or 'New Age' interpretations.",
+    "target_audience": "The primary target audience consists of advanced students and experienced practitioners of Western Esotericism and Occultism. This includes Qabalists, ceremonial magicians, astrologers, alchemists, geomancers, and scholars of comparative religion and mysticism. The extensive detail, critical perspective, and technical terminology make it less suitable for absolute beginners but indispensable for those seeking a rigorous and comprehensive understanding of magical correspondences and their operative applications."
+  }
+}
