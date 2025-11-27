@@ -1,9 +1,11 @@
 import chromadb
 from chromadb import Documents, EmbeddingFunction, Embeddings
 from google import genai
+from google.genai import errors
 from grimoire.config import config
 import time
 import threading
+import random
 
 DB_LOCK = threading.Lock()
 
@@ -63,14 +65,32 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
         batch_end = min(batch_start + batch_size, total_texts)
         batch = texts[batch_start:batch_end]
         
-        # Process current batch
-        for text in batch:
-            result = client.models.embed_content(
-                model=model,
-                contents=text,
-                config={'task_type': 'RETRIEVAL_DOCUMENT'}
-            )
-            embeddings.append(result.embeddings[0].values)
+        # Process current batch with retry logic
+        max_retries = 5
+        base_delay = 2
+        
+        for attempt in range(max_retries):
+            try:
+                for text in batch:
+                    result = client.models.embed_content(
+                        model=model,
+                        contents=text,
+                        config={'task_type': 'RETRIEVAL_DOCUMENT'}
+                    )
+                    embeddings.append(result.embeddings[0].values)
+                break # Success, exit retry loop
+            except (errors.ClientError, errors.ServerError) as e:
+                # Check for 429 (Too Many Requests) or 503 (Service Unavailable)
+                if e.code not in [429, 503]:
+                    raise e
+                
+                if attempt == max_retries - 1:
+                    raise e
+                
+                # Exponential backoff with jitter
+                delay = (base_delay * (2 ** attempt)) + (random.random() * 0.5)
+                # print(f"Rate limit hit. Retrying in {delay:.2f}s...") # Optional: log to stderr
+                time.sleep(delay)
         
         # Add delay between batches
         if batch_end < total_texts:

@@ -232,14 +232,19 @@ def index_summaries(verbose: bool = False):
                     futures.append(executor.submit(_index_single_book, file_path, key))
                 
                 for future in concurrent.futures.as_completed(futures):
-                    result = future.result()
-                    progress.advance(task_id)
-                    if verbose or result["status"] == "error" or result.get("path_updated"):
-                         _print_index_result(progress.console, result)
+                    try:
+                        result = future.result()
+                        progress.advance(task_id)
+                        progress.refresh() # Force refresh
+                        if verbose or result["status"] == "error" or result.get("path_updated"):
+                             _print_index_result(progress.console, result)
+                    except Exception as e:
+                        progress.console.print(f"[red]Critical worker error: {e}[/red]")
         else:
             for file_path in files:
                 result = _index_single_book(file_path, api_keys[0])
                 progress.advance(task_id)
+                progress.refresh()
                 if verbose or result["status"] == "error" or result.get("path_updated"):
                      _print_index_result(progress.console, result)
 
@@ -261,7 +266,11 @@ def _print_index_result(console, result):
     if result.get("chunks"):
         msg += f" | {result['chunks']} chunks"
     if result.get("message"):
-        msg += f" | {result['message']}"
+        # Highlight specific errors
+        error_msg = result['message']
+        if "429" in error_msg or "ResourceExhausted" in error_msg:
+             error_msg = f"[bold red]Rate Limit Exceeded (Retried)[/bold red]"
+        msg += f" | {error_msg}"
         
     console.print(msg)
 
