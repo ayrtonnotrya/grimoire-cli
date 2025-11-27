@@ -2,6 +2,7 @@ import chromadb
 from chromadb import Documents, EmbeddingFunction, Embeddings
 from google import genai
 from grimoire.config import config
+import time
 
 class GeminiEmbeddingFunction(EmbeddingFunction):
     def __call__(self, input: Documents) -> Embeddings:
@@ -12,22 +13,35 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
         client = genai.Client(api_key=api_key)
         model = "gemini-embedding-001" # Correct embedding model name
         
+        # Process in batches of 100 to respect rate limits (100 requests per minute)
+        batch_size = 99
+        delay_seconds = 61  
+        
         embeddings = []
-        for text in input:
-            # New SDK usage for embeddings
-            # client.models.embed_content(model=..., contents=...)
-            result = client.models.embed_content(
-                model=model,
-                contents=text,
-                config={'task_type': 'RETRIEVAL_DOCUMENT'} # Check correct enum or string
-            )
-            # Result structure might be different. 
-            # response.embeddings[0].values ?
-            # Let's assume result.embeddings[0].values based on typical new SDKs
-            # Or result.embedding_values if single?
-            # Checking docs or assuming standard new Google SDK response:
-            # It usually returns an object with `embeddings`.
-            embeddings.append(result.embeddings[0].values)
+        total_texts = len(input)
+        
+        for batch_start in range(0, total_texts, batch_size):
+            batch_end = min(batch_start + batch_size, total_texts)
+            batch = input[batch_start:batch_end]
+            
+            # Print progress if processing multiple batches
+            if total_texts > batch_size:
+                print(f"Processing batch {batch_start // batch_size + 1}/{(total_texts + batch_size - 1) // batch_size} ({batch_start + 1}-{batch_end} of {total_texts})")
+            
+            # Process current batch
+            for text in batch:
+                result = client.models.embed_content(
+                    model=model,
+                    contents=text,
+                    config={'task_type': 'RETRIEVAL_DOCUMENT'}
+                )
+                embeddings.append(result.embeddings[0].values)
+            
+            # Add delay between batches (except after the last batch)
+            if batch_end < total_texts:
+                print(f"Waiting {delay_seconds} seconds before next batch to respect rate limits...")
+                time.sleep(delay_seconds)
+        
         return embeddings
 
 def get_db_client():
