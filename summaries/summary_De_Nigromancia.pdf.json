@@ -1,0 +1,182 @@
+{
+  "header": {
+    "title": "De Nigromancia",
+    "authors": [
+      "Roger Bacon (attributed)",
+      "Michael Albion Macdonald (editor & translator)"
+    ],
+    "category": "Western Esotericism, Grimoire Tradition, Necromancy, Ceremonial Magic",
+    "keywords": [
+      "Nigromancy",
+      "Roger Bacon",
+      "Sloane MS 3885",
+      "Additional MS 36674",
+      "Michael Albion Macdonald",
+      "Ceremonial Magic",
+      "Grimoire",
+      "Spirit Conjuration",
+      "Exorcism",
+      "Talismanic Magic",
+      "Divination",
+      "Treasure Finding",
+      "Thief Catching",
+      "Ointment of Sight"
+    ]
+  },
+  "central_thesis": "De Nigromancia presents a practical system for ceremonial magic, purporting to enable the operator to summon and control spirits (both celestial and infernal), achieve various magical effects such as finding hidden treasure, identifying thieves, and commanding transport, all through strict adherence to specific rituals, prayers, consecrations, and the preparation of magical tools and circles. The text emphasizes purity, faith, and the authority derived from divine names and Christian figures, presenting itself as a \"Catholic Magical Tract\" despite its 'nigromantic' subject matter.",
+  "structure_content": [
+    {
+      "chapter_title": "The Grand Oration",
+      "summary": "A foundational prayer invoking divine protection and authority (Otheos Sother, Tetragrammaton, Oneipheton, Jesus Christ, Mary) to compel spirits."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "Defines Nigromancy as the convocation and restriction of spirits to obtain \"Thesaurus Spiritum\" (treasure of spirits). Historically situates the work in ancient Alexandria, involving Fra. Robert Lombard and Roger Bacon, highlighting its \"Catholic Magical Tract\" nature."
+    },
+    {
+      "chapter_title": "Part One: Disposition of the Operator",
+      "summary": "Details the necessary moral and physical purity, regular observances, vault construction, composition of chrism, sigil fashioning, and metal mixing required for the magician."
+    },
+    {
+      "chapter_title": "Part Two: Manner of Conjuration",
+      "summary": "Explains how to call spirits, establish dignity, discover treasure, utilize specific times, places, and cosmic arrangements, understand aerial spirit hierarchies, and work with familiar spirits."
+    },
+    {
+      "chapter_title": "Part Three: Convocation of the Spirit",
+      "summary": "Outlines the process of spirit convocation through divine love, invisible interaction, metallic compositions, and rites of praise and fraternity."
+    },
+    {
+      "chapter_title": "Part Four: True Knowledge of Spirits",
+      "summary": "Covers understanding spirits, moderating interaction with them, including essential elements for fulfillment, the priest's duties, scientific enlightenment, and the formulation of ceremonies and offerings."
+    },
+    {
+      "chapter_title": "Tract One: General Observances",
+      "summary": "Emphasizes meticulous observation of day/hour cycles, characters, and conjurations. Stresses purity of the operator and instruments, the necessity of a consecrated priest, and specific vestments and preparations. Details moral requirements like humility and faith, and environmental factors like fresh air and sunlight."
+    },
+    {
+      "chapter_title": "Tractate Two: Preparatory Rituals",
+      "summary": "Describes the importance of the Mass of St. Cyprian, specific timing related to moon phases and planetary hours, and the need for prolonged abstinence from carnal desires, food, and drink. It outlines the construction of a secret vault with specific window orientations and the consecration of all magical tools, including the Sword, Sceptre, Ring, and Plate, along with instructions for drawing various magical circles."
+    },
+    {
+      "chapter_title": "Tractate Three: Planetary and Talismanic Magic",
+      "summary": "Focuses on the construction and use of the Pentacle of Solomon, planetary characters (Saturn, Jupiter, Mars, Sol, Venus, Mercury, Luna), and personal consecrations like wearing specific girdles and armbands. It includes detailed instructions for preparing the operator and tools (knife, Sceptre, Ring) and outlines the conjurations for various spirits, emphasizing the importance of specific timing (planetary hours and lunar phases)."
+    },
+    {
+      "chapter_title": "Tractate Four: Specific Operations",
+      "summary": "Provides practical instructions for different magical operations, including general conjuration and binding, licence to depart, treasure discovery, calling a thief, making an ointment of sight, transport by spirits, knowing a true spirit, and a friendship circle."
+    },
+    {
+      "chapter_title": "Afterward",
+      "summary": "Michael Albion Macdonald's editorial notes on the provenance of the MSS, his initial skepticism regarding other \"Necronomicon\" claims, and the \"Catholic\" context of \"De Nigromancia\" as a book used for exorcism."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Nigromancia",
+      "definition": "The practice of summoning and compelling spirits (both celestial and infernal) for various magical purposes, including divination, treasure retrieval, and other operative magic. Defined in the text as \"convocation and estriction of the Spiriß wheresoever they may be\" and to obtain \"Thesaurus Spiritum\" (treasure of spirits)."
+    },
+    {
+      "term": "Thesaurus Spiritum",
+      "definition": "Literally \"treasure of spirits,\" referring to the knowledge, assistance, or material gains obtained through the summoning and binding of spirits."
+    },
+    {
+      "term": "Tetragrammaton (יהוה)",
+      "definition": "The ineffable four-letter name of God, frequently invoked as the primary source of authority and power in conjurations and inscribed on magical tools and circles to compel spirits."
+    },
+    {
+      "term": "Chrism",
+      "definition": "A consecrated oil used for anointing the operator and magical tools, enhancing their purity and spiritual efficacy. The text suggests it is used interchangeably with \"unguent.\""
+    },
+    {
+      "term": "Circle (Magical)",
+      "definition": "The primary protective and operative space for the magician, drawn with chalk and inscribed with divine names, angelic sigils, and other characters. Its size, orientation, and specific contents vary depending on the operation and the type of spirit being summoned."
+    },
+    {
+      "term": "Sceptre, Ring, Sword, Plate",
+      "definition": "The core magical instruments. Each undergoes a specific consecration ritual and is inscribed with divine names (especially Tetragrammaton) and characters, serving to assert the operator's authority over spirits."
+    },
+    {
+      "term": "Planetary Hours/Lunations",
+      "definition": "Astrological timing considered crucial for the success of operations, aligning rituals with the influences of specific planets (e.g., Jupiter for honor, Venus for love/friendship, Mars for war/evil) and the moon's phases."
+    },
+    {
+      "term": "Familiar Spirit",
+      "definition": "A spirit specifically bound to an operator for their natural life to provide knowledge, seek things, and offer assistance, typically through a dedicated ritual (e.g., the Prince Alastiel conjuration)."
+    },
+    {
+      "term": "Theurgia-Goetia",
+      "definition": "A term found in footnotes, likely referring to types of magical practices involving both divine (theurgia) and demonic (goetia) entities. The text's practices bridge this divide."
+    }
+  ],
+  "practical_system": {
+    "description": "The system described in \"De Nigromancia\" is a highly structured form of ceremonial magic focused on the summoning, binding, and commanding of spirits (both celestial and infernal) through an authoritative, Christianized framework. Success is predicated on the operator's extreme physical and moral purity, meticulous adherence to astrological timings (planetary hours, moon phases), precise construction and consecration of magical tools (Sword, Sceptre, Ring, Plate), and the accurate invocation of divine and angelic names (especially Tetragrammaton). The magic is highly operative, aiming to achieve specific, tangible outcomes, such as locating hidden treasures, compelling a thief to confess, or securing supernatural transport. The emphasis on the \"Mass of St. Cyprian\" and the invocation of Christian saints and figures suggests an attempt to legitimize or empower the magical operations within a religious context.",
+    "tools": [
+      "Magical Circle: Drawn with chalk, various forms, inscribed with divine names, angelic sigils, planetary characters.",
+      "Sceptre: Made of Bay Laurel wood, gilded, inscribed with divine names, used to assert authority.",
+      "Ring: Made of copper or gold, inscribed with Tetragrammaton, worn on the middle finger of the left hand, used for binding and communication.",
+      "Sword: Consecrated, clear & bright, used for protection, asserting authority, and tracing the circle.",
+      "Plate (Talisman): Made of copper or tin, inscribed with Tetragrammaton and other divine names, fastened to the Sceptre or used independently.",
+      "Knife (White Hilt): Used for ritual purposes, including tracing the circle and possibly carving sigils.",
+      "Altar Table: Made of fresh-cut laurel wood.",
+      "Linen/Vestments: New, white, clean, rosewater-washed linen for the altar and operator's garments (white linen or simple wool).",
+      "Chrism/Oils/Balsams: For anointing operator and tools.",
+      "Incense (Frankincense, Olibanum, Lygn Aloes, Mastic, Oil): For purification and creating specific atmospheres.",
+      "Wax Image: For sympathetic magic (e.g., thief-catching).",
+      "Phial (with rainwater/spring water): For Water Spirit operations.",
+      "Serpent Stings, Mandrake Root: Ingredients for the \"ointment of sight.\"",
+      "Mass of St. Cyprian: A specific religious ritual considered integral to the preparatory phase."
+    ],
+    "rituals": [
+      "Preparatory Purifications: Multi-day abstinence (copulation, drink, food), confession to a priest, bathing, anointing with chrism, shaving, paring nails, wearing white linen.",
+      "Space Consecration: Constructing a \"secret Vault\" with specific dimensions and window orientations, drawing magical circles (various forms for different spirit types), incensing, and sprinkling with holy water.",
+      "Tool Consecration: Elaborate rituals for consecrating the Sceptre, Ring, Sword, and Plate, involving specific prayers, anointing with balsams, inscribing divine names and characters, and performing actions like kissing the cross on the sword or wearing the ring on a specific finger.",
+      "Spirit Conjuration: A multi-stage process involving specific postures (bended knee), directional turns (East, West, South, North), repeated invocations of divine names (Tetragrammaton, Alpha and Omega, Adonai, etc.) and angelic/saintly figures, showing consecrated tools to the spirits, and uttering commands for obedience and truth.",
+      "Treasure Finding: Conjurations targeting specific angels or spirits to reveal locations, potentially involving offerings.",
+      "Thief Catching: Creating a wax effigy, inscribing it with names, performing conjurations, and symbolically \"pricking\" the image to compel the thief's appearance and confession.",
+      "Transport: Conjuring a \"spirit-horse\" for swift, safe travel, involving specific circle work and adjurations.",
+      "Familiar Spirit Binding: Conjuring Prince Alastiel to assign a knowledgeable familiar spirit for the operator's lifetime."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "\"De Nigromancia... the convocation and estriction of the Spiriß wheresoever they may be; and in verity to gather them like fellows to thyself as thou wouldst sheaves of wheat, that by their means you may obtain the 'Thesaurus Spiritum' or treasure of spirits\"",
+      "page": "3"
+    },
+    {
+      "text": "\"By Thy Great and Mighty Name Tetragrammaton which is above all Names, to which all patri archs in Heaven, Earth, and Hell do reverence; Oneipheton, which is most Mighty and Terrible, and which is not to be named save at great distreß, to which be all Honour and Glory, World Without End. Amen.\"",
+      "page": "3"
+    },
+    {
+      "text": "\"all operations of this humble Art it is necessary from the beginning not to be proud in estate, and to overcome temptations with true eternal faith. With [such] various re quisites and Instruments, and with the requisite pre cautions and other dictates; perform without doubt error, or vanity for one error is magnified absolutely to a thousand by pride.\"",
+      "page": "8"
+    },
+    {
+      "text": "\"But in this Maß of St. Cyprian, you should offer a penny... from the first to the last quarter of the Moon and not before is the hour when we are most skilled in our opera tions.\"",
+      "page": "9"
+    },
+    {
+      "text": "\"Without [יהוה] characters nought of your constrains of the Spirits will avail anything.\"",
+      "page": "19"
+    },
+    {
+      "text": "\"I conjure you, Spirit; & I adjure you by that infinite goodneß of God wherewith all things were made when he asked: 'let it be made;' & it was done. I conjure, require, & com mand you nowbetimes & forthwith that you appear, visibly without our Circle, by the almighty power & wrath of God the conquerer, wherewith he made man like to his own image above all others...\"",
+      "page": "45"
+    },
+    {
+      "text": "\"I conjure Prince Alastiel... to assign me one Familiar Spirit, not of the highest nor of the lowest [order] but of excellent knowledge, which can & will abide with me, true & faithfull, for the term of my natural life...\"",
+      "page": "75"
+    },
+    {
+      "text": "\"What I found was far from the 'Necronomicon' but instead a whole genere of Catholic Magical tract, of which one of the most notable was 'De Nigromancia.'\"",
+      "page": "83"
+    },
+    {
+      "text": "\"my publisher wrote me back with great enthusiasim to tell me that he had another copy of this Ms. from the Sloane collection in Latin, and ap parently more complete. It turned out to be Sloane MS. 3885, you see before you the result.\"",
+      "page": "84"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "\"De Nigromancia\" is a significant text for understanding the historical development of grimoire traditions, particularly within a Christianized framework. It provides a unique lens into how classical magic, often considered pagan or demonic, was integrated or adapted within a supposedly \"Catholic Magical Tract\" context, reflecting syncretic practices of the late medieval or early modern period. Its attribution to Roger Bacon, a historical figure associated with experimental science and alchemy, further contextualizes it within a tradition that sought to systematize and rationalize magical operations. The text's detailed instructions for summoning spirits, crafting talismans, and performing specific operations (like treasure finding or thief catching) align it with practical operative magic, distinct from purely philosophical or mystical esotericism. The editor's commentary on its comparison with the \"Necronomicon\" and its use within a \"Catholic\" exorcism context highlights the ongoing reinterpretation and practical application of such texts in modern occultism, even if anachronistic.",
+    "target_audience": "The primary target audience would be advanced practitioners and academic researchers in Western Esotericism, occultism, and grimoire traditions. Its dense, archaic language, coupled with highly specific and demanding ritual instructions, makes it unsuitable for beginners. Practitioners interested in historical ceremonial magic, particularly those seeking to reconstruct or understand medieval/early modern magical systems, would find it invaluable. Additionally, scholars of religious studies, history, and folklore specializing in magic and its cultural contexts would find the text's blend of Christian invocation and operative magic highly relevant."
+  }
+}
