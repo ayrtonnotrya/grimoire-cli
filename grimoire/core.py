@@ -169,8 +169,19 @@ def index_summaries(verbose: bool = False):
         # Extract PDF name from summary filename: summary_X.json -> X
         pdf_name = file_path.name.replace("summary_", "").replace(".json", "")
         
+        # Calculate absolute path for the summary file
+        full_path = str(file_path.absolute())
+
         if db.document_exists(file_path.name):
-            if verbose:
+            # Check if path needs updating
+            stored_path = db.get_document_path(file_path.name)
+            if stored_path != full_path:
+                if verbose:
+                    console.print(f"[yellow]Updating path for: {pdf_name}[/yellow]")
+                    console.print(f"  Old: {stored_path}")
+                    console.print(f"  New: {full_path}")
+                db.update_document_path(file_path.name, full_path)
+            elif verbose:
                 console.print(f"[yellow]Skipping already indexed: {pdf_name}[/yellow]")
             continue
         
@@ -189,6 +200,7 @@ def index_summaries(verbose: bool = False):
         base_metadata = {
             "source": pdf_name,
             "filename": file_path.name,
+            "full_path": str(file_path.absolute()),
             "title": summary.header.title,
             "authors": ", ".join(summary.header.authors),
             "category": summary.header.category,

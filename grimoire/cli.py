@@ -77,7 +77,13 @@ def search(
         document = results['documents'][0][i]
         chunk_type = metadata.get('chunk_type', 'Unknown').replace('_', ' ').title()
         
-        full_path = config.summaries_dir / metadata.get('filename')
+        # Use full_path from metadata if available, otherwise fallback to constructing it
+        stored_path = metadata.get('full_path')
+        if stored_path:
+            full_path = Path(stored_path)
+        else:
+            full_path = config.summaries_dir / metadata.get('filename')
+
         
         if json_output:
             output_data.append({

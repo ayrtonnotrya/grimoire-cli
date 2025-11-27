@@ -106,6 +106,46 @@ def document_exists(filename: str) -> bool:
     )
     return len(results['ids']) > 0
 
+def get_document_path(filename: str) -> str | None:
+    """Retrieves the full_path from metadata for a given filename."""
+    collection = get_collection()
+    results = collection.get(
+        where={"filename": filename},
+        limit=1,
+        include=["metadatas"]
+    )
+    if results['metadatas'] and results['metadatas'][0]:
+        return results['metadatas'][0].get('full_path')
+    return None
+
+def update_document_path(filename: str, new_path: str):
+    """Updates the full_path metadata for all chunks associated with the given filename."""
+    collection = get_collection()
+    
+    # Get all documents for this file
+    results = collection.get(
+        where={"filename": filename},
+        include=["metadatas"]
+    )
+    
+    if not results['ids']:
+        return
+
+    ids_to_update = results['ids']
+    metadatas_to_update = []
+    
+    for metadata in results['metadatas']:
+        # Create a copy and update the path
+        new_metadata = metadata.copy()
+        new_metadata['full_path'] = new_path
+        metadatas_to_update.append(new_metadata)
+        
+    collection.update(
+        ids=ids_to_update,
+        metadatas=metadatas_to_update
+    )
+
+
 def remove_duplicates() -> int:
     """Removes duplicate documents from the collection based on content hash."""
     collection = get_collection()
