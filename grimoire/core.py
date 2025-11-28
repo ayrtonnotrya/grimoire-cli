@@ -13,8 +13,15 @@ from google.genai import types
 from grimoire.config import config
 from grimoire.schemas import BookSummary, BOOK_SUMMARY_SCHEMA
 import json
+from enum import Enum, auto
 
 console = Console()
+
+class Action(Enum):
+    RETRY = auto()
+    ROTATE_KEY = auto()
+    SKIP_FILE = auto()
+    ABORT = auto()
 
 class RateLimiter:
     def __init__(self, rpm: int, tpm: int):
@@ -184,8 +191,8 @@ def process_library(list_file_path: str, verbose: bool = False):
             with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
                 futures = []
                 for i, pdf_path in enumerate(pdfs_to_process):
-                    key = api_keys[i % len(api_keys)]
-                    futures.append(executor.submit(generate_summary, pdf_path, key))
+                    # Pass ALL keys to the worker, let it manage retries
+                    futures.append(executor.submit(generate_summary, pdf_path, api_keys))
                 
                 for future in concurrent.futures.as_completed(futures):
                     try:
@@ -210,7 +217,7 @@ def process_library(list_file_path: str, verbose: bool = False):
                      progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                      break
 
-                result = generate_summary(pdf_path, api_keys[0])
+                result = generate_summary(pdf_path, api_keys)
                 progress.advance(task_id)
                 _print_process_result(progress.console, result)
                 
@@ -230,136 +237,160 @@ def _print_process_result(console, result):
         )
     )
 
-def generate_summary(pdf_path: Path, api_key: str) -> dict:
-    """Generates a summary for the given PDF using Gemini."""
-    if not api_key:
-        return {"status": "error", "file": pdf_path.name, "message": "Gemini API Key not provided."}
-
-    # Smart Key Switching: If assigned key is exhausted, try to find a replacement
-    if api_key in config.exhausted_keys:
-        available_keys = [k for k in config.gemini_api_keys if k not in config.exhausted_keys]
-        if available_keys:
-            import random
-            new_key = random.choice(available_keys)
-            logger.info(f"Key ...{api_key[-4:]} exhausted. Switching to ...{new_key[-4:]} for {pdf_path.name}")
-            api_key = new_key
-        else:
-            return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
-
-    client = genai.Client(api_key=api_key)
+def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Action, str]:
+    """Analyzes the API error and returns the appropriate action and user message."""
+    error_str = str(error)
+    masked_key = f"...{api_key[-4:]}"
     
+    # 400 INVALID_ARGUMENT
+    if "400" in error_str and "INVALID_ARGUMENT" in error_str:
+        return Action.SKIP_FILE, f"Erro na solicitação (400). Verifique o formato do arquivo ou prompt. (Arquivo: {file_name})"
+
+    # 400 FAILED_PRECONDITION (Free tier not supported/Billing inactive)
+    if "400" in error_str and "FAILED_PRECONDITION" in error_str:
+        return Action.ROTATE_KEY, f"Nível gratuito não suportado ou faturamento inativo (400). Chave {masked_key} marcada como inválida."
+
+    # 403 PERMISSION_DENIED (Key suspended, wrong key, etc.)
+    if "403" in error_str or "PERMISSION_DENIED" in error_str or "CONSUMER_SUSPENDED" in error_str:
+        return Action.ROTATE_KEY, f"Permissão negada/Chave suspensa (403). Chave {masked_key} marcada como inválida."
+
+    # 404 NOT_FOUND
+    if "404" in error_str or "NOT_FOUND" in error_str:
+        return Action.SKIP_FILE, f"Recurso não encontrado (404). (Arquivo: {file_name})"
+
+    # 429 RESOURCE_EXHAUSTED (Daily quota or rate limit)
+    if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+        # We assume daily quota if rate limiter didn't catch it, or if it's a hard 429
+        return Action.ROTATE_KEY, f"Cota diária excedida (429). Alternando chave {masked_key}."
+
+    # 500 INTERNAL
+    if "500" in error_str or "INTERNAL" in error_str:
+        return Action.RETRY, "Erro interno do Google (500). Tentando novamente..."
+
+    # 503 UNAVAILABLE
+    if "503" in error_str or "UNAVAILABLE" in error_str:
+        return Action.RETRY, "Serviço indisponível (503). Tentando novamente..."
+
+    # 504 DEADLINE_EXCEEDED
+    if "504" in error_str or "DEADLINE_EXCEEDED" in error_str:
+        return Action.RETRY, "Tempo limite excedido (504). Tentando novamente..."
+
+    # Default fallback
+    return Action.ABORT, f"Erro desconhecido: {error_str}"
+
+def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
+    """Generates a summary for the given PDF using Gemini, with retry and rotation logic."""
+    import random
+    
+    # Filter out exhausted keys
+    available_keys = [k for k in api_keys if k not in config.exhausted_keys]
+    
+    if not available_keys:
+        return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
+
+    # Load prompt once
+    current_dir = Path(__file__).parent
+    prompt_path = current_dir / "templates" / "book_summary_prompt.md"
+    if not prompt_path.exists():
+         return {"status": "error", "file": pdf_path.name, "message": f"Prompt file not found at {prompt_path}"}
+    with open(prompt_path, "r") as f:
+        prompt_text = f.read()
+
     try:
         with open(pdf_path, "rb") as f:
             pdf_data = f.read()
     except Exception as e:
         return {"status": "error", "file": pdf_path.name, "message": f"Failed to read file: {e}"}
 
-    # Load prompt
-    # Try to find it in the package templates directory
-    current_dir = Path(__file__).parent
-    prompt_path = current_dir / "templates" / "book_summary_prompt.md"
+    # Retry loop
+    max_retries = 3
+    retry_count = 0
     
-    if not prompt_path.exists():
-         return {"status": "error", "file": pdf_path.name, "message": f"Prompt file not found at {prompt_path}"}
-    
-    with open(prompt_path, "r") as f:
-        prompt_text = f.read()
-
-    # Count tokens accurately
-    try:
-        token_count_resp = client.models.count_tokens(
-            model=config.model_name,
-            contents=[
-                types.Part.from_bytes(
-                    data=pdf_data,
-                    mime_type='application/pdf',
-                ),
-                prompt_text
-            ]
-        )
-        estimated_tokens = token_count_resp.total_tokens
-        logger.debug(f"Token count for {pdf_path.name}: {estimated_tokens}")
-
-    except Exception as e:
-        logger.warning(f"Failed to count tokens for {pdf_path.name}: {e}. Using fallback estimation.")
-        # Fallback: 1 token per 4 bytes
-        file_size = pdf_path.stat().st_size
-        estimated_tokens = int(file_size / 4)
-
-    # Acquire rate limit lock
-    rate_limiter.acquire(api_key, estimated_tokens)
-
-    try:
-        response = client.models.generate_content(
-            model=config.model_name,
-            contents=[
-                types.Part.from_bytes(
-                    data=pdf_data,
-                    mime_type='application/pdf',
-                ),
-                prompt_text
-            ],
-            config={
-                'response_mime_type': 'application/json',
-                'response_schema': BOOK_SUMMARY_SCHEMA,
-                'safety_settings': [
-                    types.SafetySetting(
-                        category='HARM_CATEGORY_HATE_SPEECH',
-                        threshold='BLOCK_NONE',
-                    ),
-                    types.SafetySetting(
-                        category='HARM_CATEGORY_DANGEROUS_CONTENT',
-                        threshold='BLOCK_NONE',
-                    ),
-                    types.SafetySetting(
-                        category='HARM_CATEGORY_SEXUALLY_EXPLICIT',
-                        threshold='BLOCK_NONE',
-                    ),
-                    types.SafetySetting(
-                        category='HARM_CATEGORY_HARASSMENT',
-                        threshold='BLOCK_NONE',
-                    ),
-                ]
-            }
-        )
+    while available_keys:
+        # Pick a key
+        api_key = random.choice(available_keys)
+        client = genai.Client(api_key=api_key)
         
-        # Parse JSON
         try:
-            summary_text = response.text
-            summary_dict = json.loads(summary_text)
+            # Count tokens (Best effort)
+            try:
+                token_count_resp = client.models.count_tokens(
+                    model=config.model_name,
+                    contents=[
+                        types.Part.from_bytes(data=pdf_data, mime_type='application/pdf'),
+                        prompt_text
+                    ]
+                )
+                estimated_tokens = token_count_resp.total_tokens
+            except Exception:
+                # Fallback estimation
+                estimated_tokens = int(pdf_path.stat().st_size / 4)
+
+            # Acquire rate limit
+            rate_limiter.acquire(api_key, estimated_tokens)
+
+            # Generate content
+            response = client.models.generate_content(
+                model=config.model_name,
+                contents=[
+                    types.Part.from_bytes(data=pdf_data, mime_type='application/pdf'),
+                    prompt_text
+                ],
+                config={
+                    'response_mime_type': 'application/json',
+                    'response_schema': BOOK_SUMMARY_SCHEMA,
+                    'safety_settings': [
+                        types.SafetySetting(category='HARM_CATEGORY_HATE_SPEECH', threshold='BLOCK_NONE'),
+                        types.SafetySetting(category='HARM_CATEGORY_DANGEROUS_CONTENT', threshold='BLOCK_NONE'),
+                        types.SafetySetting(category='HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold='BLOCK_NONE'),
+                        types.SafetySetting(category='HARM_CATEGORY_HARASSMENT', threshold='BLOCK_NONE'),
+                    ]
+                }
+            )
+            
+            # Parse and Save
+            summary_dict = json.loads(response.text)
             summary_data = BookSummary(**summary_dict)
             
-            # Save JSON
             json_path = config.summaries_dir / f"summary_{pdf_path.name}.json"
             config.summaries_dir.mkdir(parents=True, exist_ok=True)
-            
             with open(json_path, "w") as f:
                 f.write(summary_data.model_dump_json(indent=2))
                 
             return {"status": "success", "file": pdf_path.name, "message": f"Saved to {json_path.name}"}
 
         except Exception as e:
-             error_msg = f"Failed to parse/save response: {e}"
-             logger.error(error_msg, exc_info=True)
-             return {"status": "error", "file": pdf_path.name, "message": error_msg}
+            action, msg = handle_api_error(e, api_key, pdf_path.name)
+            logger.error(f"Full error for {pdf_path.name}: {str(e)}") # Added verbose log
+            logger.warning(f"Error processing {pdf_path.name}: {msg}")
+            
+            if action == Action.ROTATE_KEY:
+                config.exhausted_keys.add(api_key)
+                if api_key in available_keys:
+                    available_keys.remove(api_key)
+                logger.error(f"{msg} - Rotating key.")
+                continue # Try next key immediately
 
-    except Exception as e:
-        masked_key = f"...{api_key[-4:]}"
-        error_str = str(e)
-        
-        # Enhanced Rate Limit Handling
-        if "429" in error_str or "ResourceExhausted" in error_str:
-             # Since we have a RateLimiter for RPM/TPM, any 429 that gets here is likely a Daily Quota issue.
-             # We mark the key as exhausted to prevent further attempts in this session.
-             config.exhausted_keys.add(api_key)
-             error_msg = f"Daily Rate Limit Exceeded (Key: {masked_key}) - Key disabled for session"
-             logger.error(f"429/ResourceExhausted for {pdf_path.name} with key {masked_key}. Marking key as exhausted. Full error: {repr(e)}")
-        else:
-             error_msg = f"Generation failed: {e}"
-             logger.error(f"Error processing {pdf_path.name}: {repr(e)}", exc_info=True)
-        
-        return {"status": "error", "file": pdf_path.name, "message": error_msg}
+            elif action == Action.RETRY:
+                retry_count += 1
+                if retry_count <= max_retries:
+                    logger.info(f"{msg} - Retrying ({retry_count}/{max_retries})...")
+                    time.sleep(2 * retry_count) # Exponential backoff
+                    continue # Retry with same key (or random choice again)
+                else:
+                    logger.error(f"Max retries exceeded for {pdf_path.name}.")
+                    # If max retries exceeded for transient error, maybe try another key? 
+                    # For now, let's fail this file to avoid infinite loops if it's a file issue.
+                    return {"status": "error", "file": pdf_path.name, "message": f"Max retries exceeded: {msg}"}
 
+            elif action == Action.SKIP_FILE:
+                logger.error(f"Skipping file {pdf_path.name}: {msg}")
+                return {"status": "error", "file": pdf_path.name, "message": msg}
+            
+            else: # ABORT or unknown
+                return {"status": "error", "file": pdf_path.name, "message": msg}
+
+    return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
 
 
 def index_summaries(verbose: bool = False):
@@ -592,42 +623,51 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     metadatas.append({**base_metadata, "chunk_type": "critical_analysis"})
     ids.append(f"{pdf_name}_analysis")
 
-    try:
-        if documents:
-            # Retry Loop for Embeddings
-            last_error = None
+    if not documents:
+        return {"status": "skipped", "file": pdf_name, "message": "No documents to index"}
+
+    # Retry Loop for Embeddings
+    max_retries = 3
+    retry_count = 0
+    
+    while available_keys:
+        # Pick a key (randomly to distribute load)
+        current_key = random.choice(available_keys)
+        
+        try:
+            # Generate embeddings in parallel (outside the lock)
+            embeddings = db.generate_embeddings(documents, current_key)
             
-            while available_keys:
-                # Pick a key (randomly to distribute load)
-                current_key = random.choice(available_keys)
-                
-                try:
-                    # Generate embeddings in parallel (outside the lock)
-                    embeddings = db.generate_embeddings(documents, current_key)
-                    
-                    # Add documents with pre-calculated embeddings (inside the lock)
-                    db.add_documents(documents, metadatas, ids, embeddings=embeddings)
-                    return {"status": "success", "file": pdf_name, "chunks": len(documents)}
-                
-                except RuntimeError as e:
-                    # Check if it was a daily limit error (already handled in db.py adding to exhausted_keys)
-                    if "Daily Rate Limit Exceeded" in str(e):
-                        # Key is already in exhausted_keys, remove from local available list
-                        if current_key in available_keys:
-                            available_keys.remove(current_key)
-                        last_error = e
-                        continue # Try next key
-                    else:
-                        # Other error, fail immediately
-                        raise e
+            # Add documents with pre-calculated embeddings (inside the lock)
+            db.add_documents(documents, metadatas, ids, embeddings=embeddings)
+            return {"status": "success", "file": pdf_name, "chunks": len(documents)}
+        
+        except Exception as e:
+            action, msg = handle_api_error(e, current_key, pdf_name)
+            logger.error(f"Full error for {pdf_name}: {str(e)}") # Added verbose log
+            logger.warning(f"Error indexing {pdf_name}: {msg}")
+
+            if action == Action.ROTATE_KEY:
+                config.exhausted_keys.add(current_key)
+                if current_key in available_keys:
+                    available_keys.remove(current_key)
+                logger.error(f"{msg} - Rotating key.")
+                continue # Try next key
+
+            elif action == Action.RETRY:
+                retry_count += 1
+                if retry_count <= max_retries:
+                    logger.info(f"{msg} - Retrying ({retry_count}/{max_retries})...")
+                    time.sleep(2 * retry_count)
+                    continue
+                else:
+                    return {"status": "error", "file": pdf_name, "message": f"Max retries exceeded: {msg}"}
             
-            # If we exited the loop, it means we ran out of keys
-            return {"status": "skipped", "file": pdf_name, "message": f"All keys exhausted. Last error: {last_error}"}
-
-        else:
-            return {"status": "skipped", "file": pdf_name, "message": "No documents to index"}
-    except Exception as e:
-        return {"status": "error", "file": pdf_name, "message": str(e)}
-
-
-
+            elif action == Action.SKIP_FILE:
+                return {"status": "error", "file": pdf_name, "message": msg}
+            
+            else:
+                return {"status": "error", "file": pdf_name, "message": msg}
+    
+    # If we exited the loop, it means we ran out of keys
+    return {"status": "skipped", "file": pdf_name, "message": "All keys exhausted."}
