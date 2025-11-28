@@ -1,0 +1,282 @@
+{
+  "header": {
+    "title": "Greek Magic: Ancient, Medieval and Modern",
+    "authors": [
+      "J.C.B. Petropoulos"
+    ],
+    "category": "Western Esotericism, Occultism, Magic, Classical Studies, Anthropology of Religion",
+    "keywords": [
+      "Greek magic",
+      "ancient magic",
+      "medieval magic",
+      "modern magic",
+      "curses",
+      "curse tablets (katadesmoi)",
+      "amulets",
+      "phylacteries",
+      "magical gems",
+      "Gnostic gems",
+      "demonology",
+      "evil eye (ophthalmos ponēros, vaskania, thiarmos)",
+      "exorcism",
+      "divination",
+      "necromancy",
+      "anthropomorphic statues",
+      "ritual",
+      "symbolic action",
+      "homeopathic magic",
+      "sympathetic magic",
+      "technology of enchantment",
+      "gender and magic",
+      "social function of magic",
+      "religion and magic",
+      "syncretism",
+      "Byzantine law",
+      "Christian magic",
+      "pagan practices"
+    ]
+  },
+  "central_thesis": "This book argues that magic has been a profoundly widespread and enduring phenomenon in Greek society across three millennia, continuously evolving and interacting with cultural and religious practices from antiquity to the modern era. It challenges traditional academic dismissals of magic as 'wretched nonsense' by presenting an interdisciplinary panorama that highlights the traditions, ideologies, and methods of magic, its social dimensions, its relationship with both religion and technology, and its persistent integration into daily life despite official condemnations.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction: Magic in ancient Greece",
+      "summary": "This chapter defines key Greek terms for magic (mageia, goēteia, pharmakeia, manganeia), tracing its ancient origins as a local, often anti-social and private practice operating through automatic, mechanical means rather than divine reciprocity. It introduces various forms of magic, including curses (katadesmoi) and beneficent spells, and highlights the historical context of its legal proscription despite its pervasive nature."
+    },
+    {
+      "chapter_title": "The 'wretched subject' of ancient Greek magic",
+      "summary": "The author discusses the historical academic bias against studying magic, exemplified by early scholars' disdain for subjects like astrology. It introduces Alfons Barb's pioneering work on phylacteries and gnostic gemstones, emphasizing the historical continuity of protective charms like migraine prayers and curses across millennia, demonstrating the persistence of magical beliefs despite rationalist objections."
+    },
+    {
+      "chapter_title": "Magic, amulets and Circe",
+      "summary": "This chapter explores the interaction of ancient magic and myth, using Homer’s Circe as a prime example. Circe is analyzed as a mythical persona shaped by magical images (naked goddess, Mistress of Animals) from Near Eastern amulets. Her transformation from a dangerous, sexually potent witch to a protective figure for Odysseus embodies the ambiguous apotropaic logic of magic and its anti-social ritual inversions."
+    },
+    {
+      "chapter_title": "Magic and the dead in classical Greece",
+      "summary": "This chapter details the role of the goēs (magician) in ancient Greek society, specializing in communication with the dead. It describes rituals for appeasing ghosts (e.g., proper burials, offerings) and rousing them for malevolent purposes through binding spells (katadesmoi), often inscribed on lead tablets. The chapter highlights the types of ghosts invoked (untimely dead) and the perceived marginality of these magicians, often associated with foreign lands."
+    },
+    {
+      "chapter_title": "Ancient Greek sculptors as magicians",
+      "summary": "This chapter posits that ancient Greek statues were often perceived as magically endowed with life, feelings, and motion, not merely as representations. It suggests that sculptors, particularly in the classical and late-classical periods, employed magical processes to create lifelike, seductive deities and mortals, leading to phenomena like agalmatophilia. The text cites instances of statues being restrained to prevent their 'running away' and discusses the aesthetic and philosophical underpinnings of this belief."
+    },
+    {
+      "chapter_title": "Hocus-pocus in Graeco-Roman Egypt",
+      "summary": "Through a dialogue, this chapter illustrates Graeco-Egyptian magical practices in late antiquity, showcasing love charms, curses, oracles, and healing spells derived from papyri and amulets. It reveals the syncretic nature of this magic, mixing Egyptian, Hebrew, and Greek elements, and highlights the use of diverse tools and rituals for specific purposes, from securing love to predicting the future."
+    },
+    {
+      "chapter_title": "Ancient magical gems",
+      "summary": "This chapter describes magical gems as a distinct genre of glyptic art from the Roman Imperial age. Key characteristics include unique iconography of deities/demons, unintelligible inscriptions, and cryptographic signs (charactêres) meant as secret seals. It details their materials (carnelian, jasper, hematite) and function as amulets for protection, healing, and other magical purposes, operating via sympathetic magic and cosmic forces, and often requiring initiation rituals to 'charge' them."
+    },
+    {
+      "chapter_title": "Introduction: Magic in Byzantium",
+      "summary": "This introduction explores the complex relationship between magic and emergent Christianity in Byzantium. It highlights how initially, pagan magic was reclassified as demonic, and how the Church established rigid theological and moral boundaries against it. However, it also notes instances of syncretism, where Christian figures (like Christ's miracles) could be perceived as magical, and traditional magical elements persisted within Christian practices."
+    },
+    {
+      "chapter_title": "Magic and the Devil: From the Old to the New Rome",
+      "summary": "This chapter traces the criminalization of magic in Roman and Byzantine law, where it was often associated with poisonous substances and 'evil sacrifices.' It details the evolution of demonology from a fluid concept in Greek thought to the Devil's dominion in Christian theology, emphasizing the Church's condemnation of magic as a demonic alliance, leading to widespread belief in pacts with the Devil and the state's efforts to penalize magic, including the eventual banning of 'good' magic by Emperor Leo the Wise."
+    },
+    {
+      "chapter_title": "Magic and visual culture in late antiquity",
+      "summary": "The chapter examines material-culture magic through magical papyri and gem/metal amulets in late antiquity. It highlights the syncretic nature of these objects, combining Egyptian, Hebrew, and Christian elements for diverse purposes like healing (e.g., hematite for hemorrhage, Chnoubis for indigestion), protection (Holy Rider, Evil Eye), and inducing pregnancy. It explores the symbolic power of sacred names, iconography, and materials (e.g., silver's responsiveness to women's cycles)."
+    },
+    {
+      "chapter_title": "Another 'wretched subject': The demons of the world",
+      "summary": "This chapter delves into late Greek demonology, focusing on the six categories of demons (fiery, airy, earthly, watery, sub-earthly, light-hating) described in texts like Timotheos or on Demons and parallels in Orphic Hymns and magical papyri. It contextualizes these categories within ancient cosmologies and Chaldaean Oracles, demonstrating the continuity of these ideas across different sources and their use in exorcistic rituals."
+    },
+    {
+      "chapter_title": "The magician Vigrinos and his victim: A case of magic from the Life of St Andrew the Fool",
+      "summary": "This chapter analyzes a didactic narrative from the Life of St Andrew the Fool, portraying a magician (Vigrinos) who uses a facade of piety and Christian accessories to practice demonic magic. It details his love charm ritual, which involves tying knots and using an oil-lamp in front of icons, leading to disturbing demonic dreams for his victim. The story serves to expose magic as an inverted and dangerous perversion of Christian rituals, with severe psychological and spiritual consequences."
+    },
+    {
+      "chapter_title": "Spells and exorcisms in three post-Byzantine manuscripts",
+      "summary": "This chapter presents and analyzes a collection of magic texts (spells and exorcisms) from post-Byzantine medical and prayer manuscripts. It illustrates the continuity of Hellenistic and Roman magical traditions adapted with Christian elements. The spells cover diverse intentions such as love, healing (jaundice, fever, insomnia), protection against thieves, legal success, separating friends/couples, ensuring fertility for dead children, and general protection against evil, often using specific characters, prayers, and symbolic actions. It also highlights Church condemnations of these practices."
+    },
+    {
+      "chapter_title": "Introduction: Magic in modern Greece",
+      "summary": "This introduction discusses the fluid boundary between religion and magic in modern Greece, particularly concerning the widespread and durable belief in the evil eye. It explores how practices initially denounced by the Church as 'superstitious' or 'diabolical' can become validated over time, and how folk beliefs interact with official Orthodox Christianity, shaping both affliction (evil eye) and its remedies."
+    },
+    {
+      "chapter_title": "Magic and Orthodoxy",
+      "summary": "This chapter examines the arbitrary and shifting definitions of 'magic' versus 'religion,' tracing how academic theories (Tylor, Frazer, Durkheim) have shaped these distinctions. It highlights the historical struggle of the Orthodox Church to delineate magic from true faith, noting how traditional practices become reclassified as superstition or even demonized, while the Church also incorporates and legitimizes some folk rituals like the evil eye prayer."
+    },
+    {
+      "chapter_title": "Ritual word and symbolic movement in spells against the evil eye",
+      "summary": "This chapter analyzes the xematiasma ritual in Crete as a cultural idiom for coping with the evil eye, which is seen as a social disease stemming from intense emotions like admiration or envy. It details the 'magical speech' of incantations, combining rhythmic recitation with symbolic bodily movements (counting orifices, licking forehead, spitting) and spatial displacements to expel the thiarmos (evil gaze) and reintegrate the afflicted into society. The ritual highlights the body as a locus of social and magical action."
+    },
+    {
+      "chapter_title": "The evil eye among the Greeks of Australia: Identity, continuity and modernization",
+      "summary": "This chapter explores the belief in the evil eye (vaskania) among Castellorizian immigrants in Perth, Australia. It shows how this belief, often attributed to envy and linked to the Devil, is integrated into Christian cosmology and persists as a cultural construct. The chapter details specific pre-wedding rituals (votania, mousoukarfia) designed for protection and fertility, illustrating the continuity and modernization of folk magic within a migrant community and its role in reinforcing ethnic identity and social cohesion against perceived threats."
+    },
+    {
+      "chapter_title": "The enchanted garment",
+      "summary": "This chapter delves into cloth fetishism and the magical properties of garments in Greek culture, from ancient myths (Medea's poisoned robe, Leucothea's kerchief) to modern folk tales (fairies' veils). It explores how garments serve as tools for substitution, erotic bondage, and homeopathic magic, reflecting the belief that personal items can be imbued with power and used to influence individuals or achieve desired outcomes, often linked to 'black magic' and marginal figures like witches."
+    },
+    {
+      "chapter_title": "Erotic and fertility magic in the folk culture of modern Greece",
+      "summary": "This chapter surveys erotic and fertility magic in modern Greek folk culture, based on metaphorical and analogical thought. It links female fertility to vegetal cycles and explores rituals for conception (onion, leeches, hare excrement, holy water, tree fissures) and male potency. It also details binding spells to prevent sexual union, defensive measures taken by brides, and the ambivalent power of menstrual blood and sperm in love potions, highlighting magic's interaction with natural elements and bodily fluids."
+    },
+    {
+      "chapter_title": "Introduction: The theory of magic",
+      "summary": "This introduction traces the evolution of theoretical approaches to magic, from ancient philosophers (Gorgias, Plato) and early Christian theologians (St. Paul, Church Fathers) who condemned it as demonic, to 19th-century social anthropology. It sets the stage for exploring key questions: the universality of magic, its distinction from religion and science, its definition, analytical methods, characteristics of magicians, and its status as a technology."
+    },
+    {
+      "chapter_title": "Talking of magic",
+      "summary": "This chapter addresses the methodological challenges of studying magic, particularly the difficulty for academics to overcome modern skepticism and the reliance on knowledgeable informants for practical understanding. It contrasts modern detachment with historical and cultural contexts where magic was a 'realistic possibility,' drawing parallels between Dobuan sorcery and Apuleius’s narratives to illustrate enduring beliefs in magical power."
+    },
+    {
+      "chapter_title": "Magic as a point of reference in anthropological theory",
+      "summary": "This chapter examines how 'magic' has been a central, yet elusive, concept in anthropological theory. It critiques early evolutionist views (Tylor, Frazer, Lévy-Bruhl) that positioned magic as primitive thought, contrasting them with later sociological (Durkheim, Mauss) and functionalist (Malinowski, Evans-Pritchard) approaches. The author emphasizes that magic is a social construct, deeply embedded in worldview, rather than a mere individual psychological error."
+    },
+    {
+      "chapter_title": "Technology and magic",
+      "summary": "Alfred Gell argues that the opposition between technology and magic is unfounded. He proposes that technology itself is a form of magic, driven by imagination and the pursuit of 'costless' or improbable outcomes. He categorizes human technical capabilities into 'Technology of Production,' 'Technology of Reproduction,' and 'Technology of Enchantment,' suggesting that magic is a symbolic commentary on technical strategies, ultimately indistinguishable from advanced technology in modern societies."
+    },
+    {
+      "chapter_title": "The social dimension of magic",
+      "summary": "This chapter analyzes the social function of magic, building on theories from Spencer, Lang, Tylor, Frazer, and particularly Mauss. Mauss's three constituents of magic (magicians, rituals, and laws/concepts) are explored, emphasizing that magicians' identities are socially constructed and rituals are collective actions governed by collective beliefs. The chapter details Mauss's impersonal laws (contiguity, sameness, antithesis) and personified laws (demons, souls of the dead) as underlying principles of magical action."
+    },
+    {
+      "chapter_title": "Magic, gender and social 'racism'",
+      "summary": "This chapter explores the historical tendency to avoid studying magic by historians and its association with gender. It critiques the 'woman-nature' vs. 'man-culture' dichotomy, noting how magic was often attributed to women, linking it to perceived 'unbridled sexuality.' The chapter discusses historical accusations of witchcraft, particularly against women, and examines how magic served as a lens for social 'racism' and the marginalization of specific groups."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Mageia (μαγεία)",
+      "definition": "Originally a Persian term for a member of a Median tribe specializing in religious functions, later adopted in Greek to denote various magical actions, sometimes with a dismissive or neutral sense."
+    },
+    {
+      "term": "Goēteia (γοητεία) / Goēs (γόης)",
+      "definition": "Greek terms referring to enchantment or a magician, linguistically linked to 'singing a lament.' A goēs was a specialist in communicating with the dead, either to appease them or rouse them against the living."
+    },
+    {
+      "term": "Pharmakeia (φαρμακεία)",
+      "definition": "The use of poisonous substances, which in ancient Greek contexts was often ascribed to supernatural powers and thus linked to magic, making pharmakos (φαρμακός) synonymous with 'magician.'"
+    },
+    {
+      "term": "Katadesmoi (κατάδεσμοι)",
+      "definition": "Literally 'spells that restrain,' these were curse tablets, typically thin sheets of lead inscribed with requests to divinities of the dead (like Hekate or Hermes Psychopompos) or the dead themselves, intended to harm a living victim."
+    },
+    {
+      "term": "Phylakterion (φυλακτήριον)",
+      "definition": "An amulet or charm, derived from the verb phylassô ('to protect'), worn or carried for protection against harm, illness, or evil, such as a migraine prayer inscribed on metal."
+    },
+    {
+      "term": "Apotropaion",
+      "definition": "An object, image, or ritual act intended to ward off evil or protect against malevolent forces. The logic is often ambiguous, being dangerous to the opponent but protective to the bearer (e.g., the naked goddess, the Evil Eye apotropaion)."
+    },
+    {
+      "term": "Agalmatophilia",
+      "definition": "The desire of individuals to make love to statues, understood in ancient Greek culture as a magical outcome where statues were believed to be imbued with life and personality."
+    },
+    {
+      "term": "Abrasax (Aβράσαξ)",
+      "definition": "A mystic word frequently inscribed on magical gems, often accompanying the figure of alectrocephalos (a cock-headed, serpent-legged deity), associated with the Sun God and IAΩ."
+    },
+    {
+      "term": "Chnoubis",
+      "definition": "A Graeco-Egyptian lion-headed snake demon with rays, often depicted on green magical gems and believed to protect against indigestion, functioning as one of the thirty-six decans of the Zodiac."
+    },
+    {
+      "term": "Holy Rider",
+      "definition": "A common image on Byzantine amulets, often depicting a mounted warrior (sometimes identified with Solomon) triumphing over evil, used for general protection, or specifically against demons like Abyzou."
+    },
+    {
+      "term": "Evil Eye (Ophthalmos Ponēros / Vaskania / Thiarmos)",
+      "definition": "A widespread belief across Greek culture that an insistent, penetrating, or admiring gaze can inflict harm, misfortune, or illness. It is conceptualized as a social disease, often unintentional, stemming from envy, and countered by specific rituals (xematiasma) and charms."
+    },
+    {
+      "term": "Xematiasma (ξεμάτιασμα)",
+      "definition": "A ritual healing ceremony for the evil eye, typically involving symbolic acts like dripping oil into water, uttering prayer-like incantations, counting bodily apertures, licking the forehead, and spitting. It aims to identify, remove, and expel the harmful influence, often with Christian elements."
+    },
+    {
+      "term": "Lekanomanteia",
+      "definition": "A form of divination involving looking into a bowl of water, often with oil, to reveal information or diagnose conditions. It was a known ancient practice, some elements of which were preserved in the divinatory component of the xematiasma ritual."
+    },
+    {
+      "term": "Technology of Enchantment",
+      "definition": "Alfred Gell's concept classifying human capabilities beyond mere tool-using. It refers to technical strategies—including art, music, dance, rhetoric, and gifts—employed to influence others' thoughts and actions and secure their acquiescence in human intentions or projects."
+    },
+    {
+      "term": "Homoeopathic Magic",
+      "definition": "One of James Frazer's two universal laws of sympathy, based on the principle of similarity or resemblance ('like produces like'), where an action performed on an image or substitute is believed to affect the actual object or person."
+    },
+    {
+      "term": "Sympathetic Magic",
+      "definition": "A broader concept encompassing both homoeopathic and contagious magic, based on the belief that objects or actions can influence others through similarity or contact. It reflects a cosmos suffused with divine forces operating through interconnectedness."
+    },
+    {
+      "term": "Pact with the Devil",
+      "definition": "A notion that emerged and became widespread in Byzantium, particularly in hagiographic literature, where a magician or individual would offer their soul (or that of a third party) to the Devil in exchange for supernatural power or fulfillment of desires."
+    }
+  ],
+  "practical_system": {
+    "description": "The book presents Greek magic not as a unified, dogmatic system for modern practice, but as a dynamic and evolving set of beliefs and practices spanning ancient, medieval, and modern periods. It highlights magic's fundamental role as a practical method for influencing the world, often operating mechanistically through ritual action and symbolic correspondences rather than divine supplication. Its core philosophy involves accessing and manipulating cosmic forces, addressing personal and communal needs, and navigating the boundaries between the human, divine, and demonic. Magic is often described as a 'technology' of enchantment, production, or reproduction, aiming for 'costless' or idealized outcomes. Rituals frequently involve specific timings, locations, and material components, as well as 'magical speech' that is performative and transformative.",
+    "tools": [
+      "Lead curse tablets (katadesmoi) and wax dolls.",
+      "Magical gems made of various stones (jasper, hematite, chalcedony, carnelian) inscribed with deities, demons, unintelligible words, and charactêres.",
+      "Amulets made of bronze, silver, gold, glass, lead, or various materials (e.g., olive leaves, black beans, scissors, silk) worn for protection or specific magical effects.",
+      "Wands, often associated with magicians and witches like Circe.",
+      "Herbs, plants, and animal parts (e.g., raven bile, dog hair, hare excrement) for potions and spells.",
+      "Everyday objects imbued with magical significance: oil lamps, girdles, icons (real or fake), candles, locks, mirrors, earth (from sanctuaries or graves), specific foods (apples, pomegranates, onions).",
+      "Enchanted garments or personal items (e.g., kerchiefs, veils, underwear, magic mantles) used for substitution, binding, protection, or influence.",
+      "Sacred names and characters/symbols written on various media (papyrus, metal, parchment, stone, bay leaves, paper, trays)."
+    ],
+    "rituals": [
+      "Binding spells (katadesmoi) on lead tablets, often invoking underworld deities or untimely dead, for love, legal disputes, or harm.",
+      "Necromancy and appeasement of ghosts, sometimes involving statues or offerings, for prophecy or to resolve grievances.",
+      "Love charms using inscribed characters, potions (e.g., spitting into food/drink, turtle-dove egg daub, 'male drop' of sperm), or manipulated garments.",
+      "Healing spells for various ailments (e.g., migraine, jaundice, fever, insomnia) often involving prayers, invocations of saints/deities, specific characters, and symbolic actions (e.g., oil-in-water, counting body parts, licking forehead).",
+      "Expulsion spells to banish demons or evil influences to wild, desolate places (mountains, sea depths).",
+      "Fertility magic involving rituals like passing naked through tree fissures, eating specific fruits from nunneries, or preparing bread offerings.",
+      "Protective rituals (e.g., votania, mousoukarfia) using herbs, incense, or cloves, often performed during liminal states like weddings, for good luck or to ward off the evil eye.",
+      "Exorcisms, particularly in Byzantine traditions, to compel demons to reveal their names and depart from afflicted individuals.",
+      "Divination practices like lekanomanteia (water bowl scrying) or candle divination to predict future events or determine health outcomes."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Magic has always been a widespread phenomenon in Greek society, starting from Homer’s Circe (the fi rst ‘evil witch’ in Western history) and extending to the pervasive belief in the ‘evil eye’ in twenty-fi rst-century Greece. Indeed, magic is probably the most ancient and durable among social and religious phe nomena known to classical and other scholars, and it can be traced over a span of some three millennia in sources in the Greek language as well as in an impres sive range of visual and other media.",
+      "page": "3"
+    },
+    {
+      "text": "Magic, however, was hardly a Persian import. Its origin dated to unknown times in the Greek world and it was largely the province of local men and women. By the time of Heraclitus (c. 500 bce) male practitioners might be called μάγοι2 but more oft en, at least in the case of itinerant professionals, they had other names, such as γόης, μάντις or αγύρτης.",
+      "page": "17"
+    },
+    {
+      "text": "Magic, in other words, normally lacked the element of χάρις – of reciprocity; hence the notions of supplication or vow were absent or extremely rare in, say, defi xiones (κατάδεσμοι). Gods and demons were either commanded or otherwise ‘induced’ (Plato uses the ambiguous term πείθειν)3 to carry out the spell-operator’s invariably selfi sh acts.",
+      "page": "17"
+    },
+    {
+      "text": "The object of this chapter is to show how ancient magic and myth interacted. A good example of such interaction is Circe, the Homeric witch. As I hope to show, magical images engraved on amulets and imported to Greece from the Near East were combined with rituals and literary tradition to give shape to the mythical persona of Circe the witch.",
+      "page": "24"
+    },
+    {
+      "text": "Th is phylactery and the ‘migraine prayer’ and the long search to document their background in folk belief were to play a major role in Barb’s own development as a scholar. He was a deeply religious man, a practising Roman Catholic. In the Hitler years, he settled in London, where he eventually found a post as librarian at the Warburg Institute, itself long a centre for the study of the ‘wretched sub jects’ that Neugebauer had defended.",
+      "page": "21"
+    },
+    {
+      "text": "Our knowledge concerning the history of this genre is scarce at present.6 Th eir production could hardly have begun later than the beginning of the Roman Empire; it continued in the second and third centuries and ended in late antiquity – in keeping with the general demise of gem-cutting and the legal proscription of pagan magical arts, which became increasingly harsh from the middle of the fourth century.7 Th ough the workshops were probably situated in the eastern Mediterranean, nevertheless the scarcity of pieces of known prove nance8 must make us cautious.",
+      "page": "35"
+    },
+    {
+      "text": "Th eologically speaking, religion and magic were not only diametrically opposed (God vs. the Devil) but mutually exclusive: as Paul put it, ‘I do not want you to become sharers with the demons’.6 In reality, though, magic oft en drew upon the texts and practices of the established faith in furthering its aims.",
+      "page": "56"
+    },
+    {
+      "text": "Th is book brings together the articles that appeared in four successive special issues on magic (December 1999–December 2000) in the trimonthly Greek journal, Archaiologia kai Technes.",
+      "page": "13"
+    },
+    {
+      "text": "If we no longer recognize magic explicitly, it is because technology and magic, for us, are one and the same.",
+      "page": "167"
+    },
+    {
+      "text": "Th e belief in the evil eye, in the harmful power which the insistent and pene trating gaze has on admirable persons and objects, is a cultural idiom wide spread among people in the Mediterranean, who cite it in order to comprehend and subsequently cope with the consequences of unexpected and inexplicable misfortune.",
+      "page": "95"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This book offers an invaluable resource for understanding the multifaceted nature of magic across Greek civilization, from ancient practices like curse tablets and magical gems to Byzantine exorcisms and modern folk beliefs such as the evil eye. By compiling interdisciplinary perspectives, it highlights magic’s enduring social, psychological, and religious significance, challenging historical academic biases. Its chronological approach reveals the continuity, evolution, and syncretic adaptation of magical traditions, providing a nuanced view of magic as an integral, albeit often marginalized, component of Greek culture and belief systems. For esoteric practitioners, it offers a rich historical context for specific magical currents (e.g., grimoire traditions, folk magic) and demonstrates the operative principles and tools employed over millennia.",
+    "target_audience": "The primary target audience includes academics and students in Classical Studies, Byzantine Studies, Religious Studies, Folklore, Anthropology of Religion, and Western Esotericism. Scholars and practitioners of occultism and magic will find detailed insights into the historical development, practical applications, and philosophical underpinnings of specific magical traditions within the Greek context. Additionally, those interested in cultural history, social anthropology, and the intersection of belief systems will find it highly relevant."
+  }
+}

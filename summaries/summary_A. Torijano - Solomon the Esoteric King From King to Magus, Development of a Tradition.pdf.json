@@ -1,0 +1,158 @@
+{
+  "header": {
+    "title": "Solomon the Esoteric King: From King to Magus, Development of a Tradition",
+    "authors": [
+      "Pablo A. Torijano"
+    ],
+    "category": "Western Esotericism, History of Magic, Jewish Studies, Early Christianity, Occultism",
+    "keywords": [
+      "Solomon",
+      "exorcism",
+      "magic",
+      "astrology",
+      "Hermeticism",
+      "Testament of Solomon",
+      "Hygromanteia",
+      "Sepher ha-Razim",
+      "Son of David",
+      "demonology",
+      "amulets",
+      "Late Antiquity",
+      "grimoire"
+    ]
+  },
+  "central_thesis": "The figure of King Solomon underwent a radical transformation from his biblical portrayal as a wise king to an esoteric figure—an exorcist, hermetic sage, astrologer, and magician—in Late Antiquity and the early Middle Ages. This development was driven by reinterpretation of biblical traditions, absorption of Hellenistic monarchical ideologies, and incorporation of widespread syncretistic magical and astrological practices prevalent in Jewish, Christian, and pagan milieus of the time.",
+  "structure_content": [
+    {
+      "chapter_title": "I. General Introduction",
+      "summary": "Introduces the book's aim to understand the development of Solomon's character from biblical times to the 7th century CE, focusing on his various esoteric characterizations."
+    },
+    {
+      "chapter_title": "II. Solomon the King in the Hebrew Bible",
+      "summary": "Examines Solomon's biblical image as a wise king, temple builder, and 'Son of David,' noting the ambivalent portrayal and establishing the foundational elements for later esoteric developments."
+    },
+    {
+      "chapter_title": "III. Solomon the Hellenistic King in Second Temple Literature",
+      "summary": "Discusses Solomon's reinterpretation in Hellenistic Jewish texts (LXX, Ben Sira, Eupolemus, Josephus) as a wise, just ruler, with early hints of encyclopedic knowledge and dominion over spirits, influenced by Hellenistic monarchy."
+    },
+    {
+      "chapter_title": "IV. Solomon the Exorcist",
+      "summary": "Traces the emergence of Solomon as a powerful exorcist from the 1st century BCE, analyzing the 'Who are you?' formula in 11QPsAp^, Testament of Solomon, and Questions of Bartholomew, and exploring the role of the magic ring in demon control."
+    },
+    {
+      "chapter_title": "V. Solomon the Hermetic Sage",
+      "summary": "Analyzes Solomon's portrayal in Wisdom of Solomon and Josephus' Jewish Antiquities as a Hermetic sage possessing divine knowledge of the universe's elements, celestial bodies, and spirits, connecting it to popular Hermeticism and apologetic interests."
+    },
+    {
+      "chapter_title": "VI. Solomon the Son of David",
+      "summary": "Examines the 'Son of David' title, its messianic and exorcistic connotations for Solomon in Jewish pseudepigrapha (Psalms of Solomon, Pseudo-Philo), and its transfer to Jesus in Christian traditions, often in a polemical context."
+    },
+    {
+      "chapter_title": "VII. Solomon the Horseman",
+      "summary": "Explores archaeological evidence like amulets depicting Solomon as a horseman vanquishing a female demon, indicating the popular, everyday life manifestation of his exorcistic powers and its Jewish origin before Christianization."
+    },
+    {
+      "chapter_title": "VIII. Solomon the Astrologer",
+      "summary": "Investigates Solomon's role as an astrologer in texts such as the Testament of Solomon, Hygromanteia, and Selenodromion, showing how astrological entities (planets, decans) were integrated into demonology and used for practical magic."
+    },
+    {
+      "chapter_title": "IX. Solomon the Magician",
+      "summary": "Presents Solomon as the ultimate magician, drawing from texts like Sepher ha-Razim and the magical treatise within Hygromanteia, highlighting the syncretistic blend of astrological, demonological, and practical magical techniques for active reality manipulation."
+    },
+    {
+      "chapter_title": "X. Conclusion",
+      "summary": "Synthesizes the entire development of Solomon's image from a biblical king to an exorcist, Hermetic sage, astrologer, and magician, emphasizing the syncretistic influences and the persistence of these traditions into the Middle Ages."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Son of David",
+      "definition": "A title initially signifying Solomon's legitimate heirship to King David, which later evolved in Late Antiquity to denote a figure endowed with messianic, exorcistic, and magical powers, particularly in Jewish and early Christian traditions."
+    },
+    {
+      "term": "Theios Aner (Divine Man)",
+      "definition": "A Hellenistic concept describing individuals with extraordinary, often miraculous, abilities. This concept influenced the portrayal of Solomon as an exorcist and miracle worker, aligning his powers with divine attributes."
+    },
+    {
+      "term": "Exorcistic Formula 'Who are you?'",
+      "definition": "A recurring ritualistic question used to identify and assert dominance over demons, notably found in texts like 11QPsAp^ and the Testament of Solomon. It forms a core structural element in rituals of demon identification and control."
+    },
+    {
+      "term": "Seal of Solomon / Magic Ring",
+      "definition": "A potent magical instrument, typically a ring with an engraved seal, attributed to King Solomon. It is believed to grant authority over spirits and demons, enabling their subjugation and binding, and appears widely in ancient Jewish and Christian amulets and magical papyri."
+    },
+    {
+      "term": "Popular Hermeticism",
+      "definition": "A branch of Hermetic philosophy prevalent in Late Antiquity, distinct from 'learned' Hermeticism. It focused on practical applications of occult knowledge, including astrology, medicine, alchemy, and magic, emphasizing cosmic sympathy and the properties of natural elements."
+    },
+    {
+      "term": "Cosmic Sympathy",
+      "definition": "A fundamental principle in Hermetic and astrological magic, positing an interconnectedness and mutual influence among all elements of the cosmos (e.g., stars, planets, plants, animals, human fate). Knowledge of these sympathies allows for ritualistic manipulation of reality."
+    },
+    {
+      "term": "Hygromanteia (Divination through Water)",
+      "definition": "A Greek astrological and magical treatise ascribed to Solomon and his son Rehoboam. Despite its title, it functions as a manual for astrological timing, planetary magic, and various operative magical techniques, often involving the invocation of angels and demons."
+    },
+    {
+      "term": "Decans",
+      "definition": "Thirty-six ancient Egyptian divinities, adopted into Hellenistic astrology as 'rulers of time' (chronokratores) over ten-degree arcs of the zodiac. In Solomonic demonology, they are personified as demons, each associated with specific diseases or vices, subject to adjuration by the exorcist."
+    },
+    {
+      "term": "Sepher ha-Razim (Book of Mysteries)",
+      "definition": "A Jewish magical handbook from Late Antiquity, pseudepigraphically attributed to Noah and Solomon, containing an extensive catalogue of angelic hierarchies, demonological lore, and practical magical procedures tied to cosmological structures (seven heavens)."
+    },
+    {
+      "term": "Solomon's Collapse (PGM IV 850-906)",
+      "definition": "A specific magical technique described in the Greek Magical Papyri, ascribed to Solomon. It involves inducing a trance in a pure boy (medium) to facilitate divination or communication with spirits, often to gain secret knowledge or locate treasures."
+    }
+  ],
+  "practical_system": {
+    "description": "The practical magical system attributed to Solomon, as presented by Torijano, is a syncretistic blend of demonology, astrology, and ritual techniques. It is designed to control supernatural forces and manipulate reality for diverse ends, transitioning from a passive acquisition of esoteric knowledge (Hermetic sage) to active, operative magic (magician) with specific goals such as healing, divination, protection, influencing others, and finding treasures.",
+    "tools": [
+      "Magic Ring/Seal of Solomon: A primary implement imbued with divine power, used to subdue, bind, and command demons. It often features a specific engraving and is associated with the archangel Michael.",
+      "Magical Sword: A crucial ritual instrument used for drawing protective circles on the ground, inscribing magical symbols, and as a focal point of power in many operations. Its preparation often involves specific metals (e.g., 'iron that has brought death') and handles (e.g., 'black horn of a he-goat').",
+      "Inscribed Amulets/Charms: Portable magical items made from diverse materials (e.g., haematite, tin lamella, parchment), meticulously inscribed with divine, angelic, or demonic names, symbols, and adjuration formulas for protection, healing, or other magical aims.",
+      "Ritual Garments: Special, often white linen, unworn clothes worn by the practitioner and sometimes the medium, symbolizing purity and enhancing ritual effectiveness.",
+      "Plants and Roots: Specific botanical items chosen for their sympathetic properties and associations with planets or zodiacal signs. They are harvested at astrologically opportune times and used in concoctions, fumigations, or worn as amulets for medicinal, protective, or manipulative purposes (e.g., thorn apple for flux, peony for lunar powers, Chrysankathon for Zeus, cinquefoil for invisibility).",
+      "Offerings and Fumigations: Materials such as frankincense, wine, beer, honey, milk, sesame seeds, black cumin, and specific woods (e.g., grapepine wood) offered to invoked entities to gain their favor or compliance.",
+      "Vessels/Basins: Containers, typically filled with water, used in divinatory practices (lekanomancy, hydromancy) as a scrying surface for visions or apparitions of spirits.",
+      "Wax/Clay Figures: Anthropomorphic or zoomorphic effigies created for use in sympathetic magic, often representing targets of spells or desired outcomes.",
+      "Unbaked Bricks: Used as a ritual seat within a magical circle, providing a purified and stable base for the practitioner or medium during operations."
+    ],
+    "rituals": [
+      "Exorcism: Involves the identification of demons using formulas like 'Who are you?', followed by adjurations using divine names (e.g., YHWH, Sabaoth) and Solomon's inherent authority to compel spirits to perform tasks or be banished. Purity of the practitioner and sometimes a young medium is consistently emphasized.",
+      "Astrological Timing: Performing magical operations at precise astrological hours and days, determined by the ruling planets and their associated angels and demons, to ensure maximal efficacy. This requires knowledge of planetary positions, zodiacal signs, and the specific entities governing each temporal unit.",
+      "Divination (Hydromancy/Lekanomancy): Utilizing a basin filled with water and a pure boy as a medium to summon images of spirits or to receive prophetic visions and secret knowledge regarding future events or hidden matters.",
+      "Influencing Others: Employing specific plants, inscriptions, and rituals aligned with planetary influences (e.g., Aphrodite for love spells) to gain affection, respect, or exert control over individuals.",
+      "Protection and Warding: Creating and activating amulets inscribed with divine/angelic/demonic names, Solomonic seals, and symbolic images (such as a horseman spearing a female demon) to ward off evil spirits, diseases, and misfortunes.",
+      "Treasure Finding: Engaging in specific ritual sequences, including offerings, invocations, and precise astrological timing, to reveal and acquire hidden material wealth, often facilitated by summoned spirits or angelic assistance.",
+      "Ritual Purity and Fasting: The practitioner and any medium must undergo strict purification rituals, including abstaining from certain foods (meat, wine, fish, pork), sexual intercourse, and fasting for specified durations (e.g., three days), to enhance spiritual receptivity and magical power."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "In the following pages we will focus on the texts that deal with expelling demons and the use of an exorcistic formula \"who are you?\".",
+      "page": "60"
+    },
+    {
+      "text": "And I said to him: at the hour the demon appears to you, throw this ring at the chest of the demon, saying to him: Solomon summons you; and come back quickly to me, without thinking about anything that you are going to be afraid of.",
+      "page": "75"
+    },
+    {
+      "text": "This amulet was given in Egypt by the archangel Michael; finally it was given to King Solomon to subdue and chase every impure spirit, weakness, evil, terrifying thing, dreadful thing, shivering, two-, three-, four-, or half-day fever [...] either without form or with beauty of Serpents, Nereids or Onoskelis. [...] ilee, evil demon, flee, our Lord Jesus Christ chases you from the servant of God.",
+      "page": "96"
+    },
+    {
+      "text": "The entire art, grace and force of what is sought dwells in plants, words and stones. First of all, know the positions of the seven planets; because the seven planets lead the seven days of the week; let us begin from the first day of the week, that is, from the Sun's day. And in the first period we assume that the Sun rules, and, in the same way, we will explain the others that follow.",
+      "page": "182"
+    },
+    {
+      "text": "When you want to make the sword of the technique (with which you must draw the circle on the earth, and through which the pens of the other things will be made) it is necessary to do so in this way: take iron that has brought death, a sword or a blade or something similar; then give it to the blacksmith so that he may make for you a sword that may please you [...] and fix it with a handle made of the black horn of a he-goat, and do not cut anything with it and do not put it within a scabbard, and keep it in a pure spot. It is necessary that the artisan remains pure until he finishes making it. And use it only because of its power, and not for anything else.",
+      "page": "233"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "Torijano's work provides a comprehensive and deeply contextualized analysis of King Solomon's transformation into a central figure in Western Esotericism and Occultism. It meticulously traces the syncretistic development of his image across Jewish, Hellenistic, and early Christian traditions, highlighting the interplay of biblical exegesis, Hellenistic philosophy, and popular magical practices. The detailed examination of primary texts (Qumran scrolls, Testament of Solomon, Greek Magical Papyri, amulets, Hygromanteia, Sepher ha-Razim) offers crucial insights into the historical evolution and practical mechanics of Solomonic magic, demonstrating its widespread popularity and adaptability in Late Antiquity and beyond. The book is particularly valuable for differentiating between Solomon's evolving roles as exorcist, astrologer, and magician, showing a progression from passive knowledge to active manipulation of supernatural realities.",
+    "target_audience": "Scholars and researchers in Religious Studies, Jewish Studies, Early Christian Studies, History of Magic, and Western Esotericism. It is also highly relevant for advanced practitioners of occultism interested in the historical roots and operative principles of grimoire traditions linked to Solomon."
+  }
+}

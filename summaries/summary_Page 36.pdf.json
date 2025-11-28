@@ -1,0 +1,85 @@
+{
+  "header": {
+    "title": "Ancient Magick Conjuration of Power",
+    "authors": [
+      "Traditional / Anonymous (Manuscript Compiler)"
+    ],
+    "category": "Grimoire Magic",
+    "keywords": [
+      "Conjuration",
+      "Spirit Evocation",
+      "Arabic Magic",
+      "Names of Power",
+      "Berhatiah",
+      "Grimoire",
+      "Wafq",
+      "Esoteric Manuscript",
+      "Theurgy"
+    ]
+  },
+  "central_thesis": "This manuscript page presents a detailed and purportedly unique rendition of a spirit conjuration, integrating traditional Arabic names of power and the famous Berhatiah oath, likely intended for practitioners seeking to command spiritual entities for specific aims, potentially in conjunction with a triadic magic square.",
+  "structure_content": [
+    {
+      "chapter_title": "The Conjuration of Power and Servitor Command",
+      "summary": "This section provides the full text of a potent conjuration. It begins with a series of potent names, followed by direct commands to spirits such as \"قوم\" (folk/people) and \"عمرو بن جابره الأصهب\" (Amr ibn Jabirah al-As'hab, likely a prominent jinn/demon king). The conjuration emphasizes compulsion through divine names and threats. Crucially, it incorporates the \"Azimah al-Berhatiah\" (Oath of Berhatiah) and mentions its specific connection to a \"Wafq al-Thulathi\" (triadic magic square), indicating a combined verbal and talismanic magical operation. The text attributes this rendition to the \"disposition of Sheikh Ali Hamid Al-Ghor Al-Jawbi\" and concludes by noting the completion of the \"names of the assistants/servitors\" (اسماء الاعوان), confirming the operation's goal to acquire spiritual aid."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Conjuration (عزيمة)",
+      "definition": "A formal and often lengthy invocation or command used to summon and bind spiritual entities. In this context, it relies on specific divine or angelic names and oaths to compel obedience from jinn or elemental spirits."
+    },
+    {
+      "term": "Names of Power (اسماء)",
+      "definition": "Sacred or potent words, often Arabic or Hebrew, believed to embody divine attributes or specific spiritual forces. Their recitation is central to compelling spirits and manifesting magical intent. The text lists many such names, some of which appear to be barbarous words of evocation."
+    },
+    {
+      "term": "Berhatiah (برهتية)",
+      "definition": "An ancient and widely recognized magical oath or conjuration within Arabic and Islamic magical traditions, often referred to as 'The Oath of Barhatiah.' It consists of a series of potent names used to summon and control various classes of spirits. The text explicitly links this conjuration to the Berhatiah."
+    },
+    {
+      "term": "Wafq al-Thulathi (الوفق الثلاثي)",
+      "definition": "A 'triadic magic square,' a geometric and numerological talismanic device. The text indicates that this specific Berhatiah conjuration is 'المختصة بالوفق الثلاثي,' suggesting it is either recited over such a square, inscribed within one, or intrinsically linked to its creation and activation."
+    },
+    {
+      "term": "Awan (اعوان)",
+      "definition": "Spirit servitors or assistants. The conjuration aims to command these entities, and the text notes 'تمت اسماء الاعوان' (the names of the assistants are complete), implying a preceding or subsequent listing of specific servitor spirits."
+    }
+  ],
+  "practical_system": {
+    "description": "The core practical system presented is a powerful spirit conjuration, explicitly stated as linked to the Berhatiah oath and a 'triadic Wafq.' The operation involves a lengthy and precise recitation of specific names of power, direct commands to targeted spirits (e.g., 'Amr ibn Jabirah al-As'hab'), and compelling threats to ensure obedience. The mention of 'اسماء الاعوان' indicates the conjuration's purpose is to gain control over spirit servitors for the magician's will, with the specific intent ('لكل ما تريد') being left to the practitioner. The integration of the Wafq implies a layered ritual involving both vocalization and talismanic preparation or activation.",
+    "tools": [
+      "The complete text of the conjuration (as provided in the manuscript).",
+      "A 'Wafq al-Thulathi' (triadic magic square), which would need to be constructed or prepared according to specific guidelines not detailed in this excerpt.",
+      "Implicitly, the magician's voice for recitation and potentially writing implements for preparing the Wafq."
+    ],
+    "rituals": [
+      "Recitation of a long string of specific divine/angelic/spirit names to establish authority and power.",
+      "Issuing direct, compelling commands (e.g., 'اجب يا قوم', 'اجب يا عمرو بن جابره الأصهب') to evoke and bind spirits.",
+      "Repeated invocation of the 'Berhatiah' oath and associated names ('برهتية برهتية... تكرير تكوير...') to intensify the spiritual force.",
+      "Preparation and/or use of a 'Wafq al-Thulathi' (triadic magic square) as an integral part of the ritual, possibly for housing the summoned entity or anchoring the conjuration's power."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "The next pages from the manuscript have the names of the conjuration in a unique rendition that I haven't seen anywhere else.",
+      "page": "36"
+    },
+    {
+      "text": "اجب يا قوم و سهوه لد اسماء وهي شمر اثر بطعيا في بصطفياش بصطفياش بطقیاش نجرا طلاسم لحب يا هومه و طلسم له اسماء وي سمطتا شیطاش مطور شمر طیا لیوش را قیش را قيش شاهت الوجوه ان لم تسمعوا وتجيب والجب يا طلسم عمرو",
+      "page": "36"
+    },
+    {
+      "text": "عزيمة البرهتية المختصة بالوفق الثلاثي من تصرف الشيخ الي حامد الغر الجوبي لكل ما تريد في خرمي شير",
+      "page": "36"
+    },
+    {
+      "text": "وبرهتية برهتية برهتية برهتية تكرير تكوير نقلیه تقليد تعليم ثقالية طوران طوران بر جان سر جل مرجل مز جل ترقب ترقب برهش برهش عليش عملت خوطير خوطير فلتهود فلتهور برشانا بر شانا شاخ شاخ بزهاؤلاء لظهير موالح بشكلخ قير من ايغل انفيل يبسط اقتراب",
+      "page": "36"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This text offers valuable insight into the practical application of the Berhatiah oath within a grimoire context, demonstrating its syncretic nature by combining Arabic magical traditions with what appears to be a broader system of spirit command. The claim of a 'unique rendition' is significant for scholarly comparison, suggesting variations in magical transmission and adaptation across different manuscripts. It highlights how linguistic power (names, oaths) and sympathetic magic (Wafq) are interwoven in operative magic.",
+    "target_audience": "Scholars of Islamic magic, grimoire traditions, and Western Esotericism; practitioners of ceremonial magic interested in advanced spirit conjuration and the Berhatiah tradition; historians of occultism."
+  }
+}
