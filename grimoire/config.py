@@ -130,6 +130,13 @@ class Config:
     def CONFIG_FILE(self) -> Path:
         return CONFIG_FILE
 
+    @property
+    def log_file(self) -> Path:
+        from datetime import datetime
+        log_dir = Path.home() / ".local" / "share" / "grimoire" / "logs"
+        current_date = datetime.now().strftime("%d-%m-%Y")
+        return log_dir / f"{current_date}.log"
+
     def get(self, section: str, key: str) -> Any:
         return self._config.get(section, {}).get(key)
 
