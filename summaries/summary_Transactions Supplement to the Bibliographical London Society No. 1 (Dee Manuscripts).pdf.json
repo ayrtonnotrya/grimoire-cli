@@ -1,0 +1,109 @@
+{
+  "header": {
+    "title": "LISTS OF MANUSCRIPTS FORMERLY OWNED BY DR. JOHN DEE",
+    "authors": [
+      "M. R. JAMES, LITT.D., F.B.A., F.S.A."
+    ],
+    "category": "Bibliography, Occult History, Esotericism",
+    "keywords": [
+      "John Dee",
+      "Manuscripts",
+      "Alchemy",
+      "Astrology",
+      "Renaissance Occultism",
+      "Bibliographical Society",
+      "M. R. James"
+    ]
+  },
+  "central_thesis": "This work aims to reprint and elucidate the catalogue of Dr. John Dee's manuscript library from 1583, providing critical bibliographical information and historical context to trace the fate of his dispersed collection and highlight his intellectual pursuits in Renaissance esotericism and science.",
+  "structure_content": [
+    {
+      "chapter_title": "Preface",
+      "summary": "Introduces John Dee and the historical context of his manuscript library, including its initial cataloging in 1583, the subsequent raid and dispersal, and the efforts by M. R. James to identify and provide information about the extant manuscripts. Emphasizes Dee's role as a learned man and an alchemist/spiritualist, underscoring the importance of his library for understanding sixteenth-century English manuscript collections."
+    },
+    {
+      "chapter_title": "List A (C.C.C. Oxford, MS. 191)",
+      "summary": "Presents Dee's earliest known list of manuscripts from 1556, detailing items he owned, borrowed from institutions like Peterhouse and Queen's College, and purchased from sources like John Leland's library. This list primarily features works on mathematics, astronomy, perspective, alchemy, and various scientific fragments."
+    },
+    {
+      "chapter_title": "List B (Brit. Mus. Add. 35213)",
+      "summary": "An additional early list of Dee's manuscripts, largely mirroring and confirming entries found in List A, emphasizing texts on perspective, sphaerica, and Bacon's works. This list also dates to approximately 1583."
+    },
+    {
+      "chapter_title": "List C (Catalogus Librorum Bibliothecae Externae Mortlacensis D. Ioh. Dee A 1583 6 Sept.)",
+      "summary": "The primary catalogue of Dee's library from September 1583, meticulously listing individual manuscripts with their titles, formats, and often, their current locations or past ownership notes identified by M. R. James. This extensive list reveals the breadth and depth of Dee's interests in alchemy, astrology, natural philosophy, mathematics, and various occult sciences."
+    },
+    {
+      "chapter_title": "List of Manuscripts Noticed",
+      "summary": "A comprehensive index of all manuscripts mentioned or identified in the analysis, categorized by their current or last known institutional location (e.g., Cambridge, Dublin, Oxford, British Museum), providing a cross-reference for scholars seeking specific texts from Dee's collection."
+    },
+    {
+      "chapter_title": "Additional Note",
+      "summary": "Transcribes John Dee's personal account from 1592 regarding the pillage and valuation of his library, detailing the number of printed and written books, their estimated value, and the significant loss he incurred. This provides a direct, subjective insight into the scale and importance Dee himself placed on his collection."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "John Dee's Library",
+      "definition": "A historically significant private collection of manuscripts, primarily compiled by Dr. John Dee during the Renaissance, renowned for its extensive holdings in medieval scientific, mathematical, alchemical, astrological, and hermetic texts."
+    },
+    {
+      "term": "Dispersal of Dee's Library",
+      "definition": "The historical process by which Dee's vast manuscript collection was scattered, largely due to a raid on his Mortlake home in 1583 while he was abroad, and further through sales and litigation following his death, leading to its distribution among various institutional and private collections."
+    },
+    {
+      "term": "Manuscript Identification Methodology",
+      "definition": "The systematic approach employed by M. R. James to trace and identify Dee's manuscripts, utilizing various forensic bibliographical clues such as Dee's full signature, astrological symbols (e.g., Jupiter thrice repeated), 'ladder-mark' notations, ownership notes from his associates, and content analysis."
+    },
+    {
+      "term": "St. Augustine's, Canterbury",
+      "definition": "A notable source for a significant portion of Dee's manuscript acquisitions, indicating his strategic interest in recovering and preserving texts from dissolved monastic libraries, a key theme in his broader appeals for a national library."
+    },
+    {
+      "term": "Bibliographical Society",
+      "definition": "The scholarly organization responsible for the publication of this supplement, underscoring its commitment to the study of historical books and manuscripts, and providing a platform for detailed bibliographical research into important historical figures like John Dee."
+    }
+  ],
+  "practical_system": {
+    "description": "While the book itself is a bibliographical catalogue, it reveals the 'practical system' through the contents of John Dee's library. This system is primarily a synthesis of medieval and Renaissance natural philosophy, mathematics, astrology, and alchemy, geared towards understanding and manipulating the natural world and celestial influences. Dee's library emphasized the acquisition of operational knowledge for various esoteric arts, rather than purely theoretical speculation. It provided foundational texts for astrological elections, alchemical transmutations, optical illusions, and possibly geomantic and numerological divinations.",
+    "tools": [
+      "Astrolabes (e.g., 'Tract. de compositione astrolabii')",
+      "Quadrants and Planar Spheres (e.g., 'Prophatius Judeus de quadrante', 'Iordanus de planisphaerio')",
+      "Specula / Burning Mirrors (e.g., 'Euclidis specularia', 'Modus fabricae materialis speculi comburentis')",
+      "Alchemical Furnaces and Apparatus (implied by numerous alchemical tracts)",
+      "Mathematical and Optical Instruments (from works by Euclid, Alhacen, Bacon on optics and geometry)"
+    ],
+    "rituals": [
+      "Astrological Electional Magic (from texts by Ptolemy, Albumazar, Haly, Profacius Judaeus)",
+      "Alchemical Operations (from works by Roger Bacon, Raymund Lull, Morienus, Geber, Hermes, Albertus Magnus)",
+      "Observational Astronomy for Celestial Influences (from texts on astrolabes, quadrants, planar spheres)",
+      "Geometric and Optical Applications (from Euclid, Alhacen, Pecham, for constructing instruments or creating 'specula comburentia')"
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "In 1842 J. O. Halliwell edited for the Camden Society a volume entitled The Diary of Dr. John Dee. To the diary itself, which extends with considerable gaps over the years (1554) 1577 to 1601, he appended the catalogue of Dee's manuscript library, taken from an autograph MS. in the Gale Collection at Trinity College, Cambridge (O. 4. 20). This catalogue it is my purpose to reprint here, and to furnish what information I can about the books entered in it.",
+      "page": "4"
+    },
+    {
+      "text": "Bibliographers will readily agree that this is worth doing. They will remember that Dee was not merely an alchemist and spiritualist, but a really learned man, and one who had done his best, by petitions and otherwise, to stimulate interest in the rescuing of MSS. from the dissolved monastic libraries and to induce the sovereign to establish a central national collection of them.",
+      "page": "4"
+    },
+    {
+      "text": "The catalogue of 1583, then, cannot be regarded as a full record of the manuscripts which Dee possessed at the time of his death. Some volumes will be entered in it which were lost or destroyed soon after it was made, and, on the other hand, during the twenty-five years that elapsed between its making and Dee's death, it is not to be supposed that he did not make additions to his collection. There are, in fact, volumes in existence which contain his name, with dates of acquisition long subsequent to 1583.",
+      "page": "4-5"
+    },
+    {
+      "text": "Of the general character of the collection a few words must be said. It is in the main a special one, got together to assist Dee in his peculiar studies. Had it survived intact it would have been a first-class repository of mediaeval science books excluding medicine. Alchemy, astrology, astronomy, physics, geometry, optics, mathematics are all very copiously represented; and Dee appears to have given special attention to collecting the works of two great writers, Roger Bacon and Raymund Lull. There is very little theology, and no ancient poetry.",
+      "page": "8"
+    },
+    {
+      "text": "'The divers bookes of my late library, printed & anciently written, bound & unbound, were in all near 4000: the fourth part of which were the written bookes.' He values them at £2,000. ...'The furniture of the said library was of my getting together in above 40 yeares time from divers places beyond the seas, & some by my great search and labour gotten here in England'.",
+      "page": "23"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "M. R. James's work is a cornerstone for Renaissance occult studies, providing the definitive bibliographical key to John Dee's intellectual world. It meticulously documents the primary sources that shaped Dee's esoteric and scientific thought, offering unparalleled insight into the specific texts on alchemy, astrology, Hermeticism, and natural magic that informed his practices. This analysis is crucial for understanding the provenance of numerous surviving manuscripts and for reconstructing the intellectual currents that underpinned figures like Dee, placing his magical system within a robust scholarly and historical framework. It serves as an essential resource for tracing the transmission of occult knowledge from medieval monastic libraries into the hands of Renaissance practitioners.",
+    "target_audience": "Academic scholars specializing in the history of Western Esotericism, Occultism, Renaissance studies, history of science, bibliography, and manuscript studies. It is also of significant interest to practitioners of Hermetic Qabalah, grimoire traditions, and ceremonial magic seeking deeper historical and textual understanding of their lineage."
+  }
+}
