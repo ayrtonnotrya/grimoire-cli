@@ -50,6 +50,86 @@ def index(
     core.index_summaries(verbose=verbose)
 
 @app.command()
+def process_file(
+    file_path: str = typer.Argument(..., help="Path to the PDF file"),
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="Verbose output"),
+    json_output: bool = typer.Option(False, "--json", help="Output result as JSON")
+):
+    """Process a single file."""
+    path = Path(file_path)
+    if not path.exists():
+        if json_output:
+            print(json.dumps({"status": "error", "message": "File not found"}))
+        else:
+            console.print(f"[red]File not found: {file_path}[/red]")
+        raise typer.Exit(code=1)
+
+    result = core.process_single_file(path, verbose=verbose)
+    
+    if json_output:
+        print(json.dumps(result))
+    else:
+        core._print_process_result(console, result, verbose=verbose)
+    
+    if result["status"] == "error":
+        raise typer.Exit(code=2)
+
+@app.command()
+def index_file(
+    summary_path: str = typer.Argument(..., help="Path to the summary JSON file"),
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="Verbose output"),
+    json_output: bool = typer.Option(False, "--json", help="Output result as JSON")
+):
+    """Index a single summary file."""
+    path = Path(summary_path)
+    if not path.exists():
+        if json_output:
+            print(json.dumps({"status": "error", "message": "File not found"}))
+        else:
+            console.print(f"[red]File not found: {summary_path}[/red]")
+        raise typer.Exit(code=1)
+
+    result = core.index_single_file(path, verbose=verbose)
+    
+    if json_output:
+        print(json.dumps(result))
+    else:
+        core._print_index_result(console, result, verbose=verbose)
+
+    if result["status"] == "error":
+        raise typer.Exit(code=2)
+
+@app.command()
+def get_summary(
+    pdf_name: str = typer.Argument(..., help="Name of the PDF (e.g., 'book.pdf' or just 'book')"),
+    json_output: bool = typer.Option(True, "--json", help="Output as JSON (default: True)")
+):
+    """Get the full summary of a book as JSON."""
+    summary = core.get_summary_json(pdf_name)
+    if summary:
+        print(json.dumps(summary, indent=2))
+    else:
+        if json_output:
+            print(json.dumps({"status": "error", "message": "Summary not found"}))
+        else:
+            console.print(f"[red]Summary not found for: {pdf_name}[/red]")
+        raise typer.Exit(code=1)
+
+@app.command()
+def ask(
+    question: str = typer.Argument(..., help="The question to ask the Grimoire"),
+    json_output: bool = typer.Option(False, "--json", help="Output result as JSON")
+):
+    """Ask a question to the Grimoire (RAG)."""
+    answer = core.ask_question(question)
+    
+    if json_output:
+        print(json.dumps({"question": question, "answer": answer}))
+    else:
+        console.print(f"[bold]Question:[/bold] {question}")
+        console.print(f"[bold green]Answer:[/bold green]\n{answer}")
+
+@app.command()
 def search(
     query: str, 
     n: int = typer.Option(12, help="🎯 How many gems of wisdom to uncover (default: 12)"),

@@ -26,3 +26,8 @@ packages = [{include = "grimoire"}]
 
 [project.scripts]
 grimoire = "grimoire.cli:app"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.1,<10.0.0)"
+]

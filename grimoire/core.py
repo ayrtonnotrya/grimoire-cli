@@ -4,6 +4,7 @@ from collections import deque
 import os
 import concurrent.futures
 from pathlib import Path
+from typing import Optional
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
 from rich.panel import Panel
 from rich.console import Console
@@ -23,81 +24,7 @@ class Action(Enum):
     SKIP_FILE = auto()
     ABORT = auto()
 
-class RateLimiter:
-    def __init__(self, rpm: int, tpm: int):
-        self.rpm = rpm
-        self.tpm = tpm
-        self.locks = {}  # Lock per key
-        self.request_timestamps = {}  # Deque of timestamps per key
-        self.token_timestamps = {} # Deque of (timestamp, tokens) per key
-
-    def _get_lock(self, key: str):
-        if key not in self.locks:
-            self.locks[key] = threading.Lock()
-            self.request_timestamps[key] = deque()
-            self.token_timestamps[key] = deque()
-        return self.locks[key]
-
-    def acquire(self, key: str, estimated_tokens: int = 0):
-        """Blocks until the request can be made within rate limits."""
-        lock = self._get_lock(key)
-        
-        with lock:
-            now = time.time()
-            
-            # 1. Check RPM (Requests Per Minute)
-            # Remove timestamps older than 60 seconds
-            while self.request_timestamps[key] and self.request_timestamps[key][0] < now - 60:
-                self.request_timestamps[key].popleft()
-            
-            # If we are at the limit, wait
-            if len(self.request_timestamps[key]) >= self.rpm:
-                # Calculate wait time: time until the oldest request expires
-                oldest = self.request_timestamps[key][0]
-                wait_time = 60 - (now - oldest)
-                if wait_time > 0:
-                    logger.debug(f"Rate limit (RPM) hit for key ...{key[-4:]}. Waiting {wait_time:.2f}s")
-                    time.sleep(wait_time)
-                    # Re-evaluate now that we've slept
-                    now = time.time()
-                    while self.request_timestamps[key] and self.request_timestamps[key][0] < now - 60:
-                        self.request_timestamps[key].popleft()
-
-            # 2. Check TPM (Tokens Per Minute)
-            # Remove token entries older than 60 seconds
-            current_tokens = 0
-            while self.token_timestamps[key] and self.token_timestamps[key][0][0] < now - 60:
-                self.token_timestamps[key].popleft()
-            
-            for _, tokens in self.token_timestamps[key]:
-                current_tokens += tokens
-            
-            if current_tokens + estimated_tokens > self.tpm:
-                 # Find wait time
-                 needed = (current_tokens + estimated_tokens) - self.tpm
-                 freed = 0
-                 wait_until = now
-                 for ts, t in self.token_timestamps[key]:
-                     freed += t
-                     if freed >= needed:
-                         wait_until = ts + 60
-                         break
-                 
-                 wait_time = wait_until - now
-                 if wait_time > 0:
-                     logger.debug(f"Rate limit (TPM) hit for key ...{key[-4:]}. Waiting {wait_time:.2f}s")
-                     time.sleep(wait_time)
-                     now = time.time()
-                     # Cleanup after sleep
-                     while self.token_timestamps[key] and self.token_timestamps[key][0][0] < now - 60:
-                        self.token_timestamps[key].popleft()
-
-            # Record this request
-            self.request_timestamps[key].append(now)
-            self.token_timestamps[key].append((now, estimated_tokens))
-
-# Initialize global rate limiter
-rate_limiter = RateLimiter(rpm=config.rate_limits["rpm"], tpm=config.rate_limits["tpm"])
+from grimoire.keys import key_manager
 
 def get_latest_library_tree(directory: Path) -> Path:
     """Finds the latest library_tree_*.txt file in the directory."""
@@ -134,6 +61,17 @@ def check_summary_exists(pdf_name: str) -> bool:
     """Checks if a summary file already exists for the given PDF."""
     summary_path = config.summaries_dir / f"summary_{pdf_name}.json"
     return summary_path.exists()
+
+def process_single_file(pdf_path: Path, verbose: bool = False) -> dict:
+    """Processes a single PDF file."""
+    api_keys = config.gemini_api_keys
+    if not api_keys:
+        return {"status": "error", "file": pdf_path.name, "message": "No API keys configured"}
+    
+    if check_summary_exists(pdf_path.name):
+        return {"status": "skipped", "file": pdf_path.name, "message": "Summary already exists"}
+
+    return generate_summary(pdf_path, api_keys)
 
 def process_library(list_file_path: str, verbose: bool = False):
     """Main processing function."""
@@ -324,7 +262,9 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
     
     while available_keys:
         # Pick a key
-        api_key = random.choice(available_keys)
+        api_key = key_manager.get_best_key()
+        if not api_key:
+             return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
         client = genai.Client(api_key=api_key)
         
         try:
@@ -343,7 +283,7 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
                 estimated_tokens = int(pdf_path.stat().st_size / 4)
 
             # Acquire rate limit
-            rate_limiter.acquire(api_key, estimated_tokens)
+            key_manager.acquire(api_key, estimated_tokens)
 
             # Generate content
             response = client.models.generate_content(
@@ -413,7 +353,7 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
                     # Let's rotate the key just in case, instead of failing the file.
                     if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
                          logger.warning(f"Max retries for 429 exceeded. Assuming quota exhaustion for key ...{api_key[-4:]}. Rotating.")
-                         config.exhausted_keys.add(api_key)
+                         key_manager.mark_exhausted(api_key)
                          if api_key in available_keys:
                              available_keys.remove(api_key)
                          retry_count = 0 # Reset retry count for new key
@@ -430,6 +370,14 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
 
     return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
 
+
+def index_single_file(summary_path: Path, verbose: bool = False) -> dict:
+    """Indexes a single summary file."""
+    api_keys = config.gemini_api_keys
+    if not api_keys:
+        return {"status": "error", "file": summary_path.name, "message": "No API keys configured"}
+    
+    return _index_single_book(summary_path, api_keys)
 
 def index_summaries(verbose: bool = False):
     """Reads all summary files and indexes them in ChromaDB."""
@@ -678,7 +626,9 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     
     while available_keys:
         # Pick a key (randomly to distribute load)
-        current_key = random.choice(available_keys)
+        current_key = key_manager.get_best_key()
+        if not current_key:
+             return {"status": "skipped", "file": pdf_name, "message": "All API Keys exhausted (Daily Limit)"}
         
         try:
             # Generate embeddings in parallel (outside the lock)
@@ -694,7 +644,7 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
             logger.warning(f"Error processing {pdf_name}: {msg}")
 
             if action == Action.ROTATE_KEY:
-                config.exhausted_keys.add(current_key)
+                key_manager.mark_exhausted(current_key)
                 if current_key in available_keys:
                     available_keys.remove(current_key)
                 logger.error(f"{msg} - Rotating key.")
@@ -711,7 +661,7 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
                     # If max retries exceeded for 429, rotate key
                     if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
                          logger.warning(f"Max retries for 429 exceeded. Assuming quota exhaustion for key ...{current_key[-4:]}. Rotating.")
-                         config.exhausted_keys.add(current_key)
+                         key_manager.mark_exhausted(current_key)
                          if current_key in available_keys:
                              available_keys.remove(current_key)
                          retry_count = 0
@@ -726,3 +676,113 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     
     # If we exited the loop, it means we ran out of keys
     return {"status": "skipped", "file": pdf_name, "message": "All keys exhausted."}
+def get_summary_json(pdf_name: str) -> Optional[dict]:
+    """Retrieves the full JSON summary for a given PDF name."""
+    summary_path = config.summaries_dir / f"summary_{pdf_name}.json"
+    if not summary_path.exists():
+        # Try finding it without "summary_" prefix or .json if user passed raw name
+        candidates = list(config.summaries_dir.glob(f"*{pdf_name}*"))
+        if not candidates:
+            return None
+        summary_path = candidates[0]
+
+    try:
+        with open(summary_path, "r") as f:
+            return json.load(f)
+    except Exception as e:
+        logger.error(f"Failed to load summary {summary_path}: {e}")
+        return None
+
+def ask_question(query: str) -> str:
+    """Answers a question using RAG."""
+    from grimoire import db
+    
+    # 1. Search for relevant chunks (Fetch more to optimize context)
+    results = db.query_documents(query, n_results=1000)
+    
+    if not results['documents'] or not results['documents'][0]:
+        return "I couldn't find any relevant information in your library to answer that question."
+    
+    # 2. Prepare for Dynamic Context Construction
+    all_documents = results['documents'][0]
+    all_metadatas = results['metadatas'][0]
+    
+    # Get best key for token counting and generation
+    key = key_manager.get_best_key()
+    if not key:
+        return "Error: No API keys available."
+
+    try:
+        client = genai.Client(api_key=key)
+        tpm_limit = config.rate_limits["tpm"]
+        safe_tpm_limit = int(tpm_limit * 0.8)
+        
+        # Binary search or iterative pruning could work. 
+        # Iterative pruning from the end (least relevant) is safer for relevance.
+        
+        current_n = len(all_documents)
+        step = 100
+        
+        while current_n > 0:
+            # Slice documents
+            current_docs = all_documents[:current_n]
+            current_metas = all_metadatas[:current_n]
+            
+            context_parts = []
+            for i, doc in enumerate(current_docs):
+                meta = current_metas[i]
+                source = meta.get('title', 'Unknown Source')
+                context_parts.append(f"Source: {source}\nContent: {doc}")
+            
+            context = "\n\n".join(context_parts)
+            
+            prompt = f"""You are a wise and knowledgeable Grimoire, an expert in the esoteric arts.
+Use the following context from the user's library to answer their question.
+If the answer is not in the context, state that you cannot find it in the library, but you may offer general knowledge if explicitly asked.
+Focus on being pedagogical, clear, and accurate to the provided texts.
+
+Context:
+{context}
+
+Question: {query}
+
+Answer:"""
+
+            # Count tokens
+            try:
+                count_resp = client.models.count_tokens(
+                    model=config.model_name,
+                    contents=prompt
+                )
+                total_tokens = count_resp.total_tokens
+                
+                logger.info(f"Context size: {current_n} snippets. Total tokens: {total_tokens}. Limit: {safe_tpm_limit}")
+                
+                if total_tokens <= safe_tpm_limit:
+                    # Safe to proceed
+                    # Acquire rate limit (actual count + buffer for output)
+                    key_manager.acquire(key, estimated_tokens=total_tokens + 500)
+                    
+                    response = client.models.generate_content(
+                        model=config.model_name,
+                        contents=prompt
+                    )
+                    return response.text
+                
+                else:
+                    # Prune and retry
+                    logger.info(f"Token limit exceeded ({total_tokens} > {safe_tpm_limit}). Pruning {step} snippets.")
+                    current_n -= step
+                    if current_n < 0: current_n = 0 # Should not happen with loop condition but safety first
+            
+            except Exception as e:
+                logger.error(f"Error during token counting/generation: {e}")
+                # If it's a rate limit error during counting, we might want to back off or try another key?
+                # For now, let's assume it's a hard error and break or return
+                return f"An error occurred while optimizing context: {e}"
+
+        return "Error: Could not construct a context within token limits."
+
+    except Exception as e:
+        logger.error(f"Error initializing client or process: {e}")
+        return f"An error occurred: {e}"

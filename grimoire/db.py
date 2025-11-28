@@ -7,6 +7,7 @@ import time
 import threading
 import random
 from grimoire.logger import logger
+from grimoire.keys import key_manager
 
 DB_LOCK = threading.Lock()
 _CLIENT = None
@@ -18,6 +19,16 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
         if not api_key:
             raise ValueError("Gemini API Key not configured")
         
+        # Use KeyManager to get best key if possible, or just use the first one from config
+        # Since EmbeddingFunction is instantiated by Chroma, we might not have easy control per-call.
+        # But we can rotate inside here if we want.
+        # For now, let's just use the configured key but respect rate limits via KeyManager?
+        # Actually, KeyManager is better suited for explicit calls. 
+        # Let's stick to the simple rotation or use KeyManager if we can.
+        
+        # We will use KeyManager to acquire rate limit at least.
+        key_manager.acquire(api_key, estimated_tokens=len(str(input)) // 4)
+
         client = genai.Client(api_key=api_key)
         model = "gemini-embedding-001" # Correct embedding model name
         
@@ -56,6 +67,9 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
     """Generates embeddings for a list of texts using a specific API key."""
     if api_key in config.exhausted_keys:
         raise RuntimeError("API Key exhausted (Daily Limit)")
+    
+    # Acquire rate limit
+    key_manager.acquire(api_key, estimated_tokens=len(str(texts)) // 4)
 
     client = genai.Client(api_key=api_key)
     model = "gemini-embedding-001"
@@ -100,7 +114,7 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
                     
                     # Check for Daily Limit
                     if "RequestsPerDay" in str(e) or "Daily" in str(e):
-                        config.exhausted_keys.add(api_key)
+                        key_manager.mark_exhausted(api_key)
                         raise RuntimeError(f"Daily Rate Limit Exceeded (Key: {masked_key})") from e
                     
                     raise RuntimeError(f"{e} (Key: {masked_key})") from e
