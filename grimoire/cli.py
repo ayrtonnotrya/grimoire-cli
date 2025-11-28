@@ -52,7 +52,7 @@ def index(
 @app.command()
 def search(
     query: str, 
-    n: int = typer.Option(5, help="Number of results"),
+    n: int = typer.Option(12, help="Number of results"),
     json_output: bool = typer.Option(False, "--json", help="Output results as JSON")
 ):
     """Search the library."""

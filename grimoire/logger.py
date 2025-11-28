@@ -7,8 +7,8 @@ def setup_logger(name="grimoire"):
     """Sets up a logger that writes to a daily log file in the logs/ directory."""
     
     # Create logs directory if it doesn't exist
-    log_dir = Path("logs")
-    log_dir.mkdir(exist_ok=True)
+    log_dir = Path.home() / ".local" / "share" / "grimoire" / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
     
     # Generate filename based on current date
     current_date = datetime.now().strftime("%d-%m-%Y")
