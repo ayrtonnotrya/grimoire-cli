@@ -66,7 +66,7 @@ def generate_embeddings(texts: list[str], api_key: str) -> list[list[float]]:
     # With 4 threads, max 8k tokens if all hit at once.
     # 100 RPM limit is safe (1 request per 5 chunks).
     batch_size = 5
-    delay_seconds = 2 # Small delay just to be nice
+    delay_seconds = 10 # Increased to 10s to stay safely under 30k TPM
     
     embeddings = []
     total_texts = len(texts)

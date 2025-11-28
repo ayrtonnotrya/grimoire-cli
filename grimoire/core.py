@@ -432,17 +432,36 @@ def index_summaries(verbose: bool = False):
                         progress.refresh() # Force refresh
                         if verbose or result["status"] == "error" or result.get("path_updated"):
                              _print_index_result(progress.console, result)
+                        
+                        # Check for global exhaustion
+                        if result["status"] == "skipped" and "All API Keys exhausted" in result.get("message", ""):
+                            progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
+                            progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                            executor.shutdown(wait=False, cancel_futures=True)
+                            break
+
                     except Exception as e:
                         error_msg = f"Critical worker error: {e}"
                         progress.console.print(f"[red]{error_msg}[/red]")
                         logger.error(error_msg, exc_info=True)
         else:
             for file_path in to_index:
+                # Check exhaustion before starting next
+                if len(config.exhausted_keys) == len(api_keys):
+                     progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
+                     progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                     break
+
                 result = _index_single_book(file_path, api_keys)
                 progress.advance(task_id)
                 progress.refresh()
                 if verbose or result["status"] == "error" or result.get("path_updated"):
                      _print_index_result(progress.console, result)
+                
+                if result["status"] == "skipped" and "All API Keys exhausted" in result.get("message", ""):
+                     progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
+                     progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                     break
 
 def _print_index_result(console, result):
     if result["status"] == "skipped":
