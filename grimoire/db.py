@@ -293,3 +293,8 @@ def remove_duplicates() -> int:
         
     return len(ids_to_delete)
 
+def count_documents() -> int:
+    """Returns the total number of documents in the collection."""
+    collection = get_collection()
+    return collection.count()
+

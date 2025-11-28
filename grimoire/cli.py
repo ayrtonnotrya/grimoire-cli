@@ -208,5 +208,11 @@ def deduplicate():
         console.print("[green]No duplicates found.[/green]")
 
 
+@app.command()
+def report():
+    """Generates a statistical report of the library."""
+    from grimoire.stats import print_report
+    print_report()
+
 if __name__ == "__main__":
     app()
