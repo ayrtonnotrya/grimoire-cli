@@ -1,3 +1,6 @@
+import time
+import threading
+from collections import deque
 import os
 import concurrent.futures
 from pathlib import Path
@@ -12,6 +15,82 @@ from grimoire.schemas import BookSummary, BOOK_SUMMARY_SCHEMA
 import json
 
 console = Console()
+
+class RateLimiter:
+    def __init__(self, rpm: int, tpm: int):
+        self.rpm = rpm
+        self.tpm = tpm
+        self.locks = {}  # Lock per key
+        self.request_timestamps = {}  # Deque of timestamps per key
+        self.token_timestamps = {} # Deque of (timestamp, tokens) per key
+
+    def _get_lock(self, key: str):
+        if key not in self.locks:
+            self.locks[key] = threading.Lock()
+            self.request_timestamps[key] = deque()
+            self.token_timestamps[key] = deque()
+        return self.locks[key]
+
+    def acquire(self, key: str, estimated_tokens: int = 0):
+        """Blocks until the request can be made within rate limits."""
+        lock = self._get_lock(key)
+        
+        with lock:
+            now = time.time()
+            
+            # 1. Check RPM (Requests Per Minute)
+            # Remove timestamps older than 60 seconds
+            while self.request_timestamps[key] and self.request_timestamps[key][0] < now - 60:
+                self.request_timestamps[key].popleft()
+            
+            # If we are at the limit, wait
+            if len(self.request_timestamps[key]) >= self.rpm:
+                # Calculate wait time: time until the oldest request expires
+                oldest = self.request_timestamps[key][0]
+                wait_time = 60 - (now - oldest)
+                if wait_time > 0:
+                    logger.debug(f"Rate limit (RPM) hit for key ...{key[-4:]}. Waiting {wait_time:.2f}s")
+                    time.sleep(wait_time)
+                    # Re-evaluate now that we've slept
+                    now = time.time()
+                    while self.request_timestamps[key] and self.request_timestamps[key][0] < now - 60:
+                        self.request_timestamps[key].popleft()
+
+            # 2. Check TPM (Tokens Per Minute)
+            # Remove token entries older than 60 seconds
+            current_tokens = 0
+            while self.token_timestamps[key] and self.token_timestamps[key][0][0] < now - 60:
+                self.token_timestamps[key].popleft()
+            
+            for _, tokens in self.token_timestamps[key]:
+                current_tokens += tokens
+            
+            if current_tokens + estimated_tokens > self.tpm:
+                 # Find wait time
+                 needed = (current_tokens + estimated_tokens) - self.tpm
+                 freed = 0
+                 wait_until = now
+                 for ts, t in self.token_timestamps[key]:
+                     freed += t
+                     if freed >= needed:
+                         wait_until = ts + 60
+                         break
+                 
+                 wait_time = wait_until - now
+                 if wait_time > 0:
+                     logger.debug(f"Rate limit (TPM) hit for key ...{key[-4:]}. Waiting {wait_time:.2f}s")
+                     time.sleep(wait_time)
+                     now = time.time()
+                     # Cleanup after sleep
+                     while self.token_timestamps[key] and self.token_timestamps[key][0][0] < now - 60:
+                        self.token_timestamps[key].popleft()
+
+            # Record this request
+            self.request_timestamps[key].append(now)
+            self.token_timestamps[key].append((now, estimated_tokens))
+
+# Initialize global rate limiter
+rate_limiter = RateLimiter(rpm=config.rate_limits["rpm"], tpm=config.rate_limits["tpm"])
 
 def get_latest_library_tree(directory: Path) -> Path:
     """Finds the latest library_tree_*.txt file in the directory."""
@@ -109,15 +188,36 @@ def process_library(list_file_path: str, verbose: bool = False):
                     futures.append(executor.submit(generate_summary, pdf_path, key))
                 
                 for future in concurrent.futures.as_completed(futures):
-                    result = future.result()
-                    progress.advance(task_id)
-                    _print_process_result(progress.console, result)
+                    try:
+                        result = future.result()
+                        progress.advance(task_id)
+                        _print_process_result(progress.console, result)
+                        
+                        # Check for global exhaustion
+                        if result["status"] == "skipped" and "All API Keys exhausted" in result["message"]:
+                            progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
+                            progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                            executor.shutdown(wait=False, cancel_futures=True)
+                            break
+                    except concurrent.futures.CancelledError:
+                        continue
         else:
             # Sequential Processing
             for pdf_path in pdfs_to_process:
+                # Check exhaustion before starting next
+                if len(config.exhausted_keys) == len(api_keys):
+                     progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
+                     progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                     break
+
                 result = generate_summary(pdf_path, api_keys[0])
                 progress.advance(task_id)
                 _print_process_result(progress.console, result)
+                
+                if result["status"] == "skipped" and "All API Keys exhausted" in result["message"]:
+                     progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
+                     progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                     break
 
 def _print_process_result(console, result):
     color = "green" if result["status"] == "success" else "red"
@@ -135,8 +235,16 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
     if not api_key:
         return {"status": "error", "file": pdf_path.name, "message": "Gemini API Key not provided."}
 
+    # Smart Key Switching: If assigned key is exhausted, try to find a replacement
     if api_key in config.exhausted_keys:
-        return {"status": "skipped", "file": pdf_path.name, "message": "API Key exhausted (Daily Limit)"}
+        available_keys = [k for k in config.gemini_api_keys if k not in config.exhausted_keys]
+        if available_keys:
+            import random
+            new_key = random.choice(available_keys)
+            logger.info(f"Key ...{api_key[-4:]} exhausted. Switching to ...{new_key[-4:]} for {pdf_path.name}")
+            api_key = new_key
+        else:
+            return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
 
     client = genai.Client(api_key=api_key)
     
@@ -156,6 +264,30 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
     
     with open(prompt_path, "r") as f:
         prompt_text = f.read()
+
+    # Count tokens accurately
+    try:
+        token_count_resp = client.models.count_tokens(
+            model=config.model_name,
+            contents=[
+                types.Part.from_bytes(
+                    data=pdf_data,
+                    mime_type='application/pdf',
+                ),
+                prompt_text
+            ]
+        )
+        estimated_tokens = token_count_resp.total_tokens
+        logger.debug(f"Token count for {pdf_path.name}: {estimated_tokens}")
+
+    except Exception as e:
+        logger.warning(f"Failed to count tokens for {pdf_path.name}: {e}. Using fallback estimation.")
+        # Fallback: 1 token per 4 bytes
+        file_size = pdf_path.stat().st_size
+        estimated_tokens = int(file_size / 4)
+
+    # Acquire rate limit lock
+    rate_limiter.acquire(api_key, estimated_tokens)
 
     try:
         response = client.models.generate_content(
@@ -212,18 +344,20 @@ def generate_summary(pdf_path: Path, api_key: str) -> dict:
              return {"status": "error", "file": pdf_path.name, "message": error_msg}
 
     except Exception as e:
-        error_msg = f"Generation failed: {e}"
-        if "429" in str(e) or "ResourceExhausted" in str(e):
-             masked_key = f"...{api_key[-4:]}"
-             
-             # Check for Daily Limit
-             if "RequestsPerDay" in str(e) or "Daily" in str(e):
-                 config.exhausted_keys.add(api_key)
-                 error_msg = f"Daily Rate Limit Exceeded (Key: {masked_key}) - Key disabled for session"
-             else:
-                 error_msg = f"Rate Limit Exceeded (Key: {masked_key})"
+        masked_key = f"...{api_key[-4:]}"
+        error_str = str(e)
         
-        logger.error(f"Error processing {pdf_path.name}: {e}", exc_info=True)
+        # Enhanced Rate Limit Handling
+        if "429" in error_str or "ResourceExhausted" in error_str:
+             # Since we have a RateLimiter for RPM/TPM, any 429 that gets here is likely a Daily Quota issue.
+             # We mark the key as exhausted to prevent further attempts in this session.
+             config.exhausted_keys.add(api_key)
+             error_msg = f"Daily Rate Limit Exceeded (Key: {masked_key}) - Key disabled for session"
+             logger.error(f"429/ResourceExhausted for {pdf_path.name} with key {masked_key}. Marking key as exhausted. Full error: {repr(e)}")
+        else:
+             error_msg = f"Generation failed: {e}"
+             logger.error(f"Error processing {pdf_path.name}: {repr(e)}", exc_info=True)
+        
         return {"status": "error", "file": pdf_path.name, "message": error_msg}
 
 
