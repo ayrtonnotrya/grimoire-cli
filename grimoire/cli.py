@@ -5,12 +5,12 @@ from grimoire import core, db
 import json
 from pathlib import Path
 
-app = typer.Typer(help="Grimoire: Magic Book Summarization and Search Tool")
+app = typer.Typer(help="✨ Grimoire: Transform your entire library into a searchable oracle of knowledge! Harness AI to distill wisdom from countless books and discover insights instantly. 🔮")
 console = Console()
 
 @app.command()
 def init():
-    """Initialize configuration."""
+    """🌟 Begin your magical journey! Set up Grimoire with your API key and unlock the power to transform any library into an intelligent, searchable knowledge base."""
     console.print("[bold green]Initializing Grimoire...[/bold green]")
     
     api_key = typer.prompt("Enter your Gemini API Key", hide_input=True)
@@ -29,11 +29,11 @@ def init():
 
 @app.command()
 def process(
-    list_file: str = typer.Option(..., "--list", "-l", help="Path to the library tree file"),
-    index: bool = typer.Option(True, help="Auto-index after processing"),
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose output")
+    list_file: str = typer.Option(..., "--list", "-l", help="📚 Path to your library tree - the gateway to infinite knowledge"),
+    index: bool = typer.Option(True, help="⚡ Auto-index summaries for instant searchability"),
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 See the magic happen in real-time")
 ):
-    """Process books from the library list."""
+    """🎭 Unleash the power of AI! Process entire libraries, extracting deep summaries and insights from every book. Watch as wisdom is distilled and made searchable."""
     console.print(f"Processing library from: {list_file}")
     core.process_library(list_file, verbose=verbose)
     
@@ -43,19 +43,19 @@ def process(
 
 @app.command()
 def index(
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose output")
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 Watch the indexing magic unfold")
 ):
-    """Index existing summaries into the database."""
+    """🗂️ Transform summaries into a lightning-fast semantic search engine! Build a vector database that understands meaning, not just keywords."""
     console.print("[bold]Starting indexing...[/bold]")
     core.index_summaries(verbose=verbose)
 
 @app.command()
 def search(
     query: str, 
-    n: int = typer.Option(12, help="Number of results"),
-    json_output: bool = typer.Option(False, "--json", help="Output results as JSON")
+    n: int = typer.Option(12, help="🎯 How many gems of wisdom to uncover (default: 12)"),
+    json_output: bool = typer.Option(False, "--json", help="📋 Machine-readable oracle output")
 ):
-    """Search the library."""
+    """🔮 Ask and you shall receive! Search across your entire library with semantic understanding. Discover hidden connections and profound insights from thousands of pages in seconds."""
     if not json_output:
         console.print(f"Searching for: {query}")
         
@@ -115,7 +115,7 @@ def search(
 
 @app.command()
 def deduplicate():
-    """Remove duplicate documents from the database."""
+    """🧹 Purify your knowledge base! Remove duplicate entries and keep your library pristine and efficient."""
     count = db.remove_duplicates()
     if count > 0:
         console.print(f"[bold green]Removed {count} duplicate documents.[/bold green]")
