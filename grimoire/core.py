@@ -188,8 +188,10 @@ def process_library(list_file_path: str, verbose: bool = False):
         
         # Parallel Processing
         if len(api_keys) > 1:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
-                futures = []
+            # Use manual executor management to avoid hanging on shutdown
+            executor = concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys))
+            futures = []
+            try:
                 for i, pdf_path in enumerate(pdfs_to_process):
                     # Pass ALL keys to the worker, let it manage retries
                     futures.append(executor.submit(generate_summary, pdf_path, api_keys))
@@ -198,16 +200,20 @@ def process_library(list_file_path: str, verbose: bool = False):
                     try:
                         result = future.result()
                         progress.advance(task_id)
-                        _print_process_result(progress.console, result)
+                        _print_process_result(progress.console, result, verbose=verbose)
                         
                         # Check for global exhaustion
                         if result["status"] == "skipped" and "All API Keys exhausted" in result["message"]:
                             progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
                             progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
+                            # Cancel all other futures and shutdown immediately
                             executor.shutdown(wait=False, cancel_futures=True)
-                            break
+                            return # Exit function immediately
                     except concurrent.futures.CancelledError:
                         continue
+            finally:
+                # Ensure executor is shut down
+                executor.shutdown(wait=False)
         else:
             # Sequential Processing
             for pdf_path in pdfs_to_process:
@@ -219,20 +225,28 @@ def process_library(list_file_path: str, verbose: bool = False):
 
                 result = generate_summary(pdf_path, api_keys)
                 progress.advance(task_id)
-                _print_process_result(progress.console, result)
+                _print_process_result(progress.console, result, verbose=verbose)
                 
                 if result["status"] == "skipped" and "All API Keys exhausted" in result["message"]:
                      progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
                      progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                      break
 
-def _print_process_result(console, result):
+def _print_process_result(console, result, verbose: bool = False):
     color = "green" if result["status"] == "success" else "red"
     icon = "✓" if result["status"] == "success" else "✗"
     
+    msg = f"[{color}]{icon} {result['file']}[/{color}]"
+    if result.get("masked_key"):
+        msg += f" [dim]({result['masked_key']})[/dim]"
+    msg += f"\n[dim]{result['message']}[/dim]"
+    
+    if verbose and result.get("full_error"):
+        msg += f"\n[dim red]Full Error: {result['full_error']}[/dim red]"
+
     console.print(
         Panel(
-            f"[{color}]{icon} {result['file']}[/{color}]\n[dim]{result['message']}[/dim]",
+            msg,
             border_style=color
         )
     )
@@ -260,8 +274,10 @@ def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Ac
 
     # 429 RESOURCE_EXHAUSTED (Daily quota or rate limit)
     if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
-        # We assume daily quota if rate limiter didn't catch it, or if it's a hard 429
-        return Action.ROTATE_KEY, f"Cota diária excedida (429). Alternando chave {masked_key}."
+        # Changed strategy: Retry first, as it might be a transient rate limit (RPM/TPM).
+        # Only if it persists (handled by retry loop) or if we could detect "Quota" explicitly would we rotate.
+        # Since we can't easily distinguish, we'll RETRY. If retries fail, the loop will eventually give up or we can add logic there.
+        return Action.RETRY, f"Limite de recursos (429). Tentando novamente com chave {masked_key}..."
 
     # 500 INTERNAL
     if "500" in error_str or "INTERNAL" in error_str:
@@ -357,11 +373,25 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
             with open(json_path, "w") as f:
                 f.write(summary_data.model_dump_json(indent=2))
                 
-            return {"status": "success", "file": pdf_path.name, "message": f"Saved to {json_path.name}"}
+            return {"status": "success", "file": pdf_path.name, "message": f"Saved to {json_path.name}", "masked_key": f"...{api_key[-4:]}"}
 
         except Exception as e:
             action, msg = handle_api_error(e, api_key, pdf_path.name)
-            logger.error(f"Full error for {pdf_path.name}: {str(e)}") # Added verbose log
+            
+            # Enhanced Logging for API Errors
+            error_details = str(e)
+            # Try to extract full response from ClientError
+            if hasattr(e, 'response'):
+                 try:
+                     # If it's a ClientError or similar with a response object
+                     if hasattr(e.response, 'text'):
+                         error_details += f"\nAPI Response JSON: {e.response.text}"
+                     elif hasattr(e.response, 'json'):
+                         error_details += f"\nAPI Response JSON: {json.dumps(e.response.json(), indent=2)}"
+                 except Exception:
+                     pass
+
+            logger.error(f"Full error for {pdf_path.name}: {error_details}", exc_info=True)
             logger.warning(f"Error processing {pdf_path.name}: {msg}")
             
             if action == Action.ROTATE_KEY:
@@ -379,9 +409,17 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
                     continue # Retry with same key (or random choice again)
                 else:
                     logger.error(f"Max retries exceeded for {pdf_path.name}.")
-                    # If max retries exceeded for transient error, maybe try another key? 
-                    # For now, let's fail this file to avoid infinite loops if it's a file issue.
-                    return {"status": "error", "file": pdf_path.name, "message": f"Max retries exceeded: {msg}"}
+                    # If max retries exceeded for 429, it might be a quota issue.
+                    # Let's rotate the key just in case, instead of failing the file.
+                    if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                         logger.warning(f"Max retries for 429 exceeded. Assuming quota exhaustion for key ...{api_key[-4:]}. Rotating.")
+                         config.exhausted_keys.add(api_key)
+                         if api_key in available_keys:
+                             available_keys.remove(api_key)
+                         retry_count = 0 # Reset retry count for new key
+                         continue
+
+                    return {"status": "error", "file": pdf_path.name, "message": f"Max retries exceeded: {msg}", "full_error": str(e), "masked_key": f"...{api_key[-4:]}"}
 
             elif action == Action.SKIP_FILE:
                 logger.error(f"Skipping file {pdf_path.name}: {msg}")
@@ -450,8 +488,10 @@ def index_summaries(verbose: bool = False):
         task_id = progress.add_task("Indexing...", total=len(to_index))
 
         if len(api_keys) > 1:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
-                futures = []
+            # Use manual executor management
+            executor = concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys))
+            futures = []
+            try:
                 for file_path in to_index:
                     # Pass ALL keys to the worker, let it manage retries
                     futures.append(executor.submit(_index_single_book, file_path, api_keys))
@@ -469,12 +509,13 @@ def index_summaries(verbose: bool = False):
                             progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
                             progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                             executor.shutdown(wait=False, cancel_futures=True)
-                            break
-
+                            return
                     except Exception as e:
                         error_msg = f"Critical worker error: {e}"
                         progress.console.print(f"[red]{error_msg}[/red]")
                         logger.error(error_msg, exc_info=True)
+            finally:
+                executor.shutdown(wait=False)
         else:
             for file_path in to_index:
                 # Check exhaustion before starting next
@@ -494,7 +535,7 @@ def index_summaries(verbose: bool = False):
                      progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                      break
 
-def _print_index_result(console, result):
+def _print_index_result(console, result, verbose: bool = False):
     if result["status"] == "skipped":
         return
 
@@ -509,6 +550,8 @@ def _print_index_result(console, result):
         icon = "↻"
 
     msg = f"[{color}]{icon} {result['file']}[/{color}]"
+    if result.get("masked_key"):
+        msg += f" [dim]({result['masked_key']})[/dim]"
     if result.get("chunks"):
         msg += f" | {result['chunks']} chunks"
     if result.get("message"):
@@ -527,6 +570,9 @@ def _print_index_result(console, result):
                  error_msg = base_msg
         msg += f" | {error_msg}"
         
+    if verbose and result.get("full_error"):
+        msg += f"\n[dim red]Full Error: {result['full_error']}[/dim red]"
+
     console.print(msg)
     
     # Log result to file
@@ -640,12 +686,12 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
             
             # Add documents with pre-calculated embeddings (inside the lock)
             db.add_documents(documents, metadatas, ids, embeddings=embeddings)
-            return {"status": "success", "file": pdf_name, "chunks": len(documents)}
+            return {"status": "success", "file": pdf_name, "chunks": len(documents), "masked_key": f"...{current_key[-4:]}"}
         
         except Exception as e:
             action, msg = handle_api_error(e, current_key, pdf_name)
-            logger.error(f"Full error for {pdf_name}: {str(e)}") # Added verbose log
-            logger.warning(f"Error indexing {pdf_name}: {msg}")
+            logger.error(f"Full error for {pdf_name}: {str(e)}", exc_info=True) # Added exc_info for full stack trace
+            logger.warning(f"Error processing {pdf_name}: {msg}")
 
             if action == Action.ROTATE_KEY:
                 config.exhausted_keys.add(current_key)
@@ -661,7 +707,16 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
                     time.sleep(2 * retry_count)
                     continue
                 else:
-                    return {"status": "error", "file": pdf_name, "message": f"Max retries exceeded: {msg}"}
+                    logger.error(f"Max retries exceeded for {pdf_name}.")
+                    # If max retries exceeded for 429, rotate key
+                    if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                         logger.warning(f"Max retries for 429 exceeded. Assuming quota exhaustion for key ...{current_key[-4:]}. Rotating.")
+                         config.exhausted_keys.add(current_key)
+                         if current_key in available_keys:
+                             available_keys.remove(current_key)
+                         retry_count = 0
+                         continue
+                    return {"status": "error", "file": pdf_name, "message": f"Max retries exceeded: {msg}", "full_error": str(e), "masked_key": f"...{current_key[-4:]}"}
             
             elif action == Action.SKIP_FILE:
                 return {"status": "error", "file": pdf_name, "message": msg}
