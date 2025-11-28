@@ -1,6 +1,7 @@
 import typer
 from rich.console import Console
-from grimoire.config import config
+from rich.panel import Panel
+from rich.markdown import Markdown
 from grimoire import core, db
 import json
 from pathlib import Path
@@ -127,7 +128,11 @@ def ask(
         print(json.dumps({"question": question, "answer": answer}))
     else:
         console.print(f"[bold]Question:[/bold] {question}")
-        console.print(f"[bold green]Answer:[/bold green]\n{answer}")
+        console.print("[bold green]Answer:[/bold green]")
+        if answer:
+            console.print(Markdown(answer))
+        else:
+            console.print("[red]No answer received.[/red]")
 
 @app.command()
 def search(
