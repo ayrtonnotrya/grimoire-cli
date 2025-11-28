@@ -1,0 +1,117 @@
+{
+  "header": {
+    "title": "Hygromanteia of Solomon",
+    "authors": [
+      "Solomon",
+      "Pablo A. Torijano",
+      "J. Heeg",
+      "Armand Delatte"
+    ],
+    "category": "Grimoire",
+    "keywords": [
+      "Solomonic magic",
+      "Hygromancy",
+      "Planetary magic",
+      "Angelic magic",
+      "Demonic evocation",
+      "Talismans",
+      "Ritual magic",
+      "Greek grimoire"
+    ]
+  },
+  "central_thesis": "The Hygromanteia presents a comprehensive Solomonic system of operative magic, purportedly revealed to King Solomon, for commanding angels and demons through hygromancy, precise astrological timing (planetary hours and days), and the use of specific ritual materials (herbs, metals, animal parts, sigils) to achieve a wide array of worldly and spiritual objectives.",
+  "structure_content": [
+    {
+      "chapter_title": "The Epistle to Rehoboam (Greek original and English translation)",
+      "summary": "This foundational part introduces the 'little key' to the art of divination through water (hygromancy), emphasizing the necessity for Solomon's son, Rehoboam, to master planetary observations and zodiacal signs. It outlines the general principles of how operations must be timed according to planetary influences and how spirits (angels and demons) are engaged. It sets the philosophical and practical stage for the subsequent detailed instructions."
+    },
+    {
+      "chapter_title": "Trait\\u00e9 de Magie de Salomon (French edition)",
+      "summary": "This section provides detailed astrological timing rules for magical operations, attributing specific types of work to each planetary day and hour. It enumerates the angels and demons associated with these times and describes various rituals for purposes such as acquiring love, wealth, health, and protection. Instructions include the creation of sigils, use of fumigations, and the specific invocation of spirits. This part offers a more granular look into the practical mechanics of spirit interaction and planetary alignment."
+    },
+    {
+      "chapter_title": "The English translation of the Hygromanteia",
+      "summary": "This comprehensive translation provides explicit practical instructions for the Solomonic system. It details the planetary rulers of days and hours, outlining specific magical effects for each period. It lists angels and demons by planetary hour for each day of the week. Crucially, it provides methods for preparing magical tools and materials, including planetary symbols, rings, specific plants ('Botany of the Planets'), and the creation of magical images and pentacles. This section serves as the core operative manual for practitioners."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Hygromanteia/Hygromancy",
+      "definition": "A form of divination and operative magic using water, typically involving a basin or mirror for scrying and the manifestation of spirits. It is the central divinatory method of the grimoire."
+    },
+    {
+      "term": "Planetary Hours & Days",
+      "definition": "The astrological timing system wherein each day and hour is governed by a specific planet. Operations are deemed effective only when performed under the correct planetary influence corresponding to the magical intent."
+    },
+    {
+      "term": "Angels & Demons",
+      "definition": "Spiritual entities, both benevolent (angels) and potentially malevolent (demons), hierarchically associated with specific planetary hours and days. They are invoked or adjured to facilitate magical operations and fulfill the practitioner's requests."
+    },
+    {
+      "term": "Characters/Sigils",
+      "definition": "Symbolic representations of planets, angels, or demons, drawn or inscribed on various materials (e.g., parchment, metals). These serve as focal points for magical energy and as direct commands or connections to the spirits."
+    },
+    {
+      "term": "Fumigations/Incense",
+      "definition": "Specific aromatic substances (e.g., resins, herbs) burned to create a suitable atmosphere for spirit communication, to purify the ritual space, or to imbue an operation with specific planetary energies."
+    },
+    {
+      "term": "Materia Magica (Botany of the Planets)",
+      "definition": "Diverse natural ingredients including plants, metals, and animal parts, meticulously chosen for their planetary correspondences. These are used in preparing talismans, images, and as components in ritual offerings or spell constructions."
+    },
+    {
+      "term": "Invocation/Adjuration",
+      "definition": "The ritualistic process of calling upon and commanding spirits using divine names, names of angels/demons, and specific formulas. Invocations often seek cooperation, while adjurations typically compel spirits through authority or threats."
+    },
+    {
+      "term": "Pentacles/Talismans",
+      "definition": "Magical diagrams or objects, meticulously crafted at astrologically auspicious times and imbued with planetary and spiritual energies. They are designed to attract specific influences or protect the wearer/possessor, acting as conduits or repositories of magical power."
+    }
+  ],
+  "practical_system": {
+    "description": "The Hygromanteia outlines a rigorous system of operative magic predicated on harmonizing human will with celestial and spiritual forces. The central practice is hygromancy, used for scrying and spirit manifestation, complemented by the creation of planetary talismans and magical images. Operations are meticulously timed to coincide with specific planetary hours and days, and involve a precise array of 'materia magica' (metals, plants, animal products) and potent invocations to command an extensive hierarchy of angels and demons. Success hinges on accurate astrological calculations, the correct preparation of ritual tools, and the precise recitation of divine and spiritual names.",
+    "tools": [
+      "Water basin or scrying mirror (for hygromancy)",
+      "Parchment (often 'virgin' parchment derived from specific animals like goat, ox, hare, or sheep; human skin is also mentioned for certain operations)",
+      "Writing implements (quills, various inks including vermilion, cinnabar, blood, or specially prepared magical inks)",
+      "Metals corresponding to planets (e.g., lead for Kronos, tin for Zeus, gold for Helios, copper for Aphrodite, quicksilver for Hermes, silver for Selene, iron for Ares)",
+      "Fumigations/Incense (e.g., styrax, mastic, gum-ladanum, myrrh, frankincense, and various other herbal components specific to planetary influences)",
+      "Plants (a detailed 'Botany of the Planets' specifies herbs for each planet, e.g., Chrysankathon for Zeus, Pentasitos for Ares, Hielioskopos for Helios, Saturion for Aphrodite, Pentadaktylon for Hermes, Glosophyti for Selene, Hekatontakefalon for Kronos)",
+      "Animal parts (e.g., dross of lead, extract of roses, blood, animal skins)",
+      "Magical rings or pentacles (to be worn, carried, or placed within the ritual space)",
+      "Magical sword or knife (for ritual gestures and possibly defense)",
+      "Candles or lamps (for illumination and symbolic representation)"
+    ],
+    "rituals": [
+      "Determining the most auspicious planetary hour and day for a specific magical intention.",
+      "Invoking specific angels or adjuring particular demons associated with the chosen planetary hour to achieve the desired effect.",
+      "Crafting planetary symbols or sigils on appropriate materials (e.g., lead for Kronos, gold for Helios, parchment from specific animals), often accompanied by corresponding fumigations.",
+      "Performing water divination (hygromancy) using a basin or mirror to facilitate scrying and the manifestation of spirits.",
+      "Creating magical images or pentacles, ritually consecrated to a specific purpose (e.g., attracting love, wealth, protection, or healing).",
+      "Incorporating designated plants (listed in the 'Botany of the Planets' for each planet) into rituals for healing, love spells, or protective charms.",
+      "Reciting extensive prayers and adjurations, leveraging divine names and the names of angels and demons to compel spiritual entities."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Pay attention, my very dear son Rehoboam, to the exactness of this: art of mine — your father Solomon —, to the procedures, in which: the whole matter of divination through water lies, because it is nec:: essary before anything [\n] to master the observations of the plan:: ets and of the signs of the Zodiac and to follow them and perform them according to your will.",
+      "page": "113"
+    },
+    {
+      "text": "Know, my very dear son Roboam, that one good angel and one evil demon are lords at each hour. If you want to do a good deed, adjure the good angel, so that he may be an ally to you; if you want to do any other, bad, deed, adjure the demon, so that he may be your ally; and you will do so, if you want something. It starts easily in this way.",
+      "page": "152"
+    },
+    {
+      "text": "The symbols of Kronos. Make the symbols of Kronos with the dross of lead and with vin:egar and fumigate the liaphe with them [\n]. Write them on parch:ment made from a he-goat.",
+      "page": "164"
+    },
+    {
+      "text": "The first hour of the first day, the Sun is master. On the first day, the sun rules, first hour [\n]. On the second, Aphrodite [is mistress]: [it is a good hour] for getting the love of those who have absolute power, great men and :tyrants.",
+      "page": "113"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "The Hygromanteia is a historically crucial grimoire within the Solomonic tradition, showcasing a complex syncretism of Hellenistic, Jewish, Christian, and Arabic magical influences. Its systematic approach to planetary and spirit evocation significantly influenced later works like the Key of Solomon. For contemporary esotericism, it provides invaluable insights for scholars studying historical magical practices and for practitioners engaging in ceremonial magic, particularly those interested in reconstructing or understanding traditional European grimoire systems. Its emphasis on detailed correspondences and precise ritual mechanics offers a deep dive into the operative worldview of early modern magic.",
+    "target_audience": "This work is primarily suited for academic researchers and scholars specializing in Western Esotericism, Occultism, and the history of magic. It is also highly relevant for advanced practitioners of ceremonial magic, particularly those within Solomonic traditions, who seek to reconstruct or deeply understand historical grimoire operations. Its complexity, detailed instructions, and the inherent risks of spirit evocation make it generally unsuitable for novice practitioners."
+  }
+}

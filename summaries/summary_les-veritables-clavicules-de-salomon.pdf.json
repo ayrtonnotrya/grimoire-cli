@@ -1,0 +1,218 @@
+{
+  "header": {
+    "title": "Les Véritables Clavicules de Salomon",
+    "authors": [
+      "Pierre Mora"
+    ],
+    "category": "Grimoire Tradition, Ceremonial Magic, Occultism",
+    "keywords": [
+      "Clavicules de Salomon",
+      "Grimoire",
+      "Ceremonial Magic",
+      "Planetary Magic",
+      "Talismanic Magic",
+      "Pentacles",
+      "Angels",
+      "Spirits",
+      "Qabalah",
+      "Occult Science",
+      "Divination"
+    ]
+  },
+  "central_thesis": "This grimoire presents a complete system for ceremonial magic, purportedly derived from King Solomon, asserting that through precise alignment with planetary influences, practitioners can create potent magical objects (pentacles, talismans, rings) and perform rituals involving orations, invocations, and conjurations to command various classes of spirits (Genii, Intelligences, Demons) to achieve a wide array of worldly and spiritual objectives, including wealth, health, love, protection, divination, and victory. The system emphasizes meticulous preparation, timing (planetary hours and seasons), material correspondences, and a state of inner purity and confidence.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction",
+      "summary": "An introductory discourse by King Solomon on the importance of divine wisdom and the revelation of occult secrets for human benefit, asserting the book's purpose to unlock the 'palace of this vast universe'."
+    },
+    {
+      "chapter_title": "CHAPITRE PREMIER: Disposition of the Practitioner",
+      "summary": "Outlines the necessary mental and spiritual disposition for the magician, emphasizing diligence, exactitude in following instructions, fearlessness in the presence of spirits, and profound faith in the efficacy of the art. Includes a 'Confession' for purification before any operation."
+    },
+    {
+      "chapter_title": "CHAPITRE II: Proper Places and Times for Operations",
+      "summary": "Details the requirements for the magical workspace: a secluded, clean, and unadorned chamber. It also specifies the optimal timing for operations, particularly the rising of the sun and favorable planetary constellations, emphasizing precise timing for success."
+    },
+    {
+      "chapter_title": "CHAPITRE III: Materials for Operations",
+      "summary": "Describes the suitable materials for crafting magical instruments and objects, such as virgin parchment, specific metals (gold for Sun, silver for Moon, iron for Mars, etc.), and the meticulous preparation required for them. It explicitly warns against relying on charlatans for prepared materials."
+    },
+    {
+      "chapter_title": "CHAPITRE IV: Instruments and Utensils",
+      "summary": "Lists the essential tools: a wooden cassette, writing implements (crow quill, burin, steel stylus), knives with specific handles, a compass, a hazel staff, lustral water, and censers for fumigations. These are to be new and consecrated."
+    },
+    {
+      "chapter_title": "CHAPITRE V: Influences of the Moon",
+      "summary": "Explores the lunar influences on operations, detailing favorable conjunctions and zodiacal placements for specific magical aims (travel, wealth, love, martial success, health, divination). It highlights the importance of astrological observation using almanacs or ephemerides."
+    },
+    {
+      "chapter_title": "CHAPITRE VI: Working with Talismans and Characters",
+      "summary": "Introduces the foundational practice of creating 'Pentacules' (pentacles), especially the eight 'Majeurs,' and the 'Grand Pentacule de Salomon.' It explains the incorporation of divine names, scriptural verses, and planetary characters within concentric circles, emphasizing precise execution and timing according to planetary auspices and seasons."
+    },
+    {
+      "chapter_title": "Premier Pentacule de Salomon (Spring)",
+      "summary": "Description and virtues of the first foundational pentacle, meant to guarantee against fear during spirit appearances and to compel malefic spirits without harm. It is to be enveloped in white taffeta or linen and stored carefully."
+    },
+    {
+      "chapter_title": "Pentacles for Each Day of the Week (Spring)",
+      "summary": "Presents specific pentacle designs, angelic names, invocations, and conjurations for operations performed on each day of the week during the Spring season, aligning with the ruling planet (Sunday/Sun, Monday/Moon, Tuesday/Mars, Wednesday/Mercury, Thursday/Jupiter, Friday/Venus, Saturday/Saturn)."
+    },
+    {
+      "chapter_title": "CHAPITRE VII: Rabbinical Methods for Pentacles",
+      "summary": "Expands on the construction of pentacles according to ancient Rabbinical tradition, explaining the use of sacred scriptural verses within the double circle to align with the magical intention, citing Jamblic and Paracelsus on their efficacy. Pentacles are to be worked on specific days and hours corresponding to their planetary influences."
+    },
+    {
+      "chapter_title": "CHAPITRE VIII: Colors of the Seven Planets",
+      "summary": "Details the specific color correspondences for each planet (e.g., golden yellow for Sun, silver-white for Moon, sanguine red for Mars, sapphire blue for Jupiter, black for Saturn), to be used when crafting pentacles on parchment or other materials."
+    },
+    {
+      "chapter_title": "Mystical Numbers and Seals of Planets",
+      "summary": "Provides tables of mystical numbers (magic squares) and seals for each of the seven planets, intended for engraving on talismans, where these numbers yield the same sum when counted in any direction, a key element of planetary magic squares."
+    },
+    {
+      "chapter_title": "CHAPITRE IX: Consecrated Items and Planetary Correspondences",
+      "summary": "Delves into the detailed natural correspondences for each planet: metals, minerals, precious stones, plants, animals, birds, reptiles, fish, and aromatic substances. These are to be used in conjunction with planetary operations."
+    },
+    {
+      "chapter_title": "CHAPITRE X: Mysterious Rings",
+      "summary": "Instructs on the creation and use of magical rings, explaining how to engrave the name of the familiar spirit of the ruling planet onto a precious stone set in a metal corresponding to that planet. It includes a specific conjuration for animating the ring, emphasizing careful storage and transferability of virtue."
+    },
+    {
+      "chapter_title": "Noms et Sceaux des Sept Esprits Familiers des Planètes",
+      "summary": "Provides the specific names and seals of the familiar spirits for each of the seven planets (Aratron for Saturn, Betor for Jupiter, Phaleg for Mars, Och for Sun, Agith for Venus, Ophiel for Mercury, Phul for Moon), to be used in ring magic."
+    },
+    {
+      "chapter_title": "CHAPITRE XI: Orations for Consecration",
+      "summary": "Provides exorcism-like orations for consecrating all tools and materials used in the great art. This involves specific prayers, aspersion with lustral water, and fumigation with storax or benjoin, performed in a newly consecrated workspace. Includes specific conjurations for the ritual space and tools."
+    },
+    {
+      "chapter_title": "CHAPITRE XII: Revealing Secrets Through Dreams",
+      "summary": "Offers methods for obtaining true and pleasant dreams as a form of revelation, involving sobriety, moderation, and the use of the Saturday pentacle, verbena, and laurel, accompanied by specific orations before sleep. Also notes differences for widows and boys."
+    },
+    {
+      "chapter_title": "CHAPITRE XIII: Divination with the Carafe and Key",
+      "summary": "Describes two divination methods: scrying with a carafe of pure fountain water and a boy medium (Uriel's carafe), and key divination (using a key with a cross in a New Testament to detect theft or murder). Emphasizes purity, modesty, and specific utterances for both methods."
+    },
+    {
+      "chapter_title": "CHAPITRE XIV: Planetary Hours",
+      "summary": "Presents tables for calculating planetary hours for both day and night throughout the week, acknowledging their variable duration and importance for aligning operations with specific planetary influences. Also lists names for the four seasons (Talxi, Gasmaran, Ardarael, Farlas) and seasonal angelic names."
+    },
+    {
+      "chapter_title": "Intelligence and Demon Seals (Moon, Mars, Mercury, Jupiter, Saturn, Sun, Venus)",
+      "summary": "Illustrates the specific seals or characters for the Intelligences and Demons associated with each of the seven planets, which are considered 'miraculous' for the composition of pentacles and talismans, citing Pierre Dabano."
+    },
+    {
+      "chapter_title": "Table des Heures du Jour et de la Nuit Planétaires",
+      "summary": "Detailed tables illustrating the ruling planetary hour for each of the 24 hours of the day and night across the week, vital for timing operations correctly based on variable daylight/nighttime."
+    },
+    {
+      "chapter_title": "CHAPITRE XV: Use of Incense and Perfumes",
+      "summary": "Instructs on the proper use of perfumes and incenses corresponding to each day/planet (e.g., red sandalwood for Sunday, aloes wood for Monday, pepper for Tuesday) for operations, to be burned on new charcoal in a censer when magical artifacts are completed and consecrated."
+    },
+    {
+      "chapter_title": "CHAPITRE XVI: Daily Orations and Invocations",
+      "summary": "Stresses the importance for serious practitioners to recite the orations, invocations, and conjurations daily, facing south, regardless of whether a specific operation is being performed, to maintain attunement and achieve advantageous success."
+    },
+    {
+      "chapter_title": "CHAPITRE XVII: Names of Angels for Hours",
+      "summary": "Provides extensive tables listing the names of Angels presiding over each hour of day and night for every day of the week, crucial for precise invocation in talismanic and other operations. Also lists particular characters for each day's ruling Angel."
+    },
+    {
+      "chapter_title": "Pentacles for Each Day of the Week (Summer, Autumn, Winter)",
+      "summary": "Extends the pentacle system by providing specific designs for each day of the week during the Summer, Autumn, and Winter seasons, maintaining the same general ritual structure but adapting angelic names and influences to the seasonal context."
+    },
+    {
+      "chapter_title": "Talisman de Jupiter et Propriétés des Talismans Planétaires",
+      "summary": "Details the construction of a specific Jupiter talisman (copper plate, engraved, consecrated on a Thursday during a waxing moon) for protection, luck in gambling and commerce, following Wierus. Summarizes the virtues of talismans for Moon, Mars, Mercury, Venus, Saturn, and Sun, and their respective metals. Each talisman confers distinct benefits ranging from memory and courage to love and wisdom."
+    },
+    {
+      "chapter_title": "L'Almadel",
+      "summary": "Introduces the 'Almadel' tradition, describing classes of Angels (Cherubim, Seraphim, etc.), their princes, and their changing powers over 30-day periods. It provides a prayer for divine assistance in operations and a figure of the Almadel table, emphasizing specific directional prayers (septentrional, midi, orient, occident)."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Clavicules de Salomon",
+      "definition": "A traditional grimoire framework, often attributed to King Solomon, focused on ceremonial magic, spirit evocation, and the creation of magical artifacts. This text is presented as 'The True Clavicles of Solomon'."
+    },
+    {
+      "term": "Science Occulte / Cabalistique",
+      "definition": "The underlying system of hidden knowledge and Jewish mysticism (Qabalah) that informs the magical practices, particularly regarding divine names, angelic hierarchies, and planetary correspondences."
+    },
+    {
+      "term": "Pentacles / Talismans",
+      "definition": "Magical diagrams or objects, often circular, engraved with divine names, scriptural verses, planetary characters, and angelic seals, created under specific astrological conditions and consecrated through ritual to achieve various magical effects. The text uses 'Pentacule' and 'Talisman' largely interchangeably, though sometimes distinguishes the general 'pentacule' for broader use and 'talisman' for specific planetary influence."
+    },
+    {
+      "term": "Génies / Esprits / Intelligences / Démons",
+      "definition": "Various categories of non-corporeal entities that the magician interacts with. 'Génies' and 'Esprits' (spirits) are often used generally for all, while 'Intelligences' are typically beneficent planetary spirits and 'Démons' are often malefic ones, subject to conjuration through specific rituals."
+    },
+    {
+      "term": "Planetary Magic",
+      "definition": "A core operative principle involving aligning magical work with the specific energies, times (days, hours, seasons), and material correspondences of the seven classical planets (Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn). This dictates timing, materials, and specific spirits invoked."
+    },
+    {
+      "term": "Parchemin Vierge",
+      "definition": "Virgin parchment, often specified as lamb or goat skin, meticulously prepared through ritual purification and specific processes (e.g., with lime, careful scraping) to serve as a pure, untainted substrate for pentacles and talismans, ensuring its efficacy."
+    },
+    {
+      "term": "Eau Lustrale",
+      "definition": "Lustral water, ritually consecrated water, often prepared with specific ceremonies (e.g., on the eve of Easter), used for purification and aspersion of the workspace, instruments, and materials before and during magical operations to ensure their sanctity."
+    },
+    {
+      "term": "Oraisons, Invocations, Conjurations",
+      "definition": "Standard elements of ceremonial magic rituals. 'Oraisons' (orations) are prayers for divine favor, 'Invocations' are calls to friendly spirits to assist, and 'Conjurations' are commands or adjurations, often forceful and by divine names, to compel spirits (even malefic ones) to appear or act as desired."
+    }
+  ],
+  "practical_system": {
+    "description": "The practical system is a highly structured and meticulous form of ceremonial magic focused on invoking and commanding planetary spirits and angels to achieve specific magical goals. It hinges on the creation of consecrated magical objects (pentacles, talismans, rings) that serve as conduits or focal points for these energies. Success is predicated on strict adherence to a complex set of correspondences, including planetary rulerships over days, hours, seasons, metals, stones, plants, animals, and colors. The practitioner's internal state (purity, confidence, intention) is deemed as crucial as the external ritual precision, requiring mental discipline, emotional control, and an unshakeable belief in the efficacy of the art.",
+    "tools": [
+      "A secluded, purified, and unadorned chamber ('cabinet secret') as a workspace.",
+      "A small table covered with a white cloth, serving as an altar.",
+      "Writing implements: crow quill (for parchment), burin or steel stylus (for metal), white-handled knife, black-handled knife (shaped like ancient 'coutelas'), black-handled sickle-shaped knife, inkwell with new cotton, virgin parchment.",
+      "Ritual instruments: a compass, a hazel or olive wood staff (1.5 feet long, 1 inch thick), a small hazel wood wand, an aspersorium of white foal hair.",
+      "Fire and incense tools: a censer ('réchaud de terre ou de quelque autre matière') with new charcoal, flint and steel for lighting fire, virgin wax candle, small packets of planetary perfumes/incenses.",
+      "Lustral water: A fiole of ritually consecrated water, often prepared on the eve of Easter.",
+      "Ceremonial garments: White robe ('aube blanche'), bonnet, stockings, shoes of light leather, white gloves.",
+      "Specific materials: Virgin parchment (lamb/goat), metals corresponding to planets (gold for Sun, silver for Moon, iron for Mars, tin for Jupiter, copper/brass for Venus, lead for Saturn, quicksilver for Mercury), planetary precious stones, specific plants (verbena, laurel, Enula Campana), animal products (pigeon blood for key divination), various perfumes and incenses (red sandalwood, aloes wood, pepper, mastic tears, saffron, costus, sulfur)."
+    ],
+    "rituals": [
+      "Inner purification through confession and adherence to a sober, moderate lifestyle.",
+      "Selection and ritual consecration of a secluded, clean, and unadorned magical workspace (secret cabinet) using lustral water and incense.",
+      "Meticulous preparation and consecration of all tools and materials (virgin parchment, metals, inks, etc.) through specific orations, aspersions, and fumigations.",
+      "Precise timing of all operations to align with favorable planetary hours, days, and seasons, requiring consultation of astrological tables.",
+      "Construction of Pentacles and Talismans: Engraving specific divine names, scriptural verses, planetary characters, and angelic seals onto virgin parchment or appropriate metals, following precise geometrical designs and ensuring proper orientation.",
+      "Creation of Magical Rings: Setting a planetary stone into a corresponding metal ring, then engraving the name of the planet's familiar spirit onto the ring's interior.",
+      "Invocation and Conjuration: Reciting specific orations, invocations, and conjurations addressing particular angels, spirits, or genii (by divine names and their specific titles), to compel their appearance or influence, typically within a ritually established circle.",
+      "Consecration of Objects: Imbuing the magical objects with power through further prayers, fumigations (using planet-specific perfumes/incenses), and aspersions with lustral water, often with the intent of directing spirit influence to the object.",
+      "Divination: Performing specific rituals like carafe scrying (using a young, pure boy medium) or key divination, accompanied by dedicated prayers and conjurations to gain knowledge or reveal hidden truths.",
+      "Daily Practice: Regular recitation of orations and invocations to maintain connection with celestial influences and to 'fix' the virtue of the created artifacts."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Puisqu'il m'a donné en partage la sagesse, je m'en servirai à faire éclater la gloire de sa puissance sur ses créatures. Si j'ai dit dans le livre de mes proverbes, qu'il est bon de cacher dans son sein le secret de son roi, je change ici de discours en disant qu'il est bon de publier le secret du roi des rois, afin que chacun rende à sa suprême puissance l'honneur qui lui est dû: c'est ce qui m'a porté à écrire ce volume qui se nomme à bon droit Clavicules.",
+      "page": "3"
+    },
+    {
+      "text": "Il faut être intrépide, sans appréhension et ferme dans le temps de l'apparition de Génies; et si l'on se défie de sa fermeté il faut se faire accompagner par quelques personnes discrètes qui nous rassurent; car la faiblesse de l'imagination est fort à craindre étant naturellement portée à former des fantômes chimériques qui ne furent jamais.",
+      "page": "7"
+    },
+    {
+      "text": "Les talismans, pentacules, images mystérieuses, landeries, caractères et autres figures semblables qui sont les chefs-d'œuvre de la science occulte, peuvent être formés sur différentes matières.",
+      "page": "8"
+    },
+    {
+      "text": "Or, afin qu'on ne s'y trompe pas, voici quatre vers qui désignent les métaux qui sont propes aux sept Planètes. Le Soleil marque l'or, le vif-argent Mercure. Ce qu'est Saturne au plomb, Vénus est à l'airain. La Lune de l'argent, Jupiter de l'étain Et Mars du fer est la figure.",
+      "page": "16"
+    },
+    {
+      "text": "On lit dans plusieurs auteurs l'effet admirable quede semblablesanneaux ont produit. Voici en général la manière de faire ces anneaux. On fait faire un anneau de métal convenable à la planète dont on veut obtenir les influences, et après y avoir enchâssé une pierre précieuse de la nature de la planète on gravera en dedans de la bague le nom de l'esprit familier de la planète.",
+      "page": "70"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "Les Véritables Clavicules de Salomon, attributed to Pierre Mora and published in 1914, is a notable entry in the enduring Solomonian grimoire tradition, which consistently seeks to codify the practical control of supernatural entities. While a 20th-century publication, it largely adheres to the classical framework established by medieval texts like the Key of Solomon, emphasizing the intricate system of planetary and angelic correspondences crucial for ceremonial magic. Its detailed instructions on material preparation, astrological timing, and the construction of magical artifacts (pentacles, talismans, rings) reflect a profound commitment to operative magic rooted in Hermetic and Qabalistic principles. The text's practical, systematic approach to spirit conjuration and magical object creation solidifies its place as a significant resource for understanding historical ceremonial practices, even as it offers a reinterpretation rather than a purely ancient source.",
+    "target_audience": "The text is intended for serious and dedicated practitioners of ceremonial magic and Western Esotericism. It presupposes a foundational understanding of astrological principles, Qabalistic nomenclature, and established spirit hierarchies. The extensive requirements for material procurement, meticulous preparation, precise ritual timing, and disciplined execution make it unsuitable for novices. Rather, it serves as a comprehensive operative manual for advanced students or experienced magicians committed to undertaking complex ritual work within the grimoire tradition, particularly those focused on planetary magic and theurgical or goetic operations."
+  }
+}
