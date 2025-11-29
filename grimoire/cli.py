@@ -3,6 +3,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.markdown import Markdown
 from grimoire import core, db
+from grimoire.config import config
 import json
 from pathlib import Path
 
