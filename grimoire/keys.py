@@ -59,6 +59,9 @@ class KeyManager:
             if not available:
                 return None
             
+            # Shuffle to avoid race conditions where multiple threads pick the same "best" key
+            random.shuffle(available)
+            
             best_key = None
             lowest_load_score = float('inf')
             
