@@ -96,6 +96,11 @@ def generate_library_stats() -> dict:
             continue
 
     stats["total_authors"] = len(stats["authors_list"])
+    
+    # 4. Key Stats
+    stats["total_keys"] = len(config.gemini_api_keys)
+    stats["masked_keys"] = [f"...{k[-4:]}" if len(k) > 4 else k for k in config.gemini_api_keys]
+    
     return stats
 
 def print_report():
@@ -121,6 +126,14 @@ def print_report():
     general_table.add_row("Storage (Summaries)", stats["storage_summaries"])
     general_table.add_row("Storage (Vector DB)", stats["storage_db"])
 
+    # API Keys Table
+    keys_table = Table(title="API Keys", box=box.ROUNDED)
+    keys_table.add_column("Metric", style="cyan")
+    keys_table.add_column("Value", style="magenta")
+    
+    keys_table.add_row("Total Keys", str(stats["total_keys"]))
+    keys_table.add_row("Keys List", ", ".join(stats["masked_keys"]))
+
     # Categories Table
     cat_table = Table(title="Top Categories", box=box.ROUNDED)
     cat_table.add_column("Category", style="green")
@@ -140,6 +153,7 @@ def print_report():
     # Print
     console.print(Panel("[bold]Grimoire Library Report[/bold]", style="bold white on blue"))
     console.print(general_table)
+    console.print(keys_table)
     console.print("\n")
     
     # Side by side for categories and keywords
