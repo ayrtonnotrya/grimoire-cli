@@ -239,6 +239,10 @@ def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Ac
     error_str = str(error)
     masked_key = f"...{api_key[-4:]}"
     
+    # Special Case: Daily Rate Limit Exceeded (Can appear without 429)
+    if "Daily Rate Limit Exceeded" in error_str:
+        return Action.ROTATE_KEY, f"Cota diária excedida (Daily Rate Limit Exceeded). Chave {masked_key} marcada como inválida."
+
     # 400 INVALID_ARGUMENT
     if "400" in error_str and "INVALID_ARGUMENT" in error_str:
         return Action.SKIP_FILE, f"Erro na solicitação (400). Verifique o formato do arquivo ou prompt. (Arquivo: {file_name})"
@@ -257,6 +261,10 @@ def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Ac
 
     # 429 RESOURCE_EXHAUSTED (Daily quota or rate limit)
     if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+        # Check for specific "Quota exceeded" message
+        if "Quota exceeded" in error_str:
+             return Action.ROTATE_KEY, f"Cota diária excedida (Quota exceeded). Chave {masked_key} marcada como inválida."
+
         # Changed strategy: Retry first, as it might be a transient rate limit (RPM/TPM).
         # Only if it persists (handled by retry loop) or if we could detect "Quota" explicitly would we rotate.
         # Since we can't easily distinguish, we'll RETRY. If retries fail, the loop will eventually give up or we can add logic there.

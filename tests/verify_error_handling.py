@@ -49,7 +49,13 @@ class TestErrorHandling(unittest.TestCase):
         error = Exception("429 RESOURCE_EXHAUSTED: Quota exceeded")
         action, msg = handle_api_error(error, "key1", "test.pdf")
         self.assertEqual(action, Action.ROTATE_KEY)
-        self.assertIn("Cota diária excedida (429)", msg)
+        self.assertIn("Cota diária excedida (Quota exceeded)", msg)
+
+    def test_handle_api_error_daily_limit(self):
+        error = Exception("Erro desconhecido: Daily Rate Limit Exceeded")
+        action, msg = handle_api_error(error, "key1", "test.pdf")
+        self.assertEqual(action, Action.ROTATE_KEY)
+        self.assertIn("Cota diária excedida (Daily Rate Limit Exceeded)", msg)
 
     def test_handle_api_error_503_unavailable(self):
         error = Exception("503 UNAVAILABLE: Service unavailable")
@@ -66,10 +72,11 @@ class TestErrorHandling(unittest.TestCase):
     @patch("grimoire.core.genai.Client")
     @patch("grimoire.core.time.sleep") # Mock sleep to speed up tests
     @patch("pathlib.Path.mkdir")
-    @patch("random.choice")
-    def test_generate_summary_rotation(self, mock_random_choice, mock_mkdir, mock_sleep, MockClient):
-        # Force random.choice to return key1 first, then key2
-        mock_random_choice.side_effect = ["key1", "key2"]
+    @patch("grimoire.core.key_manager")
+    def test_generate_summary_rotation(self, mock_key_manager, mock_mkdir, mock_sleep, MockClient):
+        # Mock key_manager to return key1 then key2
+        mock_key_manager.get_best_key.side_effect = ["key1", "key2", None]
+        mock_key_manager.acquire.return_value = None
         
         # Setup mock client to fail with 403 on first key, succeed on second
         mock_instance_1 = MagicMock()
