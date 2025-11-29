@@ -27,3 +27,4 @@ chroma_db/
 .DS_Store
 Thumbs.db
 logs/
+filter_library.py

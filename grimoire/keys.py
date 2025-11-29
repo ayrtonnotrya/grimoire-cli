@@ -113,7 +113,21 @@ class KeyManager:
             if key not in self.token_timestamps:
                 self.token_timestamps[key] = []
 
-            # 1. RPM Check
+            # 1. Pacing Check (New)
+            # Enforce a minimum interval between requests to prevent bursts.
+            # We add a 30% buffer to be safe.
+            if rpm_limit > 0:
+                min_interval = (60.0 / rpm_limit) * 1.3
+                last_used = self.state.get(key, {}).get("last_used", 0)
+                time_since_last = now - last_used
+                
+                if time_since_last < min_interval:
+                    wait_time = min_interval - time_since_last
+                    logger.debug(f"Pacing for key ...{key[-4:]}. Waiting {wait_time:.2f}s")
+                    time.sleep(wait_time)
+                    now = time.time() # Update now after sleep
+
+            # 2. RPM Check (Window)
             self._cleanup_timestamps(key, now)
             
             if len(self.request_timestamps[key]) >= rpm_limit:
