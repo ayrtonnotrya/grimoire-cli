@@ -3,6 +3,8 @@ import threading
 from collections import deque
 import os
 import concurrent.futures
+import subprocess
+import shutil
 from pathlib import Path
 from typing import Optional
 from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
@@ -115,6 +117,9 @@ def process_library(list_file_path: str, verbose: bool = False):
 
     console.print(f"[bold blue]Processing {len(pdfs_to_process)} books...[/bold blue]")
 
+    # Define error log file for 400 errors
+    error_log_path = file_path.parent / "process_failures_400.txt"
+
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}"),
@@ -128,18 +133,28 @@ def process_library(list_file_path: str, verbose: bool = False):
         if len(api_keys) > 1:
             # Use manual executor management to avoid hanging on shutdown
             executor = concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys))
-            futures = []
+            future_to_path = {}
             try:
                 for i, pdf_path in enumerate(pdfs_to_process):
                     # Pass ALL keys to the worker, let it manage retries
-                    futures.append(executor.submit(generate_summary, pdf_path, api_keys))
+                    future = executor.submit(generate_summary, pdf_path, api_keys)
+                    future_to_path[future] = pdf_path
                 
-                for future in concurrent.futures.as_completed(futures):
+                for future in concurrent.futures.as_completed(future_to_path):
+                    pdf_path = future_to_path[future]
                     try:
                         result = future.result()
                         progress.advance(task_id)
                         _print_process_result(progress.console, result, verbose=verbose)
                         
+                        # Log 400 errors
+                        if result["status"] == "error" and "400" in result.get("message", ""):
+                            try:
+                                with open(error_log_path, "a") as f:
+                                    f.write(f"{pdf_path}\n")
+                            except Exception as e:
+                                logger.error(f"Failed to log 400 error: {e}")
+
                         # Check for global exhaustion
                         if result["status"] == "skipped" and "All API Keys exhausted" in result["message"]:
                             progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
@@ -164,6 +179,15 @@ def process_library(list_file_path: str, verbose: bool = False):
                 result = generate_summary(pdf_path, api_keys)
                 progress.advance(task_id)
                 _print_process_result(progress.console, result, verbose=verbose)
+
+                # Log 400 errors
+                if result["status"] == "error" and "400" in result.get("message", ""):
+                    try:
+                        with open(error_log_path, "a") as f:
+                            f.write(f"{pdf_path}\n")
+                    except Exception as e:
+                        logger.error(f"Failed to log 400 error: {e}")
+                
                 
                 if result["status"] == "skipped" and "All API Keys exhausted" in result["message"]:
                      progress.console.print("[bold red]CRITICAL: All API Keys have been exhausted (Daily Limits). Stopping process.[/bold red]")
@@ -786,3 +810,111 @@ Answer:"""
     except Exception as e:
         logger.error(f"Error initializing client or process: {e}")
         return f"An error occurred: {e}"
+
+def repair_library(list_file_path: str, timeout: int = 60, verbose: bool = False):
+    """Attempts to repair PDFs listed in the file."""
+    file_path = Path(list_file_path)
+    if not file_path.exists():
+        console.print(f"[red]File not found: {file_path}[/red]")
+        return
+
+    # Output files
+    success_file = file_path.parent / "repaired_success.txt"
+    failed_file = file_path.parent / "repaired_failed.txt"
+    
+    console.print(f"[bold]Reading from {file_path}...[/bold]")
+    pdf_paths = parse_library_list(file_path)
+    console.print(f"Found {len(pdf_paths)} PDFs to repair.")
+
+    api_keys = config.gemini_api_keys
+    if not api_keys:
+        console.print("[red]Error: Gemini API Key not configured.[/red]")
+        return
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TaskProgressColumn(),
+        console=console
+    ) as progress:
+        task_id = progress.add_task("Repairing...", total=len(pdf_paths))
+        
+        for pdf_path in pdf_paths:
+            result = _repair_single_pdf(pdf_path, timeout, api_keys)
+            progress.advance(task_id)
+            
+            color = "green" if result["status"] == "success" else "red"
+            icon = "✓" if result["status"] == "success" else "✗"
+            msg = f"[{color}]{icon} {pdf_path.name}[/{color}] - {result['message']}"
+            progress.console.print(msg)
+            
+            if result["status"] == "success":
+                with open(success_file, "a") as f:
+                    f.write(f"{pdf_path}\n")
+            else:
+                with open(failed_file, "a") as f:
+                    f.write(f"{pdf_path}\n")
+
+def _repair_single_pdf(pdf_path: Path, timeout: int, api_keys: list[str]) -> dict:
+    if not pdf_path.exists():
+        return {"status": "error", "message": "File not found"}
+        
+    temp_path = pdf_path.with_suffix(".repaired.pdf")
+    
+    # 1. Run Ghostscript
+    cmd = [
+        "gs",
+        "-o", str(temp_path),
+        "-sDEVICE=pdfwrite",
+        "-dPDFSETTINGS=/default",
+        "-dNOPAUSE",
+        "-dBATCH",
+        str(pdf_path)
+    ]
+    
+    try:
+        subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout, check=False)
+    except subprocess.TimeoutExpired:
+        pass
+    except Exception as e:
+        return {"status": "error", "message": f"Ghostscript failed: {e}"}
+        
+    if not temp_path.exists() or temp_path.stat().st_size == 0:
+         return {"status": "error", "message": "Ghostscript did not produce a valid file"}
+
+    # 2. Verify with Gemini
+    prompt_text = "Please provide a one-paragraph summary of this document."
+    
+    key = key_manager.get_best_key()
+    if not key:
+        if temp_path.exists(): temp_path.unlink()
+        return {"status": "error", "message": "No API keys available"}
+        
+    try:
+        client = genai.Client(api_key=key)
+        with open(temp_path, "rb") as f:
+            pdf_data = f.read()
+            
+        response = client.models.generate_content(
+            model="gemini-2.5-flash-lite",
+            contents=[
+                types.Part.from_bytes(data=pdf_data, mime_type='application/pdf'),
+                prompt_text
+            ]
+        )
+        
+        if response.text:
+            # Success!
+            bak_path = pdf_path.with_suffix(".pdf.bak")
+            shutil.move(str(pdf_path), str(bak_path))
+            shutil.move(str(temp_path), str(pdf_path))
+            return {"status": "success", "message": "Repaired and verified"}
+        else:
+            if temp_path.exists(): temp_path.unlink()
+            return {"status": "error", "message": "Gemini verification failed (no text)"}
+            
+    except Exception as e:
+        if temp_path.exists(): temp_path.unlink()
+        return {"status": "error", "message": f"Verification failed: {e}"}
+

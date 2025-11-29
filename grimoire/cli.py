@@ -215,5 +215,15 @@ def report():
     from grimoire.stats import print_report
     print_report()
 
+@app.command()
+def repair(
+    list_file: str = typer.Option(..., "--list", "-l", help="📚 Path to the library list file"),
+    timeout: int = typer.Option(60, help="⏱️ Timeout in seconds for Ghostscript (default: 60)"),
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 Verbose output")
+):
+    """🛠️ Attempt to repair corrupted PDFs using Ghostscript and verify with Gemini."""
+    console.print(f"[bold]Starting repair process for list: {list_file}[/bold]")
+    core.repair_library(list_file, timeout=timeout, verbose=verbose)
+
 if __name__ == "__main__":
     app()
