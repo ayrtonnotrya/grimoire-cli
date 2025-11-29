@@ -75,7 +75,7 @@ def process_single_file(pdf_path: Path, verbose: bool = False) -> dict:
 
     return generate_summary(pdf_path, api_keys)
 
-def process_library(list_file_path: str, verbose: bool = False):
+def process_library(list_file_path: str, exclude_file_path: str = None, verbose: bool = False):
     """Main processing function."""
     file_path = Path(list_file_path)
     
@@ -100,7 +100,28 @@ def process_library(list_file_path: str, verbose: bool = False):
     # Filter out PDFs that already have summaries
     pdfs_to_process = []
     skipped_count = 0
+    
+    # Load exclusion list if provided
+    excluded_paths = set()
+    if exclude_file_path:
+        try:
+            console.print(f"[bold]Loading exclusion list from {exclude_file_path}...[/bold]")
+            # Use parse_library_list to reuse the logic (stripping, ignoring comments)
+            excluded_list = parse_library_list(Path(exclude_file_path))
+            # Convert to absolute strings for comparison
+            excluded_paths = {str(p.resolve()) for p in excluded_list}
+            console.print(f"[yellow]Loaded {len(excluded_paths)} files to exclude.[/yellow]")
+        except Exception as e:
+            console.print(f"[red]Failed to load exclusion list: {e}[/red]")
+            return
+
     for pdf_path in pdf_paths:
+        # Check if file is in exclusion list
+        if str(pdf_path.resolve()) in excluded_paths:
+            if verbose:
+                console.print(f"[yellow]Skipping excluded file: {pdf_path.name}[/yellow]")
+            continue
+
         if check_summary_exists(pdf_path.name):
              skipped_count += 1
              if verbose:
