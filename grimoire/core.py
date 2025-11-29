@@ -16,6 +16,7 @@ from google.genai import types
 from grimoire.config import config
 from grimoire.schemas import BookSummary, BOOK_SUMMARY_SCHEMA
 import json
+import random
 from enum import Enum, auto
 
 console = Console()
@@ -75,7 +76,7 @@ def process_single_file(pdf_path: Path, verbose: bool = False) -> dict:
 
     return generate_summary(pdf_path, api_keys)
 
-def process_library(list_file_path: str, exclude_file_path: str = None, verbose: bool = False):
+def process_library(list_file_path: str, exclude_file_path: str = None, sequential: bool = False, verbose: bool = False):
     """Main processing function."""
     file_path = Path(list_file_path)
     
@@ -91,6 +92,12 @@ def process_library(list_file_path: str, exclude_file_path: str = None, verbose:
     console.print(f"[bold]Parsing {file_path}...[/bold]")
     pdf_paths = parse_library_list(file_path)
     console.print(f"Found {len(pdf_paths)} PDFs.")
+
+    if not sequential:
+        console.print("[yellow]Shuffling processing order...[/yellow]")
+        random.shuffle(pdf_paths)
+    else:
+        console.print("[blue]Processing in sequential order.[/blue]")
 
     api_keys = config.gemini_api_keys
     if not api_keys:
