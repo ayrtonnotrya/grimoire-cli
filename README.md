@@ -112,3 +112,41 @@ To run tests:
 ```bash
 poetry run pytest
 ```
+
+## 🔧 Troubleshooting
+
+### Poetry Lock Hanging
+If `poetry lock` or `poetry install` hangs indefinitely (often on "Resolving dependencies"), it might be due to the system keyring. Try running with the keyring disabled:
+
+```bash
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+poetry install
+```
+
+### Poetry Version
+This project uses `pyproject.toml` features that may require newer versions of Poetry. If you encounter parsing errors, ensure you are using a compatible version or adjust the `pyproject.toml` to match your installed version (e.g., downgrading to 1.8.x syntax if needed).
+
+## 💾 Data Management
+
+### Database Location
+The ChromaDB vector database is stored by default in:
+`~/.local/share/grimoire/chroma_db`
+
+### Restoring Backups
+To restore a backup (e.g., from a zip file):
+
+1.  **Stop any running instances** of Grimoire.
+2.  **Clear the existing database**:
+    ```bash
+    rm -rf ~/.local/share/grimoire/chroma_db
+    ```
+3.  **Extract the backup**:
+    Ensure your backup zip contains the `chroma_db` folder structure.
+    ```bash
+    unzip backup.zip -d ~/.local/share/grimoire/
+    ```
+4.  **Verify**:
+    Run a search command to ensure the data is loaded.
+    ```bash
+    grimoire search "test"
+    ```
