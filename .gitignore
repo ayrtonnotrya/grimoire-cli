@@ -28,3 +28,7 @@ chroma_db/
 Thumbs.db
 logs/
 filter_library.py
+
+# arquivos com os file path dos livros
+library_paths*.txt
+process_failures_400.txt
