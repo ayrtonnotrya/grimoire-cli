@@ -120,7 +120,7 @@ class KeyManager:
             # Enforce a minimum interval between requests to prevent bursts.
             # We add a 30% buffer to be safe.
             if rpm_limit > 0:
-                min_interval = (60.0 / rpm_limit) * 1.3
+                min_interval = (60.0 / rpm_limit) * 1.5
                 last_used = self.state.get(key, {}).get("last_used", 0)
                 time_since_last = now - last_used
                 

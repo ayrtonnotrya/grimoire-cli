@@ -78,8 +78,8 @@ def test_rate_limit_exponential_backoff(mock_mkdir, mock_sleep, mock_types, mock
     assert mock_client.models.generate_content.call_count == 3
     
     # Verify Exponential Backoff
-    # Expected sleeps: 2s (retry 1), 4s (retry 2)
+    # Expected sleeps: 10s (retry 1), 20s (retry 2)
     assert mock_sleep.call_count == 2
-    mock_sleep.assert_has_calls([call(2), call(4)])
+    mock_sleep.assert_has_calls([call(10), call(20)])
     
     print("\nExponential backoff verified: slept for 2s then 4s.")

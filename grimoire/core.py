@@ -269,13 +269,12 @@ def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Ac
     # 429 RESOURCE_EXHAUSTED (Daily quota or rate limit)
     if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
         # Check for specific "Quota exceeded" message
-        if "Quota exceeded" in error_str:
+        if "Quota exceeded" in error_str or "Daily" in error_str:
              return Action.ROTATE_KEY, f"Cota diária excedida (Quota exceeded). Chave {masked_key} marcada como inválida."
 
-        # Changed strategy: Retry first, as it might be a transient rate limit (RPM/TPM).
-        # Only if it persists (handled by retry loop) or if we could detect "Quota" explicitly would we rotate.
-        # Since we can't easily distinguish, we'll RETRY. If retries fail, the loop will eventually give up or we can add logic there.
-        return Action.RETRY, f"Limite de recursos (429). Tentando novamente com chave {masked_key}..."
+        # Transient Rate Limit (RPM/TPM)
+        # Do NOT rotate key immediately. Retry with backoff.
+        return Action.RETRY, f"Limite de taxa (429). Aguardando para tentar novamente com chave {masked_key}..."
 
     # 500 INTERNAL
     if "500" in error_str or "INTERNAL" in error_str:
@@ -404,20 +403,21 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
             elif action == Action.RETRY:
                 retry_count += 1
                 if retry_count <= max_retries:
-                    logger.info(f"{msg} - Retrying ({retry_count}/{max_retries})...")
-                    time.sleep(2 * retry_count) # Exponential backoff
-                    continue # Retry with same key (or random choice again)
+                    # Increase backoff for 429s
+                    backoff = 2 * retry_count
+                    if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                        backoff = 10 * retry_count # Aggressive backoff for rate limits (10s, 20s, 30s)
+                    
+                    logger.info(f"{msg} - Retrying ({retry_count}/{max_retries}) in {backoff}s...")
+                    time.sleep(backoff)
+                    continue # Retry with same key
                 else:
                     logger.error(f"Max retries exceeded for {pdf_path.name}.")
-                    # If max retries exceeded for 429, it might be a quota issue.
-                    # Let's rotate the key just in case, instead of failing the file.
+                    # If max retries exceeded for 429, it might be a quota issue, BUT we shouldn't kill the key
+                    # unless we are sure. Just fail this file to avoid killing the run.
                     if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                         logger.warning(f"Max retries for 429 exceeded. Assuming quota exhaustion for key ...{api_key[-4:]}. Rotating.")
-                         key_manager.mark_exhausted(api_key)
-                         if api_key in available_keys:
-                             available_keys.remove(api_key)
-                         retry_count = 0 # Reset retry count for new key
-                         continue
+                         logger.warning(f"Max retries for 429 exceeded. Skipping file {pdf_path.name} but keeping key {api_key[-4:]} alive.")
+                         return {"status": "error", "file": pdf_path.name, "message": f"Rate limit persistent: {msg}", "full_error": str(e), "masked_key": f"...{api_key[-4:]}"}
 
                     return {"status": "error", "file": pdf_path.name, "message": f"Max retries exceeded: {msg}", "full_error": str(e), "masked_key": f"...{api_key[-4:]}"}
 
