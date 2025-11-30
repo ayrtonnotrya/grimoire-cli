@@ -1,0 +1,192 @@
+{
+  "header": {
+    "title": "Πρακτική Μαγεία Σολομωνική (Practical Solomonic Magic)",
+    "authors": [
+      "Jorg Sabellicus"
+    ],
+    "category": "Western Esotericism, Grimoire Tradition, Solomonic Magic",
+    "keywords": [
+      "Solomonic Magic",
+      "Grimoire",
+      "Pentagrams",
+      "Magic Circles",
+      "Evocation",
+      "Divination",
+      "Talismans",
+      "Amulets",
+      "Planetary Magic",
+      "Ceremonial Magic",
+      "Theurgy",
+      "Goetia",
+      "Natural Magic"
+    ]
+  },
+  "central_thesis": "The book synthesizes various grimoire traditions and folk magic practices into a practical, step-by-step manual for the invocation and command of spirits (demonic, planetary, angelic) and the manipulation of natural forces to achieve mundane and occult objectives. It asserts that the magician's authority, derived from divine names and symbols, combined with precise ritual mechanics and astrological timing, ensures successful operations and protection.",
+  "structure_content": [
+    {
+      "chapter_title": "Πρόλογος (Prologue)",
+      "summary": "An introduction to the nature and historical context of magic, categorizing it and discussing its practical applications. It highlights the synthesis of various traditional sources used in the book."
+    },
+    {
+      "chapter_title": "Εισαγωγή (Introduction)",
+      "summary": "Detailed discussion of the primary grimoire sources, notably the 'Key of Solomon' and 'Lemegeton', differentiating between their versions and emphasizing their foundational role in Solomonic magic."
+    },
+    {
+      "chapter_title": "Προειδοποίηση (Warning)",
+      "summary": "A stern admonition regarding the gravity of magical practice, the absolute necessity of strict adherence to instructions, and the potential perils of improper execution. It underscores the esoteric nature and secrecy required for successful operations."
+    },
+    {
+      "chapter_title": "Οι χρόνοι και οι επιρροές των Μαγικών πράξεων (Times and Influences of Magical Operations)",
+      "summary": "Explains the critical role of astrological timing, including planetary hours and days, in aligning magical operations with celestial influences to maximize desired outcomes for specific purposes."
+    },
+    {
+      "chapter_title": "Προετοιμασία γιά τή Μεγάλη Ἱεροτελεστία (Preparation for the Great Ritual)",
+      "summary": "Instructions for constructing essential ritual items, such as the magician's vestments, diadem, and other consecrated instruments, detailing the specific symbols and divine names to be inscribed upon them."
+    },
+    {
+      "chapter_title": "Κατασκευή καί καθαγίαση τῶν Πενταγράμμων καί τοῦ Κύκλου (Construction and Consecration of Pentagrams and the Circle)",
+      "summary": "Guidelines for accurately drawing, inscribing, and consecrating the magic circle and various pentagrams, explaining their symbolic significance as protective barriers and focal points of magical energy."
+    },
+    {
+      "chapter_title": "Ἡ Ἱεροτελεστία τῆς ἐπικλήσεως (The Ritual of Invocation)",
+      "summary": "The core operational sequence for invoking spirits, including the precise sequence of prayers, divine names, and commands necessary to compel entities into manifestation or obedience."
+    },
+    {
+      "chapter_title": "Πενταγράμματα τῆς Ἀφροδίτης, τοῦ Ἑρμῆ, τῆς Σελήνης, τοῦ Κρόνου, τοῦ Διός (Pentagrams of Venus, Mercury, Moon, Saturn, Jupiter)",
+      "summary": "Specific designs and applications of planetary pentagrams, each associated with a particular planet and its corresponding influences, for tailored magical operations, accompanied by illustrative diagrams."
+    },
+    {
+      "chapter_title": "Τά Μαγικά Πενταγράμματα (The Magic Pentagrams)",
+      "summary": "A broader overview of various magical pentagrams, discussing their colors, associated metals, and diverse applications in ceremonial magic for different purposes, emphasizing their sympathetic magical properties."
+    },
+    {
+      "chapter_title": "ΤΑ ΠΕΝΤΑΓΡΑΜΜΑ ΚΑΙ Η ΑΞΙΑ ΤΟΥΣ (The Pentagrams and Their Value)",
+      "summary": "A summary table detailing the specific uses and values of each planetary pentagram, cross-referencing them with desired outcomes such as acquiring honor (Sun), wealth (Jupiter), or love (Venus)."
+    },
+    {
+      "chapter_title": "Τά Μάγια (The Magic)",
+      "summary": "An exposition on the 'Liber Spirituum' tradition, providing detailed instructions for performing spirit evocations and the associated preparative rites and materials for interaction with entities."
+    },
+    {
+      "chapter_title": "Ἡ Διαθήκη τοῦ Σολομώντα (The Testament of Solomon)",
+      "summary": "Explores the ancient grimoire 'The Testament of Solomon', contextualizing it within the broader Solomonic tradition and emphasizing the foundational concept of the magician's divinely granted authority over spirits."
+    },
+    {
+      "chapter_title": "Ἀπό τό «Grand Grimoire» Ἐπίκληση τοῦ Ἑωσφόρου Ροφοκάλε (From the 'Grand Grimoire' Invocation of Lucifer Rofocale)",
+      "summary": "Specific, detailed instructions for a powerful evocation ritual from the 'Grand Grimoire', focusing on the invocation of high-ranking infernal entities like Lucifer Rofocale, including requisite tools, prayers, and commanding formulas."
+    },
+    {
+      "chapter_title": "Ἡ Διατύπωση τῆς Ἐπικλήσεως (The Formulation of the Invocation)",
+      "summary": "Provides general principles and specific examples for structuring invocations, often integrating Christian theological concepts and prayers alongside traditional magical names and seals to empower the magician's commands."
+    },
+    {
+      "chapter_title": "Ὁ Κύκλος τῶν Ἐπικλήσεων (The Circle of Invocations)",
+      "summary": "Further elaboration on the construction and use of the magic circle, emphasizing its function as a sacred boundary, a locus of condensed power, and a sanctuary for the magician during perilous evocations."
+    },
+    {
+      "chapter_title": "Ἐπικλήσεις γιά κάθε μέρα τῆς Ἑβδομάδας (Invocations for each day of the Week)",
+      "summary": "Prescribes specific invocations, corresponding angels, and appropriate rituals for each day of the week, aligning with the planetary ruler and its associated influences for optimal magical efficacy."
+    },
+    {
+      "chapter_title": "ΤΑ ΜΥΣΤΙΚΑ ΤΩΝ ΣΗΜΕΡΙΝΩΝ ΜΑΓΩΝ (The Secrets of Modern Magicians)",
+      "summary": "Introduces contemporary magical practices, primarily focusing on various forms of divination, such as cartomancy (using playing cards or Tarot) and scrying, to gain insight and foresee future events."
+    },
+    {
+      "chapter_title": "ΣΤΟΙΧΕΙΑ ΑΣΤΡΟΛΟΓΙΑΣ (Elements of Astrology)",
+      "summary": "Presents foundational astrological concepts, including the significance of planets and zodiac signs, detailing their correspondences and their critical role in determining propitious timings for magical operations."
+    },
+    {
+      "chapter_title": "ΦΥΣΙΚΗ ΜΑΓΕΙΑ (Natural Magic)",
+      "summary": "Explores a wide array of magical practices derived from natural elements, detailing the occult properties and uses of various plants, stones, and animal products in spells for healing, protection, and other practical purposes."
+    },
+    {
+      "chapter_title": "ΕΡΩΤΙΚΗ ΜΑΓΕΙΑ (Love Magic)",
+      "summary": "Compiles spells, recipes, and rituals specifically designed to attract, retain, or sever romantic relationships, drawing from diverse traditions and folklore, often using natural ingredients and sympathetic magic."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Πενταγράμμα (Pentagram)",
+      "definition": "A five-pointed star symbol, used in ritual circles and talismans, associated with protection, elemental forces, or planetary energies. Its precise inscription and consecration are crucial."
+    },
+    {
+      "term": "Μαγικός Κύκλος (Magic Circle)",
+      "definition": "A consecrated protective perimeter, typically drawn on the ground with divine names and symbols, which shields the magician from invoked entities and serves as a focal point for ritual power."
+    },
+    {
+      "term": "Ἱεροτελεστία (Ritual/Ceremony)",
+      "definition": "A sequence of prescribed actions, prayers, and invocations, performed under specific conditions and timings, aimed at achieving a magical objective through interaction with supernatural forces."
+    },
+    {
+      "term": "Ἐπίκληση (Invocation/Evocation)",
+      "definition": "The act of compelling a spiritual entity (angel, demon, planetary intelligence) to manifest, either internally within the magician (invocation) or externally within a designated triangle (evocation), for communication or command."
+    },
+    {
+      "term": "Δαίμονες / Πνεύματα (Demons / Spirits)",
+      "definition": "Non-corporeal entities, ranging from infernal to planetary or angelic, which can be commanded by the empowered magician through specific rituals, divine names, and seals to perform desired tasks."
+    },
+    {
+      "term": "Φυλακτό / Ταυλισμάν (Amulet / Talisman)",
+      "definition": "An object, typically a metal disc or parchment, inscribed with sacred symbols, names, or sigils, consecrated to either attract a desired influence (talisman) or repel an undesired one (amulet), for various protective or acquisitive purposes."
+    },
+    {
+      "term": "Πλανητικές Ὧρες (Planetary Hours)",
+      "definition": "Divisions of the day and night, each governed by a specific planet, dictating the most astrologically auspicious times for performing magical operations related to that planet's influence."
+    },
+    {
+      "term": "Μέγας Ἀλβέρτος (Albertus Magnus)",
+      "definition": "A pseudonymous historical figure whose name is associated with a grimoire tradition focused on 'natural magic', often involving herbs, stones, and animal parts for various practical applications including healing and love spells."
+    },
+    {
+      "term": "Κλειδί τοῦ Σολομώντα (Key of Solomon)",
+      "definition": "A foundational grimoire providing instructions for the construction of magical tools, pentacles, and the performance of various ceremonial magic operations, forming a cornerstone of Solomonic practice."
+    },
+    {
+      "term": "Λεμέγεθον / Μικρό Κλειδί (Lemegeton / Lesser Key)",
+      "definition": "A renowned grimoire containing a comprehensive catalog of 72 Goetic demons, detailing their seals, attributes, and the methods for their successful evocation and binding."
+    }
+  ],
+  "practical_system": {
+    "description": "The practical system is syncretic, drawing from diverse sources to offer a comprehensive magical methodology. It combines ceremonial evocation (commanding spirits through divine authority), natural magic (utilizing the inherent occult properties of plants, stones, and animal parts), and folk magic/divination. Core tenets include the absolute necessity of rigorous ritual preparation, adherence to precise astrological timing (planetary hours and days), the use of consecrated tools inscribed with divine names and symbols, and the magician's unwavering will and authority derived from knowledge of sacred names. The ultimate goal is to effect change in the physical world and gain knowledge through communication with various spiritual entities.",
+    "tools": [
+      "Magic Circle (Μαγικός Κύκλος): For protection, energy containment, and spirit manifestation.",
+      "Pentagrams (Πενταγράμματα): Specific planetary or Solomonic pentagrams used as talismans, seals, or elements within the circle/triangle of art.",
+      "Wand or Rod of Art (Ράβδος τῆς Τέχνης): An instrument for directing magical energy and commanding spirits.",
+      "Magician's Diadem/Crown (Στέμμα τοῦ Μάγου): Worn on the head, inscribed with divine names, symbolizing authority and protection.",
+      "Ritual Robes/Vestments (Ἱερατικά Ἐνδύματα): Clean, consecrated garments appropriate for the operation.",
+      "Incense and Offerings (Θυμίαμα καί Προσφορές): Used to attract or appease spirits and create an appropriate ritual atmosphere.",
+      "Magic Mirror/Crystal Ball (Μαγικός Καθρέπτης/Κρυστάλλινη Σφαίρα): For scrying and clairvoyance.",
+      "Herbs, Stones, Animal Parts: Ingredients for natural and folk magic spells, chosen based on their sympathetic correspondences.",
+      "Playing Cards/Tarot Cards (Τράπουλα/Χαρτιά Ταρό): For divination purposes.",
+      "Candles and Lamps (Κεριά καί Λάμπες): Used for illumination, ambiance, and as symbolic focal points.",
+      "Holy Water (Ἁγιασμένο Νερό): For purification and consecration.",
+      "Sacred Ink and Pen (Ἱερό Μελάνι καί Πέννα): For inscribing symbols, names, and seals on talismans and ritual items.",
+      "Triangle of Art (Τρίγωνο τῆς Τέχνης): Placed outside the circle for spirit manifestation."
+    ],
+    "rituals": [
+      "Solomonic Evocation: Invocations and evocations of planetary intelligences, angels, and demons for specific purposes (e.g., wealth, invisibility, love, commanding subservient spirits), meticulously timed to planetary hours and days, utilizing magic circles, pentagrams, and divine names.",
+      "Natural Magic Operations: Preparation and use of herbal concoctions, consecrated stones, and animal parts in sympathetic magic for healing, love spells, protection, and various remedies, often detailed as 'recipes'.",
+      "Love Magic Spells: A wide range of rituals and preparations aimed at attracting or retaining affection, dissolving undesirable relationships, or resolving marital issues, drawing from ancient and folk sources (e.g., 'Cleopatra's Magic', 'Kama Sutra').",
+      "Divination: Practices including cartomancy (using playing cards or Tarot), scrying (with magic mirrors or crystal balls), and dream interpretation for obtaining hidden knowledge, predicting future events, or understanding past occurrences.",
+      "Consecration of Tools: Rituals for purifying and empowering all magical instruments—wands, robes, diadems, ink, parchment—through prayers, fumigations, and inscriptions of divine names and sigils."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Ὁ μάγος πρέπει νά φοράει ἕνα στέμμα φτιαγμένο ἀπό ἀπίαστο ἄσπρο χαρτί, πού ἐπάνω του πρέπει νά γραφτοῦν μέ καθαγιασμένο μέλάνι καί πέννα, τῆς Τέχνης ( βλ. ΠΑΡΆΡΤΗΜΑ II ), τά ἑξῆς ἑβραϊκά ὀνόματα τοῦ Θεοῦ: [...] (The magician must wear a diadem made of immaculate white paper, on which the following Hebrew names of God must be written with consecrated ink and the pen of Art...)",
+      "page": "30"
+    },
+    {
+      "text": "Ἀπό τῆς ὥρας τοῦ Μεσονυκτίου πού ἡ Σελήνη βρίσκεται στό Ζώδιο τοῦ Ταύρου, στήν Παρθένο ἤ στό Αἰγόκερω (γῆνα Ζώδια) νά ἐπιτύχει κανείς ὑπερφυσιικά φαινόμενα. (From midnight, when the Moon is in the Zodiac sign of Taurus, Virgo, or Capricorn (earth signs), one can achieve supernatural phenomena.)",
+      "page": "25"
+    },
+    {
+      "text": "Ἀπό τό βιβλίο του Ἀριστοτέλη ἀναγράφεται ὅτι ἡ ρίζα τοῦ λευκοῦ Ὑοσκύαμου (Δαιμονιαίας), ἀνακουφίζει ὅποιον ὑποφέρει ἀπό κωλικούς, ἄν κρεμαστεῖ στό λαιμό του. (From Aristotle's book it is written that the root of white Hyoscyamus (Demoniaca) relieves anyone suffering from colic if hung around the neck.)",
+      "page": "396"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This book serves as a significant compilation and interpretative synthesis of various grimoire traditions, including Solomonic texts ('Key of Solomon', 'Lemegeton'), the 'Grand Grimoire', 'Albertus Magnus', and elements of modern occultism, all presented for a Greek-speaking audience. Its relevance lies in its attempt to provide a structured, practical approach to ceremonial magic, blending classical evocation with natural and folk magic. While drawing from historically disparate sources, it aims to present a cohesive system for operative magic, making complex traditions accessible, albeit sometimes through selective interpretation and simplification.",
+    "target_audience": "The target audience encompasses aspiring practitioners of ceremonial magic, occultists, and individuals seeking practical magical solutions for mundane concerns such as love, wealth, protection, healing, and divination. The inclusion of a 'Warning' section suggests it's intended for serious, disciplined students, yet the detailed, step-by-step instructions and simplified explanations also make it appealing and potentially misleading for novices without a deeper theoretical understanding of Western Esotericism."
+  }
+}

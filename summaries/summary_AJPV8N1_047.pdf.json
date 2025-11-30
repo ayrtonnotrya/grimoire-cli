@@ -1,0 +1,114 @@
+{
+  "header": {
+    "title": "Reading Faces: An Experimental Exploration of Psychometry Using Photographs and Names",
+    "authors": [
+      "ALEJANDRO PARRA",
+      "JUAN CARLOS ARGIBAY"
+    ],
+    "category": "Parapsychology Experiment",
+    "keywords": [
+      "psychometry",
+      "psychics",
+      "non-psychics",
+      "photographs",
+      "token objects",
+      "anomalous detection"
+    ]
+  },
+  "central_thesis": "The study experimentally compared the psychometric abilities of self-claimed psychics and ordinary people in distinguishing between living and dead individuals using photographs and names as stimuli, concluding that neither group scored significantly above chance, nor did self-claimed psychics demonstrate greater psi hitting or variability.",
+  "structure_content": [
+    {
+      "chapter_title": "ABSTRACT",
+      "summary": "This section introduces the study's aim to compare psychics and non-psychics in discerning living from dead individuals using psychometric objects (photographs and names). It outlines the sample (169 participants: 74 'psychics' and 95 'non-psychics') and states the primary finding: no significant differences or psi hitting were observed, suggesting difficulties in interpreting psi signals."
+    },
+    {
+      "chapter_title": "INTRODUCTION",
+      "summary": "The introduction defines psychometry as anomalous cognition via physical objects and provides historical examples of psychic detectives (Stephan Ossowiecki, Croiset) who allegedly used such abilities. It discusses the social significance of face perception and acknowledges the public's high opinion of psychics, while posing the central question of whether psychic statements are statistically significant or attributable to paranormal means, or simply psychological processes."
+    },
+    {
+      "chapter_title": "METHOD",
+      "summary": "This section details the experimental design, including participants (169 well-educated, psi-believing individuals aged 18-76), their recruitment via media, and the categorization into 'psychic' (N=95, with psi experiences but no control) and 'non-psychic' (N=74, with psi experiences and control) groups based on an adapted 17-item Anomalous Experiences Inventory. It describes the target material (104 photographs and corresponding names of living and dead persons), rigorous security measures to prevent sensory leakage, and the testing procedure involving relaxation, handling stimuli, and marking 'living' or 'dead' on an answer sheet without feedback."
+    },
+    {
+      "chapter_title": "RESULTS",
+      "summary": "The results indicate that for the whole sample, there were no significant score differences between using photographs and written names. Crucially, a MANOVA showed no significant difference in scores between the 'psychic' and 'non-psychic' groups for either stimulus type. Both groups performed at chance level, failing to support the hypothesis that psychics would score higher."
+    },
+    {
+      "chapter_title": "DISCUSSION",
+      "summary": "The discussion concludes that participants claiming psychometric psi ability did not exhibit greater psi hitting than non-psychics. Possible interpretations for the negative results include psychological defense mechanisms, neutralizing affective associations to stimuli, or the self-perception of psychic ability being mere guessing rather than genuine extrasensory perception. The authors suggest a need for a more phenomenological interpretation of participant inferences and future research on individual differences and personality factors that might correlate with psi hitting."
+    },
+    {
+      "chapter_title": "ACKNOWLEDGEMENTS",
+      "summary": "This section expresses gratitude to the BIAL Foundation for research funding and to co-experimenters Romina Mielgo and Josefina Caputo for their collaboration and provision of photographic materials."
+    },
+    {
+      "chapter_title": "REFERENCES",
+      "summary": "A list of academic and parapsychological works cited throughout the paper."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Psychometry",
+      "definition": "A type of anomalous cognition which permits a psychic to experience impressions using a physical object (e.g., photographs, token objects, names) as an 'inductor'."
+    },
+    {
+      "term": "Token-object effect",
+      "definition": "The phenomenon where self-claimed psychics use an object, such as a photograph or a personal item, to gain extrasensory or psi impressions about a target person or situation."
+    },
+    {
+      "term": "Psychic Group (as defined in study)",
+      "definition": "Participants (N=95) categorized as having 'psi experiences, but no control over that ability.' They indicated 'yes, sometimes' or 'yes, frequently' to experiencing vivid impressions from a photograph of an absent person without prior knowledge or deductive signs."
+    },
+    {
+      "term": "Non-Psychic Group (as defined in study)",
+      "definition": "Participants (N=74) categorized as having 'psi experiences, but could control over their ability.' They indicated 'yes, once' or 'yes, sometimes' to being able to control their mind while in contact with a photograph to obtain vivid impressions without prior knowledge."
+    },
+    {
+      "term": "Psi hitting",
+      "definition": "The act of scoring above chance expectation in an ESP task, indicating successful anomalous cognition. In this study, neither group demonstrated psi hitting."
+    },
+    {
+      "term": "Anomalous Experiences Inventory (AEI)",
+      "definition": "A 70-item questionnaire about paranormal experiences, adapted to a shorter 17-item scale for this study, used to categorize participants based on their belief in psi, extrasensory experiences, and extrasensory abilities."
+    }
+  ],
+  "practical_system": {
+    "description": "This text does not describe a practical system for developing or performing psychometry as a magical practice, but rather details a scientific experimental protocol for *testing* psychometric ability. The 'system' outlined is therefore a research methodology designed to elicit and measure potential anomalous cognition, rather than an initiatory or operative magical technique.",
+    "tools": [
+      "Black and white glossy photographs of living and dead persons (52 pairs).",
+      "Written names corresponding to the photographs.",
+      "Envelopes to contain pairs of stimuli, ensuring blindness.",
+      "Answer sheets for recording 'living' or 'dead' responses.",
+      "An adapted 17-item Anomalous Experiences Inventory questionnaire for participant categorization.",
+      "Electronic random number generator for stimulus order randomization."
+    ],
+    "rituals": [
+      "Nine-minute relaxation exercise guided by the experimenter's voice, to put participants in a receptive state.",
+      "Remaining quiet with eyes closed for a few minutes to wait for impressions after contact with the target.",
+      "Physical contact with target objects (photographs or written names), held individually in envelopes.",
+      "Recording binary responses ('living' or 'dead') for each target on an answer sheet."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Psychometry describes a type of anomalous cognition which permits a psychic to experience such impressions using a physical object.",
+      "page": "1"
+    },
+    {
+      "text": "The aim of the present study was to compare a group of ordinary people (non-psychics) with self-claimed psychics in order to determine if participants were capable of distinguishing between living and dead people from photographs of same.",
+      "page": "1"
+    },
+    {
+      "text": "No significant differences were found. Those participants who claimed to have psychometric ability (that is, were able to pick up impressions from an object by being in physical contact with it) neither obtained psi hitting, nor demonstrated greater variability in their psi hits.",
+      "page": "1"
+    },
+    {
+      "text": "It can be concluded that those participants who claimed to have a psychometric psi ability (that is, being able to pick up impressions from an object by being in physical contact with it) did not show greater psi hitting than non-psychics.",
+      "page": "9"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This study offers a direct, albeit challenging, empirical perspective on psychometry, a practice frequently encountered in occult and esoteric traditions. From a practitioner's standpoint, the findings – particularly the lack of verifiable psi hitting even among self-claimed psychics – underscore the significant gap between subjective experience and objective, repeatable demonstration. It suggests that the 'token-object effect' might be more nuanced, influenced by unknown psychological factors, or simply non-existent under controlled conditions. This challenges the foundational assumption in many occult practices that certain objects inherently carry energetic 'impressions' accessible by sensitive individuals. The paper's inverted definition of 'psychics' (those with psi experience but no control) versus 'non-psychics' (those with psi experience and control) adds a layer of confusion, yet the overall conclusion remains that perceived ability did not translate to measurable success.",
+    "target_audience": "Academic researchers in parapsychology, experimental psychology, and cognitive science; skeptics and critical thinkers investigating anomalous phenomena; and practitioners or students of esotericism and occultism who seek empirical validation or critique of psychometric practices. It is particularly relevant for those interested in the scientific investigation of psychic abilities rather than instructional magical texts."
+  }
+}

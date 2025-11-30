@@ -1,0 +1,106 @@
+{
+  "header": {
+    "title": "Meta-Analysis in Parapsychology: I. The Ganzfeld Domain",
+    "authors": [
+      "LANCE STORM"
+    ],
+    "category": "Parapsychology, Scientific Review",
+    "keywords": [
+      "Meta-analysis",
+      "Ganzfeld",
+      "Psi effect",
+      "Parapsychology",
+      "Replication",
+      "Effect size",
+      "Autoganzfeld"
+    ]
+  },
+  "central_thesis": "The ganzfeld paradigm consistently demonstrates significant psi effects, as evidenced by meta-analyses showing high effect sizes, even after accounting for methodological criticisms and debates. Recent studies continue to support this finding, establishing the ganzfeld as a robust experimental domain in parapsychology.",
+  "structure_content": [
+    {
+      "chapter_title": "INTRODUCTION TO META-ANALYSIS",
+      "summary": "This section defines meta-analysis as the statistical analysis of summary findings from multiple empirical studies, highlighting its quantitative nature, non-prejudgment of research quality, and aim for general conclusions. It also references historical applications by prominent statisticians and researchers."
+    },
+    {
+      "chapter_title": "PARAPSYCHOLOGY AND META-ANALYSIS",
+      "summary": "This part discusses the application of meta-analysis in parapsychology, emphasizing its role in distinguishing psi effects from chance. It addresses criticisms such as methodological flaws (e.g., data from poorly designed experiments) and 'selective reporting' or the 'file-drawer problem,' explaining how these issues are mitigated in parapsychological meta-analyses through policies on negative findings, estimation techniques, and the funnel-plot method."
+    },
+    {
+      "chapter_title": "The Ganzfeld Procedure",
+      "summary": "This chapter describes the ganzfeld as a free-response ESP test, where participants experience homogeneous, unpatterned sensory stimulation (e.g., halved ping-pong balls with uniform light, white/pink noise via headphones). The procedure aims to create a state conducive to spontaneous psi occurrences, remaining largely consistent since the 1970s."
+    },
+    {
+      "chapter_title": "The Ganzfeld Experiments",
+      "summary": "This section reviews early ganzfeld meta-analyses, particularly the debate between Hyman (1985) and Honorton (1985) regarding the significance and methodological rigor of 42 studies (1974-1982). Honorton's re-analysis, applying Bonferroni correction and focusing on direct hits, yielded a composite Stouffer Z score of 6.60 (p = 2.10 x 10^-11) with a mean effect size of 0.26. It also details Hyman's criticisms regarding multiple analyses and flaws, and the subsequent 'Joint Communiqué' which established more stringent standards for future research."
+    },
+    {
+      "chapter_title": "The Autoganzfeld Experiments",
+      "summary": "This segment focuses on the 'autoganzfeld' procedure, an automated approach designed to meet the 'Joint Communiqué' standards. It reviews 11 autoganzfeld experiments (1983-1989), which yielded a Stouffer Z of 2.61 (p = 4.50 x 10^-3) with a mean effect size of 0.117. It then discusses Milton and Wiseman's (1999) meta-analysis of post-1987 studies, which found non-significant results (Stouffer Z = 0.70, p = .24), and Storm and Ertel's (2001) rebuttal, arguing against arbitrary exclusion criteria and reconfirming significant psi effects in combined databases, with a total of 88 studies accumulating a hit-rate of 32% (p = 3.45 x 10^-20) as of 2004."
+    },
+    {
+      "chapter_title": "CONCLUSION",
+      "summary": "The conclusion reaffirms that meta-analyses support Honorton's belief in the ganzfeld as an encouraging step towards replicable psi effects. It acknowledges past controversies but asserts that improved methodologies and the 'Joint Communiqué' guidelines have led to a more robust experimental framework. The author argues that conventional explanations for psi effects (sensory leakage, selective reporting, fraud) are outdated and that the ganzfeld remains a strong paradigm for psychic functioning."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Meta-analysis",
+      "definition": "A statistical method that combines the summary findings of many empirical studies to yield a more powerful result and general conclusions."
+    },
+    {
+      "term": "Ganzfeld",
+      "definition": "A free-response ESP test technique designed to reduce sensory input by providing homogeneous, unpatterned visual and auditory stimulation, aiming to create a state conducive to psi phenomena."
+    },
+    {
+      "term": "Psi effect",
+      "definition": "An anomalous process of information transfer or influence not explicable by known physical or biological mechanisms, as investigated in parapsychology."
+    },
+    {
+      "term": "Effect size (ES)",
+      "definition": "A quantitative measure of the strength of a phenomenon or the magnitude of a relationship between two variables, independent of sample size."
+    },
+    {
+      "term": "File-drawer problem",
+      "definition": "A publication bias criticism suggesting that studies with non-significant results are less likely to be published, potentially inflating overall meta-analytic findings."
+    },
+    {
+      "term": "Funnel-plot technique",
+      "definition": "A graphical method used in meta-analysis to assess publication bias by plotting effect sizes against sample sizes, typically forming an inverted funnel shape if no bias is present."
+    },
+    {
+      "term": "Joint Communiqué (Hyman & Honorton, 1986)",
+      "definition": "An agreement between leading researchers in parapsychology establishing more stringent methodological standards and reporting protocols for ganzfeld experiments, aimed at increasing scientific rigor and replicability."
+    },
+    {
+      "term": "Autoganzfeld",
+      "definition": "An automated version of the ganzfeld procedure, implementing stricter computer-controlled randomization, target selection, presentation, and scoring to minimize potential experimenter bias and sensory leakage."
+    }
+  ],
+  "practical_system": {
+    "description": "This article is a scientific review of meta-analyses in parapsychology and does not describe a practical system for magical or occult practice. Instead, it critically examines the empirical evidence for psi effects within the ganzfeld experimental paradigm, focusing on statistical outcomes and methodological improvements in scientific research.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "Meta-analysis, a term coined by G. V. Glass in the 1970s, is 'the statistical analysis of the summary findings of many empirical studies' (Glass, McGaw, & Smith, 1981, p. 21).",
+      "page": "1"
+    },
+    {
+      "text": "L. Storm and S. Ertel (2001) reconfirmed that the ganzfeld was still the paradigm that delivered one of the highest effect sizes of all the experimental domains in parapsychology.",
+      "page": "1"
+    },
+    {
+      "text": "Meta-analysis is fast becoming the only acceptable evidence that psi might well be an 'anomalous effect in need of an explanation' (Utts, 1991, p. 363).",
+      "page": "4"
+    },
+    {
+      "text": "Parapsychologist and pioneer of ganzfeld research, Charles Honorton (Honorton, 1985) said that the ganzfeld demonstrates a “significant psi effect\" (p. 81), and the evidence in the present article supports that claim.",
+      "page": "1"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This article is highly relevant for understanding the scientific status of parapsychology, particularly regarding the ganzfeld paradigm. It provides a detailed academic review of meta-analytic findings, methodological debates, and the evolution of experimental rigor in psi research. It underscores the importance of statistical methods for evaluating controversial phenomena and highlights the ongoing efforts to establish robust evidence for psi effects.",
+    "target_audience": "The primary target audience includes academic researchers, statisticians, psychologists, and parapsychologists interested in the scientific study of anomalous phenomena. It is also valuable for scholars and students examining research methodologies, meta-analysis techniques, and the history and controversies within parapsychology."
+  }
+}

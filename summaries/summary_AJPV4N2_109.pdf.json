@@ -1,0 +1,90 @@
+{
+  "header": {
+    "title": "Mania and its Relationship to the Sheep-Goat Variable",
+    "authors": [
+      "MICHAEL A. THALBOURNE"
+    ],
+    "category": "Parapsychological Research",
+    "keywords": [
+      "mania",
+      "hypomania",
+      "sheep-goat variable",
+      "paranormal belief",
+      "psychopathology",
+      "correlation",
+      "anomalistic psychology"
+    ]
+  },
+  "central_thesis": "The study investigates the correlations between belief in and alleged experience of the paranormal (the 'sheep-goat variable') and psychological measures of hypomania and mania, concluding that 'sheep' (believers/experiencers) exhibit significantly higher levels of hypomania and mania compared to 'goats' (disbelievers), suggesting a potential increased risk of psychopathology for paranormal believers.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction to Mania and Hypomania",
+      "summary": "This section defines mania as a continuous scale, with hypomania representing the lower end (upbeat mood, gregariousness, creative thinking) and full mania representing the higher, more severe end (elation, irritability, reckless behavior, overactivity, delusions of grandeur, requiring clinical intervention)."
+    },
+    {
+      "chapter_title": "Research Question and Methodology Overview",
+      "summary": "The central question is whether 'sheep' are more prone to hypo/mania. The paper synthesizes findings from seven studies, two addressing hypomania and six addressing mania. Various measures of paranormal belief (SOBEP, Rasch Australian Sheep-Goat Scale, visual analogue ASGS, Paranormality Subscale) and psychological states (MMPI Ma for hypomania, 9-item Mania/Manic Experience Scale) were employed across these studies."
+    },
+    {
+      "chapter_title": "Hypomania Findings",
+      "summary": "Table 1 presents Pearson correlations between hypomania and the sheep-goat variable from four distinct samples. All four correlations were positive and statistically significant (r ranging from .30 to .52), consistently indicating that 'sheep' were more likely to display hypomania as measured by the MMPI Ma scale."
+    },
+    {
+      "chapter_title": "Mania Findings",
+      "summary": "Table 2 presents Pearson correlations between mania and the sheep-goat variable from ten analyses across seven studies. Seven out of ten analyses showed significantly higher manic scores in 'sheep'. All correlations were positive (r ranging from .08 to .42), with a median r of .275, though some were not statistically significant (p = n.s. to p = .012). The findings suggest a consistent, albeit weak to moderate, positive correlation between paranormal belief/experience and manic tendencies."
+    },
+    {
+      "chapter_title": "Discussion and Implications",
+      "summary": "The paper concludes that sheep are at a greater risk of psychopathology due to higher scores on the Mania Scale. It notes weak correlations with neuroticism from prior studies. It discusses efforts to purify the Mania Scale into a measure of 'atypical depression or general psychoticism', blurring distinctions between schizophrenia and manic-depression. The need for a measure of 'pure mania' is highlighted."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Sheep-Goat Variable",
+      "definition": "A psychological construct measuring an individual's belief in and alleged experience of the paranormal. 'Sheep' refer to believers/experiencers, while 'goats' refer to disbelievers."
+    },
+    {
+      "term": "Hypomania",
+      "definition": "The milder end of the manic spectrum, characterized by an upbeat mood, gregariousness, increased energy, and potentially creative thinking. It is distinguished from full mania by its lesser severity and absence of significant functional impairment."
+    },
+    {
+      "term": "Mania",
+      "definition": "The severe end of the manic spectrum, characterized by symptoms such as elation or irritability, reckless spending, indiscriminate sexuality, overactivity, extreme loudness, and delusions of grandeur. It often leads to significant functional impairment and may require hospitalization and pharmacotherapy."
+    },
+    {
+      "term": "MMPI Ma Scale",
+      "definition": "The Hypomania Scale from the Minnesota Multiphasic Personality Inventory (MMPI), a widely used psychometric test designed to assess personality traits and psychopathology. It was utilized in this research to measure hypomanic tendencies."
+    },
+    {
+      "term": "Mania (or Manic Experience) Scale",
+      "definition": "A 9-item scale developed by Thalbourne and colleagues specifically used in several studies reviewed here to measure manic-depressive-like experience. Individuals with bipolar disorder tend to score higher on this scale."
+    }
+  ],
+  "practical_system": {
+    "description": "This paper does not describe a magical or esoteric practical system. Instead, it details a research methodology employed to investigate the psychological correlates of belief in the paranormal. The 'system' here refers to the correlational study design comparing psychological states (hypomania, mania) with the 'sheep-goat variable' across multiple prior research endeavors.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "In all 4 analyses examined sheep were significantly more hypomanic than goats, and in 7 out of 10 significantly more manic. Mental health implications are discussed.",
+      "page": "109"
+    },
+    {
+      "text": "Sheep were to a moderate extent more likely to display hypomania, as measured by the MMPI scale Ma. The results are remarkably consistent.",
+      "page": "110"
+    },
+    {
+      "text": "The 7 studies contain 10 analyses, all positive (indicating more mania in sheep), ranging from r = .08 (p = n.s.) to r = .42 (p = .012), with a median r of .275, which may be considered weak.",
+      "page": "111"
+    },
+    {
+      "text": "Sheep may need to bear in mind that high scores on the Mania Scale put them at greater risk of psychopathology.",
+      "page": "111"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "From an esoteric perspective, this paper provides a psychological framework for understanding certain correlates of belief in the paranormal. While not directly addressing magical practice, it situates 'paranormal belief' within a psychological continuum that may touch upon altered states of consciousness, enthusiasm, or even grandiosity that can accompany intense esoteric engagement. It serves as a cautionary analysis, suggesting that an uncritical or highly immersive belief in the paranormal might correlate with psychological states that, at their extreme, manifest as psychopathology. It implicitly argues for a grounded approach, even within esoteric exploration, to distinguish between genuine experience and potentially maladaptive psychological patterns.",
+    "target_audience": "This research is primarily aimed at academics and researchers in parapsychology, psychology, and psychiatry interested in the psychological underpinnings of paranormal belief and experience. Additionally, it could be of interest to practitioners and scholars of esotericism who seek to understand the psychological profiles of individuals drawn to or engaged in anomalous experiences, offering a critical lens from a scientific perspective."
+  }
+}

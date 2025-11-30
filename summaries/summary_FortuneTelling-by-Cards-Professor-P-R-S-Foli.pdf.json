@@ -1,0 +1,187 @@
+{
+  "header": {
+    "title": "Fortune-Telling by Cards",
+    "authors": [
+      "Professor P. R. S. Foli"
+    ],
+    "category": "Western Esotericism",
+    "keywords": [
+      "Fortune-telling",
+      "Cards",
+      "Cartomancy",
+      "Divination",
+      "Tarot",
+      "Occultism",
+      "Esotericism",
+      "Playing Cards"
+    ]
+  },
+  "central_thesis": "The book serves as a practical manual detailing various methods of fortune-telling through playing cards (Cartomancy) and providing an introduction to Tarot, asserting the practice as a blend of historical tradition, amusement, and a legitimate tool for gaining insight into the unknown, capable of inspiring hope and assuaging sorrow despite skepticism.",
+  "structure_content": [
+    {
+      "chapter_title": "CHAPTER I: HOW WE GOT OUR PACK OF CARDS",
+      "summary": "This chapter explores the historical origins of playing cards, considering theories of Romany folk or European invention, the evolution of card suits and signs, and the enduring human fascination with Cartomancy as a method of divination, highlighting its psychological and societal impact throughout history."
+    },
+    {
+      "chapter_title": "CHAPTER II: WHAT THE INDIVIDUAL CARDS SIGNIFY",
+      "summary": "This section introduces two primary Cartomancy systems: the English method using a full 52-card pack and a foreign method utilizing a 32-card pack, where card orientation (upright/reversed) alters meaning. It provides detailed significations for each card from Ace to Deuce across all four suits for the full pack, supplemented by a concise table of meanings and 'Mystic Meanings' linking cards to calendar cycles."
+    },
+    {
+      "chapter_title": "CHAPTER III: THE SELECTED PACK OF THIRTY-TWO CARDS",
+      "summary": "Focusing on the 32-card 'Reduced Pack' method, this chapter details the exclusion of cards from Two to Six. It specifies how to mark and interpret reversed cards, providing distinct significations for each card (Ace, King, Queen, Knave, Ten, Nine, Eight, Seven) in Hearts, Diamonds, Clubs, and Spades for both upright and reversed positions."
+    },
+    {
+      "chapter_title": "CHAPTER IV: THE SIGNIFICATION OF QUARTETTES, TRIPLETS, AND PAIRS",
+      "summary": "This chapter explains the combined divinatory meanings of cards appearing in specific numerical groups (quartets, triplets, and pairs). It differentiates interpretations for court cards and plain cards, discusses the general tendencies of each suit, and outlines 'lesser points' such as identifying the inquirer's representative card and specific table arrangements."
+    },
+    {
+      "chapter_title": "CHAPTER V: WHAT THE CARDS CAN TELL OF THE PAST, THE PRESENT, AND THE FUTURE",
+      "summary": "A simple method using the 32-card pack is presented, where cards are shuffled, cut, and dealt into three sections representing the Past, Present, and Future, with two 'surprise' cards set aside. The chapter includes a practical example reading for an inquirer represented by the Knave of Hearts, illustrating the interpretation of card combinations in each temporal segment."
+    },
+    {
+      "chapter_title": "CHAPTER VI: YOUR FORTUNE IN TWENTY-ONE CARDS",
+      "summary": "This method employs 21 cards drawn from a 32-card pack. After an initial discard of eleven cards and setting one aside as 'the surprise,' the remaining twenty are interpreted sequentially. The process involves repeated shuffling and dealing into three smaller packs, with the inquirer selecting one for a final reading, and the 'surprise' cards read last."
+    },
+    {
+      "chapter_title": "CHAPTER VII: COMBINATION OF SEVENS",
+      "summary": "This chapter introduces a method using 32 selected cards (Ace, King, Queen, Knave, Ten, Nine, Eight, Seven of each suit). It details the shuffling and cutting process, the selection of significant cards from drawn threes, and the identification of the inquirer's representative card based on complexion. Card significations specific to this method are provided, along with combination interpretations and a 'Typical Example'."
+    },
+    {
+      "chapter_title": "CHAPTER VIII: ANOTHER METHOD WITH THIRTY-TWO CARDS",
+      "summary": "An alternative 32-card method is outlined, specifying the discard of cards from Two to Six. It provides general meanings for suits and court cards (linking kings to professions) and precise significations for Ace, Seven, Eight, Nine, and Ten across Hearts, Spades, Diamonds, and Clubs. Instructions for consulting the cards include drawing a representative card and arranging the dealt cards in four rows for interpretation."
+    },
+    {
+      "chapter_title": "CHAPTER IX: A FRENCH METHOD",
+      "summary": "This chapter details a French Cartomancy system using a 32-card pack. It describes dealing cards into two 16-card packs, with the inquirer choosing one and the first card becoming a 'surprise.' The remaining fifteen cards are laid out and interpreted through pairs, triplets, counting in sevens from the representative card, and pairing end cards. The cards are then re-dealt into three packs of five for further reading, with uppermost cards contributing to 'The Surprise'."
+    },
+    {
+      "chapter_title": "CHAPTER X: THE GRAND STAR",
+      "summary": "The 'Grand Star' method is presented, utilizing an uneven number of cards (typically 21) arranged in a star pattern around a central representative card. The chapter explains the specific procedure for withdrawing cards from the pack (alternately top and bottom) and placing them in a numbered order. Interpretation focuses on pairing cards within outer and inner circles, and central points, with a diagram and example card order provided."
+    },
+    {
+      "chapter_title": "CHAPTER XI: IMPORTANT QUESTIONS. FORTUNE-TELLING GAMES",
+      "summary": "This section provides methods for answering specific questions using a 32-card pack, where the outcome depends on the presence or absence of key cards among twenty-one exposed cards. It offers 'Specimen Questions' and also details 'Cupid and Venus at Work,' a round game using a 52-card pack for love-related predictions, incorporating elements of chance and card significations."
+    },
+    {
+      "chapter_title": "CHAPTER XII: HOW THEY TELL FORTUNES IN ITALY",
+      "summary": "An Italian method using a 32-card pack (A, K, Q, J, 10, 9, 8, 7) is detailed. Cards are dealt in threes, with specific rules for keeping or rejecting combinations of suits. After 15 cards are on the table, interpretation involves counting in fifths from the representative card, pairing end cards, and finally dealing into five distinct packs (for the inquirer, house, unexpected, expected, and surprise/consolation)."
+    },
+    {
+      "chapter_title": "CHAPTER XIII: THE MASTER METHOD. THE CHART AND ITS EXPLANATION",
+      "summary": "This chapter introduces the 'Master Method,' an elaborate system using a 36-card pack (32-card base plus four Twos). It outlines the procedure for laying out cards in a 6x6 grid, where each of the 36 squares holds a unique divinatory meaning. The interpretation considers both the individual card's signification and its interaction with the specific meaning of its position, particularly in relation to the inquirer's card."
+    },
+    {
+      "chapter_title": "CHAPTER XIV: THE MASTER METHOD. SIGNIFICATIONS OF CARDS USED",
+      "summary": "This section provides specific significations for all court and plain cards within Hearts, Clubs, Diamonds, and Spades, as they apply to 'The Master Method.' It details how card meanings are nuanced by the square they occupy in the 36-card grid and by the inquirer's personal circumstances (e.g., gender, marital status, profession)."
+    },
+    {
+      "chapter_title": "CHAPTER XV: A COMBINATION OF NINES",
+      "summary": "This method uses a 52-card pack dealt into rows of nine. The reading involves identifying a representative card and then counting nine cards from it and successive ninth cards. The chapter provides examples of 'First,' 'Second,' and 'Third Readings,' demonstrating how interpretations are built upon card juxtapositions and patterns across multiple deals, focusing on acquaintances, slander, and evolving fortunes."
+    },
+    {
+      "chapter_title": "CHAPTER XVI: YOUR HEART'S DESIRE. SIX WAYS OF TRYING A WISH",
+      "summary": "This chapter compiles various methods for divining the fulfillment of a wish. These include 'The Wish with Fifteen Cards' (specific layout), 'Another Way with Fifty-two Cards' (circle and triangle arrangement), 'The Wish with Thirty-two Cards' (pairing), 'What the Four Aces Tell' (counting aces), 'The Wish in Seven Packs' (arranged suits), and 'The Wish Card Again' (focus on the Nine of Hearts and its surroundings)."
+    },
+    {
+      "chapter_title": "CHAPTER XVII: RHYMING FORTUNE-TELLER",
+      "summary": "A simpler, more light-hearted method for social amusement is presented. It involves drawing cards from a new 52-card pack after a specific invocation. The meaning of each drawn card (Ace to King/Knave across all suits) is provided through rhyming verses, offering general predictions for both men and women."
+    },
+    {
+      "chapter_title": "CHAPTER XVIII: THE TAROTS: THEIR ORIGIN AND HISTORY",
+      "summary": "This section delves into the historical background of Tarot cards, discussing their proposed derivations (e.g., tarotée, tarrochi) and theories regarding their ancient origins (e.g., 'Book of Thoth,' Egyptian roots). It highlights the influential cartomancer Etteilla and the fundamental division of the Tarot into Major and Minor Arcana."
+    },
+    {
+      "chapter_title": "CHAPTER XIX: ETTEILLA'S METHOD OF USING THE TAROTS",
+      "summary": "This chapter outlines Etteilla's elaborate Tarot divination system using a 78-card pack. It provides symbolic meanings for the Major Arcana (grouped into 'First,' 'Second,' and 'Third' sets) and the Minor Arcana suits (Sceptres, Cups, Swords, Pentacles). Detailed general rules for shuffling and cutting are given, alongside specific dealing layouts for 'The Second Deal,' 'The Third Deal or Great Figure' (a complex star-like diagram), and 'The Fourth Deal' for specific wishes."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Cartomancy",
+      "definition": "The practice of divination using playing cards, which the author positions as a practice with ancient roots, psychological value, and historical significance, distinct from mere gambling."
+    },
+    {
+      "term": "Representative Card",
+      "definition": "A specific card chosen to symbolize the inquirer (the person whose fortune is being told), typically based on gender (King for man, Queen for woman) or complexion, and central to many divinatory layouts."
+    },
+    {
+      "term": "Reversed Cards",
+      "definition": "Cards that appear upside down in a spread, whose meaning is often modified, contradicted, or negatively impacted compared to their upright signification, particularly emphasized in the 32-card 'foreign' methods."
+    },
+    {
+      "term": "Reduced Pack",
+      "definition": "A deck of playing cards containing fewer than the standard 52 cards, commonly 32 cards (Ace, King, Queen, Knave, Ten, Nine, Eight, Seven of each suit) or 36 cards (the 32-card pack augmented by the four Twos for 'The Master Method')."
+    },
+    {
+      "term": "Tarots",
+      "definition": "The historical predecessors of modern playing cards, used primarily for divination. They consist of Major Arcana (symbolic figures) and Minor Arcana (suits representing material concerns), with origins often linked to ancient esoteric traditions."
+    },
+    {
+      "term": "Etteilla's Method",
+      "definition": "A complex and influential Tarot divination system developed by the French cartomancer Etteilla, involving a 78-card pack, specific card significations for Major and Minor Arcana, and elaborate dealing layouts such as 'The Grand Figure'."
+    },
+    {
+      "term": "The Master Method",
+      "definition": "A comprehensive Cartomancy system described in the book, employing a 36-card pack laid out in a 6x6 grid. The interpretation hinges on the combined meanings of individual cards and the specific divinatory significance of each of the 36 positions on the grid."
+    },
+    {
+      "term": "Wish Card (Nine of Hearts)",
+      "definition": "A specific card, the Nine of Hearts, designated as the symbol of the inquirer's wish or heart's desire in several methods, with its surrounding cards indicating the likelihood and circumstances of its fulfillment."
+    },
+    {
+      "term": "Sympathy",
+      "definition": "An essential intuitive connection or rapport required between the fortune-teller and the inquirer to ensure an accurate and insightful reading of the cards, transcending mere mechanical interpretation."
+    }
+  ],
+  "practical_system": {
+    "description": "The book outlines numerous operative systems for divination, primarily using a standard 52-card playing deck, often reduced to 32 or 36 cards. Key elements across these systems include specific card significations (individual, in combinations, and altered by reversal), and precise geometric layouts on a table. The 'Master Method' is particularly structured, using a 36-card grid where each card's meaning is synergistically interpreted with its position on the grid. Etteilla’s Tarot method is introduced as a more complex system with Major and Minor Arcana.",
+    "tools": [
+      "A standard 52-card pack of playing cards (new or marked for reversed cards).",
+      "A reduced 32-card pack (Ace, King, Queen, Knave, 10, 9, 8, 7 of each suit).",
+      "An augmented 36-card pack (the 32-card pack plus the four 2s) for 'The Master Method'.",
+      "A 78-card Tarot pack (for Etteilla's Method).",
+      "A table (preferably round for some methods).",
+      "A bag (specifically for the 'Another Lottery' game in Chapter XI).",
+      "The practitioner's 'Patience, the power of putting two and two together, a quick intuitive perception, and a touch of mysticism in the character' (essential internal tools)."
+    ],
+    "rituals": [
+      "Shuffling and cutting the pack, frequently with the left hand, sometimes into three sections by the inquirer.",
+      "Selecting a 'representative card' to symbolize the inquirer, based on gender, complexion, or by drawing.",
+      "Employing specific card layouts on the table, such as linear arrangements, semi-circles, four rows, star patterns ('Grand Star'), rows of nine, or five distinct small packs (Italian method).",
+      "Turning cards face upwards in a predetermined sequence for interpretation.",
+      "Performing 'wishing intently' during shuffling or dealing for divination concerning specific desires.",
+      "Observing and interpreting 'reversed cards,' as their inverted orientation significantly modifies or opposes their upright meanings in several methods.",
+      "Interpreting cards individually, in numerical groups (pairs, triplets, quartettes), and in relation to their surrounding cards or specific positions within a layout (e.g., Past, Present, Future sections; named squares in the 'Master Method')."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "\"THIS goddess Fortune frustrates, single-handed, the plans of a hundred learned men.\"",
+      "page": "5"
+    },
+    {
+      "text": "\"Of all the methods by which men and women seek to penetrate into the mysteries of Fate and Futurity, Cartomancy is one that can claim the distinction of having swayed the human mind from prehistoric times right down to this twentieth century of ours.\"",
+      "page": "5"
+    },
+    {
+      "text": "\"We give this method of Fortune-telling for what it is worth. It may be either a pastime seasoned with a flavour of mystery, a study in the weird ways of coincidence, or a test of skill quickened by intuition.\"",
+      "page": "5-6"
+    },
+    {
+      "text": "\"Any one with the slightest knowledge of occultism is aware that sympathy with the inquirer or subject is essential.\"",
+      "page": "10"
+    },
+    {
+      "text": "\"Patience, the power of putting two and two together, a quick intuitive perception, and a touch of mysticism in the character, are all useful factors in the pursuit of this pastime.\"",
+      "page": "23"
+    },
+    {
+      "text": "\"Special care must be taken when using the selected pack to notice which way the cards come out upon the table, whether upright or reversed, as the meanings of the two positions may be diametrically opposed.\"",
+      "page": "17"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "Professor Foli's 'Fortune-Telling by Cards' is historically significant as a compendium of early 20th-century popular occult practices, particularly focused on accessible forms of Cartomancy. It provides a valuable snapshot of how divination using standard playing cards and basic Tarot concepts was systematized and presented to a wider audience. The book’s eclectic collection of methods, ranging from simple to quite elaborate (e.g., 'The Master Method,' 'Etteilla's Method'), demonstrates the varied approaches to practical divination during its time. Its relevance today lies in offering a foundational text for understanding the evolution of Cartomancy, providing practical systems for practitioners, and illustrating the enduring human quest for insight into fate, albeit from a pragmatic, entertainment-oriented perspective rather than deep ceremonial magic.",
+    "target_audience": "The primary target audience consists of individuals interested in learning practical fortune-telling methods using cards, ranging from casual enthusiasts seeking amusement to novice practitioners of Cartomancy. It appeals to those with a nascent curiosity in occultism and esotericism, offering straightforward instructions without demanding a deep theoretical or philosophical commitment. The book's clear, step-by-step approach also makes it suitable for academic researchers studying the historical popularization of occult practices and divination techniques."
+  }
+}

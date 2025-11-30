@@ -1,0 +1,130 @@
+{
+  "header": {
+    "title": "THE PLANETS, THE JEWS AND THE BEGINNINGS OF “JEWISH ASTROLOGY”",
+    "authors": [
+      "Reimund Leicht"
+    ],
+    "category": "History of Jewish Esotericism",
+    "keywords": [
+      "Jewish astrology",
+      "planets",
+      "tequfot",
+      "mazzalot",
+      "rabbinic Judaism",
+      "calendar reckoning",
+      "planetary rulers",
+      "Second Temple period",
+      "Babylonian Talmud",
+      "Vettius Valens",
+      "Halakhic astrology"
+    ]
+  },
+  "central_thesis": "The paper argues that despite an initial long period of silence or exclusion concerning planetary knowledge in early Jewish sources, planetary astronomy and astrology became an integral, and even halakhically legitimate, part of traditional Jewish learning in Late Antiquity and the Middle Ages. This shift was primarily driven by its association with calendar reckoning and the concept of planetary rulers for days and hours, marking the birth of an \"authentic Jewish astrology.\"",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction: The Surprising Inclusion of Planets",
+      "summary": "The article introduces the initial absence of detailed planetary knowledge in early Jewish texts (Hebrew Bible, Second Temple period, Qumran) and contrasts it with the later ubiquity of planetary astrology in Late Antiquity and the Middle Ages, posing the central question of how this transformation occurred."
+    },
+    {
+      "chapter_title": "The Absence of Planets in Ancient Jewish Sources",
+      "summary": "This section details the scarcity of explicit references to planets in the Hebrew Bible, noting only Saturn (Kewan) and a doubtful translation of Venus (Ash/Hesperos). It extends this observation to post-biblical literature of the Second Temple period and Qumran, concluding that there is no positive evidence of detailed planetary astronomical or astrological knowledge. Speculative attempts to re-interpret texts like 1 Enoch to include planets are dismissed."
+    },
+    {
+      "chapter_title": "General Absence Prior to Second Temple Destruction",
+      "summary": "The discussion continues by noting the lack of intimate planetary knowledge even in texts attributed to Abraham (Greek astrological texts) or interpretations by Josephus and Philo, who likely wrote for a Greek audience. The author concludes that before the destruction of the Second Temple, Jewish culture lacked any significant evidence of planetary astronomy or astrology, whether due to lack of interest or censorship."
+    },
+    {
+      "chapter_title": "The First Steps Toward an Inclusion: Planets in the Talmud",
+      "summary": "This section marks the turning point, highlighting the intensified rabbinic efforts in the late 2nd/early 3rd century CE to fix the luni-solar calendar. It introduces quotes from Bar Qappara, Rav, and R. Yohanan, who emphasize the religious commandment (`mitzvah`) to calculate `tequfot` (seasonal periods) and `mazzalot` (interpreted as planetary rulers), linking this practice to wisdom. The integration of the 'planetary week' system into Jewish calendar calculations is presented."
+    },
+    {
+      "chapter_title": "Planetary Rulers and Calendar Reckoning",
+      "summary": "The article explains the `tequfah` calculations by Mar Shemuel (Julian year) and Adda, and the fixed pattern of `tequfot` falling at specific hours/days. It introduces the system of planetary rulers for weekdays and hours, describing its origins and the technical explanation by Vettius Valens, where hourly planetary rulers determine daily rulers based on planetary distances from Earth. The discussion includes Solomon Gandz's theory of Jewish origin for this system, linking Saturn's rule to the creation narrative."
+    },
+    {
+      "chapter_title": "Talmudic Evidence of Planetary Astrology",
+      "summary": "The author presents concrete evidence from the Babylonian Talmud. Mar Shemuel's astrological prognostications regarding winds based on Jupiter's influence on `tequfot` are detailed. The concept of the 28-year solar cycle and `tequfah` of Nisan falling in Saturn's hour is shown to be integrated into halakhic discussions (e.g., blessing on seeing celestial phenomena). Crucially, the term `mazzalot` is re-interpreted as 'ruling planet' within this context, solidifying the idea of planetary astrology as a rabbinic obligation."
+    },
+    {
+      "chapter_title": "Astrology's Role in Rabbinic Practice",
+      "summary": "This part elaborates on the practical application of planetary astrology, showing how Yehoshua ben Levi's initial attempts to de-astrologize genethlialogical prognostications were overturned by later amoraim like R. Hanina, who asserted the influence of the 'mazzal of the hour' (planetary ruler) over the 'mazzal of the day.' Examples include astrological advice for blood-letting based on Mars' influence, demonstrating the practical, operative side of this newly sanctioned Jewish astrology."
+    },
+    {
+      "chapter_title": "\"Jewish Astrology\" in Later Centuries",
+      "summary": "The section traces the enduring legacy and expansion of this system beyond the Talmudic period. It highlights the widespread acceptance of planetary rulers and `tequfot`-astrology in medieval Jewish learning, citing works by Shabbetai Donnolo, Rashi, Bekhor Shor, Eleazar of Worms, and texts like `Sha'ar ha-Hittin` and `Shimmush HaNKaL ShaZaM`. This demonstrates its integration into calendar handbooks, liturgical manuscripts, and esoteric works, legitimizing it through Talmudic tradition."
+    },
+    {
+      "chapter_title": "Conclusion: The Birth of Authentic Jewish Astrology",
+      "summary": "The paper concludes that the integration of calendar reckoning with the system of planetary rulers created a 'halakhically sanctioned' brand of Jewish astrology by the 2nd/3rd century CE. This phenomenon, with its unique ideological roots and practical context within rabbinic culture, developed into an authentic form of Jewish astrology."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Tequfot",
+      "definition": "Calculations related to the tropical solar year and the four cardinal points of the seasons (equinoxes and solstices). These points, when falling in specific planetary hours, were used for astrological prognostications."
+    },
+    {
+      "term": "Mazzalot",
+      "definition": "In the context of this paper, 'mazzalot' is interpreted as 'ruling planet' in a technical astrological sense, rather than the more common 'sign of the zodiac' or other astral constellations. It refers to the planet governing a particular hour or day, influencing events or individuals."
+    },
+    {
+      "term": "Planetary Week/Rulers",
+      "definition": "A system where each day of the week and each hour of the day is assigned a ruling planet. This system is based on an ordered sequence of planets (Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon) reflecting their geocentric distance, with the ruler of the first hour of a day determining the ruler of the entire day."
+    },
+    {
+      "term": "Halakhically Sanctioned Astrology",
+      "definition": "The process by which planetary astrology, initially absent or potentially condemned in early Jewish culture, found legitimate entrance and even became a religious obligation (`mitzvah`) within rabbinic Judaism, primarily through its integration with calendar reckoning and the interpretation of `mazzalot` as ruling planets."
+    },
+    {
+      "term": "Pinqas",
+      "definition": "A collection of genethlialogical prognostications, notably one attributed to Yehoshua ben Levi. It contained predictions based on the weekday of birth, which later amoraim re-interpreted astrologically, shifting the focus from the 'mazzal of the day' to the 'mazzal of the hour'."
+    }
+  ],
+  "practical_system": {
+    "description": "The paper describes the emergence of a 'Jewish astrology' primarily centered on the calculation of `tequfot` (seasonal points) and the attribution of `mazzalot` (planetary rulers) to specific hours and days. This system was used to derive prognostications for natural phenomena, provide guidance for timing actions, and offer basic horoscopic readings. Its core operative mechanism involves determining the planetary ruler of a specific hour or day and understanding its associated influences.",
+    "tools": [
+      "Sophisticated calendar reckoning methods (e.g., those of Mar Shemuel or Adda) for calculating `tequfot` and the progression of planetary hours.",
+      "Astronomical tables and knowledge of planetary cycles to accurately determine planetary rulers for any given hour or day.",
+      "Knowledge of planetary correspondences and their traditional astrological influences (e.g., Jupiter's association with winds, Mars with blood, Saturn with specific 'tequfah' events).",
+      "Specialized astrological texts and handbooks, such as `Sha'ar ha-Hittin`, `Shimmush HaNKaL ShaZaM`, `Pirqe de-Rabbi Eliezer`, and `Barayta di-Shemu'el`, which codify predictions and rules."
+    ],
+    "rituals": [
+      "Performing a blessing upon observing specific rare celestial conjunctions, such as the `tequfah` of Nisan falling in Saturn's hour during the 28-year cycle.",
+      "Making prognostications about environmental conditions (e.g., wind patterns) based on which planetary hour a `tequfah` occurs (e.g., Jupiter's hour).",
+      "Timing medical procedures, such as blood-letting, by avoiding or favoring specific planetary hours (e.g., avoiding Mars' even-numbered hours).",
+      "Interpreting genethlialogical prognostications based on the planetary ruler of an individual's hour of birth to understand their character or fate.",
+      "Using astrological texts, like `Sha'ar ha-Hittin`, for predictions concerning commodity prices (e.g., wheat prices based on Tevet `tequfah`'s timing).",
+      "Consulting `Shimmush HaNKaL ShaZaM` for `katarchai` (e.g., auspicious timings for starting actions) and simple horoscopes."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "This exclusion of the planets from Jewish culture is quite striking.",
+      "page": "1"
+    },
+    {
+      "text": "In contrast to biblical times and Second Temple Judaism, some basic knowledge about planets and their role in astrology becomes ubiquitous in traditional Jewish learning in Late Antiquity and in the Middle Ages.",
+      "page": "1"
+    },
+    {
+      "text": "From the whole period preceding the destruction of the Second Temple, we possess not a single piece of evidence from Jewish culture testifying to a more intimate knowledge of planetary astronomy or astrology.",
+      "page": "4"
+    },
+    {
+      "text": "in principle it would have been possible to count weekdays and hours simply by numerals... but there is evidence that the rabbis adopted a system of planetary rulers for both the days of the week and for the hours of each day... at a relatively early stage.",
+      "page": "6-7"
+    },
+    {
+      "text": "R. Hanina said to them: Go and tell the son of Levi that it is not the mazzal of the day but the mazzal of the hour which exercises its influence,",
+      "page": "13"
+    },
+    {
+      "text": "Jupiter's influence on the tequfot was both the first echo of, but even more so a powerful catalyst for the development of a halakhically sanctioned brand of \"Jewish astrology.\"",
+      "page": "18"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This work is highly relevant to Western Esotericism and Occultism as it meticulously traces the historical and cultural integration of planetary astrology into a major religious tradition (Judaism). It illuminates how initially external or suppressed astrological principles became systematized and sanctioned within rabbinic thought, leading to an 'authentic Jewish astrology.' This provides crucial historical context for understanding the transmission, transformation, and legitimization of astrological knowledge within Jewish mystical and magical traditions (e.g., Kabbalah, grimoires) and its subsequent influence on broader Western esoteric currents, including Christian Cabala and Hermeticism. It highlights the dynamic interplay between religious authority and esoteric practice.",
+    "target_audience": "Academic scholars of Jewish Studies, History of Science, History of Astrology, and Western Esotericism. It is also valuable for practitioners of Jewish magic or Kabbalah who seek to understand the historical and theological roots of astrological concepts within their traditions."
+  }
+}

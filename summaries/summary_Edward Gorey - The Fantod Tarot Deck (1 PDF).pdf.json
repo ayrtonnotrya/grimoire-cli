@@ -1,0 +1,90 @@
+{
+  "header": {
+    "title": "The Fantod Tarot Deck",
+    "authors": [
+      "Edward Gorey",
+      "Brandi Weed"
+    ],
+    "category": "Satirical Occultism",
+    "keywords": [
+      "Edward Gorey",
+      "Fantod Pack",
+      "Divination",
+      "Cartomancy",
+      "Satire",
+      "Macabre Humor",
+      "Madame Groeda Wyrde"
+    ]
+  },
+  "central_thesis": "The Fantod Pack by Edward Gorey is a satirical cartomancy deck designed to spoof traditional divination. It offers humorously morbid predictions and emphasizes subjective interpretation, reflecting Gorey's unique macabre aesthetic rather than providing a serious divinatory system.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction to The Fantod Tarot Deck",
+      "summary": "This section introduces the Fantod Pack as an 'oddity' and a 'spoof' of cartomancy, highlighting Edward Gorey's distinctive pen-and-ink artistic style and morbid sense of humor. It contextualizes the deck within Gorey's broader body of work, mentioning 'The Gashlycrumb Tinies', and credits Brandi Weed for providing background information."
+    },
+    {
+      "chapter_title": "Description of the Deck's Components",
+      "summary": "This part details the physical characteristics of the 20-card deck, noting its thick, glossy stock, unrounded corners, and moderate size (2-1/2 by 4-3/4 inches). It describes the 'Figbash' creature on the card backs and booklet cover. Examples of card symbols like 'The Urn', 'The Child', and 'The Waltzing Mouse' are given, along with the 'sinister yet funny mix' of their 'unwholesome' meanings, which include specific calamities and designated 'calamitous' days/months."
+    },
+    {
+      "chapter_title": "The History and Philosophy of Madame Groeda Weyrd",
+      "summary": "This section provides the fictional backstory for 'Madame Groeda Weyrd' (an anagram of Edward Gorey), who is presented as the author of the accompanying interpretative booklet. It describes her as a diviner of 'mixed Finnish and Egyptian extraction' and reinforces the highly subjective nature of card interpretation, stating that meanings are 'selective rather then exhaustive' and depend on the consultant's character and circumstances, requiring an 'imagination of disaster'."
+    },
+    {
+      "chapter_title": "Individual Card Interpretations",
+      "summary": "This extensive section presents each of the 20 cards individually. For each card (e.g., 'The Sea', 'The Limb', 'The Stones', 'The Black Doll'), its title is provided, along with an associated 'calamitous' month or day of the week, and a list of multiple specific, generally negative or absurd, divinatory meanings. The unique warning for 'The Black Doll' – 'What most you fear / Is coming near' – is specifically highlighted."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Fantod Pack",
+      "definition": "Edward Gorey's 20-card satirical divination deck, characterized by its macabre humor and distinctive pen-and-ink illustrations, explicitly designed as a 'spoof' of cartomancy."
+    },
+    {
+      "term": "Madame Groeda Wyrde (Weyrd)",
+      "definition": "The fictional author of the deck's interpretative booklet, an anagram of Edward Gorey, whose persona embodies the satirical and absurd nature of the Fantod Pack's divinatory system."
+    },
+    {
+      "term": "Calamitous Predictions",
+      "definition": "The characteristic type of divinatory outcomes offered by the Fantod Pack, consistently focusing on misfortune, discomfort, and often absurd perils, frequently linked to specific, designated 'calamitous' days or months."
+    },
+    {
+      "term": "Figbash",
+      "definition": "A unique, strange creature that serves as a recurring motif, appearing on the card backs and the accompanying instruction booklet, adding to the Fantod Pack's distinctive aesthetic."
+    },
+    {
+      "term": "Subjective Interpretation",
+      "definition": "A core tenet of reading the Fantod Pack, where meanings are highly dependent on the 'character and circumstances of the person consulting the pack' and explicitly require the reader's 'imagination of disaster' to gain full understanding."
+    }
+  ],
+  "practical_system": {
+    "description": "The Fantod Pack constitutes a practical system for mock-divination utilizing a 20-card deck accompanied by an interpretative booklet. Each card features a distinct Edward Gorey illustration and is intrinsically linked to a specific month or day designated as 'calamitous.' The booklet, attributed to 'Madame Groeda Wyrde,' provides an array of 'unwholesome' and often absurd divinatory meanings for each card. The operative core of this system is the highly subjective interpretation of these calamitous meanings, guided by the individual's personal circumstances and requiring a 'terrible imagination' to fully apprehend the implied disasters.",
+    "tools": [
+      "The 20-card Fantod Pack deck",
+      "Instructional booklet by 'Madame Groeda Wyrde'"
+    ],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "This deck is a bit of an oddity, as it's not really so much an actual cartomancy deck as a spoof of same.",
+      "page": "1"
+    },
+    {
+      "text": "Interpretation must always depend on the character and circumstances of the person consulting the pack. What might portend a wipe-out for a teenage hotdogger from Yokohama, might warn an octogenarian spinster in Minot, North Dakota, of a fall in the bathtub, though, of course, the results might come to much the same thing.",
+      "page": "2"
+    },
+    {
+      "text": "The exception is the Black Doll which has only the particularly grim warning of 'What most you fear / Is coming near'.",
+      "page": "2"
+    },
+    {
+      "text": "The meanings given are selective rather then exhaustive, and hints rather then assertions. Lastly, you must rely on your own temerity and 'imagination of disaster' Henry James) to gain full meaning of the cards.",
+      "page": "3"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "The Fantod Pack holds significant relevance within the context of esoteric studies as a prime example of satirical occultism and artistic commentary on divination. It expertly uses occult aesthetics and structural elements to create humor and artistic expression, simultaneously parodying the serious undertones often found in traditional divinatory practices. It functions as a notable cultural artifact that bridges the realms of macabre art, literature, and esoteric parody, appealing particularly to collectors and aficionados of Edward Gorey's distinctive body of work.",
+    "target_audience": "The primary target audience consists of devotees of Edward Gorey's unique artistic style and macabre humor, collectors of unusual or novelty divination decks, and individuals who appreciate satire within the broader sphere of esotericism. It appeals to those seeking an unconventional, darkly humorous, and artistically rich approach to 'fortune-telling,' rather than serious practitioners of cartomancy seeking genuine mystical insight or practical magical operations."
+  }
+}

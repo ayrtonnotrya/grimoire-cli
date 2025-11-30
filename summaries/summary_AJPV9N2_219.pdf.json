@@ -1,0 +1,102 @@
+{
+  "header": {
+    "title": "The Psychology of Paranormal Belief. A Researcher's Handbook",
+    "authors": [
+      "Harvey J. Irwin"
+    ],
+    "category": "Psychology of Paranormal Belief",
+    "keywords": [
+      "paranormal belief",
+      "parapsychology",
+      "psychology",
+      "research handbook",
+      "psi",
+      "environmental sensitivity",
+      "I Ching",
+      "precognition",
+      "sheep-goat effect",
+      "scepticism",
+      "gullibility",
+      "social marginality hypothesis",
+      "worldview hypothesis",
+      "cognitive deficits hypothesis",
+      "psychodynamic functions hypothesis"
+    ]
+  },
+  "central_thesis": "Irwin's work provides a comprehensive overview of the psychology of paranormal belief, exploring its various forms, sociocultural underpinnings, psychometric measurement, and theoretical explanations, culminating in a detailed causal model that explains belief in scientifically unaccepted phenomena.",
+  "structure_content": [
+    {
+      "chapter_title": "Chapter 1: Introduction to Paranormal Beliefs",
+      "summary": "This chapter addresses fundamental questions regarding paranormal beliefs, such as whether they constitute delusions, are irrational, or are scientifically unacceptable. It also discusses the range of paranormal beliefs, from superstitions to beliefs in traditional parapsychological phenomena, astrology, and UFOs."
+    },
+    {
+      "chapter_title": "Chapter 2: Sociocultural Influences on Paranormal Belief",
+      "summary": "Examines the impact of various social and cultural factors on the development and maintenance of paranormal belief, including the influence of parents, peers, conjugal partners, culture, educational institutions, social movements, and media."
+    },
+    {
+      "chapter_title": "Chapter 3: Psychometrics of Paranormal Belief",
+      "summary": "Focuses on the measurement of paranormal belief, discussing the development and properties of various scales, including the Australian Sheep-Goat Scale (ASGS) and Tobacyk's Revised Paranormal Belief Scale, and their utility in research, alongside topics like superstition."
+    },
+    {
+      "chapter_title": "Chapter 4: Social Marginality Hypothesis",
+      "summary": "Presents the hypothesis that individuals experiencing social marginality, privation, or perceived loss of control are more inclined to adopt paranormal beliefs, which offer emotional compensation."
+    },
+    {
+      "chapter_title": "Chapter 5: Worldview Hypothesis",
+      "summary": "Interprets paranormal belief as an outcome of a broader subjective stance, representing a common human approach to constructing meaning and 'making sense of the world'."
+    },
+    {
+      "chapter_title": "Chapter 6: Cognitive Deficits Hypothesis",
+      "summary": "Explores the perspective that paranormal believers exhibit cognitive shortcomings, being characterized as illogical, irrational, credulous, uncritical, or foolish."
+    },
+    {
+      "chapter_title": "Chapter 7: Psychodynamic Functions Hypothesis",
+      "summary": "Reviews empirical evidence supporting the idea that paranormal beliefs serve specific psychological needs for individuals."
+    },
+    {
+      "chapter_title": "Chapter 8: Theoretical Integration: A Causal Model of Belief in Scientifically Unaccepted Phenomena",
+      "summary": "Presents Irwin's refined causal model, which posits that paranormal belief is activated by contextual stress, leading to feelings of vulnerability, loss of personal control, and anxiety. This activates existing paranormal beliefs and behaviors (e.g., divination via I Ching) within a specific context, driven by a need for environmental mastery. The model also touches upon early experiences with diminished control as a predisposing factor."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Paranormal Belief (Working Definition)",
+      "definition": "A proposition not empirically attested to the satisfaction of the scientific establishment but generated within the nonscientific community and endorsed by individuals capable of rational thought, forming part of their reality. Such beliefs can be intuitive or reflective, possess cognitive, affective, and behavioral components, are stable, resistant to counterargument, and exist on a spectrum from extreme scepticism to extreme gullibility."
+    },
+    {
+      "term": "Definition of Paranormal Phenomena (Preferred)",
+      "definition": "Phenomena that are 'scientifically impossible' (i.e., contravene basic limiting scientific principles, such as mind acting beyond the brain or the existence of independent spirits) rather than merely 'scientifically unaccepted'."
+    },
+    {
+      "term": "Causal Model of Belief in Scientifically Unaccepted Phenomena",
+      "definition": "Irwin's model proposing that contextual stress induces vulnerability, perceived loss of control, and anxiety, which, in turn, activates paranormal beliefs and behaviors within specific contexts, largely driven by a need for mastery over one's environment."
+    },
+    {
+      "term": "Sheep-Goat Effect",
+      "definition": "A phenomenon mentioned as potentially inducing paranormal belief, suggesting a real psi process, though not deeply explored in the context of Irwin's causal model."
+    }
+  ],
+  "practical_system": {
+    "description": "This book is an academic analysis of the psychology of paranormal belief, not a practical manual for engaging in occult or magical practices. While it discusses paranormal behaviors (like using divination), it explains them within a psychological model of belief formation rather than instructing on their execution.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "The scientific establishment nevertheless [that is, despite observational theories of psi] continues to regard psi as an inherent impossibility. Be that as it may, the fact remains that some other paranormal beliefs do not implicate scientifically impossible processes. Many of the metaphysical beliefs of spiritism and religion are not a literal violation of scientific tenets. The existence of spirits and of heaven, for example, is not precluded by science. It is therefore not appropriate to define paranormal beliefs in terms of the contravention of scientific principles by paranormal phenomena.",
+      "page": "15"
+    },
+    {
+      "text": "it is strongly recommended that researchers and other academic commentators define paranormal belief more specifically in terms of belief in phenomena that putatively are scientifically impossible rather than merely scientifically unaccepted",
+      "page": "109"
+    },
+    {
+      "text": "a proposition that has not been empirically attested to the satisfaction of the scientific establishment but is generated within the nonscientific community and eventually endorsed by people who might normally be expected by their society to be capable of rational thought and reality testing. For these people, the belief is phenomenologically a part of their sense of reality and truth rather than 'a proposition they endorse'. Like other types of belief, a paranormal belief will be either intuitive or reflective; will have cognitive, affective and (sometimes) behavioural components; will be distinct from a value or simple statement of preference; will be relatively stable and thus somewhat resistant to the influence of counterargument; and will be dimensional, that is, marked by various degrees of endorsement between the poles of extreme scepticism and extreme gullibility.",
+      "page": "17"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "The book holds paradigmatic status in the field, serving as an admirably comprehensive and vital sourcebook for researchers. It successfully integrates empirical and theoretical work with conventional psychology, offering numerous suggestions and hypotheses that promise to stimulate future research in parapsychology for many years.",
+    "target_audience": "Academic researchers in parapsychology and psychology interested in the theoretical and empirical study of paranormal belief, as well as students and scholars seeking a foundational understanding of the field."
+  }
+}

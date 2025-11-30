@@ -1,0 +1,115 @@
+{
+  "header": {
+    "title": "Pro Attitude and Macro-PK: A Pilot Study Using Neuro-feedback and EMG Biofeedback",
+    "authors": [
+      "Lance Storm",
+      "Nicholas R. Burns"
+    ],
+    "category": "Experimental Parapsychology and Consciousness Studies",
+    "keywords": [
+      "Psychokinesis (PK)",
+      "Neuro-feedback",
+      "EMG Biofeedback",
+      "EEG Alpha Rhythm",
+      "Pro Attitude",
+      "Transliminality",
+      "Anomalous Perturbations",
+      "Mind-Matter Interaction"
+    ]
+  },
+  "central_thesis": "This study's central thesis, when viewed through an esoteric lens, is that specific, trained physiological states (high EEG alpha rhythm and low EMG amplitude) combined with particular psychological factors (a 'pro attitude' or 'unconscious intention' and high 'transliminality') can correlate with, and potentially induce, measurable psychokinetic (PK) effects on external physical systems, specifically 'macro-PK' disturbances on a computer-generated image.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction & Background",
+      "summary": "The paper introduces the correlation between specific EEG waveforms (Delta, Theta, Alpha, Beta) and mental states, particularly focusing on Alpha rhythm's historical association with ESP and PK phenomena. It posits that altered states conducive to paranormal functioning can be induced and measured via neuro-biofeedback, highlighting previous research linking relaxation, alpha states, and PK. Two psychological predictors, 'pro attitude' and 'transliminality,' are introduced as crucial components in understanding psi effects and their physiological correlates."
+    },
+    {
+      "chapter_title": "Methodology: Experimental Design & Setup",
+      "summary": "Eight participants, pre-selected for 'psychic ability' based on prior I Ching experiments, underwent a bimodal (normal/paranormal) biofeedback task using the ProComp+ apparatus. Participants were trained to keep EEG alpha above and/or EMG below thresholds to make a 'Spinning Man' animation move in 'normal modes'. In 'paranormal modes', participants were blind to the absence of physiological feedback, still attempting to make the Man spin, with the hypothesis that their 'pro attitude' would elicit micro-PK changes or 'anomalous perturbations' on single video frames. Physiological data (EEG, EMG) were continuously recorded, and video sessions were taped for later anomaly analysis. Various psychological scales (Transliminality, Pro Attitude) and demographic questions were administered."
+    },
+    {
+      "chapter_title": "Results: Findings and Anomalies",
+      "summary": "The study found no statistically significant evidence for video anomalies during paranormal modes (Hypothesis 1) or for the hypothesized relationships between psychological predictors (pro attitude, transliminality) and psi effects (Hypothesis 2). Mean EEG alpha amplitude was not higher, nor EMG amplitude lower, in paranormal modes compared to normal modes (Hypothesis 3), possibly due to the lack of feedback in paranormal modes. Correlations between prior biofeedback/meditation experience, pro attitude, and transliminality with alpha/EMG were mostly non-significant, though often in the hypothesized direction. EEG alpha showed a trend towards being 'trained up' across trials for some participants. Three 'unexpected anomalies' occurred (e.g., unexpected respiration channel activation, persistent heartbeat artifact in EMG preventing 'Spinning Man' movement), which were parsimoniously attributed to software flaws."
+    },
+    {
+      "chapter_title": "Discussion: Interpretation and Future Directions",
+      "summary": "The authors discuss the lack of evidence for macro-PK effects and physiological correlates during paranormal modes, suggesting that the absence of feedback in those modes might have been psi-inhibitive. The methodological challenges of discerning psi when direct feedback is given are acknowledged. While most results were non-significant, some trends were in the hypothesized direction. The study concludes that ProComp+ may still be a serviceable tool for identifying 'psi-able types' and enhancing psi through physiological training. Future research should involve larger sample sizes, more extensive training sessions, and the development of sensitive, objective software for micro-PK analysis at the pixel level to overcome human error and cost associated with manual frame inspection."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "ProComp+ Apparatus",
+      "definition": "A highly flexible, multi-modality, 8-channel, artifact-free system for sophisticated physiological monitoring (EMG, EEG, temperature, heart rate, blood volume pulse, skin conductance, EKG, respiration) used in this study for neuro-feedback and biofeedback training related to psi."
+    },
+    {
+      "term": "EEG Alpha Rhythm",
+      "definition": "Relatively slow, high amplitude brainwaves (8-12Hz) produced when one is still awake but relaxed, hypothesized to be conducive to psi effects, and targeted for 'training up' in this experiment."
+    },
+    {
+      "term": "EMG Amplitude",
+      "definition": "Electromyography amplitude, a measure of muscle tension, hypothesized to be lower (indicating relaxation) during psi-conducive states, and targeted for 'training down' in this experiment."
+    },
+    {
+      "term": "Spinning Man Animation",
+      "definition": "A computer-generated visual feedback mechanism; the 'man' spins when participants meet physiological thresholds in normal modes, and serves as the target for hypothesized 'macro-PK effects' (anomalous perturbations) in paranormal modes."
+    },
+    {
+      "term": "Paranormal Modes",
+      "definition": "Experimental phases where direct physiological feedback was withheld, but participants were instructed to maintain physiological states to make the 'Spinning Man' spin. These modes were designed to test for unconscious psychokinetic influence or 'anomalous perturbations'."
+    },
+    {
+      "term": "Pro Attitude",
+      "definition": "A psychological predictor of psi (from Thalbourne's psychopraxia theory), defined as a preference for state S over not-S if both alternatives were presented, covering conscious and unconscious goals/motivational states related to bringing about a goal (e.g., making the 'Spinning Man' spin)."
+    },
+    {
+      "term": "Transliminality",
+      "definition": "A psychological predictor of psi, defined as the hypothesized tendency for psychological material (e.g., anomalous experiences, creative ideas, mystical states) to cross thresholds into or out of consciousness, linked to drawing on the unconscious for paranormal effects."
+    },
+    {
+      "term": "Psychopraxia",
+      "definition": "A neologism by Thalbourne, derived from Greek 'psyche' (self/mind) and 'praxia' (to accomplish/bring about), referring to the 'self at work' effecting a goal, which can be normal or paranormal. This provides a theoretical basis for 'pro attitude'."
+    }
+  ],
+  "practical_system": {
+    "description": "The study outlines an experimental protocol that can be interpreted as a scientific-magical system for training internal physiological states and applying 'pro attitude' (intentional will) to manifest psychokinetic effects. The core 'operative' theory is that by consciously training the brain into an alpha state (relaxed awareness) and the body into a state of low muscular tension, an individual can create a physiological baseline conducive to exerting unconscious will (pro attitude) upon external reality, manifesting as subtle 'macro-PK effects' on a visual target. The system involves alternating between direct feedback training (for physiological mastery) and 'blind' periods (for psychokinetic application of the trained state and intention).",
+    "tools": [
+      "ProComp+ Neuro-feedback Apparatus (8-channel encoder unit, sensors, electrodes, conducting gels – Ten20-CONDUCTIVE, Signa-gel)",
+      "Biograph Operating Software (Version 2.0)",
+      "Experimental 'Protocol' Software (custom-written)",
+      "PC Computer with 17\" CRT Monitor (displaying 'Spinning Man' animation)",
+      "Sony 'Digital 8' Video Camera (Model DCR-TRV140E) for recording",
+      "Video Capture Hardware (miroVIDEO DC20 plus) and Software (VidCap, FadeToBlack, IrfanView) for frame analysis",
+      "Recliner Chair (for participant comfort and relaxation during operations)",
+      "Thalbourne's Revised Transliminality Scale (RTS)",
+      "Thalbourne and Storm's Pro Attitude Scale (PAS)"
+    ],
+    "rituals": [
+      "Physiological Preparation: Attachment of EEG electrodes (Ag-AgCl, 10mm) at scalp site Cz, reference on left earlobe, ground on right earlobe, with conductive gel. EMG electrodes are attached to the right trapezius muscle along the muscle's direction. This is analogous to preparing the 'magical instrument' (the body/mind) for operation.",
+      "Conscious State Training ('Normal Modes'): Participants engage in biofeedback sessions where visual feedback (a 'Spinning Man' animation) is contingent on achieving and maintaining specific physiological thresholds—high EEG alpha rhythm and/or low integrated EMG amplitude. This trains the operator in achieving a 'magical state' of relaxed, focused awareness, akin to a meditative or trance induction.",
+      "Unconscious Will Projection ('Paranormal Modes'): Following periods of conscious training, participants are instructed to continue the task (making the Man spin) but are unknowingly placed in 'paranormal modes' where the animation is no longer driven by physiological feedback. The operator's 'pro attitude' (unconscious will or intention) to keep the Man spinning, while attempting to maintain the trained physiological state, is hypothesized to induce 'anomalous perturbations' or 'macro-PK effects' on the single frames of the Spinning Man image. This phase represents the direct application of trained will for external effect.",
+      "Psychological Profiling: Completion of the Revised Transliminality Scale (RTS) and the Pro Attitude Scale (PAS) to assess predispositions for psi. This is a form of self-assessment or 'divination' regarding one's inherent magical aptitude or psychological traits conducive to occult workings."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Thompson and Thompson (1998) define neuro-biofeedback as “a form of biofeedback in which the subject trains to control attributes of brain wave activity” (p. 247).",
+      "page": "113"
+    },
+    {
+      "text": "Thalbourne (2004) states that \"a person may be said to have a pro attitude towards state S when they would prefer S rather than -S [not S] if those two alternatives were to be brought to their attention\" (p. 65).",
+      "page": "115"
+    },
+    {
+      "text": "Transliminality is defined as the \"hypothesised tendency for psychological material to cross (trans) thresholds (limines) into or out of consciousness” (Thalbourne & Houran, 2000, p. 853).",
+      "page": "115"
+    },
+    {
+      "text": "It was the aim of the Procomp experiment to explore whether (a) the psi process (in the form of a macro-PK effect) is related to high EEG alpha amplitude and/or low EMG amplitude; (b) the pro attitude is related to the psi process, high EEG alpha amplitude, and low EMG amplitude; and (c) transliminality is related to the psi process, high EEG alpha amplitude, and low EMG amplitude.",
+      "page": "116"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This study is highly relevant to Western Esotericism, Occultism, and Magic as it represents a rigorous, albeit pilot, attempt to scientifically investigate psychokinesis (PK)—a core magical operation often referred to as thaumaturgy or 'working by will'. By using biofeedback to induce specific brainwave states (EEG alpha, associated with deep relaxation and meditative states) and reduce muscle tension (EMG), the researchers are essentially exploring the physiological correlates of altered states of consciousness frequently sought in magical practices for manifestation and influence. The 'pro attitude' concept directly correlates with magical 'intention' or 'will', while 'transliminality' speaks to the permeability of consciousness, a critical factor in accessing and manipulating subtle energies or information in magical theory. The 'Spinning Man' animation serves as a focal point for intentional influence, akin to a sigil or magical target. While yielding largely null results, the methodology provides a template for future scientific explorations of mind-matter interaction, offering potential validation or refutation of fundamental occult principles through empirical means.",
+    "target_audience": "The primary target audience includes parapsychologists, cognitive scientists, researchers in consciousness studies, and practitioners of biofeedback. From an esoteric perspective, it is valuable for Chaos Magicians interested in empirically testing the efficacy of focused intent and altered states; Hermeticists and Qabalists seeking modern scientific parallels to traditional concepts of will and subtle influence; and any occultist engaged in practical magic who desires a deeper, evidence-based understanding of the mechanisms underlying psychokinetic phenomena and the role of internal states in external manifestation. It also serves as a cautionary tale on the challenges of measuring such subtle effects."
+  }
+}

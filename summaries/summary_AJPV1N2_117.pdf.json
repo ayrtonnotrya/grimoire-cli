@@ -1,0 +1,89 @@
+{
+  "header": {
+    "title": "Examining the Evidence for Psi in the Context of Scientific Revolution",
+    "authors": [
+      "HANNAH JENKINS"
+    ],
+    "category": "Academic Research Paper (Parapsychology/Philosophy of Science)",
+    "keywords": [
+      "psi",
+      "philosophy texts",
+      "Kuhnian scientific revolution",
+      "anomalous phenomena",
+      "Hume's miracle argument",
+      "parapsychology"
+    ]
+  },
+  "central_thesis": "This paper argues that the conflicting representations of psi evidence in philosophy texts (ranging from dismissal to acceptance) stem from differing beliefs about what is possible, indicating that the evidence for psi has placed modern science in Thomas Kuhn's 'crisis stage' of a scientific revolution. It proposes that a more balanced and critical representation of psi in future philosophy texts, interpreted through this Kuhnian lens, would help ameliorate its current marginalization and facilitate its consideration as a problem-solving tool.",
+  "structure_content": [
+    {
+      "chapter_title": "INTRODUCTION",
+      "summary": "The introduction highlights the historical dismissal of psi evidence, citing Henry Sidgwick's 1882 address, and states the paper's aim to analyze the status of psi evidence within a Kuhnian scientific revolution framework to advocate for its fairer representation in philosophy texts."
+    },
+    {
+      "chapter_title": "THE REPRESENTATION OF PSI IN MAINSTREAM PHILOSOPHY",
+      "summary": "This section illustrates the common dismissal of psi in contemporary philosophy of mind texts, exemplified by Rey (1997), where the possibility of psi is quickly brushed aside without reference or acknowledgment of ongoing academic investigation. The author critiques this 'fait accompli' approach, noting it gives a false impression of a settled issue despite over a century of research into anomalous phenomena."
+    },
+    {
+      "chapter_title": "THE TRADITIONAL ARGUMENTS FOR AND AGAINST THE EVIDENCE FOR PSI",
+      "summary": "The paper delves into the philosophical basis for dismissing psi, tracing it to George Price's 1955 modernization of David Hume's miracle argument. This argument suggests that fraud or self-delusion is more rational than accepting phenomena incompatible with 'modern physics' and its 'basic limiting principles'. Counter-arguments challenge the assumption of modern science being complete and correct, concluding that the dispute over psi is rooted in differing beliefs about what is possible rather than purely empirical evidence."
+    },
+    {
+      "chapter_title": "THE CRISIS STAGE",
+      "summary": "Applying Thomas Kuhn's model of scientific revolutions, the paper argues that the anomalous phenomena associated with psi have pushed modern science into a 'crisis stage'. Psi challenges fundamental concepts like time, space, and causality, creating more problems than solutions within current paradigms. Until psi can solve a contemporary scientific problem, it will remain in this crisis stage, hindering the adoption of a new paradigm."
+    },
+    {
+      "chapter_title": "A SOLUTION",
+      "summary": "The author proposes that philosophical texts should present psi evidence within the context of a Kuhnian crisis stage. This approach aims to allow those maintaining the dominant view (that psi cannot exist) to accept its possibility as an area for investigation without it being an outright challenge. By treating conflicting paradigms as contenders in a 'neutral boxing ring' of philosophical analysis, future students can use psi evidence as a problem-solving tool, potentially leading to its wider acceptance in mainstream sciences."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Psi",
+      "definition": "Anomalous phenomena (e.g., telepathy, telekinesis, clairvoyance) that appear to challenge existing physical theory and are the subject of parapsychological investigation."
+    },
+    {
+      "term": "Humean skeptics",
+      "definition": "Individuals who maintain the modern interpretation of David Hume's argument against miracles, asserting that any evidence for psi must be attributable to fraudulent means or unintentional self-delusion rather than genuine phenomena incompatible with modern science."
+    },
+    {
+      "term": "Scientific Revolution (Kuhnian)",
+      "definition": "A process of paradigm shift in science as described by Thomas Kuhn, involving stages from the emergence of anomalies that cannot be explained by the current worldview, through a 'crisis stage', to the eventual acceptance of a new, revised paradigm."
+    },
+    {
+      "term": "Crisis Stage",
+      "definition": "A specific phase in Thomas Kuhn's model of scientific revolution where existing theories are clearly insufficient to explain a growing number of anomalies, creating intellectual tension and indicating the need for a new or revised paradigm, though one has not yet fully emerged or been accepted."
+    },
+    {
+      "term": "Basic Limiting Principles",
+      "definition": "Conceptual principles, analyzed by philosopher C. D. Broad, with which psi phenomena are argued to be fundamentally incompatible. These principles are invoked by Humean skeptics to support the claim that psi cannot exist within the framework of modern physics."
+    }
+  ],
+  "practical_system": {
+    "description": "This academic paper presents a theoretical and analytical argument regarding the representation of parapsychological phenomena (psi) within academic philosophy, framed by Thomas Kuhn's theory of scientific revolutions. It does not describe, propose, or operationalize any practical system for occultism or magic. Its purpose is to advocate for a change in academic discourse and epistemological approach, not to instruct in practice.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "\"We have done all that we can when the critic has nothing left to allege except that the investigator is in the trick. But, when he [sic] has nothing else left to allege, he will allege that.\"",
+      "page": "1"
+    },
+    {
+      "text": "\"But there is no evidence of such phenomena (or so most current philosophers of mind assume)\"",
+      "page": "3"
+    },
+    {
+      "text": "\"the decision to reject one paradigm is always simultaneously the decision to accept another, and the judgment leading to that decision involves the comparison of both paradigms with nature and with each other\"",
+      "page": "8"
+    },
+    {
+      "text": "\"the current worldview can no longer be used to explain them but a new workable worldview has yet to emerge\"",
+      "page": "8"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant to contemporary discussions in the philosophy of science, parapsychology, and the sociology of knowledge. It offers a structured argument for re-evaluating the academic reception of psi phenomena by applying a well-established model of scientific change (Kuhn's scientific revolution). By framing the debate as a clash of paradigms rather than a simple evidentiary dispute, it provides a novel perspective on how anomalous data are dismissed or integrated into scientific discourse. Its call for a more even-handed representation in philosophy texts addresses a significant gap in academic honesty regarding controversial topics.",
+    "target_audience": "The primary target audience includes academics and postgraduate students in philosophy (particularly philosophy of mind, philosophy of science, and epistemology), parapsychology, and potentially historians or sociologists of science. It would also appeal to anyone interested in the epistemological challenges posed by anomalous phenomena and the dynamics of scientific paradigm shifts."
+  }
+}

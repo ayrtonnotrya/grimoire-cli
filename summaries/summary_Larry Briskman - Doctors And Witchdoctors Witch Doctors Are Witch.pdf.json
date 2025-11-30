@@ -1,0 +1,100 @@
+{
+  "header": {
+    "title": "Doctors and witchdoctors: Which doctors are which?-I",
+    "authors": [
+      "Larry Briskman"
+    ],
+    "category": "Philosophy of Science / Medical Ethics",
+    "keywords": [
+      "demarcation problem",
+      "philosophy of science",
+      "inductivism",
+      "Francis Bacon",
+      "David Hume",
+      "witchcraft",
+      "medical practice",
+      "empirical support",
+      "pseudoscience"
+    ]
+  },
+  "central_thesis": "The article critiques Francis Bacon's inductivist solution to the philosophical problem of demarcation, which aims to distinguish genuine empirical science (e.g., Western medicine) from pseudoempirical superstition (e.g., witchcraft). It argues that David Hume's refutation demonstrates that the inductive method itself relies on an unprovable 'principle of induction,' thereby undermining the very basis for demarcating science from superstition according to inductivist criteria.",
+  "structure_content": [
+    {
+      "chapter_title": "Intellectual status",
+      "summary": "This section establishes the premise that Western medical practitioners derive their authority from recognized intellectual status, not primarily political or economic power. It asserts that this status is justified by the scientific knowledge underpinning medical practice, which necessitates a solution to the problem of demarcation."
+    },
+    {
+      "chapter_title": "The problem of demarcation",
+      "summary": "The core philosophical challenge is defined as explaining why empirical science (especially medical science) should be taken more seriously than claims of witchcraft, faith healing, or Christian Science. The author highlights that 'superstitions' can appear to receive empirical support due to phenomena like spontaneous remission, making genuine versus spurious support difficult to distinguish."
+    },
+    {
+      "chapter_title": "Bacon's inductivist solution",
+      "summary": "This part details Francis Bacon's proposed solution: genuine empirical science is distinguished by its use of the inductive method. This involves starting with unprejudiced observations, collecting sufficient evidence, and then inferring underlying causes or universal laws, contrasting it with 'anticipation' where ideas precede observation."
+    },
+    {
+      "chapter_title": "Hume's refutation of inductivism",
+      "summary": "This section explains David Hume's argument that the inductive method itself requires a 'hidden assumption' (the 'principle of induction') – that past observations are a reliable guide to what lies beyond observation. Hume demonstrates that this principle cannot be proven inductively without circularity, thus rendering it a 'pseudoempirical superstition' by inductivism's own rules and devastating Bacon's solution."
+    },
+    {
+      "chapter_title": "Preconceived principle",
+      "summary": "The article concludes this part by reiterating that Hume's refutation implies that empirical science, under inductivist criteria, becomes indistinguishable from superstition. It also briefly mentions additional problems with inductivism, such as the impossibility of truly unprejudiced observation and the ill-defined concept of 'sufficient' evidence."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Demarcation Problem",
+      "definition": "The fundamental philosophical question of how to distinguish genuine empirical science from pseudoempirical superstition or pseudoscience, which is crucial for justifying the intellectual status and resource allocation to Western medicine."
+    },
+    {
+      "term": "Inductive Method (Baconian)",
+      "definition": "Francis Bacon's proposed scientific methodology involving starting investigations without preconceived ideas, making unprejudiced empirical observations, collecting a sufficient body of evidence, and then inductively inferring underlying causes or universal laws from these observations."
+    },
+    {
+      "term": "Anticipation/Speculation (Baconian)",
+      "definition": "A method, contrasted with induction, where one begins with preconceived ideas or conjectures about phenomena and then seeks empirical or observational evidence to support these existing ideas, often leading to spurious or pseudoempirical support."
+    },
+    {
+      "term": "Principle of Induction",
+      "definition": "The implicit and necessary assumption within the inductive method that observed effects are a good guide to their underlying causes, or that observed particulars are good guides to universal laws. Hume argues this principle cannot itself be established inductively, rendering it a 'pseudoempirical superstition' by inductivism's own standards."
+    },
+    {
+      "term": "Witchcraft (as described in the article)",
+      "definition": "Presented as a form of 'pseudoempirical superstition' or 'pseudoscience' used as a comparative example to empirical science. Its practices are depicted as lacking efficacy and genuine empirical support, even if they might appear successful due to factors like spontaneous remission of symptoms."
+    }
+  ],
+  "practical_system": {
+    "description": "The article discusses 'witchcraft' not as a functional occult system, but as a comparative example of 'pseudoempirical superstition' to illustrate the problem of demarcation. The author explicitly states that 'the practices of the witchdoctor have no efficacy whatsoever in curing illness,' and any apparent success is attributed to factors like spontaneous remission of symptoms. From the article's perspective, witchcraft lacks a valid 'practical system' that genuinely interacts with reality, serving instead as a framework for beliefs that may appear empirically supported but are ultimately spurious.",
+    "tools": [
+      "Live chicken entrails (for examination)",
+      "Pins (for symbolic action)",
+      "Effigy (for symbolic action)"
+    ],
+    "rituals": [
+      "Study of the entrails of a live chicken (for examination/diagnosis)",
+      "Ritual purification (as a prescribed cure for illness)",
+      "Symbolic action (such as sticking pins in an effigy of the person identified as casting a spell, for cure)"
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "\"How can we distinguish genuine empirical science from pseudoempirical superstition or pseudoscience?\"",
+      "page": "2"
+    },
+    {
+      "text": "\"What distinguishes the scientist (who employs induction) is that he always begins his investigation of the world without preconceived ideas: he approaches the world with an open mind and makes empirical observations in an unprejudiced manner.\"",
+      "page": "2"
+    },
+    {
+      "text": "\"Hume's argument can now be formulated as follows: every inference, or process of reasoning, from observed effects to their underlying causes or from observed particulars to universal laws, is effectively an inference from what has been found in observation (or in \"experience,\" as it is sometimes put) to that which is not found in observation (experience).\"",
+      "page": "3"
+    },
+    {
+      "text": "\"Induction, the philosopher C D Broad lamented, which was thought to be the glory of science, turns out to be the scandal of philosophy.\"",
+      "page": "3"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "The article's relevance lies in its fundamental critique of the epistemological basis for scientific authority and the demarcation between science and non-science. It highlights a core problem in the philosophy of science that impacts how societies justify and privilege certain forms of knowledge, such as modern medicine. By dissecting inductivism, it compels a deeper consideration of what constitutes 'genuine' empirical support and knowledge.",
+    "target_audience": "The primary target audience includes philosophers of science, epistemologists, medical ethicists, and academics interested in the historical and philosophical underpinnings of scientific methodology. It is also relevant for medical professionals and the educated public seeking to understand the intellectual foundations of Western medicine's privileged status."
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "header": {
+    "title": "SCRIBAL PRACTICES IN THE PRODUCTION OF MAGIC HANDBOOKS IN EGYPT",
+    "authors": [
+      "Jacco Dieleman"
+    ],
+    "category": "Ancient Egyptian Magic Texts, Scribal Traditions",
+    "keywords": [
+      "hieratic",
+      "Demotic magic formularies",
+      "scribal conventions",
+      "text formats",
+      "recipe structure",
+      "Egyptian temple scriptoria",
+      "Greco-Egyptian magic",
+      "magic handbooks"
+    ]
+  },
+  "central_thesis": "This article examines the diachronic organization of information in hieratic and Demotic magic formularies through scribal conventions like visual aids, controlled vocabulary, and fixed text formats. It posits that hieratic genre rules remained unchanged, while Demotic handbooks, though often continuing these rules, also show significant deviations and innovations, indicating both continuity with Egyptian temple scriptoria and external influences.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction",
+      "summary": "Introduces the study as a diachronic examination of scribal practices in Egyptian magic formularies, arguing for stability in hieratic traditions and innovation in Demotic ones. It frames these observations as pertinent to understanding the cultural and institutional roots of Greco-Egyptian magic."
+    },
+    {
+      "chapter_title": "The Demotic Magical Papyri",
+      "summary": "Describes the corpus of Demotic Magical Papyri (DMP) as a coherent collection of Roman-period spells from various provenances, noting their linguistic diversity (Demotic, hieratic, Old-Coptic, Greek, cipher) and archaeological relation to the larger Greek Magical Papyri (GMP) corpus, while emphasizing their distinct scribal training and target audience."
+    },
+    {
+      "chapter_title": "Egyptian formularies for healing and protection",
+      "summary": "Outlines the long-standing tradition of Egyptian magic handbooks for healing and protection, dating back to 2400 BCE. It discusses their role as compendiums of recipes, the institutionalized scribal tradition in temple scriptoria, and the evolution of manuscript layout from vertical hieroglyphs to horizontal hieratic lines, persisting into the Roman period."
+    },
+    {
+      "chapter_title": "Text formats in Egyptian formularies",
+      "summary": "Details the formal features and scribal conventions of hieratic formularies. Recipes are categorized by keywords: 'phrt' (substance-based) or 'r3'/'šnt' (incantation-based). Red ink is used for highlighting, and a fixed sequence of text units (title, ingredients, directions for use, incantation for 'phrt'; title, incantation, directions for use for 'r3'/'šnt') defines the recipe's text format, irrespective of content length."
+    },
+    {
+      "chapter_title": "Continuity and innovation in the Demotic formularies",
+      "summary": "Compares Demotic scribal practices to hieratic, noting continuity in basic principles (black/red ink, structural organization) but also differences. Demotic uses red ink more sparingly. General title words like 'phrt' and 'r3' are retained, but 'zpw' and 'šnt' are discarded, while new terms like 'gy' (method) and specific divination terms emerge. Demotic recipes also make more frequent use of paragraph markers for complex structures."
+    },
+    {
+      "chapter_title": "Text formats in the Demotic formularies",
+      "summary": "Distinguishes between 'compartmentalized' and 'integrated' text formats in Demotic recipes. Compartmentalized recipes (Demotic 'phrt', 'r3', 'ph-ntr', some 'gy') generally retain traditional divisions, though 'r3' recipes show variations. Integrated recipes represent an innovation, intertwining incantations and directions for use, typical of longer, more complex rites like divination and binding spells."
+    },
+    {
+      "chapter_title": "Demotic phrt recipes",
+      "summary": "Explains that Demotic 'phrt' recipes generally follow hieratic conventions, focusing on substances. However, their application area is loosened, extending beyond the body to lamps or statuettes. Recipes can include incantations at the end. Deviations, like integrated ingredients, are noted for concise, serial recipes, with the term 'phr' ('to enchant') suggesting new conceptual uses."
+    },
+    {
+      "chapter_title": "Demotic r3 recipes",
+      "summary": "Discusses the continuation of 'r3' recipes in Demotic, despite 'r3' being replaced by 's' in common speech, indicating deliberate retention of archaic jargon. While many retain the classical 'title, incantation, directions' format, some subvert it to 'title, directions, incantation', particularly when Greek incantations or manipulative writing are involved. The use of 'dd mdwt' as a paragraph marker for directions is identified as a scribal error or reinterpretation."
+    },
+    {
+      "chapter_title": "Demotic ph-ntr recipes",
+      "summary": "Defines 'ph-ntr' ('god's arrival') as a compartmentalized oracular consultation recipe, distinct from integrated divination types like 'šn hn' or 'šn n p3 hbs'. It is characterized by simpler directions and fewer voces magicae, suggesting it may represent reworked older materials compared to the more recent, innovative integrated types."
+    },
+    {
+      "chapter_title": "gy recipes",
+      "summary": "Describes 'gy' ('method of doing something') recipes as outlining sets of actions, incantations, and preparations without a fixed text format (both compartmentalized and integrated examples exist). The term is suggested to have evolved from a paragraph marker for sub-sections in complex procedures to a general recipe title, explaining its absence in hieratic texts and lack of consistent format."
+    },
+    {
+      "chapter_title": "Integrated recipes",
+      "summary": "Identifies integrated recipes as a significant innovation in Demotic formularies, departing from strict compartmentalization. This format blends directions for use and incantations in a linear, narrative sequence, reflecting increased ritual length and complexity. It is prevalent in complex rites like separation, binding, and divination spells, and possibly influenced by Greek formularies."
+    },
+    {
+      "chapter_title": "Conclusion",
+      "summary": "Summarizes three key observations: shared scribal conventions (ink use, vocabulary) between hieratic and Demotic formularies, continuation of classical 'r3' and 'phrt' types with some deviations, and the introduction of a novel 'integrated' recipe type. The innovations likely stemmed from the increased complexity of rituals, potentially influenced by Greek texts, raising questions about their origin and evolution."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "phrt",
+      "definition": "A generic term for 'prescription' or 'medicament' in ancient Egyptian formularies, primarily for recipes focused on preparing and applying substances. In Demotic, its application broadened beyond direct bodily application."
+    },
+    {
+      "term": "r3",
+      "definition": "A generic term for 'utterance' or 'incantation' in ancient Egyptian formularies, used for recipes where the spoken word is central. In Demotic, while retained as a title word, 's' (recitation/invocation) was its common speech equivalent."
+    },
+    {
+      "term": "šnt",
+      "definition": "A term for 'conjuration' in hieratic formularies, denoting an incantation-based recipe. It fell out of use as a title word in Demotic formularies."
+    },
+    {
+      "term": "zpw",
+      "definition": "A term for 'remedy' in hieratic formularies (plural of 'deed'), also denoting a substance-based recipe. It fell out of use as a title word in Demotic formularies."
+    },
+    {
+      "term": "gy",
+      "definition": "A Demotic generic term meaning 'method of doing something'. It defines a recipe as a series of actions or steps, without prioritizing substance or incantation. 'Gy' recipes exhibit no fixed text format, suggesting its origin as a paragraph marker that evolved into a recipe type."
+    },
+    {
+      "term": "ph-ntr",
+      "definition": "A Demotic title word meaning 'god's arrival', referring to a type of oracular consultation ritual, typically structured as a compartmentalized recipe with simple directions and few voces magicae, potentially representing older traditions."
+    },
+    {
+      "term": "šn hn",
+      "definition": "A Demotic title word meaning 'vessel inquiry', referring to a divination rite, characterized by an integrated text format due to its complex procedural nature."
+    },
+    {
+      "term": "šn n p3 hbs",
+      "definition": "A Demotic title word meaning 'inquiry of the lamp', referring to a divination rite, characterized by an integrated text format due to its complex procedural nature."
+    },
+    {
+      "term": "kswr",
+      "definition": "A Demotic title word meaning 'ring', specifically for spells concerning the consecration and magical imbuing of rings."
+    },
+    {
+      "term": "Compartmentalized recipes",
+      "definition": "A text format where the distinct units of a recipe (title, ingredients, incantation, directions for use) are strictly separated and follow a fixed sequence. This is characteristic of classical hieratic formularies and many Demotic ones."
+    },
+    {
+      "term": "Integrated recipes",
+      "definition": "A text format, primarily found in Demotic formularies, where the units of incantation and directions for use are intertwined and loosely sequenced. This format is associated with longer, more complex rituals and emphasizes procedural coherence over strict textual divisions."
+    },
+    {
+      "term": "dd mdwt",
+      "definition": "Literally 'words to be said', this phrase traditionally introduces the incantation section of a recipe. In Demotic formularies, it is sometimes used as a meta-textual paragraph marker to introduce 'directions for use', potentially indicating a scribal reinterpretation or error."
+    }
+  ],
+  "practical_system": {
+    "description": "The article describes the scribal system for organizing magical recipes in ancient Egyptian handbooks, which functions as a meta-framework for constructing practical magical operations. This system dictated the visual presentation, textual sequencing, and vocabulary to facilitate efficient retrieval and accurate execution of rituals. It evolved from rigid, 'compartmentalized' formats in hieratic texts to more fluid, 'integrated' formats in Demotic papyri, adapting to increased ritual complexity and external influences. The 'practical system' is thus not a specific magical school, but the method by which magical knowledge was codified and transmitted.",
+    "tools": [
+      "Fixed text formats (compartmentalized vs. integrated)",
+      "Keyword-based titles ('phrt', 'r3', 'gy', 'ph-ntr', 'kswr')",
+      "Use of red ink for highlighting (titles, numbers, measures, paragraph markers)",
+      "Use of black ink for main body text",
+      "Controlled vocabulary and fixed phrases (e.g., 'dd mdwt' for incantations, 'p3y=f swh iyh' for preparation)",
+      "Paragraph markers for text unit transitions",
+      "Lists for ingredients and measures",
+      "Step-by-step instructions for procedures"
+    ],
+    "rituals": [
+      "Healing rites (e.g., curing 'tmjt' disease, stomach aches)",
+      "Protective spells (e.g., repelling blood, driving out '3' poison)",
+      "Divination rites (e.g., bowl divination, lamp divination, sun inquiry, dream sending, god's arrival 'ph-ntr', vessel inquiry 'šn hn')",
+      "Binding spells",
+      "Aphrodisiacs (e.g., love spells, stimulating sexual desire)",
+      "Curative applications",
+      "Amulet production",
+      "Consecration of magical rings ('kswr')",
+      "Thief-finding spells"
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "This article is a diachronic examination of the means by which information is organized in recipes contained in the hieratic and Demotic magic formularies from Egypt. These scribal conventions concern visual reading aids, controlled vocabulary and fixed text formats.",
+      "page": "1"
+    },
+    {
+      "text": "My proposition that the key word determines a recipe's text format is cogently confirmed by the following two recipes. They are both concerned with curing a patient from the tmjt disease. The first recipe is a phrt text detailing how to prepare a poultice to be put on the spot where the patient suffers from the disease, whereas the second is a šnt recipe whose incantation directly addresses the demons causing the disease and is meant to be spoken over an ointment or poultice of an entirely different composition.",
+      "page": "12"
+    },
+    {
+      "text": "The Demotic magic formularies contain a number of recipes whose text structure is not compartmentalized. Instead of retaining a strict dichotomy between the units of [incantation] and [directions for use], these recipes exhibit a partial blurring of these distinctions, resulting in a frequent alternation between directions for use and words to be said within one and the same recipe. I refer to recipes of this type as 'integrated recipes.' They deserve close scrutiny, because they are not attested in the extant hieratic formularies. In their structure, they represent a true innovation in scribal practices.",
+      "page": "27"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This article is highly relevant to Western Esotericism and Occultism by providing a detailed historical and structural analysis of ancient Egyptian magical texts, which are foundational to many later magical traditions. It illuminates the practical organization and transmission of operative magical knowledge, offering insights into how ancient practitioners conceptualized and executed rituals through their textual records. Understanding these scribal conventions is crucial for accurately interpreting and contextualizing the grimoire traditions and their practical mechanics.",
+    "target_audience": "The target audience includes academic researchers in Egyptology, the history of magic, and Western Esotericism, as well as practitioners of modern magic (e.g., Hermeticism, ceremonial magic) interested in the historical roots and operative methods of ancient magical systems. It is valuable for those who seek to understand the practical construction of ritual manuals beyond mere content, delving into the 'how' of magical instruction."
+  }
+}

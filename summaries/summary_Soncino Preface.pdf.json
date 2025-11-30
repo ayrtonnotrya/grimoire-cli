@@ -1,0 +1,109 @@
+{
+  "header": {
+    "title": "Zohar - Preface To The CD ROM Edition",
+    "authors": [
+      "The Translators (of the Soncino Zohar)"
+    ],
+    "category": "Textual Introduction to Esoteric Text",
+    "keywords": [
+      "Zohar",
+      "Soncino Translation",
+      "CD ROM Edition",
+      "Textual Variants",
+      "Transliteration",
+      "Hebrew Text",
+      "Raya Mehemna",
+      "Tikkunai Zohar",
+      "Biblical Quotations",
+      "Editorial Methodology"
+    ]
+  },
+  "central_thesis": "This preface details the editorial and translation methodology employed in the CD-ROM edition of the Soncino Zohar, outlining the sources for both Hebrew and English texts, conventions for handling discrepancies, omissions, transliteration, and the presentation of various Zoharic sections.",
+  "structure_content": [
+    {
+      "chapter_title": "A. Text and Translation",
+      "summary": "Describes that the Hebrew text is primarily from the Rom Vilna (1924) edition, while the Soncino translation is based mostly on the Mantua edition. Notes specific formatting for 'Note' (discrepancies) and 'Tr. note' (translator omissions/embedded footnotes). States the English text is the 1984 five-volume Second Edition of the Soncino Zohar, with 'Tetragrammaton' and 'Kah' substituted for Hebrew Deity terms, and British spellings retained. Explains that omissions in the translation are due to complexity or reliability concerns."
+    },
+    {
+      "chapter_title": "B. Transliteration",
+      "summary": "Explains that the Soncino transliteration system is used, which is academic but differs from modern Israeli usage (e.g., 'Bereshith' instead of 'Bereshit'). Mentions technical font problems, such as 'h' appearing as an ordinary 'h' instead of signifying 'chet', and the omission of accent marks, with context and italicization intended to prevent misunderstanding."
+    },
+    {
+      "chapter_title": "C. Other Sections of the Zohar",
+      "summary": "Details the inclusion of the Raya Mehemna (partially translated, under a separate menu 'Raya Mehemna' with page titles) and the Tikkunai Zohar (Hebrew only) in the CD-ROM edition, clarifying that the main Soncino translation focuses on the Zohar's principal doctrines."
+    },
+    {
+      "chapter_title": "Translators' Preface (General Editorial Philosophy)",
+      "summary": "States the translation's dual aim: accessibility for English readers and assistance for those studying the original. Mentions that intercalations from other works are not included. Discusses deliberate omissions of complex passages or Hebrew word plays. Acknowledges the enigmatic nature of parts of the Zohar (especially Genesis comments) and the aim for faithful reproduction of the original's 'tenebrosity'. Explains the system for printing Biblical quotations: small capitals for main text-headings, italics for subsidiary verses, and quotation marks for incidental quotes. Highlights efforts to impose order through paragraphing and parentheses to demonstrate the Zohar's inherent structure."
+    },
+    {
+      "chapter_title": "Bibliographical Notes (Scattered)",
+      "summary": "Indicates that Biblical references align with the Hebrew text or American Jewish translation, with renderings from this version or the English Revised Version, or custom renderings to match Zohar's lessons. Confirms the translation is mainly from the Mantuan text, with occasional readings from the Amsterdam text, and Mantuan text paging is inserted."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Rom Vilna printed edition (1924)",
+      "definition": "The primary source for the Hebrew text of the Zohar in this CD-ROM edition."
+    },
+    {
+      "term": "Mantua edition",
+      "definition": "The primary basis for the Hebrew text utilized by the Soncino translation."
+    },
+    {
+      "term": "Soncino translation",
+      "definition": "The English translation of the Zohar, specifically the 1984 five-volume Second Edition, which serves as the English text for the CD-ROM edition."
+    },
+    {
+      "term": "Raya Mehemna",
+      "definition": "Sections of the Zohar that appear alongside the main text in printed editions, included partially translated in the CD-ROM edition under a separate menu choice."
+    },
+    {
+      "term": "Tikkunai Zohar",
+      "definition": "Other portions of the Zohar included in the CD-ROM edition in Hebrew only, without translation."
+    },
+    {
+      "term": "\"Note\"",
+      "definition": "A label in a special typeface indicating discrepancies between the Hebrew text and the Soncino translation in the CD-ROM edition."
+    },
+    {
+      "term": "\"Tr. note\"",
+      "definition": "A label in a special typeface indicating translator's notes, often explaining omissions or embedded footnotes in the English text."
+    },
+    {
+      "term": "Soncino transliteration",
+      "definition": "The generally accepted scholarly and academic transliteration system for Hebrew words used in the Soncino translation, which does not always align with modern Israeli usage."
+    }
+  ],
+  "practical_system": {
+    "description": "This document describes the editorial and translation practices used in creating the CD-ROM edition of the Zohar. It does not outline a magical or occult system for practical application from the Zohar itself, but rather the systematic approach to presenting the Zohar's text for study. It details textual sourcing, discrepancy handling, transliteration conventions, and the inclusion/exclusion of various Zoharic components within this particular digital edition. The 'system' here is one of textual curation and presentation, not ritual magic.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "The Hebrew text of the Zohar in this CD ROM is essentially that of the Rom Vilna printed edition (1924).",
+      "page": null
+    },
+    {
+      "text": "The English text is that of the five-volume Second Edition of the Soncino Zohar published in 1984.",
+      "page": null
+    },
+    {
+      "text": "The Soncino transliteration of Hebrew words is the generally accepted scholarly and academic one. It does not correspond to the modern Israeli usage, and thus we have 'Bereshith' instead of 'Bereshit'.",
+      "page": null
+    },
+    {
+      "text": "The aim of this translation is, on the one hand, to make the Zohar accessible to English readers, on the other hand, to afford assistance to those who struggle with its intricacies in the original.",
+      "page": null
+    },
+    {
+      "text": "A further effort has been made to bring order and system into the text by careful paragraphing and by a judicious use of parentheses.",
+      "page": null
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This preface is critically relevant for any scholar, practitioner, or student engaging with the Zohar via the Soncino translation or the CD-ROM edition. It provides the essential contextual framework for understanding the textual basis, editorial decisions, and inherent limitations or biases of this specific publication. For those seeking to perform textual criticism or compare editions, this document is foundational. From an occult perspective, it highlights the importance of precise textual transmission and the challenges of translating complex esoteric concepts into a comprehensible form, acknowledging the 'tenebrosity' of the original text itself.",
+    "target_audience": "The target audience includes academic researchers in Jewish mysticism and Kabbalah, practitioners of esoteric traditions who utilize the Zohar as a source text, students of comparative religion, and anyone interested in the methodologies of textual translation and critical editing of sacred or occult texts. It is specifically aimed at users of the CD-ROM edition of the Soncino Zohar."
+  }
+}
