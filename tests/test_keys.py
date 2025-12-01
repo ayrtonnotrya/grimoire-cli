@@ -39,13 +39,15 @@ def test_key_manager_get_best_key():
         with patch("grimoire.config.config.exhausted_keys", set()):
             km = KeyManager()
             key = km.get_best_key()
-            assert key in ["k1", "k2"]
+            # k2 is reserved, so only k1 should be returned
+            assert key == "k1"
 
 def test_key_manager_exhausted_key():
     with patch("grimoire.config.Config.gemini_api_keys", new_callable=PropertyMock) as mock_keys:
-        mock_keys.return_value = ["k1", "k2"]
+        # Use 3 keys so k3 is reserved, leaving k1 and k2 as candidates
+        mock_keys.return_value = ["k1", "k2", "k3"]
         with patch("grimoire.config.config.exhausted_keys", {"k1"}):
             km = KeyManager()
-            # Should only return k2
+            # k1 is exhausted, k3 is reserved. Should return k2.
             for _ in range(10):
                 assert km.get_best_key() == "k2"

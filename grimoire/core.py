@@ -321,7 +321,7 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
     
     while available_keys:
         # Pick a key
-        api_key = key_manager.get_best_key()
+        api_key = key_manager.get_best_key(reserved_only=False)
         if not api_key:
              return {"status": "skipped", "file": pdf_path.name, "message": "All API Keys exhausted (Daily Limit)"}
         client = genai.Client(api_key=api_key)
@@ -686,7 +686,7 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     
     while available_keys:
         # Pick a key (randomly to distribute load)
-        current_key = key_manager.get_best_key()
+        current_key = key_manager.get_best_key(reserved_only=False)
         if not current_key:
              return {"status": "skipped", "file": pdf_name, "message": "All API Keys exhausted (Daily Limit)"}
         
@@ -768,7 +768,7 @@ def ask_question(query: str) -> str:
     all_metadatas = results['metadatas'][0]
     
     # Get best key for token counting and generation
-    key = key_manager.get_best_key()
+    key = key_manager.get_best_key(reserved_only=True)
     if not key:
         return "Error: No API keys available."
 

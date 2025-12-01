@@ -49,13 +49,36 @@ class KeyManager:
         if key in self.token_timestamps:
             self.token_timestamps[key] = [(t, v) for t, v in self.token_timestamps[key] if t > now - 60]
 
-    def get_best_key(self, estimated_tokens: int = 0) -> Optional[str]:
-        """Selects the best available key based on usage and rate limits."""
+    def get_best_key(self, estimated_tokens: int = 0, reserved_only: bool = False) -> Optional[str]:
+        """Selects the best available key based on usage and rate limits.
+        
+        Args:
+            estimated_tokens: Expected token usage for the request.
+            reserved_only: If True, considers ONLY the reserved key (the last one).
+                           If False, considers ALL keys EXCEPT the reserved one (unless only 1 key exists).
+        """
         with self.lock:
             now = time.time()
             
+            # Determine candidate keys based on reservation logic
+            all_keys = self.keys
+            if not all_keys:
+                return None
+            
+            candidates = []
+            if len(all_keys) == 1:
+                # If only 1 key, it's used for everything
+                candidates = all_keys
+            else:
+                # Reserve the last key
+                reserved_key = all_keys[-1]
+                if reserved_only:
+                    candidates = [reserved_key]
+                else:
+                    candidates = all_keys[:-1]
+
             # Filter out exhausted keys
-            available = [k for k in self.keys if k not in config.exhausted_keys]
+            available = [k for k in candidates if k not in config.exhausted_keys]
             if not available:
                 return None
             

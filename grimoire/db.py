@@ -165,39 +165,39 @@ def add_documents(documents: list[str], metadatas: list[dict], ids: list[str], e
 def query_documents(query_text: str, n_results: int = 5):
     collection = get_collection()
     
-    # For query embedding, we might need to manually embed if we want to specify task_type='RETRIEVAL_QUERY'
-    # But ChromaDB's query() takes query_texts and uses the embedding function (which uses RETRIEVAL_DOCUMENT above).
-    # This is a mismatch. 
-    # Ideally, we pass query_embeddings to collection.query().
+    # Try to get the reserved key first
+    api_key = key_manager.get_best_key(reserved_only=True)
     
-    api_keys = config.gemini_api_keys
-    last_error = None
+    # If reserved key is not available (e.g. single key setup or exhausted), try non-reserved
+    if not api_key:
+        api_key = key_manager.get_best_key(reserved_only=False)
+        
+    if not api_key:
+        raise RuntimeError("All API keys exhausted.")
 
-    for api_key in api_keys:
-        try:
-            client = genai.Client(api_key=api_key)
-            model = "gemini-embedding-001"
-            
-            query_result = client.models.embed_content(
-                model=model,
-                contents=query_text,
-                config={'task_type': 'RETRIEVAL_QUERY'}
-            )
-            query_embedding = query_result.embeddings[0].values
-            
-            results = collection.query(
-                query_embeddings=[query_embedding],
-                n_results=n_results
-            )
-            return results
-        except Exception as e:
-            last_error = e
-            masked_key = f"...{api_key[-4:]}"
-            logger.warning(f"Search failed with key {masked_key}: {e}. Rotating key...")
-            continue
-            
-    # If we get here, all keys failed
-    raise RuntimeError(f"All API keys failed. Last error: {last_error}")
+    try:
+        # Acquire rate limit
+        key_manager.acquire(api_key, estimated_tokens=len(query_text) // 4)
+
+        client = genai.Client(api_key=api_key)
+        model = "gemini-embedding-001"
+        
+        query_result = client.models.embed_content(
+            model=model,
+            contents=query_text,
+            config={'task_type': 'RETRIEVAL_QUERY'}
+        )
+        query_embedding = query_result.embeddings[0].values
+        
+        results = collection.query(
+            query_embeddings=[query_embedding],
+            n_results=n_results
+        )
+        return results
+    except Exception as e:
+        masked_key = f"...{api_key[-4:]}"
+        logger.error(f"Search failed with key {masked_key}: {e}")
+        raise RuntimeError(f"Search failed: {e}")
 
 def document_exists(filename: str) -> bool:
     """Checks if a document with the given filename exists in the collection."""
