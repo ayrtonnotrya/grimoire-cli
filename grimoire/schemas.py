@@ -10,6 +10,26 @@ class BookHeader(BaseModel):
 class SearchPlan(BaseModel):
     search_queries: List[str] = Field(description="List of precise search queries to retrieve occult knowledge.")
 
+class RitualTool(BaseModel):
+    name: str = Field(description="Name of the tool")
+    usage: str = Field(description="How the tool is used in the ritual")
+    substitute: Optional[str] = Field(None, description="Suggested substitute if the user lacks the tool")
+
+class RitualStep(BaseModel):
+    name: str = Field(description="Name of the step")
+    action: str = Field(description="Physical action to perform")
+    incantation: Optional[str] = Field(None, description="Verbal incantation")
+    visualization: Optional[str] = Field(None, description="Mental visualization")
+
+class ConstructedRitual(BaseModel):
+    title: str = Field(description="Title of the ritual")
+    intent: str = Field(description="The specific intent of the ritual")
+    timing: str = Field(description="Best timing (moon phase, day, hour)")
+    tools: List[RitualTool] = Field(description="List of required tools")
+    steps: List[RitualStep] = Field(description="Sequential steps of the ritual")
+    closing: str = Field(description="How to close the ritual")
+    expected_result: str = Field(description="What to expect as a result")
+
 class SigilPrompt(BaseModel):
     visual_prompt: str = Field(
         description="A dense, descriptive visual prompt for the image generator. MUST be under 480 tokens. Focus on visual elements, style, and symbolism."
@@ -45,6 +65,7 @@ class BookSummary(BaseModel):
     relevant_quotes: List[Quote] = Field(..., description="3 to 5 relevant quotes")
     critical_analysis: CriticalAnalysis
 
+# Explicit Schema for Gemini API (No $ref, No Optional/Null issues)
 # Explicit Schema for Gemini API (No $ref, No Optional/Null issues)
 BOOK_SUMMARY_SCHEMA = {
     "type": "OBJECT",
@@ -112,4 +133,41 @@ BOOK_SUMMARY_SCHEMA = {
         }
     },
     "required": ["header", "central_thesis", "structure_content", "key_concepts", "relevant_quotes", "critical_analysis"]
+}
+
+CONSTRUCTED_RITUAL_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "title": {"type": "STRING"},
+        "intent": {"type": "STRING"},
+        "timing": {"type": "STRING"},
+        "tools": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "name": {"type": "STRING"},
+                    "usage": {"type": "STRING"},
+                    "substitute": {"type": "STRING"}
+                },
+                "required": ["name", "usage"]
+            }
+        },
+        "steps": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "properties": {
+                    "name": {"type": "STRING"},
+                    "action": {"type": "STRING"},
+                    "incantation": {"type": "STRING"},
+                    "visualization": {"type": "STRING"}
+                },
+                "required": ["name", "action"]
+            }
+        },
+        "closing": {"type": "STRING"},
+        "expected_result": {"type": "STRING"}
+    },
+    "required": ["title", "intent", "timing", "tools", "steps", "closing", "expected_result"]
 }

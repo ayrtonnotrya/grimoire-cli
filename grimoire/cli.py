@@ -266,5 +266,89 @@ def set_imagen_key(
         console.print(f"[bold red]Failed to save key:[/bold red] {e}")
 
 
+@app.command()
+def ritual(
+    intent: str = typer.Argument(..., help="The specific intent of the ritual (e.g., 'Banish anxiety', 'Attract wealth')"),
+    inventory: str = typer.Option(None, "--inventory", "-i", help="Comma-separated list of available items"),
+    inventory_file: str = typer.Option(None, "--inventory-file", "-f", help="Path to a text file containing the inventory"),
+    json_output: bool = typer.Option(False, "--json", help="Output the raw JSON structure")
+):
+    """🕯️ The Ritualist: Construct a personalized ritual based on your intent and available tools."""
+    from grimoire.ritual import perform_ritual_planning
+    
+    # 1. Resolve Inventory
+    final_inventory = "No specific tools available. Use body, voice, and mind."
+    
+    if inventory:
+        final_inventory = inventory
+    elif inventory_file:
+        path = Path(inventory_file)
+        if path.exists():
+            final_inventory = path.read_text().strip()
+        else:
+            console.print(f"[yellow]Warning: Inventory file '{inventory_file}' not found. Proceeding without specific inventory.[/yellow]")
+
+    if not json_output:
+        console.print(Panel.fit(f"[bold magenta]The Ritualist[/bold magenta]\nIntent: {intent}\nInventory Source: {'User Input' if inventory else ('File' if inventory_file else 'None')}", border_style="magenta"))
+        with console.status("[bold green]Consulting the Library and constructing your ritual...[/bold green]", spinner="moon"):
+            try:
+                ritual_obj = perform_ritual_planning(intent, final_inventory)
+            except Exception as e:
+                console.print(f"[bold red]Ritual construction failed:[/bold red] {e}")
+                raise typer.Exit(code=1)
+    else:
+        try:
+            ritual_obj = perform_ritual_planning(intent, final_inventory)
+        except Exception as e:
+            print(json.dumps({"error": str(e)}))
+            raise typer.Exit(code=1)
+
+    # 2. Output Handling
+    if json_output:
+        print(ritual_obj.model_dump_json(indent=2))
+    else:
+        # Render Beautifully with Rich
+        from rich.table import Table
+        from rich.text import Text
+        from rich.columns import Columns
+        
+        # Header
+        console.print(f"\n[bold underline overline magenta]{ritual_obj.title.upper()}[/bold underline overline magenta]\n")
+        
+        # Meta Info
+        grid = Table.grid(expand=True)
+        grid.add_column()
+        grid.add_column(justify="right")
+        grid.add_row(f"[bold]Intent:[/bold] {ritual_obj.intent}", f"[bold]Timing:[/bold] {ritual_obj.timing}")
+        console.print(Panel(grid, border_style="dim"))
+        
+        # Tools
+        tools_table = Table(title="Required Tools", box=None, show_header=True, header_style="bold cyan")
+        tools_table.add_column("Tool")
+        tools_table.add_column("Usage")
+        tools_table.add_column("Substitute", style="italic dim")
+        
+        for tool in ritual_obj.tools:
+            tools_table.add_row(tool.name, tool.usage, tool.substitute or "-")
+            
+        console.print(Panel(tools_table, border_style="cyan"))
+        
+        # Steps
+        console.print("\n[bold yellow]--- The Ritual Steps ---[/bold yellow]\n")
+        
+        for i, step in enumerate(ritual_obj.steps, 1):
+            step_content = Text()
+            step_content.append(f"Action: {step.action}\n", style="white")
+            if step.visualization:
+                step_content.append(f"Visualize: {step.visualization}\n", style="italic blue")
+            if step.incantation:
+                step_content.append(f"\nSay: \"{step.incantation}\"", style="bold magenta")
+                
+            console.print(Panel(step_content, title=f"{i}. {step.name}", border_style="yellow", expand=False))
+            
+        # Closing & Result
+        console.print(Panel(f"[bold]Closing:[/bold] {ritual_obj.closing}\n\n[bold]Expected Result:[/bold] {ritual_obj.expected_result}", border_style="green"))
+
+
 if __name__ == "__main__":
     app()
