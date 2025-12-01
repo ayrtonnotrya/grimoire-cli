@@ -59,6 +59,7 @@ MODEL_RATE_LIMITS = {
 MODEL_PLANNING = "gemini-2.5-flash-lite"
 MODEL_ALCHEMY = "gemini-2.5-pro"
 MODEL_MATERIALIZATION = "imagen-4.0-ultra-generate-001"
+MODEL_NANO_BANANA = "gemini-3-pro-image-preview"
 
 class Config:
     def __init__(self):

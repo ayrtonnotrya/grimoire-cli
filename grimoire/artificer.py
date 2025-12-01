@@ -5,9 +5,8 @@ from google import genai
 from google.genai import types
 from rich.console import Console
 
-from grimoire.config import config, MODEL_PLANNING, MODEL_ALCHEMY, MODEL_MATERIALIZATION
-from grimoire.schemas import SearchPlan, SigilPrompt
-from grimoire import db
+from grimoire.config import config, MODEL_ALCHEMY, MODEL_MATERIALIZATION, MODEL_NANO_BANANA
+from grimoire.schemas import SigilPrompt
 from grimoire.keys import key_manager
 from grimoire.guard import ImagenGuard
 from grimoire.logger import logger
@@ -27,58 +26,14 @@ def _get_client(model_name: str) -> genai.Client:
         raise ArtificerError("All API Keys exhausted.")
     return genai.Client(api_key=api_key)
 
-def stage_1_planning(intent: str, style: str) -> SearchPlan:
+def stage_1_alchemy(intent: str, style: str) -> SigilPrompt:
     """
-    Stage 1: Planning (Gemini 2.5 Flash-Lite)
-    Generates search queries based on intent and style.
+    Stage 1: Alchemy (Gemini 2.5 Pro)
+    Synthesizes intent and style into a visual prompt.
     """
-    console.print(f"[bold blue]Stage 1: Planning (Model: {MODEL_PLANNING})[/bold blue]")
-    
-    client = _get_client(MODEL_PLANNING)
-    
-    system_instruction = """You are an expert occult librarian. Your goal is to formulate precise search queries to retrieve relevant magical knowledge from a vector database.
-    The user wants to create a 'Sigil' (magical symbol) for a specific intent and style.
-    
-    Constraints:
-    1. The next stage has a context limit. Do NOT retrieve the entire library.
-    2. Focus on the specific intent and style.
-    3. Return ONLY the JSON object matching the SearchPlan schema.
-    """
-    
-    prompt = f"""
-    User Intent: {intent}
-    Desired Style: {style}
-    
-    Generate 3-5 precise search queries to find relevant symbols, rituals, and artistic references in the occult library.
-    """
-    
-    try:
-        response = client.models.generate_content(
-            model=MODEL_PLANNING,
-            contents=prompt,
-            config={
-                'response_mime_type': 'application/json',
-                'response_schema': SearchPlan,
-                'system_instruction': system_instruction
-            }
-        )
-        
-        plan = SearchPlan(**json.loads(response.text))
-        return plan
-    except Exception as e:
-        logger.error(f"Stage 1 failed: {e}")
-        raise ArtificerError(f"Stage 1 (Planning) failed: {e}")
-
-def stage_2_alchemy(intent: str, style: str, search_results: list[str]) -> SigilPrompt:
-    """
-    Stage 2: Alchemy (Gemini 2.5 Pro)
-    Synthesizes retrieved knowledge into a visual prompt.
-    """
-    console.print(f"[bold purple]Stage 2: Alchemy (Model: {MODEL_ALCHEMY})[/bold purple]")
+    console.print(f"[bold purple]Stage 1: Alchemy (Model: {MODEL_ALCHEMY})[/bold purple]")
     
     client = _get_client(MODEL_ALCHEMY)
-    
-    context_text = "\n\n".join(search_results)
     
     system_instruction = """You are a Master Occult Calligrapher and Sigilographer. Your goal is to create a precise visual prompt for generating FUNCTIONAL SIGILS.
 
@@ -90,7 +45,6 @@ def stage_2_alchemy(intent: str, style: str, search_results: list[str]) -> Sigil
        - Example: If Style is "Temple of Ascending Flame", do NOT draw fire. Instead, use the ARTISTIC SCHOOL of that order (e.g., aggressive geometry, sharp angles, fluid but dangerous curves).
     5. COMPOSITION:
        - User Intent dictates the CENTRAL GEOMETRY.
-       - Retrieved Context (RAG) enriches PERIPHERAL GLYPHS and details.
        - Do NOT hallucinate visual elements that violate the Black & White constraint.
     6. CRITICAL CONSTRAINT: The output prompt MUST be under 480 tokens.
     
@@ -100,9 +54,6 @@ def stage_2_alchemy(intent: str, style: str, search_results: list[str]) -> Sigil
     prompt = f"""
     User Intent: {intent}
     Desired Style (Stroke Technique): {style}
-    
-    Retrieved Context from Grimoire (Use for peripheral glyphs/details only):
-    {context_text}
     
     Construct the visual prompt.
     Ensure the description enforces a "scanned ancient book diagram" or "clean SVG vector" aesthetic.
@@ -125,87 +76,118 @@ def stage_2_alchemy(intent: str, style: str, search_results: list[str]) -> Sigil
         sigil_prompt = SigilPrompt(**json.loads(response.text))
         return sigil_prompt
     except Exception as e:
-        logger.error(f"Stage 2 failed: {e}")
-        raise ArtificerError(f"Stage 2 (Alchemy) failed: {e}")
+        logger.error(f"Stage 1 failed: {e}")
+        raise ArtificerError(f"Stage 1 (Alchemy) failed: {e}")
 
-def stage_3_materialization(visual_prompt: str, aspect_ratio: str, output_path: Path):
+def stage_2_materialization(visual_prompt: str, aspect_ratio: str, output_path: Path, use_nano_banana: bool = False):
     """
-    Stage 3: Materialization (Imagen 4 Ultra)
-    Generates the image.
+    Stage 2: Materialization
+    Generates the image using either Imagen 4 Ultra or Nano Banana Pro.
     """
-    console.print(f"[bold gold1]Stage 3: Materialization (Model: {MODEL_MATERIALIZATION})[/bold gold1]")
+    model_name = MODEL_NANO_BANANA if use_nano_banana else MODEL_MATERIALIZATION
+    console.print(f"[bold gold1]Stage 2: Materialization (Model: {model_name})[/bold gold1]")
     
-    # Use ImagenGuard to get the dedicated paid key
+    # Use ImagenGuard to get the dedicated paid key for BOTH models to ensure high quality/quota management
     try:
         guard = ImagenGuard()
         api_key = guard.get_key()
         # Create an isolated client for this specific paid operation
         client = genai.Client(api_key=api_key)
     except Exception as e:
-        raise ArtificerError(f"Stage 3 Authorization Failed: {e}")
+        raise ArtificerError(f"Stage 2 Authorization Failed: {e}")
     
     try:
-        # Imagen 4 Ultra parameters
-        # Note: The python client might have slightly different parameter names depending on version.
-        # Based on docs/genai/generate_images_using_Imagen.md, we use 'imagen-3.0-generate-001' style but for 4.0.
-        # Assuming standard generate_images call.
-        
-        response = client.models.generate_image(
-            model=MODEL_MATERIALIZATION,
-            prompt=visual_prompt,
-            config=types.GenerateImageConfig(
-                number_of_images=1,
-                aspect_ratio=aspect_ratio,
-                person_generation='DONT_ALLOW',
-                safety_filter_level="BLOCK_LOW_AND_ABOVE", 
-            )
-        )
-        
-        if response.generated_images:
-            image = response.generated_images[0]
-            image.image.save(output_path)
-            console.print(f"[green]Sigil saved to {output_path}[/green]")
+        if use_nano_banana:
+            # Nano Banana Pro (Gemini 3 Pro Image Preview) Implementation
+            # We use direct REST API call because the installed SDK version (0.2.2) 
+            # does not support 'image_config' in GenerateContentConfig yet.
+            import requests
+            import base64
+            
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_NANO_BANANA}:generateContent?key={api_key}"
+            
+            payload = {
+                "contents": [{
+                    "parts": [{"text": visual_prompt}]
+                }],
+                "generationConfig": {
+                    "responseModalities": ["IMAGE"],
+                    "imageConfig": {
+                        "aspectRatio": aspect_ratio
+                    }
+                }
+            }
+            
+            response = requests.post(url, json=payload, headers={"Content-Type": "application/json"})
+            
+            if response.status_code != 200:
+                raise ArtificerError(f"Nano Banana Pro API Error ({response.status_code}): {response.text}")
+            
+            response_data = response.json()
+            
+            # Parse response for image data
+            image_saved = False
+            try:
+                candidates = response_data.get("candidates", [])
+                if candidates:
+                    parts = candidates[0].get("content", {}).get("parts", [])
+                    for part in parts:
+                        if "inlineData" in part:
+                            b64_data = part["inlineData"]["data"]
+                            image_data = base64.b64decode(b64_data)
+                            with open(output_path, "wb") as f:
+                                f.write(image_data)
+                            image_saved = True
+                            break
+            except Exception as e:
+                logger.error(f"Failed to parse Nano Banana response: {e}")
+                raise ArtificerError(f"Failed to parse Nano Banana response: {e}")
+
+            if image_saved:
+                console.print(f"[green]Sigil saved to {output_path}[/green]")
+            else:
+                raise ArtificerError("No image generated by Nano Banana Pro (No inlineData found).")
+
         else:
-            raise ArtificerError("No image generated.")
+            # Imagen 4 Ultra Implementation
+            response = client.models.generate_image(
+                model=MODEL_MATERIALIZATION,
+                prompt=visual_prompt,
+                config=types.GenerateImageConfig(
+                    number_of_images=1,
+                    aspect_ratio=aspect_ratio,
+                    person_generation='DONT_ALLOW',
+                    safety_filter_level="BLOCK_LOW_AND_ABOVE", 
+                )
+            )
+            
+            if response.generated_images:
+                image = response.generated_images[0]
+                image.image.save(output_path)
+                console.print(f"[green]Sigil saved to {output_path}[/green]")
+            else:
+                raise ArtificerError("No image generated by Imagen.")
             
     except Exception as e:
-        logger.error(f"Stage 3 failed: {e}")
-        raise ArtificerError(f"Stage 3 (Materialization) failed: {e}")
+        logger.error(f"Stage 2 failed: {e}")
+        raise ArtificerError(f"Stage 2 (Materialization) failed: {e}")
 
-def generate_sigil(intent: str, style: str, aspect_ratio: str, output_path: str):
+def generate_sigil(intent: str, style: str, aspect_ratio: str, output_path: str, nano_banana_pro: bool = False):
     """
     Orchestrates the Sigil Artificer pipeline.
     """
     output_file = Path(output_path).resolve()
     
     try:
-        # --- Stage 1: Planning ---
-        console.print("[italic]Summoning Gemini Flash-Lite to interpret your intent and consult the ethereal archives...[/italic]")
-        plan = stage_1_planning(intent, style)
-        console.print(f"[cyan]Queries generated:[/cyan] {plan.search_queries}")
-        
-        # --- Intermediate: Retrieval ---
-        console.print(f"[italic]Consulting the library...[/italic]")
-        all_results = []
-        for query in plan.search_queries:
-            # Increased to 100 results per query to leverage Gemini 2.5 Pro's 2M+ token window
-            results = db.query_documents(query, n_results=100)
-            if results['documents'] and results['documents'][0]:
-                all_results.extend(results['documents'][0])
-        
-        if not all_results:
-            console.print("[yellow]Warning: No arcane references found. Proceeding with raw intent.[/yellow]")
-        else:
-            console.print(f"[green]Found {len(all_results)} arcane references.[/green]")
-
-        # --- Stage 2: Alchemy ---
-        console.print("[italic]Gemini Pro is now weaving the retrieved concepts into a visual ritual description (Targeting < 480 tokens)...[/italic]")
-        sigil_prompt = stage_2_alchemy(intent, style, all_results)
+        # --- Stage 1: Alchemy ---
+        console.print("[italic]Gemini Pro is distilling your intent into a visual ritual description...[/italic]")
+        sigil_prompt = stage_1_alchemy(intent, style)
         console.print(f"[dim]Visual Prompt: {sigil_prompt.visual_prompt}[/dim]")
         
-        # --- Stage 3: Materialization ---
-        console.print("[italic]Materializing the sigil using the power of Imagen 4 Ultra...[/italic]")
-        stage_3_materialization(sigil_prompt.visual_prompt, aspect_ratio, output_file)
+        # --- Stage 2: Materialization ---
+        model_display = "Nano Banana Pro" if nano_banana_pro else "Imagen 4 Ultra"
+        console.print(f"[italic]Materializing the sigil using the power of {model_display}...[/italic]")
+        stage_2_materialization(sigil_prompt.visual_prompt, aspect_ratio, output_file, use_nano_banana=nano_banana_pro)
         
         console.print(f"[bold green]The sigil has been forged and saved to {output_file}.[/bold green]")
 

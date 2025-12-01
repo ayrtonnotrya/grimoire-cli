@@ -235,14 +235,15 @@ def sigil(
     intent: str = typer.Argument(..., help="The magical intent for the sigil (e.g., 'Overcome creative block')"),
     style: str = typer.Option(..., "--style", "-s", help="The artistic or magical style (e.g., 'Chaos Magic', 'Art Nouveau')"),
     aspect_ratio: str = typer.Option("1:1", "--aspect-ratio", "-ar", help="Aspect ratio for the image (1:1, 16:9, 9:16, 3:4, 4:3)"),
-    output: str = typer.Option(..., "--output", "-o", help="Path to save the generated sigil image")
+    output: str = typer.Option(..., "--output", "-o", help="Path to save the generated sigil image"),
+    nano_banana_pro: bool = typer.Option(False, "--nano-banana-pro", help="Use the advanced Gemini 3 Pro Image model (Nano Banana Pro)")
 ):
-    """🎨 Forge a magical sigil using the Sigil Artificer pipeline (Flash-Lite -> Pro -> Imagen 4 Ultra)."""
+    """🎨 Forge a magical sigil using the Sigil Artificer pipeline (Alchemy -> Materialization)."""
     from grimoire import artificer
     
-    console.print(Panel.fit(f"[bold magenta]Sigil Artificer[/bold magenta]\nIntent: {intent}\nStyle: {style}", border_style="magenta"))
+    console.print(Panel.fit(f"[bold magenta]Sigil Artificer[/bold magenta]\nIntent: {intent}\nStyle: {style}\nModel: {'Nano Banana Pro' if nano_banana_pro else 'Imagen 4 Ultra'}", border_style="magenta"))
     
-    artificer.generate_sigil(intent, style, aspect_ratio, output)
+    artificer.generate_sigil(intent, style, aspect_ratio, output, nano_banana_pro)
 
 @app.command()
 def set_imagen_key(
