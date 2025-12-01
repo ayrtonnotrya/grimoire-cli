@@ -55,6 +55,11 @@ MODEL_RATE_LIMITS = {
     "gemini-1.5-flash-8b": {"rpm": 15, "tpm": 250000},
 }
 
+# Sigil Artificer Models
+MODEL_PLANNING = "gemini-2.5-flash-lite"
+MODEL_ALCHEMY = "gemini-2.5-pro"
+MODEL_MATERIALIZATION = "imagen-4.0-ultra-generate-001"
+
 class Config:
     def __init__(self):
         self._config = self._load_config()

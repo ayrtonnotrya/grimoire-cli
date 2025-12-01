@@ -230,5 +230,19 @@ def repair(
     console.print(f"[bold]Starting repair process for list: {list_file}[/bold]")
     core.repair_library(list_file, timeout=timeout, verbose=verbose)
 
+@app.command()
+def sigil(
+    intent: str = typer.Argument(..., help="The magical intent for the sigil (e.g., 'Overcome creative block')"),
+    style: str = typer.Option(..., "--style", "-s", help="The artistic or magical style (e.g., 'Chaos Magic', 'Art Nouveau')"),
+    aspect_ratio: str = typer.Option("1:1", "--aspect-ratio", "-ar", help="Aspect ratio for the image (1:1, 16:9, 9:16, 3:4, 4:3)"),
+    output: str = typer.Option(..., "--output", "-o", help="Path to save the generated sigil image")
+):
+    """🎨 Forge a magical sigil using the Sigil Artificer pipeline (Flash-Lite -> Pro -> Imagen 4 Ultra)."""
+    from grimoire import artificer
+    
+    console.print(Panel.fit(f"[bold magenta]Sigil Artificer[/bold magenta]\nIntent: {intent}\nStyle: {style}", border_style="magenta"))
+    
+    artificer.generate_sigil(intent, style, aspect_ratio, output)
+
 if __name__ == "__main__":
     app()

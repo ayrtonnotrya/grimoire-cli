@@ -1,11 +1,19 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
-class SummaryHeader(BaseModel):
-    title: str = Field(..., description="Title of the work")
-    authors: List[str] = Field(..., description="List of authors")
-    category: str = Field(..., description="Category or Tradition (e.g., Chaos Magic, Qabalah)")
-    keywords: List[str] = Field(..., description="5 to 10 central technical terms")
+class BookHeader(BaseModel):
+    title: str = Field(description="The full title of the book")
+    authors: List[str] = Field(description="List of authors")
+    category: str = Field(description="Primary category (e.g., Chaos Magic, Hermetics, Wicca)")
+    keywords: List[str] = Field(description="5-10 relevant keywords")
+
+class SearchPlan(BaseModel):
+    search_queries: List[str] = Field(description="List of precise search queries to retrieve occult knowledge.")
+
+class SigilPrompt(BaseModel):
+    visual_prompt: str = Field(
+        description="A dense, descriptive visual prompt for the image generator. MUST be under 480 tokens. Focus on visual elements, style, and symbolism."
+    )
 
 class ChapterSummary(BaseModel):
     chapter_title: str = Field(..., description="Title of the chapter or section")
@@ -29,7 +37,7 @@ class CriticalAnalysis(BaseModel):
     target_audience: str = Field(..., description="Intended audience (beginner, adept, academic)")
 
 class BookSummary(BaseModel):
-    header: SummaryHeader
+    header: BookHeader
     central_thesis: str = Field(..., description="Summary of the main purpose of the book")
     structure_content: List[ChapterSummary] = Field(..., description="Summary by chapters or sections")
     key_concepts: List[ConceptDefinition] = Field(..., description="Fundamental terms and definitions")
