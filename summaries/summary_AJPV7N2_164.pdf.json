@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "The Assumption of Grand Identity and Belief in Reincarnation",
+    "authors": [
+      "MICHAEL A. THALBOURNE"
+    ],
+    "category": "Parapsychology, Psychology",
+    "keywords": [
+      "Grand identity",
+      "Reincarnation belief",
+      "Psychosis",
+      "Delusion",
+      "Jesus Christ",
+      "Correlation",
+      "Questionnaire"
+    ]
+  },
+  "central_thesis": "The paper hypothesizes and empirically tests for a positive correlation between individuals' self-reported assumption of a 'grand identity' (believing oneself to be a famous historical figure, e.g., Jesus Christ, often associated with psychotic episodes) and their belief in reincarnation. The underlying rationale is that if one believes they are a famous historical figure like Jesus, and that this figure returned through normal birth (not celestial spectacle), then a belief in reincarnation provides a rationalizing mechanism for this experience.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract and Introduction",
+      "summary": "The author notes that individuals experiencing psychotic episodes sometimes claim a 'grand identity,' often identifying as Jesus Christ. Given that such a return would likely involve normal birth, it is posited that these individuals might also be more inclined to believe in reincarnation. The paper outlines the objective to investigate the correlation between the assumption of grand identity and belief in reincarnation using a questionnaire approach."
+    },
+    {
+      "chapter_title": "Method",
+      "summary": "Seven datasets, totaling 1,025 participants (predominantly university students), were retrospectively analyzed. The study focused on two true/false questionnaire items: (1) 'If reincarnation were true, it would explain some unusual experiences I have had' (Magical Ideation Scale No. 24) and (2) 'I have never had an experience where I believed that I was, literally, a famous figure, such as Jesus Christ' (Manic-Depressiveness Scale No. 14, reverse-scored). Pearson correlation was used for statistical analysis of these dichotomous variables."
+    },
+    {
+      "chapter_title": "Results",
+      "summary": "Individual studies showed weak, mostly non-significant positive correlations between grand identity assumption and reincarnation belief. However, when all datasets were combined (N=1,025), a positive and statistically significant Pearson correlation of r(1023) = .083, p = .008, was found. While 19% of the total sample reported assuming a grand identity, 42.6% of this subgroup believed in reincarnation, compared to 32.5% in the overall sample. Age and sex were found not to significantly correlate with either variable."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "The study concludes that the hypothesis is confirmed, showing a significant, albeit exceedingly weak and not clinically significant, relationship. The author suggests that despite the small effect size, such correlations can be meaningful in social science contexts. It is acknowledged that the questionnaire items are not ideal and that future research should employ more appropriate measures of grand identity and reincarnation, potentially utilizing a multivariate approach including other variables like self-esteem, transliminality, and narcissistic personality, to better understand the predictors of grand identity assumption."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Grand Identity",
+      "definition": "The belief or experience of literally being a famous historical figure, such as Jesus Christ, often reported during psychotic episodes. This study uses a self-report measure of having experienced such a belief."
+    },
+    {
+      "term": "Belief in Reincarnation",
+      "definition": "The personal conviction that if reincarnation were true, it would explain certain unusual experiences one has had. This is measured by a specific item from the Magical Ideation Scale."
+    },
+    {
+      "term": "Jesus-Delusion",
+      "definition": "A specific manifestation of grand identity where an individual believes themselves to be Jesus Christ. The paper suggests this could imply a belief in Jesus's return 'like a thief in the night' (normal birth) which then leads to a rationalization via reincarnation."
+    },
+    {
+      "term": "Manic-Depressiveness Scale",
+      "definition": "A psychological instrument, from which a specific item ('I have never had an experience where I believed that I was, literally, a famous figure, such as Jesus Christ') was reverse-scored to assess the assumption of grand identity in this study."
+    },
+    {
+      "term": "Magical Ideation Scale",
+      "definition": "A psychological instrument designed to measure schizotypy, from which an item ('If reincarnation were true, it would explain some unusual experiences I have had') was used to assess belief in reincarnation."
+    }
+  ],
+  "practical_system": {
+    "description": "This document is a psychological research paper reporting a correlational study; it does not describe a practical system, philosophy, or mechanics for magical practice, nor does it offer instructions for operationalizing any form of esotericism or occultism. The 'grand identity' discussed is a psychological phenomenon observed in clinical contexts, not a magical attainment.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "ABSTRACT: Sometimes people in psychotic episodes purport that their identity has changed, and the most famous personage to whom there is a change is Jesus Christ. Clearly, even if true, the person has not arrived on Earth by celestial spectacle, but rather by being born in the normal way. This fact suggests that such people may be more likely to believe in reincarnation.",
+      "page": "164"
+    },
+    {
+      "text": "The conclusion, then, is that, given a sufficiently large sample, belief in reincarnation shows a significant but exceedingly weak (and not clinically significant) relationship to having thought oneself to be a famous personage.",
+      "page": "169"
+    },
+    {
+      "text": "The amount of variance accounted for in this study is miniscule—in the order of 1%.",
+      "page": "170"
+    },
+    {
+      "text": "The author does not take this position: it is common in sociology, for instance, to have large samples but very low (and significant) correlations, and these are taken to be meaningful (see, for example, the work of Greeley, 1995, on belief in life after death, such as Table 5.3, p. 93, where the significant correlations range from r = .05 to r = .20).",
+      "page": "169"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant to the fields of parapsychology, abnormal psychology, and psychiatry, offering a statistical investigation into the psychological underpinnings of grand identity delusions. It provides empirical support for a weak but significant link between certain types of delusions and belief in reincarnation, contributing to the understanding of how individuals rationalize unusual personal experiences within their belief systems.",
+    "target_audience": "Academic researchers and practitioners in psychology, parapsychology, and psychiatry; mental health professionals interested in the phenomenology of delusions and belief systems; scholars studying the intersection of belief in afterlife concepts and psychological states."
+  }
+}

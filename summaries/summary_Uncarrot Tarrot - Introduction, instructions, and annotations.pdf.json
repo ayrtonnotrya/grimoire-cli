@@ -1,0 +1,127 @@
+{
+  "header": {
+    "title": "The Uncarrot Tarot",
+    "authors": [
+      "Andrew Plotkin"
+    ],
+    "category": "Western Esotericism",
+    "keywords": [
+      "Tarot",
+      "Custom Deck",
+      "Personal Symbolism",
+      "Awful Green Things From Outer Space",
+      "Moopsball",
+      "Elvish Alphabet",
+      "Divination",
+      "DIY Occultism"
+    ]
+  },
+  "central_thesis": "The Uncarrot Tarot is a highly personalized and self-referential divinatory system, designed by the author during his youth, that integrates pop culture references, personal symbolism, and unique operational rules to create a functional, albeit non-traditional, Tarot deck.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction to The Uncarrot Tarot",
+      "summary": "This section details the genesis of the Uncarrot Tarot deck, created by the author as a teenager. It covers the materials used (index cards, mechanical pencil), the number of cards (93), and the core influences, which include sci-fi tropes, 1983 computers, the Elvish alphabet, and characters from the board game 'Awful Green Things From Outer Space'. It introduces the four primary suits: Hammers, Disks, Pencils, and Silly Hats."
+    },
+    {
+      "chapter_title": "Uncarrot Tarot: Annotations and Suit Correspondences",
+      "summary": "The author explains the deck's title as a wordplay. He outlines the intended parallels between the Uncarrot suits and traditional Tarot: Hammers (weapons from 'Moopsball') correspond to Swords, Pencils (representing intelligence) to Wands, Silly Hats (shaped like cups) to Cups, and Disks (floppy disks) to Pentacles. The annotations also mention the inclusion of secondary suits, traditional Major Arcana, and 'Meta Arcana' which comment on the concept of Tarot itself. Specific species from 'Awful Green Things' (Frathms, Redundans, Snudlians, Smbalites, and a fifth race) are explicitly associated with the suits and individual cards, alongside the use of Tolkien's Elvish alphabet (Tengwar) with Sindarin vowel arrangement for card inscriptions."
+    },
+    {
+      "chapter_title": "Notes on Particular Cards: The Title and Minor Arcana Examples",
+      "summary": "This section provides specific commentary on individual cards. The 'Title' card, featuring a labyrinth, is an active part of readings. Examples from the Minor Arcana include: 'Pencils' (Four, Knight, Knave highlighting physical features), 'Disks' (Two as a 'Disk Zorcher', Five as 'nonsense', Six as 'Sadistic Software', Seven as 'Penqueriel', Knight as Redundan armor, Knave as an early tablet concept, King with an open-backed throne, Hitchhiker as an Apple computer), 'Hammers' (Ace as the first card drawn, Knight as 'action shot', Knave attacking from behind with frisbees), and 'Silly Hats' (Ace mistaken for 'Two of Feathers', Five as propellor beanies, Knight with a Martin Gardner scimitar, Knave as 'evil', King with a 'silliest crown', Hitchhiker at a monorail station)."
+    },
+    {
+      "chapter_title": "Notes on Particular Cards: Miscarcana and Major/Meta Arcana Examples",
+      "summary": "Further card annotations include the 'Miscarcana' (Five of Kings featuring all five species, King of Fives with a pentagonal throne and five people in portrait, Two of Protractors as a pun). The Major and Meta Arcana are detailed with origins from other media or personal reflections: 'The Blank' and 'The Big Black Thing' as conceptual opposites, 'The Captain' from 'Sundog', 'The Card' with Roman numeral XXIV and a Hofstadter-inspired spiraling effect, 'The Dancer' and 'The Supernova' from Ann Maxwell, 'The Demon' (difficulty with flames), 'The Doctor' with a robotic Mascot and Sonic Toothbrush, 'The Genius' with math competition badges, 'The Hanged Man' depicted with Redundan tentacles forming a pentagram, 'The Marble Machine', 'The Maze' as a Praser Maze, 'Misprint', 'The Nerd' (pickle-holster, F&M library background), 'The Pickle' (uncertain status), 'The Planet' (Voltornion), 'The Robot' (Znutar's Robot from Zork 2), and 'Transfer' (anatomical drawing)."
+    },
+    {
+      "chapter_title": "The Instructions: Operative Meanings and Reading Rules",
+      "summary": "This section outlines the functional rules for interpreting the Uncarrot Tarot. It defines the core meaning of each suit (Disk: own goals, Hammer: against others, Pencil: others' goals, Silly Hat: for fun). Numerical meanings (Ace: stability to 10: sanity) and court card meanings (Knight: force, Knave: wit, Ruler: control, Hitchhiker: allowing others) are provided. Special cards like 'Trashcan' (accomplishes nothing), 'King' (increases control), 'Five' (events to get even), and 'Protractor' (events to get odd) are also defined. Crucially, the reading rules dictate that if a card is inverted, it is read normally, while if it is right-way up, its meaning is reversed. The instruction 'Never shuffle' is also given."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Uncarrot Tarot",
+      "definition": "A 93-card custom Tarot deck created by Andrew Plotkin, characterized by its unique symbolism drawn from the author's youth, sci-fi, video games, and personal interests, functioning as a complete divinatory system with its own rules."
+    },
+    {
+      "term": "Hammers (Suit)",
+      "definition": "One of the four main suits, equivalent to Swords in traditional Tarot. Symbolized by 'plastic squeaky-head hammers' from the game Moopsball, representing 'doing something against others'."
+    },
+    {
+      "term": "Pencils (Suit)",
+      "definition": "One of the four main suits, equivalent to Wands. Represents 'intelligence' and 'accomplishing goals set by others', often associated with the Frathms species from 'Awful Green Things From Outer Space'."
+    },
+    {
+      "term": "Silly Hats (Suit)",
+      "definition": "One of the four main suits, equivalent to Cups. Shaped like cups, representing 'accomplishing something for the hell of it', and associated with the Smbalites species."
+    },
+    {
+      "term": "Disks (Suit)",
+      "definition": "One of the four main suits, equivalent to Pentacles. Symbolized by floppy disks, representing 'accomplishing own goals', and associated with the Redundans species."
+    },
+    {
+      "term": "Major Arcana",
+      "definition": "A set of trump cards depicting archetypal figures and scenes, reinterpreted through the author's unique symbolic lens (e.g., The Captain, The Dancer, The Genius)."
+    },
+    {
+      "term": "Meta Arcana",
+      "definition": "A unique category of trump cards in the Uncarrot Tarot that comment on the very idea or structure of a Tarot deck itself (e.g., The Blank, The Big Black Thing, The Card, Misprint)."
+    },
+    {
+      "term": "Awful Green Things From Outer Space",
+      "definition": "A board game by Tom Wham, whose cartoon characters (species like Frathms, Redundans, Snudlians, Smbalites) are explicitly used as the primary artistic and symbolic figures on the Uncarrot Tarot cards."
+    },
+    {
+      "term": "Elvish Alphabet (Tengwar)",
+      "definition": "J.R.R. Tolkien's constructed script, used on many Uncarrot Tarot cards for inscriptions, employing a Sindarin vowel arrangement as appropriate for English."
+    },
+    {
+      "term": "Reversed Card Interpretation",
+      "definition": "A unique operative rule where an inverted card is read normally, but a right-way up card has its meaning reversed, fundamentally altering traditional Tarot interpretation."
+    },
+    {
+      "term": "Never Shuffle",
+      "definition": "A core operative instruction for the Uncarrot Tarot, deviating from nearly all traditional Tarot practices by forbidding shuffling, implying a fixed or predetermined order for the deck or a different method of drawing."
+    }
+  ],
+  "practical_system": {
+    "description": "The Uncarrot Tarot is a complete 93-card divinatory system. It features four primary suits (Hammers, Pencils, Silly Hats, Disks) corresponding to traditional Tarot suits, augmented by secondary suits, Major Arcana, and unique 'Meta Arcana' cards. The card imagery draws heavily from the author's adolescent interests, utilizing characters from 'Awful Green Things From Outer Space' and other sci-fi/gaming elements. The system includes a defined set of meanings for suits, numbers, court cards, and special cards, along with specific, non-traditional rules for conducting readings.",
+    "tools": [
+      "The Uncarrot Tarot deck (93 cards, originally hand-drawn on halved 4x6 index cards with mechanical pencil and fixative)."
+    ],
+    "rituals": [
+      "Keep the 'Title' card within the deck during readings.",
+      "Never shuffle the deck; the order of cards must remain as it is set or drawn without randomization.",
+      "Interpret cards based on their suit, number/rank, and special card meanings as provided in 'The Instructions'.",
+      "If a card is drawn inverted (upside-down), read its meaning normally as defined.",
+      "If a card is drawn right-way up, reverse its defined meaning for interpretation."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "The cards are full of the symbolic allegory of my youth -- or something. Really, the memes that I was enthusiastic about back then.",
+      "page": "1"
+    },
+    {
+      "text": "I couldn't draw people (and I still can't). With the exception of a couple of hands, there are no human forms here. Instead, I blatantly ripped off Tom Wham's cartoon characters from the board game Awful Green Things From Outer Space.",
+      "page": "1"
+    },
+    {
+      "text": "I intended the four main suits to be basically parallel to the traditional Tarot suits.",
+      "page": "1"
+    },
+    {
+      "text": "If card is inverted, read normally. If right-way up, reverse meaning.",
+      "page": "7"
+    },
+    {
+      "text": "Never shuffle.",
+      "page": "7"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "The Uncarrot Tarot, while a personal project from youth, holds significant relevance for contemporary magical practitioners, particularly those engaged in Chaos Magic, sigil work, and the creation of personal magical systems. It exemplifies how deeply embedded personal symbolism, pop culture, and niche interests can be woven into a functional divinatory tool, challenging traditional notions of sacred iconography. The explicit instructions, especially 'Never shuffle' and the inverted interpretation rule, highlight a self-aware, almost meta-magical approach to system design, making it a case study in the deliberate construction of unique operative mechanics. It resonates with the DIY ethos prevalent in modern occultism, demonstrating that efficacy can stem from personal resonance rather than historical lineage.",
+    "target_audience": "The primary target audience for understanding and appreciating this work would be practitioners of Chaos Magic, highly individualized occultists, those interested in the psychology or semiotics of personal magical systems, esoteric artists, game designers, and fans of the specific pop culture references (e.g., 'Awful Green Things From Outer Space', 'Moopsball'). It would appeal less to strict traditionalists of established Tarot systems due to its radical departure from conventional symbolism and mechanics."
+  }
+}

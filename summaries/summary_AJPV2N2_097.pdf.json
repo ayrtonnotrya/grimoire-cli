@@ -1,0 +1,119 @@
+{
+  "header": {
+    "title": "Analysis of Haunt Experiences at a Historical Illinois Landmark",
+    "authors": [
+      "James Houran"
+    ],
+    "category": "Parapsychology / Empirical Study",
+    "keywords": [
+      "Haunt experiences",
+      "Perceptual-personality variables",
+      "Paranormal belief",
+      "Participant expectation",
+      "Transliminality",
+      "Psychological experiences",
+      "Physical manifestations",
+      "Edwards Place",
+      "Illinois",
+      "Noise-to-signal ratio"
+    ]
+  },
+  "central_thesis": "This empirical study investigates reported haunt experiences at a historical site, examining their correlation with perceptual-personality variables and environmental factors. It aims to conceptually replicate previous findings and test the hypothesis that haunt experiences derive from a \"noise-to-signal ratio,\" where psychological factors facilitate the perception of unidentified, probabilistically distributed stimuli, rather than being the direct cause of reported phenomena.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract",
+      "summary": "Summarizes the study's objective to conceptually replicate findings on haunt experiences, perceptual-personality variables, and environmental factors at a historic mansion. Twenty 'experimentally-blind' participants completed psychological measures and visited ten areas, documenting anomalies. Findings show correlations between experiences and Participant Expectation/Traditional Paranormal Beliefs, but no differentiation between Psychological Experiences and Physical Manifestations by psychological factors, nor association with basic environmental features. The study posits a 'noise-to-signal ratio' where perceptual-personality variables facilitate perception of unidentified stimuli."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "Discusses the lack of funding for haunt and poltergeist research, advocating for collaboration with television producers for legitimate studies. It highlights the multivariate nature of haunt experiences, emphasizing psychological factors alongside potential physical energies. The paper frames its investigation as a conceptual replication of prior findings on how perceptual-personality variables like Paranormal Belief, Participant Expectation, Transliminality, and Hyperesthesia mediate haunt experiences, and explores the distinction between Psychological Experiences and Physical Manifestations. Additional measures like 'anxiety sensitivity' are introduced."
+    },
+    {
+      "chapter_title": "Method",
+      "summary": "Details a convenience sample of 20 participants (70% women, Mage=35.3) for a 'blind' study at the Edwards Place mansion. Eight perceptual-personality questionnaires (e.g., Cognitions About Body and Health Questionnaire, Screening for Somatization Symptoms, Revised Transliminality Scale, Revised Paranormal Belief Scale, Anxiety Sensitivity Index-11, Synesthesia, Hyperesthesia, Whiteley Index) were administered. Participants then visited ten marked rooms (three target, seven control) for ten minutes each, completing a custom Haunt Experiences Checklist. An independent researcher later assessed environmental/aesthetic features of each room, also blind to haunt reports."
+    },
+    {
+      "chapter_title": "Results",
+      "summary": "Reports that 65% of participants experienced at least one anomaly. Most experiences involved unpleasant odours, cold sensations, negative emotions, and bodily sensations, with apparitions and physical manifestations being least common. Historically 'active' areas showed significantly more reported experiences than 'inactive' areas. Experients scored significantly higher on Participant Expectation and Traditional Paranormal Beliefs. No statistically significant differences were found between active and inactive rooms based on artwork, temperature, humidity, or air vents. Psychological Experiences and Physical Manifestations were strongly correlated (rho=.86) and not differentially mediated by distinct psychological factors, contrasting previous findings."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "Interprets the findings, noting that perceptual-personality variables did not differentially mediate Psychological Experiences vs. Physical Manifestations, contrary to prior work. Participant reports clustered in previously identified 'active' locations, but also occurred in control areas, supporting the probabilistic distribution of stimuli. Strong effects of Participant Expectation and Traditional Paranormal Beliefs on reported experiences were validated, indicating a psychological set influences perception. The study concludes that basic environmental features did not act as context effects, and calls for advanced instrumentation to identify instigating stimuli, suggesting non-sensitive individuals can detect stimuli if strong enough or ambient 'noise' is low."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Haunt Experiences Checklist",
+      "definition": "A custom psychological measure used in this study to document 25 categories of anomalous experiences, including visual images, sounds, sensations, emotions, and physical manifestations, reported by participants in specific areas."
+    },
+    {
+      "term": "Perceptual-Personality Variables",
+      "definition": "A range of psychological traits and predispositions, measured by questionnaires (e.g., Transliminality, Paranormal Beliefs, Hyperesthesia, Anxiety Sensitivity), investigated as potential mediators of who experiences and reports anomalous phenomena."
+    },
+    {
+      "term": "Traditional Paranormal Beliefs (TPB)",
+      "definition": "A subscale of the Revised Paranormal Belief Scale, representing beliefs that are culturally transmitted and socially beneficial (e.g., in the devil, Heaven/Hell, witchcraft). Found to strongly correlate with reported haunt experiences."
+    },
+    {
+      "term": "Participant Expectation",
+      "definition": "The participant's anticipated likelihood of experiencing unusual phenomena during the study, measured on a 5-point scale. Found to be a strong predictor of both the occurrence and number of reported haunt experiences."
+    },
+    {
+      "term": "Noise-to-Signal Ratio Hypothesis",
+      "definition": "The proposition that the probability of having a haunt experience depends on the strength of instigating stimuli relative to ambient background noise, with perceptual-personality variables merely facilitating the perception of these (unidentified) stimuli, rather than being the direct cause of the experience itself."
+    },
+    {
+      "term": "Psychological Experiences",
+      "definition": "A class of haunt phenomena (derived from the checklist) comprising visual apparitions/imagery, bodily sensations, emotional responses, and sensed presences, initially hypothesized to be mediated by different psychological factors than Physical Manifestations."
+    },
+    {
+      "term": "Physical Manifestations",
+      "definition": "A class of haunt phenomena (derived from the checklist) including temperature changes, auditory experiences, physical manifestations (e.g., erratic appliance functioning), and olfactory experiences, initially hypothesized to be mediated by different psychological factors than Psychological Experiences."
+    },
+    {
+      "term": "Transliminality",
+      "definition": "The tendency for psychological material to cross thresholds into or out of consciousness. While suggestively higher in experients, it did not significantly correlate with the phenomenology of experiences in this study."
+    }
+  ],
+  "practical_system": {
+    "description": "This document is an empirical research paper detailing a scientific investigation into the factors influencing reported anomalous experiences, not a manual describing a practical system of Western Esotericism, Occultism, or Magic. It outlines a methodology for studying subjective experiences and their correlations with psychological traits and environmental factors, rather than providing instructions for magical practice or ritual work.",
+    "tools": [
+      "Cognitions About Body and Health Questionnaire",
+      "Screening for Somatization Symptoms (SOMS-2)",
+      "Revised Transliminality Scale",
+      "Synesthesia Scale",
+      "Hyperesthesia Scale",
+      "Whiteley Index",
+      "Anxiety Sensitivity Index-11",
+      "Revised Paranormal Belief Scale (RPBS)",
+      "Haunt Experiences Checklist"
+    ],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "Previous questionnaire and field research shows that the report and phenomenology of haunt experiences correlate with a number of perceptual-personality variables, suggesting that processes related to a shifting and focusing of attention mediate who will have an experience and who will not.",
+      "page": "97"
+    },
+    {
+      "text": "The probability of having a haunt experience might therefore derive from a noise-to-signal ratio. In this sense, perceptual-personality variables merely facilitate the perception of stimuli that produce haunt experiences, rather than inspiring witness reports.",
+      "page": "97"
+    },
+    {
+      "text": "The haunt stimuli themselves in this case remain unidentified, but seem to be distributed probabilistically throughout the site.",
+      "page": "97"
+    },
+    {
+      "text": "Consistent with earlier findings, the number of discrete experiences and the number of different categories of experience both correlated strongly with Participant Expectation and Traditional Paranormal Beliefs. However, Psychological Experiences and Physical Manifestations were not mediated by different sets of psychological factors.",
+      "page": "97"
+    },
+    {
+      "text": "My interpretation is that the basic environmental features of the Edwards Place did not serve as context effects for the participants' experiences, and neither did any advance conscious knowledge of the site that the participants might have had. There was no systematic influence of the perceptual-personality variables on the patterns of reported experiences, except for the consistently strong effects of Participation Expectation and Traditional Paranormal Beliefs.",
+      "page": "117"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is a strong contribution to parapsychological research on haunt experiences, offering an empirical investigation into the psychological and environmental factors influencing such reports. It attempts to build upon and replicate previous findings, particularly concerning the role of individual differences and expectations. From the perspective of Western Esotericism, Occultism, and Magic, the paper's relevance is primarily as an example of a scientific approach that explicitly seeks conventional or unidentified naturalistic explanations for phenomena often attributed to magical or spiritual causes. It proposes that 'haunt experiences' are mediated by perceptual-personality variables and a 'noise-to-signal ratio' of unidentified stimuli, rather than directly by spirits, magical operations, or other occult forces. It does not engage with occult cosmologies or operative magic, but rather aims to deconstruct such experiences into measurable psychological and environmental components.",
+    "target_audience": "The target audience includes academic researchers in parapsychology, cognitive psychology, social psychology, and personality psychology, as well as those interested in the scientific study of anomalous experiences or the psychology of belief. It would also be of interest to skeptics or critical investigators of paranormal claims. It is not intended for practitioners of Western Esotericism, Occultism, or Magic seeking practical systems or philosophical insights into magical workings, as it operates entirely outside of those frameworks."
+  }
+}

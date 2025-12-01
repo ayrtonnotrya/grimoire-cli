@@ -1,0 +1,161 @@
+{
+  "header": {
+    "title": "Meta-Analysis in Parapsychology: II. Psi Domains other than Ganzfeld",
+    "authors": [
+      "Lance Storm"
+    ],
+    "category": "Parapsychology / Meta-Analysis / Scientific Review",
+    "keywords": [
+      "Meta-analysis",
+      "parapsychology",
+      "psi",
+      "DMILS",
+      "forced-choice ESP",
+      "free-response ESP",
+      "dice-throwing",
+      "micro-PK",
+      "RNG",
+      "dream-psi",
+      "sheep-goat effect",
+      "religiosity",
+      "hypnosis"
+    ]
+  },
+  "central_thesis": "This article reviews meta-analyses across various parapsychological domains, including biological systems, forced-choice ESP, free-response ESP, dice-throwing, micro-PK, and dream-psi, concluding that these studies consistently reveal statistically significant non-zero anomalous effects. While these effects are generally small, their persistence across diverse methodologies provides substantial evidence for psi phenomena, warranting further process-oriented research to understand their underlying mechanisms.",
+  "structure_content": [
+    {
+      "chapter_title": "1. Biological Systems (DMILS)",
+      "summary": "Reviews meta-analyses on Direct Mental Influence on Living Systems (DMILS), including Braud and Schlitz (1991) and Schmidt et al. (2004). Both analyses found significant, consistent effects across various biological target systems (e.g., electrodermal activity, blood pressure, fish orientation), with Braud and Schlitz reporting a mean ES of 0.178 (Z = 3.79, p = 1.00 x 10⁻⁴) and Schmidt et al. an ES (Cohen's d) of 0.11 (p < .001). The key factor identified was participants' 'intentionality'."
+    },
+    {
+      "chapter_title": "2. Forced-Choice (Precognition and Clairvoyance)",
+      "summary": "Examines meta-analyses of forced-choice ESP experiments. Honorton and Ferrari (1989) analyzed 309 studies (1935-1987) on precognition, finding a small but robust effect size (ES = 0.02, Z = 6.02, p = 1.10 x 10⁻⁹). Steinkamp et al. (1998) compared clairvoyance and precognition, finding almost identical, small effect sizes across 22 study-pairs, with precognition ES = 0.010 and clairvoyance ES = 0.009. Experienced participants and trial-by-trial feedback were identified as enhancing effects."
+    },
+    {
+      "chapter_title": "3. Free-Response (GESP/Remote-Viewing)",
+      "summary": "Reviews Milton's (1998) meta-analysis of 75 free-response ESP studies (1964-1993), including remote viewing, which yielded a mean effect size of 0.170 (Z = 5.89, p = 1.93 x 10⁻⁹). Comparison with ganzfeld studies showed no significant difference in mean effect sizes, suggesting similar efficacy for eliciting psi."
+    },
+    {
+      "chapter_title": "4. Dice-Throwing",
+      "summary": "Details Radin and Ferrari's (1991) meta-analysis of 59 dice-throwing studies (1935-1987). It found a significant, though small, quality-weighted effect size of 0.003 (Z = 3.19, p = 7.16 x 10⁻⁴), indicating a 'genuine mental intention effect on dice'. This domain, along with RNGs, shows some of the weakest effect sizes."
+    },
+    {
+      "chapter_title": "5. Micro-PK (Random Number Generators)",
+      "summary": "Summarizes Radin and Nelson's (1989, 2003) updated meta-analysis of 515 RNG studies (1959-2003). It consistently found a small overall mean z-score of 0.17 with an extremely large Stouffer Z value (Z = 3.81, p = 6.94 x 10⁻⁵), providing robust evidence for mind-matter interaction, despite being challenged by arguments of publication bias. It represents the domain with the lowest mean z score among those analyzed."
+    },
+    {
+      "chapter_title": "6. Dream-Psi",
+      "summary": "Covers dream-psi research, highlighting the Maimonides Dream Studies (1960-1973) and a later meta-analytic review by Sherwood and Roe (2003) of 21 post-Maimonides studies (total 582 trials). While individual studies varied, the combined mean z score across a 40-year period showed a strong indication of correspondence between dream motifs and target material (Stouffer Z = 6.37, p = 9.45 x 10⁻¹¹), particularly with independent judges and emotionally vivid targets."
+    },
+    {
+      "chapter_title": "The Sheep-Goat Effect",
+      "summary": "Lawrence (1993) meta-analyzed 73 forced-choice studies (1947-1993) on the sheep-goat effect, finding that believers ('sheep') consistently scored significantly better than non-believers ('goats'), with an ES of 0.03 (Stouffer Z = 8.17, p = 1.33 x 10⁻¹⁶). He noted the importance of administering belief scales before ESP tasks to prevent bias."
+    },
+    {
+      "chapter_title": "Religiosity, Belief in an Afterlife, Belief in Psychic Phenomena, and ESP",
+      "summary": "Haraldsson (1993) meta-analyzed eight forced-choice ESP experiments, identifying religiosity (z = 2.48, p = .007) and belief in an afterlife (z = 1.92, p = .028) as significant positive predictors of ESP performance, with religiosity being the strongest. Belief in psychic phenomena did not correlate significantly."
+    },
+    {
+      "chapter_title": "Hypnosis/Comparison Condition ESP",
+      "summary": "Stanford and Stein (1994) meta-analyzed 25 studies contrasting hypnosis and comparison conditions for ESP performance. They found a significant Stouffer Z of 8.77 (p < 10⁻¹⁶) for hypnosis conditions (π = 0.52), while comparison conditions were at chance (Stouffer Z = 0.34, p = .367). Hypnosis appears conducive to psi, especially with an effective investigator and participant attributes."
+    },
+    {
+      "chapter_title": "COMMENTS ON THE META-ANALYSES & CONCLUSION",
+      "summary": "The article acknowledges criticisms of meta-analysis but maintains that the significant non-zero effect sizes across all major experimental domains provide strong evidence for anomalous effects in parapsychology. It stresses the need for the field to move beyond merely demonstrating psi to conducting process-oriented research aimed at understanding the mechanisms of psi, similar to how other sciences address anomalies. This shift, it argues, will justify parapsychology as a discipline and foster a deeper understanding of psi."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Meta-analysis",
+      "definition": "A statistical method used to combine the results of multiple independent studies, yielding a quantitative estimate of the overall effect or trend, and increasing statistical power."
+    },
+    {
+      "term": "Psi (Parapsychology)",
+      "definition": "Anomalous processes of information or energy transfer, such as extrasensory perception (ESP) or psychokinesis (PK), that are not currently explicable in terms of known physical or biological mechanisms."
+    },
+    {
+      "term": "DMILS (Direct Mental Influence on Living Systems)",
+      "definition": "Experiments designed to test whether a participant's mental intention can directly influence the physiological activity or behavior of a distant biological system (e.g., human skin resistance, animal locomotion)."
+    },
+    {
+      "term": "Forced-Choice ESP",
+      "definition": "Extrasensory perception experiments where participants are required to choose a target from a limited, predefined set of options (e.g., guessing cards with a small number of symbols)."
+    },
+    {
+      "term": "Free-Response ESP (GESP/Remote Viewing)",
+      "definition": "Extrasensory perception experiments where participants respond freely with images, thoughts, or impressions, often describing complex, non-specific targets, as in General Extra-Sensory Perception (GESP) or Remote Viewing protocols."
+    },
+    {
+      "term": "Micro-PK (RNG)",
+      "definition": "Psychokinesis experiments testing for direct mental influence on physical systems at a 'micro' (subatomic or non-macroscopic) level, typically using Random Number Generators (RNGs) or Random Event Generators (REGs)."
+    },
+    {
+      "term": "Precognition",
+      "definition": "A form of ESP involving the paranormal acquisition of information about future events that could not be known through normal means of deduction or inference."
+    },
+    {
+      "term": "Clairvoyance",
+      "definition": "A form of ESP involving the paranormal acquisition of information about a contemporary physical event or object that is hidden or located at a distance, without the use of normal sensory channels."
+    },
+    {
+      "term": "Sheep-Goat Effect",
+      "definition": "A consistent finding in parapsychology that individuals who believe in the possibility of psi ('sheep') tend to score higher on psi tasks than those who do not ('goats')."
+    },
+    {
+      "term": "Effect Size (ES)",
+      "definition": "A quantitative measure of the magnitude of a phenomenon or the strength of a relationship between variables, independent of sample size (e.g., Cohen's d, z/√n)."
+    },
+    {
+      "term": "Stouffer Z",
+      "definition": "A method used in meta-analysis to combine z-scores from multiple independent studies, providing an overall test of significance for the combined evidence."
+    },
+    {
+      "term": "Fail-safe N",
+      "definition": "An estimate of the number of unretrieved or unreported null-effect studies that would be required to reduce a meta-analytically derived statistically significant effect to a non-significant level, used to assess potential publication bias."
+    }
+  ],
+  "practical_system": {
+    "description": "The 'system' presented is a research methodology focused on identifying, quantifying, and understanding anomalous effects through rigorous meta-analysis and process-oriented experimentation. It moves beyond simply demonstrating phenomena to advocating for systematic investigation into the conditions, mechanisms, and predictive factors of psi. The practical application lies in guiding future parapsychological research to optimize experimental designs for stronger effects and deeper theoretical understanding.",
+    "tools": [
+      "Meta-analysis software and statistical methods (e.g., calculating z-scores, effect sizes like Cohen's d, Stouffer Z, fail-safe N).",
+      "Random Number Generators (RNGs) or Random Event Generators (REGs) for micro-PK experiments.",
+      "Biofeedback equipment (e.g., EDA monitors, blood pressure cuffs) for measuring physiological changes in DMILS studies.",
+      "Forced-choice ESP testing apparatus (e.g., Zener cards, computer-based guessing tasks).",
+      "Free-response target sets (e.g., images, videos) and rating scales for GESP/Remote Viewing.",
+      "Dice for dice-throwing experiments, preferably balanced to avoid intrinsic biases.",
+      "Sleep laboratory equipment (e.g., EEG for REM monitoring) for dream-psi research.",
+      "Psychometric scales (e.g., Icelandic Sheep-Goat Scale) to measure belief and other psychological predictors of psi performance."
+    ],
+    "rituals": [
+      "Employing meta-analysis to synthesize findings across diverse studies, providing cumulative evidence for anomalous effects.",
+      "Designing experiments with specific 'process-oriented' questions to elucidate the mechanisms of psi, rather than just its presence.",
+      "Using experienced participants and providing trial-by-trial feedback in certain forced-choice ESP designs to potentially increase effect sizes.",
+      "Administering belief scales (e.g., 'sheep-goat') *before* ESP tasks to prevent outcome feedback from biasing stated belief.",
+      "Focusing on participant 'intentionality' in DMILS studies as a 'key factor' for influence.",
+      "Utilizing independent judges for evaluating free-response material (e.g., dream reports) to ensure objectivity and potentially higher scoring.",
+      "Designing dream-psi targets with emotional themes, vividness, color, and simplicity to enhance correspondence."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Results indicate that these meta-analyses provide considerable evidence that there is an anomalous effect in the field of parapsychology in need of an explanation.",
+      "page": "135"
+    },
+    {
+      "text": "The overall conclusion was that 'effect[s] appear to occur in a 'goal-directed' manner' (p. 41) because influencers were able to bring about effects without a specific understanding or awareness of how the physical or physiological processes brought about the desired outcomes. Braud and Schlitz (1991) argued that participants' 'intentionality' was the 'key factor' that brought about the significant results\":",
+      "page": "136"
+    },
+    {
+      "text": "The point to be noted here is that parapsychology must focus on process studies that aim to explain the mechanism of psi, rather than just demonstrate its presence.",
+      "page": "149"
+    },
+    {
+      "text": "Thus the field of parapsychology justifies itself as a discipline, and in the spirit of Rosenthal's (1986, p. 333) words—'at any point in time some judgment can be made'—it is hoped that this pair of review articles fosters a judgement in scientists, researchers, academics, and laypersons alike, that might help draw positive attention to the field, thereby allowing the opportunity of reaching a deeper understanding of the nature of psi.",
+      "page": "150"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This article is highly relevant within academic parapsychology, offering a comprehensive and technical synthesis of meta-analytic evidence across six major psi domains. It validates the existence of statistically significant, albeit small, anomalous effects, thus solidifying the empirical basis for psi phenomena. Its critical engagement with methodological considerations (e.g., publication bias, effect size interpretation, investigator effects) and its call for process-oriented research are crucial for advancing the field beyond mere existence proofs, guiding future experimental design and theoretical development. It also contextualizes parapsychological findings within broader scientific discussions on anomalies and research methodology.",
+    "target_audience": "The primary target audience includes academic researchers, practitioners, and scholars in parapsychology, psychology, and statistics. It is also highly relevant for skeptics and proponents of psi phenomena seeking a rigorous scientific review of the evidence, as well as for students interested in meta-analysis methodology and the scientific study of anomalous experiences."
+  }
+}
