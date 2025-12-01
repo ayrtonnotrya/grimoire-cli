@@ -13,6 +13,9 @@
 -   **Smart Key Management**: Supports multiple API keys with automatic rotation and intelligent rate limiting (TPM/RPM) to maximize throughput.
 -   **Granular Control**: Process individual files, index specific documents, or scan entire libraries.
 -   **JSON Output**: All commands support JSON output for easy integration with other tools or agents.
+-   **Sigil Artificer**: Generate unique magical sigils with specific artistic styles using the `sigil` command.
+-   **The Ritualist**: Create personalized rituals based on your intent and available inventory using the `ritual` command.
+-   **Library Maintenance**: Tools to `deduplicate` entries and `repair` corrupted PDF files.
 
 ## 🚀 Installation
 
@@ -84,6 +87,42 @@ grimoire search "sigil magic rituals" --n 5
 Retrieve the structured summary of a specific book:
 ```bash
 grimoire get-summary "Liber Null"
+```
+
+### 7. Deduplicate
+Remove duplicate entries from your library to keep it clean:
+```bash
+grimoire deduplicate
+```
+
+### 8. Report
+Generate a statistical report of your library:
+```bash
+grimoire report
+```
+
+### 9. Repair
+Attempt to repair corrupted PDFs using Ghostscript:
+```bash
+grimoire repair --list /path/to/library_tree.txt
+```
+
+### 10. Sigil Artificer
+Generate a magical sigil based on an intent and style:
+```bash
+grimoire sigil "Protection from negativity" --style "Chaos Magic" --output sigil.png
+```
+
+### 11. The Ritualist
+Construct a personalized ritual based on your intent:
+```bash
+grimoire ritual "Manifest creativity" --inventory "candles,incense,salt"
+```
+
+### 12. Manage Keys
+Set the dedicated API key for image generation (Imagen):
+```bash
+grimoire set-imagen-key "YOUR_API_KEY"
 ```
 
 ## ⚙️ Configuration
