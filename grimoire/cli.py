@@ -244,5 +244,26 @@ def sigil(
     
     artificer.generate_sigil(intent, style, aspect_ratio, output)
 
+@app.command()
+def set_imagen_key(
+    key: str = typer.Argument(..., help="The API Key for the Satellite Project (Paid)")
+):
+    """🔑 Set the dedicated API key for Imagen (Satellite Project)."""
+    from grimoire.guard import ImagenGuard
+    
+    console.print(Panel.fit("[bold red]⚠️  WARNING: PAID USAGE ALERT ⚠️[/bold red]\n\nThis key will be used for the 'Satellite Project'.\nIt is subject to strict rate limits to prevent financial loss:\n\n• [bold]1 Request per Minute[/bold]\n• [bold]100 Requests per Day[/bold]\n\n[italic]The key will be stored securely in ~/.local/share/grimoire/imagen_key.secret[/italic]", border_style="red"))
+    
+    confirm = typer.confirm("Do you understand the risks and wish to proceed?")
+    if not confirm:
+        console.print("[yellow]Aborted.[/yellow]")
+        raise typer.Exit()
+
+    try:
+        ImagenGuard.save_key(key)
+        console.print(f"[bold green]Imagen Key saved securely![/bold green]")
+    except Exception as e:
+        console.print(f"[bold red]Failed to save key:[/bold red] {e}")
+
+
 if __name__ == "__main__":
     app()

@@ -9,6 +9,7 @@ from grimoire.config import config, MODEL_PLANNING, MODEL_ALCHEMY, MODEL_MATERIA
 from grimoire.schemas import SearchPlan, SigilPrompt
 from grimoire import db
 from grimoire.keys import key_manager
+from grimoire.guard import ImagenGuard
 from grimoire.logger import logger
 
 console = Console()
@@ -124,7 +125,14 @@ def stage_3_materialization(visual_prompt: str, aspect_ratio: str, output_path: 
     """
     console.print(f"[bold gold1]Stage 3: Materialization (Model: {MODEL_MATERIALIZATION})[/bold gold1]")
     
-    client = _get_client(MODEL_MATERIALIZATION)
+    # Use ImagenGuard to get the dedicated paid key
+    try:
+        guard = ImagenGuard()
+        api_key = guard.get_key()
+        # Create an isolated client for this specific paid operation
+        client = genai.Client(api_key=api_key)
+    except Exception as e:
+        raise ArtificerError(f"Stage 3 Authorization Failed: {e}")
     
     try:
         # Imagen 4 Ultra parameters
