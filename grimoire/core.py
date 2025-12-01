@@ -29,6 +29,21 @@ class Action(Enum):
 
 from grimoire.keys import key_manager
 
+class GlobalRateLimiter:
+    def __init__(self, delay: float):
+        self.delay = delay
+        self.last_call_time = 0.0
+        self.lock = threading.Lock()
+
+    def wait(self):
+        with self.lock:
+            current_time = time.time()
+            elapsed = current_time - self.last_call_time
+            if elapsed < self.delay:
+                sleep_time = self.delay - elapsed
+                time.sleep(sleep_time)
+            self.last_call_time = time.time()
+
 def get_latest_library_tree(directory: Path) -> Path:
     """Finds the latest library_tree_*.txt file in the directory."""
     files = list(directory.glob("library_tree_*.txt"))
@@ -76,7 +91,7 @@ def process_single_file(pdf_path: Path, verbose: bool = False) -> dict:
 
     return generate_summary(pdf_path, api_keys)
 
-def process_library(list_file_path: str, exclude_file_path: str = None, sequential: bool = False, verbose: bool = False):
+def process_library(list_file_path: str, exclude_file_path: str = None, sequential: bool = False, verbose: bool = False, delay: float = 6.0):
     """Main processing function."""
     file_path = Path(list_file_path)
     
@@ -157,6 +172,10 @@ def process_library(list_file_path: str, exclude_file_path: str = None, sequenti
     ) as progress:
         task_id = progress.add_task("Summarizing...", total=len(pdfs_to_process))
         
+        # Initialize Global Rate Limiter
+        rate_limiter = GlobalRateLimiter(delay)
+        console.print(f"[blue]Global rate limit set to {delay} seconds between calls.[/blue]")
+
         # Parallel Processing
         if len(api_keys) > 1:
             # Use manual executor management to avoid hanging on shutdown
@@ -165,7 +184,7 @@ def process_library(list_file_path: str, exclude_file_path: str = None, sequenti
             try:
                 for i, pdf_path in enumerate(pdfs_to_process):
                     # Pass ALL keys to the worker, let it manage retries
-                    future = executor.submit(generate_summary, pdf_path, api_keys)
+                    future = executor.submit(generate_summary, pdf_path, api_keys, rate_limiter)
                     future_to_path[future] = pdf_path
                 
                 for future in concurrent.futures.as_completed(future_to_path):
@@ -204,7 +223,7 @@ def process_library(list_file_path: str, exclude_file_path: str = None, sequenti
                      progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                      break
 
-                result = generate_summary(pdf_path, api_keys)
+                result = generate_summary(pdf_path, api_keys, rate_limiter)
                 progress.advance(task_id)
                 _print_process_result(progress.console, result, verbose=verbose)
 
@@ -291,7 +310,7 @@ def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Ac
     # Default fallback
     return Action.ABORT, f"Erro desconhecido: {error_str}"
 
-def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
+def generate_summary(pdf_path: Path, api_keys: list[str], rate_limiter: Optional['GlobalRateLimiter'] = None) -> dict:
     """Generates a summary for the given PDF using Gemini, with retry and rotation logic."""
     import random
     
@@ -344,6 +363,10 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
             # Acquire rate limit
             key_manager.acquire(api_key, estimated_tokens)
 
+            # Global Rate Limit Wait
+            if rate_limiter:
+                rate_limiter.wait()
+
             # Generate content
             response = client.models.generate_content(
                 model=config.model_name,
@@ -378,17 +401,30 @@ def generate_summary(pdf_path: Path, api_keys: list[str]) -> dict:
             action, msg = handle_api_error(e, api_key, pdf_path.name)
             
             # Enhanced Logging for API Errors
-            error_details = str(e)
+            error_details = f"Error Type: {type(e).__name__}\nMessage: {str(e)}"
+            
             # Try to extract full response from ClientError
             if hasattr(e, 'response'):
                  try:
-                     # If it's a ClientError or similar with a response object
-                     if hasattr(e.response, 'text'):
-                         error_details += f"\nAPI Response JSON: {e.response.text}"
-                     elif hasattr(e.response, 'json'):
-                         error_details += f"\nAPI Response JSON: {json.dumps(e.response.json(), indent=2)}"
-                 except Exception:
-                     pass
+                     resp = e.response
+                     # Log Status Code
+                     if hasattr(resp, 'status_code'):
+                         error_details += f"\nStatus Code: {resp.status_code}"
+                     
+                     # Log Headers (useful for quotas)
+                     if hasattr(resp, 'headers'):
+                         error_details += f"\nHeaders: {dict(resp.headers)}"
+                     
+                     # Log Body
+                     if hasattr(resp, 'text') and resp.text:
+                         error_details += f"\nAPI Response Text: {resp.text}"
+                     elif hasattr(resp, 'json'):
+                         try:
+                             error_details += f"\nAPI Response JSON: {json.dumps(resp.json(), indent=2)}"
+                         except:
+                             pass
+                 except Exception as log_err:
+                     error_details += f"\n(Failed to extract response details: {log_err})"
 
             logger.error(f"Full error for {pdf_path.name}: {error_details}", exc_info=True)
             logger.warning(f"Error processing {pdf_path.name}: {msg}")

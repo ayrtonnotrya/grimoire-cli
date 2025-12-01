@@ -35,13 +35,14 @@ def process(
     exclude: str = typer.Option(None, "--exclude", "-e", help="🚫 Path to a file listing PDFs to exclude/ignore"),
     sequential: bool = typer.Option(False, "--sequential", "-s", help="🔄 Process files sequentially (default is random order)"),
     index: bool = typer.Option(True, help="⚡ Auto-index summaries for instant searchability"),
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 See the magic happen in real-time")
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 See the magic happen in real-time"),
+    delay: float = typer.Option(6.0, "--delay", "-d", help="⏱️ Minimum delay (seconds) between API calls to avoid burst limits")
 ):
     """🎭 Unleash the power of AI! Process entire libraries, extracting deep summaries and insights from every book. Watch as wisdom is distilled and made searchable."""
     console.print(f"Processing library from: {list_file}")
     if exclude:
         console.print(f"Excluding files from: {exclude}")
-    core.process_library(list_file, exclude_file_path=exclude, sequential=sequential, verbose=verbose)
+    core.process_library(list_file, exclude_file_path=exclude, sequential=sequential, verbose=verbose, delay=delay)
     
     if index:
         console.print("[bold]Starting indexing...[/bold]")
