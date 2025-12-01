@@ -80,25 +80,35 @@ def stage_2_alchemy(intent: str, style: str, search_results: list[str]) -> Sigil
     
     context_text = "\n\n".join(search_results)
     
-    system_instruction = """You are a Sigil Artificer, a master of visual magic. Your goal is to create a DENSE, DESCRIPTIVE visual prompt for an AI image generator (Imagen 4 Ultra).
+    system_instruction = """You are a Master Occult Calligrapher and Sigilographer. Your goal is to create a precise visual prompt for generating FUNCTIONAL SIGILS.
+
+    HARD CONSTRAINTS (MUST FOLLOW):
+    1. VISUAL OUTPUT MUST BE STRICTLY: "Black ink on white background".
+    2. FORBIDDEN TERMS: photorealistic, 3D render, volumetric lighting, colors, shading, depth of field, cinematic, hyperrealistic.
+    3. DIMENSIONALITY: The image must be completely FLAT (2D). No shadows, no gradients.
+    4. STYLE INTERPRETATION: Treat the 'Style' parameter as a STROKE TECHNIQUE (line-weight, curvature, geometry type), NOT as a thematic subject.
+       - Example: If Style is "Temple of Ascending Flame", do NOT draw fire. Instead, use the ARTISTIC SCHOOL of that order (e.g., aggressive geometry, sharp angles, fluid but dangerous curves).
+    5. COMPOSITION:
+       - User Intent dictates the CENTRAL GEOMETRY.
+       - Retrieved Context (RAG) enriches PERIPHERAL GLYPHS and details.
+       - Do NOT hallucinate visual elements that violate the Black & White constraint.
+    6. CRITICAL CONSTRAINT: The output prompt MUST be under 480 tokens.
     
-    CRITICAL CONSTRAINT: The output prompt MUST be under 480 tokens.
-    
-    Instructions:
-    1. Analyze the User Intent, Style, and the Retrieved Occult Context.
-    2. Synthesize a visual description of a sigil that embodies these elements.
-    3. Focus on: Geometry, Line weight, Colors (or lack thereof), Texture, Lighting, and Atmosphere.
-    4. Do NOT include conversational filler ("Here is the prompt"). Return ONLY the JSON.
+    Your output prompt must describe a clean, high-contrast, esoteric diagram suitable for printing or vectorization.
     """
     
     prompt = f"""
     User Intent: {intent}
-    Desired Style: {style}
+    Desired Style (Stroke Technique): {style}
     
-    Retrieved Context from Grimoire:
+    Retrieved Context from Grimoire (Use for peripheral glyphs/details only):
     {context_text}
     
-    Create the visual prompt now.
+    Construct the visual prompt.
+    Ensure the description enforces a "scanned ancient book diagram" or "clean SVG vector" aesthetic.
+    
+    Append this exact string to the end of your generated visual prompt:
+    "Visual style: High contrast, monochrome, flat 2D, line art, vector graphics aesthetic, esoteric symbol, black ink on white background, no shading, no colors."
     """
     
     try:
