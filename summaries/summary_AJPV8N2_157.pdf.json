@@ -1,0 +1,139 @@
+{
+  "header": {
+    "title": "Quantitative Analysis of Research Mediums' Conscious Experiences during a Discarnate Reading versus a Control Task: A Pilot Study",
+    "authors": [
+      "Adam J. Rock",
+      "Julie Beischel"
+    ],
+    "category": "Parapsychology Research / Mediumship Studies",
+    "keywords": [
+      "research medium",
+      "mediumship",
+      "phenomenology",
+      "Phenomenology of Consciousness Inventory (PCI)",
+      "discarnate reading"
+    ]
+  },
+  "central_thesis": "The central thesis of this study is to quantitatively assess the phenomenological differences in certified research mediums' conscious experiences during a discarnate reading task, compared to a control task, using the Phenomenology of Consciousness Inventory (PCI). The aim is to understand the psychological responses and potential altered states of consciousness associated with purported anomalous information reception (AIR) from discarnates, contributing to the debate between survival and super-psi hypotheses.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract",
+      "summary": "This section introduces the study's objective: to quantify the phenomenological effects of discarnate readings using the PCI. Seven mediums underwent counter-balanced discarnate reading and control conditions, both conducted via phone with a blinded experimenter. Retrospective PCI assessment revealed significant phenomenological differences between the two conditions, suggesting the PCI's utility in future research differentiating experiences like discarnate vs. psychic telepathy readings."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "The introduction contextualizes mediumship research within parapsychology, acknowledging its historical study and recent experimental validation of anomalous information reception (AIR). It highlights the limitations of purely proof-focused research and emphasizes the need for phenomenological studies to understand the underlying mechanisms (survival hypothesis, super-psi, psychic reservoir). Understanding these mechanisms is deemed crucial for academic and social reasons, including consciousness science and grief counseling. The study aims to fill a gap by quantitatively investigating mediums' phenomenology during discarnate readings."
+    },
+    {
+      "chapter_title": "METHOD",
+      "summary": "This section details the experimental design. Participants were seven certified research mediums (6 female, 1 male, age 43-54), screened and trained through an intensive certification procedure. They were conscious and aware during readings, representing modern 'mental mediumship'. The primary instrument was the 53-item Phenomenology of Consciousness Inventory (PCI), quantifying 12 major and 14 minor phenomenological dimensions. The procedure involved counter-balanced phone calls for a discarnate reading (medium given a discarnate's first name, asked specific questions by a blinded experimenter/proxy sitter) and a control task (medium discussed a living person they knew with the same experimenter). PCI was completed immediately after each call."
+    },
+    {
+      "chapter_title": "RESULTS",
+      "summary": "Statistical analysis using Wilcoxon Signed Rank tests revealed significant phenomenological differences (p < .05) between the discarnate reading and control conditions. During discarnate readings, mediums reported significantly higher negative affect, altered experience (including altered body image, time sense, perception, meaning), inward absorbed attention (and direction), and altered state of awareness. Conversely, self-awareness, volitional control, and memory were significantly lower. Initial Box Tests for psygram pattern differences were not significant due to small sample size but approached significance and became significant when the data set was hypothetically amplified."
+    },
+    {
+      "chapter_title": "DISCUSSION",
+      "summary": "The discussion interprets the results, noting that the higher negative affect in readings aligns with mediums experiencing discarnates' ailments or emotional content. The increased 'altered experience' dimensions (body image, time, perception, meaning) suggest spatial expansion, timelessness, intense perceptual changes, and spiritual experiences. Higher 'inward absorbed attention' indicates focus on internal mental phenomena. The significantly higher 'altered state of awareness' points to an unusual state of consciousness. Lower self-awareness, volitional control, and memory during readings are consistent with mediums relinquishing personal control, adopting discarnate traits, and experiencing 'state-specific' or 'state-bound' information access, acting as a 'conduit.' The lack of significant psygram pattern differences in the small sample suggests that a 'major reorganization in pattern structure' (i.e., full altered state of consciousness by Tart's definition) was not definitively detected, but larger samples show promise."
+    },
+    {
+      "chapter_title": "Possible Methodological Limitations and Suggestions for Future Research",
+      "summary": "This section addresses limitations, primarily stating that the study aimed to differentiate task demands, not information sources. Future research should include a placebo/sham reading condition and standardized question sets to investigate differential information sources (fictional vs. factual discarnate). The challenge of maintaining a 'blind' in sham conditions is discussed. Replicating with a larger sample size is crucial for statistical power and to explore correlations with reading accuracy. Implementing Modern Test Theory (Rasch scaling) is suggested to control for response biases. Finally, comparing discarnate readings with psychic telepathy readings for the living using PCI could help differentiate underlying phenomenological processes."
+    },
+    {
+      "chapter_title": "Conclusion",
+      "summary": "The study concludes that significant phenomenological differences exist between discarnate reading and control conditions. This quantitative analysis complements prior qualitative work, enhancing understanding of mediumship processes. Future extensions with sham conditions and standardized questions could help determine if mediums perceive discarnates as internal projections (imaginal) or independent entities (exosomatic)."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Mediumship",
+      "definition": "The purported ability of individuals to report accurate and specific information about deceased loved ones (discarnates) of living people (sitters) without prior knowledge or sensory feedback."
+    },
+    {
+      "term": "Discarnate Reading",
+      "definition": "A specific experimental condition where a medium attempts to communicate with a deceased person (discarnate) on behalf of a living sitter, typically under blind conditions and via telephone, answering structured questions about the discarnate."
+    },
+    {
+      "term": "Control Task",
+      "definition": "A comparative experimental condition designed to mimic the social interaction of a discarnate reading, but where the medium discusses a living person they personally know with the experimenter, without attempting anomalous information reception (AIR)."
+    },
+    {
+      "term": "Phenomenology of Consciousness Inventory (PCI)",
+      "definition": "A 53-item self-report questionnaire used to quantitatively assess 26 phenomenological elements of consciousness (12 major and 14 minor dimensions) experienced during a particular stimulus condition, scored on a seven-point Likert scale."
+    },
+    {
+      "term": "Psygram",
+      "definition": "A pictorial representation of PCI data that illustrates the average intensity values for each major PCI dimension and the strength of association (couplings) between pairs of dimensions, used to characterize discrete states of consciousness (SoC)."
+    },
+    {
+      "term": "Anomalous Information Reception (AIR)",
+      "definition": "A broad term in parapsychology referring to the reception of information through non-sensory or non-local means, encompassing phenomena like mediumship, clairvoyance, precognition, and telepathy."
+    },
+    {
+      "term": "Altered State of Consciousness (ASC)",
+      "definition": "A temporary but significant change from the ordinary waking state of consciousness, characterized by a 'major reorganization in pattern structure' of psychological elements, as conceptualized by Tart (1975)."
+    },
+    {
+      "term": "Super-psi",
+      "definition": "A parapsychological hypothesis suggesting that mediums do not communicate directly with the deceased but rather gain information through extrasensory perception (clairvoyance, precognition, telepathy) from living sources (e.g., sitters, experimenters, the 'cosmic store')."
+    },
+    {
+      "term": "Survival Hypothesis",
+      "definition": "The hypothesis positing that an individual's consciousness or personality continues to exist independently of the physical body after death, allowing for potential communication with the living."
+    }
+  ],
+  "practical_system": {
+    "description": "This document does not present a magical system or a manual for occult practice. Instead, it details a scientific experimental protocol for the quantitative assessment of subjective conscious experiences during purported mediumistic communication. The 'system' described is a research methodology focused on comparing phenomenological states (using the PCI) between a discarnate reading task and a control task, aiming to identify characteristics of consciousness during anomalous information reception.",
+    "tools": [
+      "**Phenomenology of Consciousness Inventory (PCI):** A 53-item self-report questionnaire, completed immediately after each experimental condition, to quantify 26 dimensions of subjective experience. This serves as the primary tool for mapping consciousness states.",
+      "**Telephone Communication:** The medium for conducting both the discarnate reading and control tasks, ensuring the medium is blinded to visual or auditory cues from the 'sitter' (experimenter).",
+      "**Digital Audio Recording Equipment:** Used to record all experimental calls for research integrity and potential future analysis.",
+      "**Blinded Experimenter/Proxy Sitter:** An experimental control to minimize potential sensory leakage or conscious/unconscious cues influencing the medium's performance.",
+      "**Standardized Question Sets:** Pre-defined questions for both conditions to ensure consistency in task demands.",
+      "**Statistical Analysis Software:** Used for data analysis (e.g., Wilcoxon Signed Rank tests for intensity differences, Box Tests for psygram pattern differences) to identify significant phenomenological variations."
+    ],
+    "rituals": [
+      "**Discarnate Reading Protocol (Experimental Ritual):** This involves a medium engaging in a structured phone conversation with a blinded experimenter (acting as a proxy sitter). The medium receives only the discarnate's first name and is then prompted with a specific set of questions regarding the discarnate's physical appearance, personality, hobbies, cause of death, and any messages for the sitter. The medium is expected to access information without sensory feedback, simulating an act of 'channeling' or 'spiritual communication'.",
+      "**Control Task Protocol (Comparative Ritual):** This involves a medium engaging in a casual phone conversation with the same experimenter, discussing a living person known personally to the medium. The question set mirrors that of the discarnate reading but focuses on a known living individual, ensuring the medium does not attempt anomalous information reception (AIR). This serves as a baseline for ordinary waking consciousness during a similar social interaction."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Mediums claim to be able to report accurate and specific information about the deceased loved ones (termed discarnates) of living people (termed sitters) even without any prior knowledge about the sitters or the discarnates and in the complete absence of any sensory feedback.",
+      "page": "1"
+    },
+    {
+      "text": "The aim of the present study was, thus, to investigate experimentally the phenomenological differences that arose psychologically in accordance with the demands of a discarnate reading task versus a control task.",
+      "page": "1"
+    },
+    {
+      "text": "Phenomenology associated with the discarnate reading condition appeared to be significantly different from phenomenology associated with the control condition.",
+      "page": "1"
+    },
+    {
+      "text": "Consequently, if the psygram associated with a baseline or control condition is significantly different from a psygram associated with, for example, a discarnate reading condition, then one may conclude that the reading condition was associated with a “major reorganization in pattern structure that is hypothesised by Tart (1975) to be associated with an altered state of consciousness” (Woodside, Kumar, & Pekala, 1997, p. 84).",
+      "page": "6"
+    },
+    {
+      "text": "This finding indicates that during the discarnate reading condition the mediums' attention tended to be directed towards internal stimuli (i.e., mental phenomena).",
+      "page": "16"
+    },
+    {
+      "text": "That is, during the discarnate reading task, the mediums purportedly experienced an unusual state of consciousness relative to the ordinary waking state.",
+      "page": "16"
+    },
+    {
+      "text": "The discarnate reading condition scored significantly lower than the control condition with regards to self-awareness. Consequently, it appears that during a discarnate reading, the medium's self-awareness dissipates as his/her attentional focus is directed towards the discarnate.",
+      "page": "16"
+    },
+    {
+      "text": "This finding is consistent with the notion that a medium is, quite literally, a conduit that enables a discarnate to communicate to a sitter or loved one. Indeed, previous research (Rock et al., 2008) suggests that, during readings, mediums relinquish volitional control and adopt the personality traits and behavioural tendencies of discarnates.",
+      "page": "17"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This study offers significant relevance to Western Esotericism and Occultism by providing an empirical, quantitative framework for analyzing the subjective experiences associated with mediumship. From an occult perspective, mediumship often involves accessing non-physical realities or entities, making the observed 'altered states of consciousness,' 'dissipation of self-awareness,' and 'relinquishing volitional control' highly pertinent to trance work, channeling, and spirit contact practices found in grimoire traditions or Chaos Magic. The study's exploration of phenomenological differences provides a measurable metric for internal states that magicians might achieve or induce through ritual, meditation, or invocation. It also grounds the 'survival vs. super-psi' debate in measurable psychological effects, prompting esotericists to consider if the subjective experience provides clues to the source of anomalous information—whether it's an external discarnate entity or an extension of the medium's own psychic abilities. The PCI, though designed for parapsychological research, presents a valuable tool for any occult practitioner or researcher seeking to standardize and compare subjective experiences across different magical operations or altered states.",
+    "target_audience": "The primary audience for this paper includes academic researchers in parapsychology, consciousness studies, transpersonal psychology, and psychology of religion. Within the context of Western Esotericism and Occultism, the target audience expands to scholars of esotericism interested in the empirical investigation of paranormal phenomena, practitioners of mediumship, trance magic, channeling, or spirit communication seeking a scientific understanding of their internal experiences, and esoteric researchers looking for standardized methodologies to quantify subjective states induced by magical or ritual practices."
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "header": {
+    "title": "Science, Nonscience and Rejected Knowledge: The Case of Parapsychology",
+    "authors": [
+      "Harvey J. Irwin"
+    ],
+    "category": "Parapsychological Studies / Sociology of Science",
+    "keywords": [
+      "Parapsychology",
+      "Scientific Method",
+      "Rejected Knowledge",
+      "Skepticism",
+      "Scientific Legitimacy",
+      "ESP",
+      "PK",
+      "History of Science",
+      "Meta-analysis",
+      "Ganzfeld debate"
+    ]
+  },
+  "central_thesis": "Despite purporting to apply scientific method to investigate paranormal experiences, parapsychology has been consistently marginalized and dismissed as nonscientific 'rejected knowledge' by a substantial section of the mainstream scientific community, a process maintained through various chronological shifts in rationale and strategic efforts.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract",
+      "summary": "Introduces parapsychology's claim to scientific method for investigating paranormal experiences and notes the ongoing dispute over its scientific status. The paper aims to chronologically identify rationales for dismissal and strategies by parapsychologists for legitimacy versus orthodox scientists for marginalization."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "Defines parapsychology as the scientific investigation of 'putatively paranormal experiences' and clarifies its scope beyond just 'proof-oriented' research to include process-oriented, phenomenological, and social functions of belief. It establishes that a significant section of mainstream science disputes parapsychology's scientific claim, often depicting it as unscientific or pseudoscientific. The paper posits parapsychology's persistent marginalization, despite over a century of research, as a 'rejected science' deserving sociological analysis."
+    },
+    {
+      "chapter_title": "PROTOSCIENTIFIC TESTING OF SPIRITUALISTIC MEDIUMS",
+      "summary": "Examines early scientific encounters with Spiritualist phenomena in the 19th century, highlighting attempts to expose them as fraud (e.g., Faraday's table-tipping experiments) and the scientific establishment's implicit assumption that research would debunk paranormal claims. It details Sir William Crookes' controversial findings affirming the genuineness of Daniel Dunglas Home's phenomena, which provoked immediate, emotional criticism, illustrating the early establishment of a notional boundary rejecting empirical support for the paranormal, even from within the scientific elite."
+    },
+    {
+      "chapter_title": "J. B. RHINE'S PIONEERING STUDIES OF THE ESP HYPOTHESIS",
+      "summary": "Discusses J. B. Rhine's systematic, quantitative investigations into ESP at Duke University from the 1930s. Rhine's work aimed to establish ESP research with methodological rigor, using card-guessing protocols and statistical analyses. Initially met with cautious interest, his book 'Extra-Sensory Perception' (1934) and subsequent popularization led to vehement antagonism from psychologists, who ridiculed his work as superstitious. Despite support from mathematicians for his statistics, methodological criticisms (often facile or based on early experiments Rhine himself improved upon) served to attack his fundamental assertion that ESP hypothesis was scientifically testable."
+    },
+    {
+      "chapter_title": "PARAPSYCHOLOGICAL ASSOCIATION'S AFFILIATION WITH THE AAAS",
+      "summary": "Chronicles the Parapsychological Association's (PA) efforts to gain affiliation with the American Association for the Advancement of Science (AAAS) starting in 1957. Despite multiple rejections based on dogmatic grounds (e.g., 'parapsychology is not firmly or generally accepted as a science'), the PA finally achieved affiliation in 1969. This 'intellectual turning point' was seen as an acknowledgment that parapsychology 'uses scientific methods of inquiry', though deep-seated resistance and subsequent attempts at disaffiliation (e.g., in the late 1970s) indicate it was largely a 'token recognition' for a field still considered controversial or nonexistent by many mainstream scientists."
+    },
+    {
+      "chapter_title": "META-ANALYSIS AND THE GANZFELD DEBATE",
+      "summary": "Explores meta-analysis as a crucial tool for parapsychologists post-AAAS affiliation to address criticisms of replicability. Meta-analysis allows aggregation of results to demonstrate a statistically significant effect size, even if individual experiments aren't perfectly repeatable. Despite studies showing robust effects (e.g., in Ganzfeld-psi experiments), skeptics raise objections like the 'file-drawer problem' (unreported null findings) and methodological flaws. Even a joint meta-analysis by Honorton (parapsychologist) and Hyman (skeptic) agreed on an 'anomalous effect' in Ganzfeld studies, but the broader debate over meta-analysis in parapsychology continues, with skeptical positions often denying the concept of 'degrees' of replicability for paranormal phenomena."
+    },
+    {
+      "chapter_title": "THE NATIONAL RESEARCH COUNCIL REPORT",
+      "summary": "Details the 1988 NRC report 'Enhancing Human Performance', commissioned by the US Army, which concluded 'no scientific justification from research conducted over a period of 130 years for the existence of parapsychological phenomena'. Parapsychologists critiqued the report for its limited scope (20 years of research vs. 130-year conclusion), prejudicial committee composition (dominated by known skeptics like Ray Hyman and James Alcock), selective citation, and suppression of favorable background papers. This episode exemplifies the 'Machiavellian approach' of the scientific establishment to maintain parapsychology's status as rejected knowledge, prioritizing rhetorical power over logic."
+    },
+    {
+      "chapter_title": "THE CONTEMPORARY SCENE",
+      "summary": "Summarizes the ongoing marginal status of parapsychology, characterized by 'pseudo-skepticism' and implicit 'a priori' rejection. Mainstream science employs strategies like obstructing access to orthodox journals, diluting accepted papers with negative commentaries, discouraging funding and academic career paths, and generally ignoring or misrepresenting parapsychological research in textbooks. Some parapsychologists, frustrated by the unyielding antagonism, advocate for ignoring skeptics or even for a Kuhnian paradigm shift, embracing postmodernist and feminist views to challenge the deterministic, reductionistic nature of contemporary science. This ongoing conflict is framed as a sociopolitical struggle by elite scientists to sustain science's cultural image and demarcate 'rejected knowledge'."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Parapsychology",
+      "definition": "The scientific investigation of putatively paranormal experiences, encompassing proof-oriented research, process-oriented research, phenomenological research, and the psychological/social functions of paranormal belief."
+    },
+    {
+      "term": "Paranormal Experiences",
+      "definition": "Experiences commonly taken by lay people to indicate the operation of factors currently unknown to, or unrecognized by, orthodox science, including extrasensory perception (ESP), psychokinesis (PK), psychic healing, out-of-body experiences, near-death experiences, apparitional experiences, and past-life experiences."
+    },
+    {
+      "term": "Rejected Knowledge",
+      "definition": "A sociological concept referring to findings or a discipline (like parapsychology) that, despite claiming scientific methods, are actively marginalized, dismissed, or deemed unscientific by the mainstream scientific community, often through strategic, rhetorical, or political means rather than purely logical ones."
+    },
+    {
+      "term": "Scientific Legitimacy",
+      "definition": "The acceptance and recognition of a field of inquiry by the mainstream scientific institution as adhering to scientific principles and producing valid knowledge, often sought through affiliation with prestigious scientific bodies like the AAAS."
+    },
+    {
+      "term": "Meta-analysis",
+      "definition": "A statistical technique used to aggregate results across multiple studies (both statistically significant and non-significant) on a given phenomenon to determine an overall effect size and assess its replicability, often used by parapsychologists to counter claims of non-repeatability."
+    },
+    {
+      "term": "Ganzfeld Debate",
+      "definition": "A long-standing controversy surrounding the hypothesized facilitation of ESP by sensory restriction techniques (Ganzfeld state), particularly concerning the replicability of effects and the interpretation of meta-analytic findings in parapsychological research."
+    },
+    {
+      "term": "CSICOP (Committee for Skeptical Inquiry)",
+      "definition": "An organized social movement of self-described skeptics (originally Committee for the Scientific Investigation of Claims of the Paranormal) that vehemently denounces and critiques parapsychology and similar 'pseudosciences', often utilizing journalists, magicians, and philosophers among its most vocal members."
+    }
+  ],
+  "practical_system": {
+    "description": "This academic paper does not describe a practical esoteric or occult system. Instead, it provides a historical and sociological analysis of parapsychology's struggle for scientific legitimacy and its classification as 'rejected knowledge' by mainstream science. It details the methods and arguments employed by both parapsychologists seeking acceptance and orthodox scientists aiming to marginalize the field, without offering any operative magical or spiritual practices.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "Despite over a hundred years of associated research effort the status of parapsychology as a scientific endeavour is disputed by a substantial section of the contemporary mainstream scientific community.",
+      "page": "8"
+    },
+    {
+      "text": "The scientific legitimacy of parapsychology has been shown to be rejected most strongly by the 'scientific elite' (McClenon, 1982), the academics who exercise the greatest influence over policy decisions in the world of institutionalised science (Broad & Wade, 1982).",
+      "page": "9"
+    },
+    {
+      "text": "The notional boundary between parapsychological research and legitimate scientific research therefore was firmly laid down even in the protoscientific phase of parapsychology, although the objective criteria to define this boundary had yet to be enunciated explicitly. It was sufficient at this stage that the scientific establishment 'knew' paranormal processes were physically impossible and could never be shown to be otherwise.",
+      "page": "13"
+    },
+    {
+      "text": "The Committee finds no scientific justification from research conducted over a period of 130 years for the existence of parapsychological phenomena.",
+      "page": "22"
+    },
+    {
+      "text": "For parapsychologists the ultimate cause for concern should be not so much the tactics that are employed as the premise upon which this Machiavellian approach is based, namely, the perceived illegitimacy of parapsychological research.",
+      "page": "23"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant to Western Esotericism, Occultism, and Magic, not as a practical guide, but as a crucial sociological and historical case study. It meticulously details the mechanisms by which a field investigating phenomena often overlapping with occult concerns (e.g., ESP, PK) is systematically rejected by mainstream science. For an occultist, understanding the 'why' and 'how' of parapsychology's marginalization provides insight into the broader scientific resistance to anomalous experiences and phenomena. It reveals the rhetorical strategies, political power dynamics, and a priori biases ('pseudo-skepticism') that define the boundaries of accepted knowledge, directly impacting how magical or esoteric claims are perceived and dismissed. The paper highlights that the rejection is often not purely methodological, but ideological and cultural, a pattern frequently observed in the treatment of occult traditions by scientific materialists.",
+    "target_audience": "Academic researchers in the sociology of science, history of science, parapsychology, and critical studies of pseudoscience. Additionally, practitioners and scholars of Western Esotericism, Occultism, and Magic would find this invaluable for understanding the cultural and institutional barriers to the study and acceptance of anomalous phenomena, and for contextualizing the historical and contemporary relationship between science and the 'unexplained'."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "header": {
+    "title": "Belief in, and Alleged Experience of, the Paranormal in the Portuguese Population",
+    "authors": [
+      "MICHAEL A. THALBOURNE",
+      "C. F. SILVA",
+      "S. N. RAZENTE"
+    ],
+    "category": "Parapsychology Research; Sociology of Belief",
+    "keywords": [
+      "Paranormal belief",
+      "Paranormal experience",
+      "Portuguese population",
+      "Sheep-Goat Scale",
+      "Reincarnation",
+      "Astrology",
+      "Religiosity"
+    ]
+  },
+  "central_thesis": "The study reveals that belief in and alleged experience of the paranormal among the Portuguese population are generally low. While correlations exist, they are moderate with beliefs in reincarnation and past-life recall, and weaker with astrology and other religious variables, indicating a skeptical leaning.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract",
+      "summary": "This section summarizes the study's objective to gauge paranormal belief and experience in the Portuguese population, using a random telephone survey of 750 individuals and the 18-item Australian Sheep-Goat Scale (ASGS). Key findings indicate low levels of paranormal belief and experience, with moderate correlations found for reincarnation belief and past-life recall, and weaker correlations with astrology and general religious variables."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "The introduction defines 'paranormal' as 'psychic' or 'that cannot be explained according to the viewpoint of conventional science,' subdividing it into ESP (extrasensory perception), PK (psychokinesis), and post-mortem survival. It provides context by reviewing previous national surveys of paranormal belief, noting Portugal's previous exclusion, and introduces the ASGS as a standardized, comparable instrument for this survey."
+    },
+    {
+      "chapter_title": "Method",
+      "summary": "This section details the research methodology, including the use of a Portuguese translation of the 18-item forced-choice ASGS, which covers ESP, psychokinesis, and life after death. It explains the 2-1-0 point scoring system for 'yes,' 'maybe,' and 'no' responses. Additionally, it lists 13 other questions concerning religious and paranormal beliefs (e.g., reincarnation, miracles, astrology). The survey procedure describes a telephone survey of 750 persons, stratified by region and habitat, with demographic breakdowns of respondents (age, gender, religious affiliation)."
+    },
+    {
+      "chapter_title": "Results",
+      "summary": "The results present quantitative data, including Table 1 which summarizes responses to the 18 ASGS items, showing average scores and percentage distributions for 'yes,' 'maybe,' and 'no.' It highlights that 'had a hunch?' received the most affirmative responses, while 'am psychic?' received the least. Figure 1 illustrates the frequency distribution of total ASGS scores, demonstrating a significant positive skew towards the lower, more skeptical end. Table 2 outlines Pearson correlation coefficients between ASGS scores and other variables, with the strongest associations found for belief in reincarnation and recall of a previous life, and weaker correlations with astrology and various religious practices."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "The discussion interprets the findings, concluding that the Portuguese population exhibits a skeptical tendency regarding paranormal belief and experience compared to other studies. It notes that while religious affiliation and self-reported religiosity were high, other indices of religious activity were comparatively low. A weak association between religiosity and paranormal belief was observed, with belief in reincarnation being a notable exception. The authors suggest using 'uncertain' instead of 'maybe' for clearer responses in future surveys."
+    },
+    {
+      "chapter_title": "References",
+      "summary": "This section provides a comprehensive list of academic articles and books cited within the paper, contextualizing the current study within existing parapsychological and sociological research on belief in the paranormal across various countries."
+    },
+    {
+      "chapter_title": "Appendix",
+      "summary": "The appendix supplies the exact wording for the 13 additional survey questions not part of the ASGS, along with the rounded percentage responses for each option. These questions cover topics such as reading paranormal/religious materials, belief in reincarnation (asked twice), past life experience, Bible reading, self-rated religiosity, prayer, belief in miracles, supernatural phenomena, miraculous properties of holy water, resurrection of the dead, and astrology."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Paranormal",
+      "definition": "Defined as 'psychic' and 'that cannot be explained according to the viewpoint of conventional science.' It is further subdivided into mental phenomena (e.g., ESP, extrasensory perception), physical phenomena (e.g., PK, psychokinesis, or mind-over-matter), and the concept of conscious personality surviving physical death."
+    },
+    {
+      "term": "Sheep-Goat Scale",
+      "definition": "A questionnaire designed to measure the extent of belief (or disbelief) and alleged experience (or non-experience) in the paranormal. The Australian Sheep-Goat Scale (ASGS) specifically is a forced-choice, 18-item version used in this study."
+    },
+    {
+      "term": "ESP (Extrasensory Perception)",
+      "definition": "A category of mental paranormal phenomena, encompassing abilities such as Telepathy (mind-to-mind communication), Clairvoyance (gaining information about an object or event without using known senses), and Precognition (knowledge of an event or state of affairs before it occurs)."
+    },
+    {
+      "term": "PK (Psychokinesis)",
+      "definition": "A category of physical paranormal phenomena, also referred to as 'mind-over-matter,' implying the ability to influence physical objects or systems with the mind alone."
+    },
+    {
+      "term": "ASGS (Australian Sheep-Goat Scale)",
+      "definition": "The specific 18-item forced-choice instrument utilized in the survey. Responses are scored: 'yes' receives 2 points, 'maybe' receives 1 point, and 'no' receives 0 points. The total score can range from 0 to 36, indicating the degree of belief and alleged experience in paranormal phenomena."
+    }
+  ],
+  "practical_system": {
+    "description": "This document is a research paper detailing a survey methodology and the statistical analysis of public belief in paranormal phenomena. It does not present or describe a practical, operative system of esotericism, occultism, or magic. Instead, its core 'system' is the Australian Sheep-Goat Scale (ASGS) and the associated survey questions, which are tools for academic inquiry into beliefs and experiences, not for the practice of magical arts.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "Belief in, and alleged experience of, the paranormal in the Portuguese population were gauged via a random telephone survey of 750 persons, using a Portuguese version of the 18-item forced-choice Australian Sheep-Goat Scale (Thalbourne, 1995). Belief and experience tended to be on the low side, as shown both by the low average scores obtained for each of the 18 individual items and by the tendency of Scale-scores to occur at the low end of the range.",
+      "page": "1"
+    },
+    {
+      "text": "In this article, the term \"paranormal\" will be taken to be synonymous with \"psychic\", and with the phrase “that cannot be explained according to the viewpoint of conventional science.\"",
+      "page": "1"
+    },
+    {
+      "text": "Portuguese people tended to score somewhat on the skeptical side when it comes to belief in, and alleged experience of, the paranormal.",
+      "page": "9"
+    },
+    {
+      "text": "A great advantage of using this Sheep-Goat Scale is that it thereby renders comparable, data obtained in other previous surveys or experiments (e.g., Basterfield & Thalbourne, 2002; Storm & Thalbourne, 2005).",
+      "page": "2"
+    },
+    {
+      "text": "As can be seen from the Figure, the scores showed a tendency to be shifted towards the low, disbelieving end of the Sheep-Goat Scale, and while kurtosis is normal, skewness is significantly positive (i.e., the scores tend to be down the left-hand end, z = 3.61, p < .001). So there is more disbelief than belief in the paranormal, and a lack of paranormal experience.",
+      "page": "7"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "From an esoteric and occult perspective, this paper provides valuable empirical data on the public's baseline perception and acceptance of phenomena that often border or intertwine with occult beliefs and practices (e.g., ESP, PK, afterlife concepts). While not a magical text, it highlights the 'sheep' vs. 'goat' divide within a specific population, which is fundamental to parapsychology and relevant for understanding who might be receptive to esoteric ideas or who might dismiss them outright. The findings suggest a generally skeptical public in Portugal, offering a contextual lens for practitioners to understand the societal environment for esotericism, the challenges in communicating nuanced occult concepts, and the popular framing of what might otherwise be considered 'magical' abilities or experiences. The correlation between paranormal belief and reincarnation is particularly noteworthy, as reincarnation is a central doctrine in many esoteric traditions.",
+    "target_audience": "The primary target audience is academic researchers in parapsychology, sociology of religion, and cultural studies. Scholars and historians of Western Esotericism and Occultism would also find it relevant for understanding the societal reception and prevalence of beliefs related to paranormal phenomena. Additionally, leaders or community organizers within esoteric traditions might use these findings to gauge public openness to their specific teachings and to adapt their outreach or educational strategies accordingly."
+  }
+}

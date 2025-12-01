@@ -1,0 +1,113 @@
+{
+  "header": {
+    "title": "From Dreams to (Virtual) Reality: Exploring Behavioural Embodiment in Out-Of-Body Experients",
+    "authors": [
+      "CRAIG D. MURRAY",
+      "JEZZ FOX"
+    ],
+    "category": "Parapsychological Research / Psychological Study",
+    "keywords": [
+      "Out-of-Body Experience (OBE)",
+      "Virtual Reality (VR)",
+      "Behavioural Embodiment",
+      "Body-Image",
+      "Dissociation",
+      "Absorption",
+      "Somatoform Dissociation"
+    ]
+  },
+  "central_thesis": "This empirical study investigates whether individuals who report prior Out-of-Body Experiences (OBErs) exhibit a qualitatively different 'behavioural embodiment' during immersion in a Virtual Reality (VR) system compared to non-experients (non-OBErs), and if they score higher on measures of absorption, dissociation, and somatoform dissociation. While the hypothesis regarding general disembodied behavioural interaction in VR was not supported, OBErs were found to score significantly higher on the specified psychological measures, and a positive correlation was identified between the frequency of reported OBEs and time spent navigating the VR environment from an elevated position.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction",
+      "summary": "Reviews existing psychological theories of OBEs, including Palmer's (1978) body-concept reduction and Blackmore's (1984) cognitive explanation involving impoverished sensory models. Discusses Irwin's (2000) findings on somatoform dissociation in OBErs and Murray and Fox's (2004, 2005a) work on body-image differences and VR immersion. Introduces the concept of 'behavioural embodiment' as a new dimension for OBE research, hypothesizing OBErs will exhibit more 'disembodied' behaviours in VR (e.g., 'flying' through objects or at elevated perspectives)."
+    },
+    {
+      "chapter_title": "Method",
+      "summary": "Describes the experimental design. Participants (16 OBErs, 28 non-OBErs) were recruited and immersed in a custom-built Virtual Reality system using a Virtual Research V6 head-mounted display (HMD) and a 3D mouse to navigate a 'Cityscape' virtual environment. Behavioural Embodiment was measured by the proportion of time spent at an elevated level and the number of collisions with virtual objects. Participants also completed the Somatoform Dissociation Questionnaire (SDQ-20), Tellegen Absorption Scale (TAS), Dissociation Experiences Questionnaire (DEQ), and an item to assess prior OBE occurrence."
+    },
+    {
+      "chapter_title": "Results",
+      "summary": "Presents statistical analysis, primarily ANOVA tests. Significant differences were found, confirming that OBErs scored significantly higher than non-OBErs on Somatoform Dissociation (F(1, 42) = 23.83, p < .001), Absorption (F(1, 42) = 8.91, p = .005), and Dissociation (F(1, 42) = 5.29, p = .026). However, no significant differences were found between groups on the measures of Behavioural Embodiment (time in air, number of collisions). A two-tailed Spearman's correlation for OBErs only revealed a significant positive correlation between the number of prior OBEs and the proportion of trial time spent navigating the environment from an elevated position (r(14) = .52, p = .041)."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "Interprets the findings, acknowledging that the primary hypothesis of general behavioural embodiment differences was not supported. Emphasizes the significant finding of higher scores among OBErs on somatoform dissociation, absorption, and dissociation, aligning with previous research. Discusses the specific correlation between OBE frequency and 'time in the air' in VR for OBErs as a potential avenue for future research. Notes limitations of the 'number of collisions' measure due to ambiguity between accidental and intentional interactions, partly caused by the HMD's reduced peripheral vision."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Out-of-Body Experience (OBE)",
+      "definition": "An experience in which a person feels their 'self' or consciousness is spatially separated from their physical body."
+    },
+    {
+      "term": "Behavioural Embodiment",
+      "definition": "A proposed dimension of body-image referring to the tendency for individuals to either continue or cease behaving in a physically constrained, 'embodied' manner, even when not required to do so by physical laws (e.g., in virtual reality or dreams). Measured by factors like 'time spent elevated in VR' and 'collisions with virtual objects'."
+    },
+    {
+      "term": "Somatoform Dissociation",
+      "definition": "Body experiences that manifest as 'deficit symptoms' (e.g., numbness, loss of perception) or 'positive symptoms' (e.g., psychosomatic pain, tics), indicative of dissociative disorder and reflecting perceptual body-image. Measured by the SDQ-20."
+    },
+    {
+      "term": "Absorption",
+      "definition": "A personality trait characterized as 'openness to absorbing or self-altering experiences,' often related to hypnotic susceptibility. Measured by the Tellegen Absorption Scale (TAS)."
+    },
+    {
+      "term": "Dissociation",
+      "definition": "A mental process that produces a lack of connection in a person's thoughts, memories, feelings, actions, or sense of identity. Measured by the Dissociation Experiences Questionnaire (DEQ)."
+    },
+    {
+      "term": "Virtual Environment (VE)",
+      "definition": "A three-dimensional computer-generated world designed to afford real-time interaction and exploration, aiming to create an impression of 'telepresence' or immersion for the user."
+    }
+  ],
+  "practical_system": {
+    "description": "The 'system' described is a research methodology for studying behavioural embodiment and psychological correlates of OBEs within a controlled Virtual Reality (VR) environment. It employs immersive VR technology to simulate a distinct environment where participants' navigation patterns and interactions can be observed and quantified, while their psychological profiles are assessed using standardized questionnaires. This scientific system aims to identify measurable differences in how individuals with prior OBEs interact with simulated realities compared to non-experients.",
+    "tools": [
+      "Virtual Research V6 head-mounted display (HMD)",
+      "Custom-built PC (for running the VE)",
+      "3D mouse (for navigation within the VE)",
+      "Cityscape virtual environment (a simulated city with buildings, roads, grass areas, and virtual objects)",
+      "Digital video camera (for recording participant interaction)",
+      "Somatoform Dissociation Questionnaire (SDQ-20)",
+      "Tellegen Absorption Scale (TAS)",
+      "Dissociation Experiences Questionnaire (DEQ)",
+      "Palmer's (1979) OBE assessment item"
+    ],
+    "rituals": [
+      "Initial psychological assessment: Participants complete questionnaires (DEQ, TAS, SDQ-20) to measure dissociation, absorption, and somatoform dissociation.",
+      "OBE assessment: Participants respond to Palmer's (1979) single-item question to identify prior OBE experiences.",
+      "VR immersion: Participants don a head-mounted display (HMD) to enter the virtual environment.",
+      "Navigation instruction: Participants receive instructions on how to use a 3D mouse to navigate the VE.",
+      "Task completion: Participants are asked to locate a specific object (Easter Island head statue) within the VE.",
+      "Behavioural observation: For 15 minutes, participants' exploration is recorded by a digital video camera for later analysis of 'behavioural embodiment' (time spent elevated, number of collisions).",
+      "Trial termination: The VR session is stopped after 15 minutes."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "ABSTRACT: Recent research has indicated that the body experience of people who report a prior out-of-body experience (OBErs) is qualitatively different on a number of body-image variables to that of non-experients (non-OBErs). The present study examined OBErs and non-OBErs Behavioural Embodiment during immersion in a Virtual Reality system. It was hypothesised that OBErs would, compared with non-OBErs, exhibit a disembodied behavioural interaction with the Virtual Environment (VE), characterised by the proportion of time spent navigating the environment from an elevated position and the number of collisions with virtual objects. It was also hypothesised that OBErs would score higher on measures of absorption, dissociation and somatoform dissociation.",
+      "page": "1"
+    },
+    {
+      "text": "In the present paper we wish to suggest another dimension of body-image that we believe may be useful in the study of OBEs and which we term 'behavioural embodiment'.",
+      "page": "4"
+    },
+    {
+      "text": "OBErs were found to score significantly higher than the non-OBErs on measures of absorption, dissociation and somatoform dissociation.",
+      "page": "1"
+    },
+    {
+      "text": "The present study did not find any significant differences between OBE and non-OBE participants on two measures of Behavioural Embodiment while immersed in a virtual reality system.",
+      "page": "8"
+    },
+    {
+      "text": "However, as the number of previous OBEs participants reported increased, so did the amount of time they spent navigating the virtual environment in the air, r(14) = .52, p = .041.",
+      "page": "8"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "While not an esoteric or occult text in itself, this paper is highly relevant to esotericism by providing a scientific, psychological framework for understanding the subjective experiences often associated with occult practices, such as astral projection or soul flight, which are phenomenologically similar to Out-of-Body Experiences (OBEs). It challenges direct correlations between OBEs and observable 'disembodied' behaviour in virtual environments, urging practitioners to consider the nuanced psychological underpinnings (like dissociation and absorption) that may accompany such experiences. For magicians, understanding these psychological correlates of OBEs can inform self-assessment and training, separating psychological predispositions from purely 'magical' mechanics. The study's findings on dissociation and absorption among OBErs suggest that these traits could be foundational psychological conditions that enable or predispose individuals to such experiences, whether induced through meditative, ritualistic, or spontaneous means.",
+    "target_audience": "This paper is primarily aimed at academic researchers in psychology, parapsychology, and virtual reality. It would also be of interest to clinicians studying dissociative disorders, and potentially to a broader audience interested in the scientific investigation of anomalous or subjective experiences, including those in the esoteric and occult communities seeking a psychological perspective on phenomena like OBEs."
+  }
+}

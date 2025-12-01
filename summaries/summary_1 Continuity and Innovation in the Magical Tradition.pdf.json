@@ -1,0 +1,138 @@
+{
+  "header": {
+    "title": "CONTINUITY AND INNOVATION IN THE MAGICAL TRADITION: A JERUSALEM SYMPOSIUM AND ITS WIDER CONTEXTS",
+    "authors": [
+      "Gideon Bohak",
+      "Yuval Harari",
+      "Shaul Shaked"
+    ],
+    "category": "Historical Magic Studies",
+    "keywords": [
+      "magic",
+      "magical tradition",
+      "continuity",
+      "innovation",
+      "ancient magic",
+      "medieval magic",
+      "Near Eastern cultures",
+      "Jewish magic",
+      "Christian magic",
+      "Muslim magic",
+      "Akkadian",
+      "Egyptian",
+      "Greek",
+      "Demotic",
+      "Babylonian incantation bowls",
+      "astrology",
+      "divination",
+      "medicine",
+      "mysticism",
+      "scribal practices",
+      "grimoire traditions"
+    ]
+  },
+  "central_thesis": "The book explores the processes of continuity and innovation within magical traditions across diverse ancient and medieval cultures (Near Eastern, Jewish, Christian, Muslim). It emphasizes the 'scribal nature' of magic, where literate practitioners transmitted, adapted, and composed texts, and examines the complex interrelations between magic and other specialized fields like divination, medicine, and astrology, revealing a shared 'magical logic' despite cultural and temporal distances.",
+  "structure_content": [
+    {
+      "chapter_title": "Textual History of Maqlû Incantations",
+      "summary": "Tzvi Abusch analyzes elaborate Akkadian anti-witchcraft incantations (Maqlû), demonstrating how repetitions and inconsistencies arise from gradual textual expansions, interpolations of older spells, and conscious editorial activities across different tablets over a millennium."
+    },
+    {
+      "chapter_title": "Egyptian Precedents for Charitesion",
+      "summary": "Joachim Friedrich Quack traces the Egyptian origins of the 'charitesion' (a magical procedure for charm and grace), identifying the use of 'favor' and 'love' terminology from the second millennium BCE through the Roman period, and showing how Greek charitesia elements are rooted in pre-Hellenistic Egyptian culture."
+    },
+    {
+      "chapter_title": "Demotic Magical Papyri and Egyptian Magical Recipes",
+      "summary": "Jacco Dieleman examines Demotic magical papyri, arguing they are not mere translations but represent unique compositions by Egyptian scribes with access to temple libraries and newer magical technologies, illustrating both continuity and innovation in recipe types from Pharaonic to Roman Egypt."
+    },
+    {
+      "chapter_title": "Magic and Divination in Late Antiquity",
+      "summary": "Fritz Graf analyzes an Ephesian inscription and Porphyry's writings to illustrate the complex relationship between magic and divination in the Greek-speaking world, showing 'magic' could be both a source of evil and a tool for noble aims, distinct from divination until the rise of Christianity."
+    },
+    {
+      "chapter_title": "Magic and Medicine in Roman Empire",
+      "summary": "Christopher Faraone explores the connections between magic and medicine in the Roman Empire, using examples like beliefs about uterine movement and amuletic gemstones, suggesting that physicians and magicians shared social circles and specialized knowledge."
+    },
+    {
+      "chapter_title": "Magico-Theurgical Practices in Jewish Mysticism",
+      "summary": "Ithamar Gruenwald analyzes magico-theurgical practices in Jewish Hekhalot literature and Sefer Ha-Razim, focusing on a detailed ritual for 'speaking with the moon or stars' for love, demonstrating its internal ritual logic and consistency with other magical traditions."
+    },
+    {
+      "chapter_title": "Jewish Incantation Bowls in Sasanian Period",
+      "summary": "Shaul Shaked examines Jewish incantation bowls from the Sasanian period, particularly three bowls for a single client, to show how scribes utilized and adapted textual units, bridging larger units based on specific circumstances like bowl size or client names."
+    },
+    {
+      "chapter_title": "Qybl' Counter-Spells on Babylonian-Jewish Bowls",
+      "summary": "Dan Levene focuses on 'qybl'' bowls, a sub-genre of Babylonian-Jewish incantation bowls intended as counter-spells. He analyzes their textual similarities and differences, their physical arrangement (paired, sealed with bitumen), and the recurrence of Yaror demons, demonstrating the complex transmission of magical know-how."
+    },
+    {
+      "chapter_title": "Astrology in Jewish Texts",
+      "summary": "Kocku von Stuckrad surveys astrological elements in the Testament of Solomon, Sefer Ha-Razim, and Hekhalot literature, challenging neat scholarly distinctions between magic and astrology or Jewish and Christian practices by showing the veneration of planets and ascents to heaven."
+    },
+    {
+      "chapter_title": "Development of Jewish Interest in Astrology",
+      "summary": "Reimund Leicht traces the gradual development of Jewish interest in astrology, noting its absence in biblical/Second Temple literature but its emergence in rabbinic literature from the 2nd-3rd centuries CE, influenced by luni-solar calendar studies, leading to a distinct 'Jewish' branch of astrology."
+    },
+    {
+      "chapter_title": "Dream Inquiries for Treasure in Jewish Tradition",
+      "summary": "Yuval Harari explores dream inquiries in Jewish and non-Jewish societies, focusing on requests for locating hidden treasures. He re-edits and contextualizes a specific dream request found in the Cairo Genizah, shedding light on the circumstances of its production."
+    },
+    {
+      "chapter_title": "Genizah Rotuli and Aggressive Jewish Magic",
+      "summary": "Gideon Bohak assesses the importance of Genizah rotuli (vertical parchment scrolls) containing aggressive magical recipes from late-antique Palestine. He shows their transmission into the 9th-10th centuries, suggesting they fell out of circulation due to their perceived violence by medieval Jewish public."
+    },
+    {
+      "chapter_title": "Arabic Version of the Sword of Moses",
+      "summary": "Alexander Fodor analyzes a modern Arabic manuscript of 'The Sword of Moses', comparing it to known versions. He demonstrates how the Arabic text restructures the original, strips away Jewish flavor, and adds Egyptian-Arabic elements, indicating a likely Coptic Christian redactor and a millennium of cross-cultural adaptation."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Magical Logic",
+      "definition": "The underlying, strikingly identical patterns, principles, and shared phenomena observed across diverse magical traditions in different cultures and time periods."
+    },
+    {
+      "term": "Scribal Nature of Magic",
+      "definition": "The characteristic where magical traditions are primarily transmitted, copied, edited, revised, and composed by literate individuals (scribes, scholars, practitioners of letters) who rely on written texts for their specialized knowledge, rather than solely on oral tradition."
+    },
+    {
+      "term": "Continuity and Innovation",
+      "definition": "The dual process central to magical traditions, involving both the long-term, continuous transmission of textual units and practices, and their simultaneous adaptation, transformation, borrowing, and integration of new elements across different periods and cultures."
+    },
+    {
+      "term": "Charitesion",
+      "definition": "A specific magical procedure attested in Greek and Demotic magical papyri, designed to impart charm and grace to an individual, with identified precedents and linguistic roots in ancient Egyptian culture."
+    },
+    {
+      "term": "Qybl'",
+      "definition": "A specific sub-genre of Babylonian-Jewish incantation bowls, characterized as a counter-spell intended to reverse and return aggressive magical actions upon their perpetrators. These bowls were often arranged in pairs and sealed with bitumen."
+    }
+  ],
+  "practical_system": {
+    "description": "This book is an academic anthology presenting scholarly studies of various historical magical traditions and their evolution, rather than a manual for a single, coherent practical magical system. It analyzes the mechanics and philosophies of historical magic from a research perspective, discussing textual transmission, cultural adaptation, and the relationship between magic and other ancient disciplines. It does not provide instructions for performing specific rituals or using magical tools.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "Such similarities demonstrate to what extent many different cultures share a 'magical logic' which is strikingly identical, and in particular they show the recurrence of certain phenomena when magical practices are transmitted in written form and often preserve, adopt and adapt much older textual units.",
+      "page": "2"
+    },
+    {
+      "text": "Perhaps the most interesting feature of the magical traditions covered in the following papers is their scribal nature; rather than being 'old wives' tales' (as such materials used to be referred to dismissively in the past), the magical materials covered here were the purview of scribes and scholars, or, at the very least, of literate individuals who received much of their detailed knowledge in written form or memorized large chunks of text and then reproduced it orally or in writing.",
+      "page": "2"
+    },
+    {
+      "text": "The focus on processes of continuity and innovation, and on the delimitation of the magicians' specific expertise, is bound to yield some surprising results.",
+      "page": "3"
+    },
+    {
+      "text": "Modern scholars are in fact looking over the shoulders of the ancient magicians and muttering, 'Look, this is an edition of a much older recipe...but this piece is newly made up...and this bit is borrowed from another culture or translated from another language...and here the author is slipping into the realms of divination, or showing off with some medical terminology...and there the style is that of a mystic of the same period, with a somewhat different twist.'",
+      "page": "3"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This book is highly relevant to Western Esotericism and Occultism as it provides a robust academic framework for understanding the historical development and cross-cultural interconnections of magical practices. By meticulously analyzing texts from ancient Mesopotamia to medieval periods, it challenges anachronistic and simplistic views of magic, revealing its scholarly, complex, and adaptive nature. It illuminates the roots of many modern esoteric traditions, including grimoire magic, Qabalah (through Jewish magical texts), and Hermeticism, by tracing their deep historical lineage and highlighting shared operational logic and continuous innovation. The emphasis on scribal traditions underscores the intellectual depth involved in historical magical practices, often overlooked by those focusing solely on modern, often decontextualized, systems.",
+    "target_audience": "Academic scholars in ancient and medieval history, religious studies, Near Eastern studies, Jewish studies, Classics, and the academic study of Esotericism. It is also valuable for practitioners of modern magical traditions and occultists seeking a deeper, historically informed understanding of the origins and evolution of magical thought and practice, particularly those interested in grimoire traditions, Qabalah, Hermeticism, and comparative magic."
+  }
+}
