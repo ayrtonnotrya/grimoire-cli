@@ -1,0 +1,121 @@
+{
+  "header": {
+    "title": "The Australian Sheep-Goat Scale: Development and Empirical Findings",
+    "authors": [
+      "MICHAEL A. THALBOURNE"
+    ],
+    "category": "Parapsychology / Psychology",
+    "keywords": [
+      "Australian Sheep-Goat Scale",
+      "Basic Limiting Principles",
+      "paranormal",
+      "paranormal belief",
+      "psi",
+      "sheep-goat effect"
+    ]
+  },
+  "central_thesis": "This paper comprehensively details the evolution of the Australian Sheep-Goat Scale (ASGS) from its inception as a 10-item instrument to an improved 26-item version, outlining its psychometric properties, factor structure, reliability, and various empirical findings concerning its predictive validity (the Sheep-Goat Effect) and correlations with a wide range of psychological and parapsychological variables. It aims to establish the ASGS as a robust and widely applicable measure of paranormal belief for research.",
+  "structure_content": [
+    {
+      "chapter_title": "INTRODUCTION",
+      "summary": "Introduces the concept of 'sheep' (believers) and 'goats' (disbelievers) in psychic phenomena, highlights the widespread nature of paranormal belief, and underscores the need for scientifically rigorous tools like the ASGS to categorize individuals and explore psychological differences."
+    },
+    {
+      "chapter_title": "CONSTRUCTION OF THE AUSTRALIAN SHEEP-GOAT SCALE",
+      "summary": "Describes the historical development of the ASGS, starting as a 10-item scale in 1976, expanding to 13 and then 18 items by 1982 to include psychokinesis, and detailing its various administration formats (forced-choice, visual analogue, Likert, and Rasch-scaled versions)."
+    },
+    {
+      "chapter_title": "THE FACTOR STRUCTURE OF THE ASGS",
+      "summary": "Examines the dimensionality of the ASGS, reporting analyses that identified factors such as general ESP belief/experience, afterlife beliefs, and psychokinesis. It discusses the debate between uni-componential and bi-componential approaches to interpreting paranormal belief measured by the scale."
+    },
+    {
+      "chapter_title": "RELIABILITY",
+      "summary": "Presents evidence for the internal reliability and test-retest reliability of the ASGS, citing high Cronbach's alpha values (e.g., 0.94 for the 18-item visual analogue scale) and acceptable test-retest coefficients, demonstrating the scale's consistency."
+    },
+    {
+      "chapter_title": "RESPONSE BIAS",
+      "summary": "Investigates the potential influence of social desirability on ASGS scores, reporting multiple studies that found no significant association with measures like the Eysenck Lie Scale or the Marlowe-Crowne Social Desirability Scale."
+    },
+    {
+      "chapter_title": "VALIDITY ISSUES",
+      "summary": "Addresses the validity of the ASGS, including content validity (how item endorsement frequencies align with intuitive expectations) and convergent validity, showing strong positive correlations with other established paranormal belief scales (e.g., Tobacyk Paranormal Belief Scale, Anomalous Experience Inventory)."
+    },
+    {
+      "chapter_title": "PREDICTIVE VALIDITY: THE SHEEP-GOAT EFFECT",
+      "summary": "Evaluates the ASGS's ability to predict performance in psi tasks. It confirms the existence of the 'Sheep-Goat Effect' (believers performing better) in 7 out of 28 studies, particularly in telepathy, and discusses potential mechanisms like psi-missing in 'goats'."
+    },
+    {
+      "chapter_title": "NON-PARAPSYCHOLOGICAL CORRELATES OF THE ASGS",
+      "summary": "Systematically reviews a wide array of psychological variables correlated with ASGS scores, grouped under the Social Marginality, Worldview, Cognitive Deficits, and Psychodynamic Functions Hypotheses. Findings include correlations with gender, marital status, religiosity, dualist philosophy, dream interpretation, creative personality, fantasy proneness, and certain psychopathological traits."
+    },
+    {
+      "chapter_title": "TRANSLIMINALITY",
+      "summary": "Discusses transliminality (the tendency for psychological material to cross into consciousness) as a key correlate of ASGS scores, suggesting a shared underlying mechanism between paranormal belief and transliminality-related variables like mystical experience, creative personality, and magical ideation."
+    },
+    {
+      "chapter_title": "SPECIAL GROUPS OF PARTICIPANTS",
+      "summary": "Presents findings from studies comparing ASGS scores in specific populations, such as individuals with manic-depression, schizophrenia, panic attacks, UFO abductees, and 'non-close-relaters', often indicating higher paranormal belief in these groups."
+    },
+    {
+      "chapter_title": "MISCELLANEOUS CORRELATES",
+      "summary": "Covers other varied correlates of the ASGS, including hypnotizability, beliefs and reactions related to being stared at, Type 'A' behavior, hypersensitivity to sensory stimulation, non-religious conservatism, false memories, susceptibility to the conjunction fallacy, narcissism, and physiological markers like the 2D:4D digit ratio."
+    },
+    {
+      "chapter_title": "CONCLUSION",
+      "summary": "Summarizes the ASGS's successful development, robust psychometric properties, and extensive empirical applications in both parapsychology and orthodox psychology, recommending it as a reliable measure for researchers studying paranormal belief."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Australian Sheep-Goat Scale (ASGS)",
+      "definition": "A questionnaire designed to measure an individual's belief in various aspects of the paranormal, such as ESP, life after death, and psychokinesis. It has evolved through 10-item, 13-item, and 18-item versions, with a proposed 26-item version (BLPQ)."
+    },
+    {
+      "term": "Sheep-Goat Effect (SGE)",
+      "definition": "The observed phenomenon in parapsychological experiments where 'sheep' (believers in psi) tend to score significantly higher on psi tasks than 'goats' (disbelievers), sometimes even involving 'psi-missing' (scoring significantly below chance) by goats."
+    },
+    {
+      "term": "Basic Limiting Principles (BLP)",
+      "definition": "C. D. Broad's theoretical framework outlining the fundamental principles governing the existence and operation of mind within the physical world. Paranormal phenomena are defined as those that contradict these principles, making them 'anti-scientific' in a certain sense."
+    },
+    {
+      "term": "Paranormal Belief",
+      "definition": "Belief in phenomena generally considered scientifically impossible by mainstream science, such as psi processes (ESP, PK), ostensible psi-dependent phenomena (e.g., divinatory arts), and the concept of a non-material component of human existence (e.g., spirit, reincarnation, astral projection)."
+    },
+    {
+      "term": "Transliminality",
+      "definition": "A psychological construct defined as the hypothesized tendency for psychological material (e.g., thoughts, images, feelings) to cross the threshold into consciousness. It is strongly correlated with paranormal belief and shares many of its psychological correlates."
+    }
+  ],
+  "practical_system": {
+    "description": "This document is an academic paper on the development and validation of a psychological scale (Australian Sheep-Goat Scale) measuring paranormal belief. It does not describe a practical system, philosophy, rituals, or tools related to Western Esotericism, Occultism, or Magic. Its focus is on psychometric properties and empirical correlates of belief in the paranormal, not on the practice or theory of magic.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "The phrase “the Australian Sheep-Goat Scale”, or ASGS for short, refers to a questionnaire measure (or family of measures) of belief in various aspects of the paranormal, such as extrasensory perception (ESP), life after death, and psychokinesis (PK). The term \"sheep\" is traditionally used for “believer” in some aspect of psychic phenomena, while \"goat\" is used for “disbeliever”.",
+      "page": "1"
+    },
+    {
+      "text": "Paranormal phenomena have in common the fact that they contradict C. D. Broad's (1978) Basic Limiting Principles about the existence and operation of mind in the mathematico-physical world, and are therefore in some sense anti-scientific.",
+      "page": "1"
+    },
+    {
+      "text": "In parapsychology, the eventual concern is with predictive validity: whether subjective experiences reflect actual psi and can be used to predict performance on objective tests.",
+      "page": "8"
+    },
+    {
+      "text": "Transliminality is defined as the hypothesised tendency for psychological material to cross the threshold into consciousness (Thalbourne, 2010).",
+      "page": "26"
+    },
+    {
+      "text": "strictly speaking, the term 'paranormal belief' should apply only to belief in events that in mainstream science are generally deemed to be scientifically impossible, that is, belief in phenomena that are widely viewed as contravening the 'basic limiting principles' of current scientific thinking.",
+      "page": "1"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant for academic researchers and practitioners in parapsychology and psychology interested in the measurement of paranormal belief, the 'sheep-goat effect,' and its psychological correlates. It details a widely used and validated instrument, providing a comprehensive overview of its development and empirical application. It is foundational for understanding the psychological profile of paranormal believers and disbelievers, particularly concerning its links to personality, cognitive styles, and psychopathology. The article explicitly defines 'paranormal' within a scientific context, contrasting it with phenomena that defy C.D. Broad's Basic Limiting Principles, which is a key framework in parapsychological discourse.",
+    "target_audience": "The primary target audience is academic researchers, parapsychologists, psychologists, and graduate students in related fields. Individuals interested in the scientific study of paranormal belief, its psychometric measurement, and its relationship to personality, cognition, and psychopathology would find this paper invaluable. It is not intended for a general audience or for practitioners of Western Esotericism, Occultism, or Magic seeking practical instructions or philosophical insights into magical systems, as the text is a scientific review of a psychological scale rather than an esoteric treatise."
+  }
+}

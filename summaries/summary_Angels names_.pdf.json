@@ -1,0 +1,96 @@
+{
+  "header": {
+    "title": "Index of Angel names, magical words, and names of God",
+    "authors": [
+      "Unknown Compiler"
+    ],
+    "category": "Western Esotericism, Grimoire Tradition, Magical Lexicon",
+    "keywords": [
+      "Angelology",
+      "Demonology",
+      "Divine Names",
+      "Magical Words",
+      "Grimoires",
+      "Occultism",
+      "Reference Work"
+    ]
+  },
+  "central_thesis": "This index serves as a comprehensive, cross-referenced lexicon for practitioners and researchers engaging with classical and early modern grimoire traditions by providing a structured directory of essential magical names, words, and divine epithets found in foundational esoteric texts.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction to the Index and Source Texts",
+      "summary": "This section introduces the purpose of the index as a reference tool for magical names and words. It highlights the diverse foundational grimoires and esoteric texts from which the entries are drawn, providing an essential context for understanding the broader grimoire tradition."
+    },
+    {
+      "chapter_title": "Alphabetical Compendium of Magical Entities and Terms",
+      "summary": "The core of the work, this alphabetical listing provides entries for angel names, demon names, divine epithets, and magical words. Each entry is cross-referenced to its source text(s) and specific locations, serving as a practical guide for identification and contextualization within operative magical systems. Entries often specify the entity's type or associated correspondence, such as 'angel of the 2nd month', 'demon', 'aerial spirit', 'name of God', 'angel of the zodiac', or 'Olympic spirit'."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Angel Names",
+      "definition": "Names of celestial beings invoked for assistance, protection, or knowledge in various magical operations, often categorized by planetary, elemental, or temporal correspondences. Examples include 'Aariel', 'Abariel', 'Aiel', 'Gabriel'."
+    },
+    {
+      "term": "Magical Words",
+      "definition": "Potent words, often of Hebrew, Greek, or Latin origin, used in invocations, charms, or sigils to effect magical change. Examples include 'Abracadabra', 'ALPHA', 'Omega'."
+    },
+    {
+      "term": "Names of God",
+      "definition": "Various divine epithets and names, frequently of Qabalistic or Abrahamic origin, employed for authority, protection, and power in magical rituals. Examples include 'ADONAI ELOHIM', 'IAH', 'YHVH'."
+    },
+    {
+      "term": "Grimoire Tradition",
+      "definition": "A lineage of magical texts, typically from the late medieval to early modern period, containing instructions for summoning spirits, performing divinations, and creating magical talismans. This index references key grimoires such as 'Key of Solomon', 'Lemegeton', 'Grand Grimoire', and 'Heptameron'."
+    },
+    {
+      "term": "Invocation/Evocation",
+      "definition": "Operative magical techniques central to many grimoires, involving calling upon spiritual entities (angels, demons, planetary intelligences) to appear or influence events. The names and words listed in this index are the fundamental components for such practices."
+    },
+    {
+      "term": "Correspondences",
+      "definition": "A system of symbolic relationships (e.g., planets, elements, days, hours, zodiacal signs) that link various aspects of the cosmos and are crucial for timing and structuring magical workings. Many angel names are indexed with their associated day, month, or zodiacal sign, reflecting this core principle."
+    }
+  ],
+  "practical_system": {
+    "description": "This index does not present an independent practical magical system. Instead, it serves as an indispensable reference tool for operating within numerous pre-existing grimoire traditions. It systematically catalogs the essential nomenclature—names of angels, demons, divine epithets, and magical words—required to perform rituals and invocations described in foundational occult texts. A practitioner would use this index to find the correct spelling and source of a specific name or word needed for a particular working outlined in one of the referenced grimoires, ensuring accuracy and adherence to traditional methods. Its utility lies in facilitating access to and verification of magical vocabulary across a wide array of canonical texts.",
+    "tools": [
+      "Magical wands, swords, lamens, and rings (for inscribing divine/angelic names or magical words)",
+      "Parchment or paper talismans (for precise names and words)",
+      "Oral invocations and conjurations (for accurate pronunciation of names)",
+      "Source grimoires themselves, such as 'Key of Solomon' and 'Lemegeton'"
+    ],
+    "rituals": [
+      "Angelic invocations (e.g., from Abramelin, Heptameron, Liber Juratus, Key of Solomon)",
+      "Demonic evocations (e.g., from Grand Grimoire, Grimorium Verum, Lemegeton, Testament of Solomon)",
+      "Planetary magic workings (e.g., from Arbatel, Heptameron, Picatrix, Key of Solomon)",
+      "Divine Name recitations for power and protection (e.g., across Key of Solomon, Liber Juratus)"
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Index of Angel names, magical words, and names of God",
+      "page": null
+    },
+    {
+      "text": "Abbreviations: A: Arbatel of Magic, Ab: Book of the Sacred Magic of Abramelin the Mage, E: Book of Enoch (Charles tr.), G: Grand Grimoire, GV: Grimorium Verum, H: Heptameron, Peter de Abano, J: Liber Juratus (Sworn Book of Honorius), K: Key of Solomon (ed. Mathers), L: Lemegeton, P: Picatrix, ed. Pingree, 1986, T: Johannes Trithemius, De Septem Secundeis, 1508, TS: Testament of Solomon",
+      "page": null
+    },
+    {
+      "text": "Aamon (demon): G",
+      "page": null
+    },
+    {
+      "text": "ADONAI ELOHIM TZABAOTH SHADDAI: K",
+      "page": null
+    },
+    {
+      "text": "Abrasiel (lesser angel of the 7th hour of the day): L 3",
+      "page": null
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This index is highly relevant as a meta-text for Western Esotericism. It acts as a Rosetta Stone for navigating the complex nomenclature of seminal grimoires. By centralizing references to angels, demons, divine names, and magical words from diverse sources, it facilitates comparative study, ritual preparation, and historical research into the syncretic nature of grimoire traditions. It underscores the importance of precise terminology and divine authority in these systems, essential for successful magical operation and scholarly understanding.",
+    "target_audience": "Academic researchers specializing in occult history and Western Esotericism, practitioners of grimoire magic who require precise names and references for their operations, and students of comparative religion or folklore interested in magical texts. It assumes a foundational understanding of the referenced grimoire traditions and the operative principles of ritual magic."
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "header": {
+    "title": "Psi Test Feats Achieved Alone at Home: Do they Disappear under Lab Control?",
+    "authors": [
+      "SUITBERT ERTEL"
+    ],
+    "category": "Parapsychology",
+    "keywords": [
+      "psi",
+      "hit-rates",
+      "home testing",
+      "lab control",
+      "ball-selection test",
+      "bead-selection test",
+      "fraud",
+      "bias",
+      "effect size"
+    ]
+  },
+  "central_thesis": "Extraordinary hit-rates in unsupervised home psi tests are ambiguous, potentially reflecting genuine psi or fraudulent/negligent conduct. The 'first-home-then-lab-test' strategy, by retesting high scorers under lab control, can validate these home-based psi effects as genuine and reduce the relevance of fraud or bias as an explanation for observed hit surpluses.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract",
+      "summary": "The paper investigates the ambiguity of high hit-rates in unsupervised home psi tests by employing a 'first-home-then-lab-test' strategy. High-scoring student participants (N=238 for Sample 1, N=47 for Sample 2) from home-based ball-selection tests were retested under lab control. Both hypotheses—decline of hit-rates under lab control (due to less psi-conducive conditions and regression to the mean) and significant above-chance hit-rates under lab control (due to genuine psi)—were confirmed. Critically, some participants showed significantly *higher* hit-rates under lab control, suggesting fraud and bias are less relevant."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "The author, due to funding limitations, conducted experimental research into the paranormal by inviting students to perform psi tests at home, acknowledging the methodological qualm of not ruling out fraud. The primary aim was to investigate if high scorers from home tests produce random hit-rates under lab control (supporting fraud/bias) or still significantly above-chance hit-rates (supporting genuine psi), and if the latter, why hit-rates decline under control."
+    },
+    {
+      "chapter_title": "Method",
+      "summary": "Describes the participants (student cohorts, selected high-scorers), experimenters (author and student assistants), and materials used: Ball-selection test I (50 numbered table tennis balls, guess numbers), Ball-selection test II (balls with numbers and colors, guess both), and Bead-selection test (1500 colored beads, guess colors). Procedures for both home (self-administered) and lab (experimenter-supervised) tests are detailed, emphasizing blind drawing and recording. Data analysis primarily uses the Binomial test, transforming individual Z-scores into effect sizes (ES = Z/√n) and testing significance across individuals with a chi-square formula."
+    },
+    {
+      "chapter_title": "Results",
+      "summary": "Results for Sample 1 (N=16) and Sample 2 (N=13) high-scorers showed a significant decline in effect size from home to lab conditions (e.g., Sample 1: ES_home=0.369, ES_lab=0.122; Sample 2: ES_home=0.275, ES_lab=0.098), confirming both hypotheses. However, despite the decline, hit-rates under lab control remained highly significant (p < 10^-15 for both samples). Notably, three participants (Ahmed, Amelie, Silke) exhibited significantly *increased* hit-rates under lab control, suggesting psi-enhancing effects rather than inhibitory ones, and further undermining fraud/bias explanations."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "The discussion confirms that high-scorers under lab control did not produce random hit-rates, supporting the presence of paranormal abilities. The decline in hit-rates under lab control is attributed to regression to the mean and less psi-conducive conditions (e.g., stress). The surprising increase in hit-rates for three participants under lab control strongly suggests that fraud and bias are largely irrelevant to explaining observed hit-score differences, as genuine psi effects can be enhanced or diminished by situational factors, including experimenter presence."
+    },
+    {
+      "chapter_title": "Conclusion",
+      "summary": "The study concludes that high hit-rate excesses in unsupervised home tests indicate genuine paranormal ability, as many high scorers maintain significant hit deviations under lab control. The 'first-home-then-lab-test' strategy is recommended as a methodological rule for identifying psi-gifted individuals efficiently and cost-effectively, potentially overcoming the 'tiny' and 'elusive' nature of typical psi effects."
+    },
+    {
+      "chapter_title": "Appendix",
+      "summary": "Provides a detailed analysis of the bead-selection test (Cohort 7, 2004), noting an unexpected peculiarity: significant hit differences among the five color targets for 11 individuals. Average hit excesses were less marked than in ball test I, suggesting psi might bifurcate into 'average hit level' and 'differential effect' components. Despite a lower effect size, the combined analysis of bead test results achieved similar significance levels to the best ball-selection cohort, attributed to a larger number of trials."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Psi power",
+      "definition": "A general term referring to purported psychic abilities or anomalous processes of information or energy transfer not currently explicable in terms of known physical or biological mechanisms."
+    },
+    {
+      "term": "First-home-then-lab-test strategy",
+      "definition": "A methodological approach where participants initially conduct psi tests in an unsupervised home environment, and only those who achieve high scores are subsequently invited to perform additional tests under strict laboratory control."
+    },
+    {
+      "term": "Ball-selection test I",
+      "definition": "An experimental paradigm where participants blindly draw one of 50 numbered table tennis balls (1-5, ten of each) from an opaque bag after guessing the number, with a mean chance expectation (MCE) of P=0.20."
+    },
+    {
+      "term": "Ball-selection test II",
+      "definition": "A variation of the ball-selection test where table tennis balls are marked with numbers (1-5) and also sprinkled with red or green dots, requiring participants to guess both number and color, with an MCE of P=0.10."
+    },
+    {
+      "term": "Bead-selection test",
+      "definition": "An experimental paradigm using a box of 1500 small handicraft beads (five colors, 300 of each), where participants blindly draw beads to achieve a desired target color. The number of hits is fixed (e.g., 100 hits per sub-series), while the number of trials is open, with an MCE of P=0.20 for colors."
+    },
+    {
+      "term": "Effect size (ES)",
+      "definition": "A standardized measure of the magnitude of an observed effect, calculated as Z/√n (where Z is the Binomial Z-score and n is the number of trials), used to compare performance across different conditions or studies."
+    },
+    {
+      "term": "Regression to the mean (RTM)",
+      "definition": "A statistical phenomenon where an exceptional performance or measurement is likely to be followed by a more average or less extreme one, due to the influence of random factors."
+    },
+    {
+      "term": "Psi-conducive conditions",
+      "definition": "Environmental or psychological factors (e.g., relaxed atmosphere, lack of stress) hypothesized to be favorable for the manifestation of psi abilities, as opposed to psi-inhibiting conditions (e.g., formal lab setting, tension)."
+    }
+  ],
+  "practical_system": {
+    "description": "The practical system outlined is the 'first-home-then-lab-test strategy' for identifying and validating psi ability. This system involves two main phases: an initial screening phase conducted by participants themselves in an unsupervised home setting to efficiently identify high-scorers, followed by a validation phase where these high-scorers perform additional tests under strict laboratory control to confirm genuine psi effects and mitigate concerns of fraud or unconscious bias.",
+    "tools": [
+      "Opaque bag (approximately 30cm x 40cm, originally for sports shoes) for ball tests.",
+      "50 table tennis balls, each marked with one of five digits (1-5), ten balls per digit, for Ball-selection test I.",
+      "Table tennis balls additionally sprinkled with red or green dots for Ball-selection test II.",
+      "Box containing 1500 small handicraft beads (4mm diameter), with five distinct colors (red, green, blue, yellow, white), 300 beads per color, for the Bead-selection test.",
+      "Record forms to be filled by participants (home tests) or experimenters (lab tests) for recording guessed and drawn numbers/colors or frequencies of blind draws."
+    ],
+    "rituals": [
+      "Home Test Protocol: Participants record their guessed number/color, then blindly draw a ball/bead from an opaque container, record the actual result, and replace the item. This process is repeated for a specified number of trials (e.g., 360-480 trials in 6-8 runs of 60 trials each) within a set timeframe (e.g., 8 days).",
+      "Lab Test Protocol: High-scoring participants from home tests are re-invited to perform the same or similar tests in a lab. An experimenter (sometimes student assistants) sits opposite the participant, observes behavior, and manually records guesses and draws to ensure strict adherence to blind conditions and prevent sensory leakage or manipulation. Each draw is preceded by stirring balls/beads.",
+      "Ball-Selection Test Procedure: Prior to each trial, the participant guesses a number (or number and color for Version II). They shake the opaque bag, close their eyes, reach in, pick and draw a ball, check the result, write it down, and return the ball to the bag.",
+      "Bead-Selection Test Procedure: The participant decides on a target color for a row of 10 hits. For each hit, they stir beads in the box with outstretched fingers, draw with eyes closed, and return the bead to the box. They record the number of draws needed to achieve each hit, with 100 hits per sub-series and 300 total hits required for a complete test unit."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "One way out of this dilemma is to let participants run psi tests at home and to invite high scorers thereafter to do additional runs under lab control.",
+      "page": "1"
+    },
+    {
+      "text": "However, the results show that high-scorers under home-conditions, when tested under lab control, did not produce hit-rates at random.",
+      "page": "13"
+    },
+    {
+      "text": "Curiously, for three high scorers at home, for Ahmed, Amelie, and Silke, hit-rates under lab control were vastly greater, as is shown in Figure 4 and Table 3.",
+      "page": "11"
+    },
+    {
+      "text": "The results suggest that hit-rate excesses in multiple-choice tests obtained by samples of participants alone at home, without lab control, do indicate paranormal power since quite a few high scorers at home are capable of producing significant hit deviations under lab control as well.",
+      "page": "14"
+    },
+    {
+      "text": "The common lament of the para-community and their critics about \"tiny” and “elusive” experimental psi effects might eventually lose its grounds and henceforth be remembered as symptom of past methodological deficiency.",
+      "page": "15"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant to the field of parapsychology, particularly in addressing the long-standing debate concerning the reliability and validity of psi experiments conducted under varying levels of control. It proposes and empirically tests a methodological strategy to reconcile findings from unsupervised home settings with those from controlled laboratory environments. By demonstrating significant psi effects even under lab conditions, and in some cases, enhanced performance, the study challenges conventional skeptical interpretations and provides a pathway for identifying and working with 'psi-gifted' individuals, which has significant implications for future research design and resource allocation in the field.",
+    "target_audience": "The primary target audience includes academic researchers and practitioners in parapsychology, experimental psychology, and statistics who are interested in the methodology and empirical evidence for psi phenomena. It is also relevant for critics and skeptics of parapsychology, as it directly addresses concerns about fraud and bias, and for students in these fields seeking to understand the complexities of experimental design in anomalous research."
+  }
+}

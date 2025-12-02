@@ -1,0 +1,121 @@
+{
+  "header": {
+    "title": "BIBLIA CABALISTICA OR THE CABALISTIC BIBLE",
+    "authors": [
+      "REV. WALTER BEGLEY"
+    ],
+    "category": "Western Esotericism, Cabala, Numerology, Biblical Exegesis",
+    "keywords": [
+      "Cabala",
+      "Gematria",
+      "Biblical numerology",
+      "Christian Cabala",
+      "Latin Cabala",
+      "Numerical exegesis",
+      "Patristic numerology",
+      "Lutheran Cabala",
+      "Isopsephy",
+      "Theosophy"
+    ]
+  },
+  "central_thesis": "This book provides an exhaustive historical collection of various numerical cabalas, including Hebrew, Greek, and particularly the lesser-known Latin forms (gematria, trigonalis, simplex, etc.), demonstrating their curious application to the Holy Scriptures, Apocrypha, and theological themes by ancient, medieval, and early modern scholars, often revealing hidden mystical meanings, prophecies, or theological proofs through numerical equivalences of texts and concepts.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction",
+      "summary": "The introduction differentiates between the 'old cabala' (primarily Hebrew/Greek gematria) and the 'new Latin cabala' (post-1530). It establishes the book's focus on Christian applications of numerical cabalas, often drawing from rare and obscure sources, and contextualizes cabala within broader esoteric traditions like Gnosticism and Pythagoreanism. Begley advocates for a more serious study of Biblical numerology, dismissing its universal condemnation as mere folly, and highlights the esoteric intent behind many scriptural narratives."
+    },
+    {
+      "chapter_title": "Vetus Testamentum Cabalisticum",
+      "summary": "This section presents numerous examples of numerical cabalas derived from Old Testament passages. It includes interpretations from Genesis (e.g., linking numerical values to Messianic prophecies), Psalms (dedications to historical figures like Ludwig XIV, Emperor Charles VI, or Elizabeth Christina), Proverbs, Isaiah (revealing 'Jesus Christ' through text numeration), Jeremiah, Ezekiel, Daniel (prophetic numbers), Micah, and Habakkuk. These examples showcase various cabalistic systems like gematria and cabala trigonalis applied to both Hebrew and German translations of the texts."
+    },
+    {
+      "chapter_title": "Apocrypha",
+      "summary": "This part extends the numerical analysis to texts from the Apocrypha, featuring examples from Esdras, Judith, Sapientia, Baruch, and Machabees. The cabalistic interpretations here are frequently tied to specific historical individuals, political events, or dedications, illustrating how numerical esotericism was used for various secular and religious panegyrics or commentaries during different historical periods, particularly in Germanic and Italian contexts."
+    },
+    {
+      "chapter_title": "Novum Testamentum Cabalisticum",
+      "summary": "This chapter focuses on the New Testament, presenting cabalistic interpretations from texts like Matthew (including lengthy soliloquies of the Virgin Mary, numerical proofs for Peter as the Rock), Luke (e.g., numerations of the 'Ave Maria'), John (numerical identities of Christ's name and attributes), Acts (celebrations of evangelists and church figures), and the Apocalypse (interpretations of the number 666 and other prophetic figures). It features works by prominent cabalists such as Josephus Mazza and J. B. Spadius, often reflecting a Catholic theological perspective."
+    },
+    {
+      "chapter_title": "Appendix: Cabalistic Curios, Scriptural, Patristic, and Lutheran",
+      "summary": "This appendix delves deeper into significant mystical numbers. It analyzes the number 153 (the miraculous catch of fishes), associating it with the 'Sons of God' and concepts of perfection and regeneration, noting its geometric and biblical significance. It also provides an extensive examination of the number 6 and 666, linking them to 'Man without God' and the Antichrist, with historical applications against various Popes (especially Leo X). Furthermore, it explores Daniel's prophetic numbers (2300, 1290, 1335), presenting elaborate Lutheran cabalistic interpretations that unfold Christian mysteries and anti-papal polemics."
+    },
+    {
+      "chapter_title": "Bibliography",
+      "summary": "A comprehensive listing of the numerous rare and specialized works cited throughout the book, including various historical cabalistic treatises, pamphlets, and academic discussions. This section is crucial for academic research into the history of cabalistic thought and its textual manifestations across different linguistic and theological traditions."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Cabala (Biblical/Numerical)",
+      "definition": "A system of textual exegesis that assigns numerical values to letters in words and phrases to uncover hidden mystical meanings, prophecies, or theological truths within sacred texts. The book distinguishes between older Hebrew/Greek forms and later, less recognized, Latin forms."
+    },
+    {
+      "term": "Gematria",
+      "definition": "An ancient cabalistic method of calculating the numerical value of words and phrases by summing the values of their constituent letters, then finding connections to other words or phrases with the same numerical sum. This practice is seen in Hebrew, Greek (Isopsephy), and Latin traditions."
+    },
+    {
+      "term": "Cabala Trigonalis",
+      "definition": "A specific Latin cabala system, primarily developed in Germany, where letters are assigned values according to an arithmetical progression based on triangular numbers (A=1, B=1+2=3, C=3+3=6, etc.). This method was notably used for anti-papal polemics."
+    },
+    {
+      "term": "Cabala Simplex",
+      "definition": "A straightforward Latin cabala system where letters are assigned simple sequential numerical values (A=1, B=2, C=3, etc.). This system was favored by Italian cabalists."
+    },
+    {
+      "term": "The Number 153",
+      "definition": "A numerically significant figure, especially in Christian cabala, representing the 'Sons of God,' the number of the elect, and concepts of spiritual perfection and regeneration. It is often linked to the miracle of the great catch of fishes in John xxi. 11 and possesses unique mathematical properties (e.g., sum of the first 17 integers)."
+    },
+    {
+      "term": "The Number 666",
+      "definition": "Referred to as the 'number of the Beast' in the Apocalypse, cabalistically interpreted as representing 'Man without God' or spiritual imperfection. Historically, this number was frequently applied by Protestant cabalists to denounce various Popes as Antichrist figures, particularly Leo X."
+    },
+    {
+      "term": "Daniel's Prophetic Numbers",
+      "definition": "Specific numbers from the Book of Daniel (e.g., 2300, 1290, 1335) that were subjected to extensive cabalistic analysis, particularly by Lutheran scholars, to extract end-time prophecies, anti-papal messages, and insights into Christian doctrines."
+    }
+  ],
+  "practical_system": {
+    "description": "This book is primarily an historical and analytical compilation of various numerical cabalistic systems as they were applied to sacred texts. It does not present a unified, directly actionable 'practical system' for a modern practitioner to learn and operate from scratch. Instead, it offers a vast repertoire of examples and methodologies (e.g., Hebrew Gematria, Greek Isopsephy, Latin Simple Cabala, Latin Triangular Cabala, Chronograms, Notaricon) demonstrating *how* past cabalists extracted 'hidden meanings' and 'prophecies' from scriptural passages by assigning numerical values to letters and summing them. The operative side, as implied by the examples, involves an intricate intellectual exercise of numerical calculation, textual manipulation, and interpretive ingenuity to find correspondences between textual sums and desired theological, historical, or personal concepts.",
+    "tools": [
+      "Alphabetical numerical equivalences (Hebrew, Greek, Latin, various systems)",
+      "Scriptural texts (Bible, Apocrypha)",
+      "Intellectual capacity for complex calculation and interpretation"
+    ],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "The symbolical meaning of numbers in Holy Scripture deserves more study and attention than it has received in recent times.",
+      "page": "16"
+    },
+    {
+      "text": "The old cabala per gematriam...is well known to Biblical scholars everywhere. The new cabala is scarcely mentioned in any books of reference, and the works containing specimens of it are rare in the highest degree...",
+      "page": "15"
+    },
+    {
+      "text": "My strong opinion is that this is throughout a cryptic statement of an esoteric character, that there is much more in it than appears to the ordinary reader...",
+      "page": "19"
+    },
+    {
+      "text": "But what a regrettable incident if forty happy years of married life had really thus been sacrificed, through both parties being ignorant of the mystical and cabalistic meaning of the number 6!",
+      "page": "20"
+    },
+    {
+      "text": "The cabala trigonalis thus singularly brought into vogue in Germany held its ground there almost to the exclusion of the simpler cabala for some time, and several at Breslau and elsewhere afterwards followed in his steps...",
+      "page": "28"
+    },
+    {
+      "text": "The assumption is that 153 is cabalistically the number of the Sons of God.",
+      "page": "127"
+    },
+    {
+      "text": "If 6 cabalistically represents Man without God, we may well expect that 666, or the threefold 6, should represent still more essentially the same idea, and so we find it.",
+      "page": "131"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "Begley's 'Biblia Cabalistica' is highly relevant for understanding the historical development and application of numerical esotericism, particularly within Christian contexts often overlooked by studies focused solely on Jewish Kabbalah. It serves as an invaluable anthology of diverse cabalistic methods (gematria, trigonalis, simplex, etc.) applied to an extensive range of biblical and apocryphal texts. For scholars, it provides rich primary source material illustrating how numerology was used for theological exegesis, political commentary, and polemics (e.g., anti-papal interpretations of 666). For practitioners, it offers a deep historical context for numerical magic, demonstrating how different systems were conceptualized and used to uncover 'hidden truths,' thereby enriching a magician's understanding of the historical roots and diverse methodologies of Qabalistic practices beyond standard interpretations. The book's strength is its meticulous cataloging of these intricate and often ingenious applications, bridging academic and operative interests.",
+    "target_audience": "The book explicitly targets 'lovers and collectors of literary curiosities,' 'readers who are...on the increase nowadays' in unique literature, and those interested in 'curious, paradoxical, out of the common run' books. Academically, its audience includes scholars of Western Esotericism, the history of occultism, religious studies, and comparative mysticism. Practically, it appeals to practitioners of Qabalah, numerical magic, and related esoteric disciplines who seek to understand the historical breadth, varied methodologies, and specific applications of numerical exegesis in Christian and other traditions, providing a foundation for innovative approaches to symbolic and numerical work."
+  }
+}
