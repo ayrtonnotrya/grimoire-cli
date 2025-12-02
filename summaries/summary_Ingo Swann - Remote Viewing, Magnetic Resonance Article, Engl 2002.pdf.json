@@ -1,0 +1,122 @@
+{
+  "header": {
+    "title": "REMOTE VIEWING WITH THE ARTIST INGO SWANN: NEUROPSYCHOLOGICAL PROFILE, ELECTROENCEPHALOGRAPHIC CORRELATES, MAGNETIC RESONANCE IMAGING (MRI), AND POSSIBLE MECHANISMS",
+    "authors": [
+      "M. A. PERSINGER",
+      "W. G. ROLL",
+      "S. G. TILLER",
+      "S. A. KOREN",
+      "C. M. COOK"
+    ],
+    "category": "Scientific Study (Neuropsychology, Parapsychology, Biophysics)",
+    "keywords": [
+      "Remote Viewing",
+      "Ingo Swann",
+      "Neuropsychology",
+      "EEG",
+      "MRI",
+      "Magnetic Fields",
+      "Consciousness",
+      "Parapsychology",
+      "Geomagnetic Field"
+    ]
+  },
+  "central_thesis": "The study investigates the neurophysiological and physical correlates of remote viewing, proposing that this paranormal phenomenon is linked to specific brain activity (e.g., 7-Hz spike and slow wave activity over occipital lobes) and unique structural/functional organization within the right parieto-occipital region of the brain. It suggests that remote viewing may be enhanced by experimentally generated weak complex magnetic fields and does not necessarily require non-physical or spiritual explanations, but rather physical events and processes interacting with altered cerebral perception.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction",
+      "summary": "This section introduces remote viewing as the awareness of distant objects without normal senses, framed as a neuroperceptual problem. The authors argue that scientific methods, not mystical assumptions, are optimal for studying such phenomena, positing that all experiences correlate with brain activity and are evoked by physical stimuli, which some individuals with altered brain microstructures might detect."
+    },
+    {
+      "chapter_title": "Method",
+      "summary": "This section details the experimental design, including the subject (Ingo Swann), his initial neuropsychological and personality assessment, and exposure to specific counterclockwise circumcerebral magnetic fields (burst-firing and frequency-modulated patterns). The core procedure involved Swann attempting to remotely view proximal hidden stimuli (pictures/objects) and distant 'outbound' locations while his electroencephalographic (EEG) activity was recorded. Magnetic Resonance Imaging (MRI) was also performed. Drawings and verbal descriptions were rated for accuracy."
+    },
+    {
+      "chapter_title": "Results",
+      "summary": "Swann's neuropsychological assessment showed mostly average to above-average scores, but with specific below-normal scores related to right hemisphere functions (e.g., toe gnosis, left hand dexterity). Subjective experiences varied with magnetic field patterns, including visual phenomena and pressure. Remote viewing periods correlated with bursts of paroxysmal 7-Hz spike and slow wave activity over the occipital lobes, which was absent during baseline. This 7-Hz activity significantly correlated with the accuracy of his remote viewing. MRI revealed several clusters of unidentified bright objects within the subcortical white matter of the right occipital lobe and below the parieto-occipital sulcus."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "The findings suggest that Ingo Swann's brain organization allows for distant information representation, with accuracy correlated to 7-Hz paroxysmal activity, likely originating subcortically (e.g., hippocampal-amygdaloid transition area) and involving altered pulvinar modulation. The paper hypothesizes that remote viewing could involve accessing information contained within the geomagnetic field itself, represented holographically, possibly during 'temporal dilation' in conscious processing. This framework aligns with a physical, rather than spiritual, explanation for paranormal phenomena."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Remote Viewing",
+      "definition": "Awareness of distant objects or places without employing normal senses, which the study attempts to explain through neurophysiological and biophysical mechanisms rather than mystical ones."
+    },
+    {
+      "term": "7-Hz Spike and Slow Wave Activity",
+      "definition": "A specific electroencephalographic signature observed over the occipital lobes during remote viewing, which was found to be positively correlated with the accuracy of the subject's perceptions. This activity was absent during baseline periods."
+    },
+    {
+      "term": "Circumcerebral Magnetic Fields",
+      "definition": "Experimentally generated weak complex magnetic fields applied to the subject's head (2,000 nT to 5,000 nT), which significantly altered his subjective experiences and are hypothesized to enhance remote viewing by interacting with the 'neuromagnetic binding factor' of consciousness."
+    },
+    {
+      "term": "Holographic-like Representation",
+      "definition": "A theoretical model proposed for how distant information might be discerned, suggesting that information is contained within a holographic-like representation in space (e.g., the geomagnetic field) rather than being propagated and attenuated over distance."
+    },
+    {
+      "term": "Geomagnetic Field",
+      "definition": "The Earth's static magnetic field, hypothesized to contain specific interference or birefringence patterns from objects and events, which, when 'subtracted' from the constant field, could form electromagnetic units of information accessible through altered perception."
+    },
+    {
+      "term": "Neuroperceptual Integration",
+      "definition": "The brain's processing of multiple, parallel sequences of electromagnetic information from transduced physical stimuli. The paper suggests that individuals with different modulations of this integration might perceive stimuli typically not discerned by most."
+    }
+  ],
+  "practical_system": {
+    "description": "The paper outlines an experimental system for inducing and measuring remote viewing, focusing on controlled environmental conditions and simultaneous neurophysiological monitoring. It involves exposing a subject with a known capacity for remote viewing (Ingo Swann) to specific weak complex magnetic fields, then asking them to perceive hidden or distant targets while their brain activity is recorded. The system uses structured protocols for stimulus presentation, response collection (drawings and verbal descriptions), and quantitative analysis, including accuracy ratings and correlations with EEG patterns and brain imaging.",
+    "tools": [
+      "Eight equally spaced solenoids: To generate counterclockwise circumcerebral magnetic fields (2,000 nT to 5,000 nT intensity, various wave patterns).",
+      "Meda FM 300 vector magnetometer: For measuring and verifying the resultant magnetic field in the chamber.",
+      "Acoustic chamber: To provide a controlled, quiet environment, minimizing external sensory input.",
+      "Lapel microphone: To record the subject's verbal descriptions and comments during experiments.",
+      "EEG sensors (silver electrodes) and EC2 cream: For recording electroencephalographic activity from frontal, temporal, and occipital lobes.",
+      "Manilla envelopes: To conceal proximal stimuli (colored photographs, objects).",
+      "Polaroid pictures and street addresses: To designate distant targets for outbound experiments.",
+      "Synchronized watches: To ensure precise timing and coordination between the subject's remote viewing and experimenters' presence at target sites.",
+      "Magnetic Resonance Imaging (MRI) scanner (1.5 T): For detailed structural brain imaging.",
+      "Whissell's Dictionary of Affect: Software used for automated analysis of emotional and linguistic characteristics of verbal descriptions."
+    ],
+    "rituals": [
+      "Subject undergoes neuropsychological assessment to establish baseline cognitive and personality profiles.",
+      "Subject is exposed to specific circumcerebral magnetic fields (burst-firing or frequency-modulated patterns with various parameters) for 5-minute intervals in an acoustic chamber, blindfolded, while subjective experiences are monitored.",
+      "Subject sits in a quiet, blindfolded acoustic chamber with EEG sensors (F7, F8, T3, T4, O1, O2) attached, undergoing baseline and active remote viewing recordings.",
+      "Remote viewing sessions involve sketching and verbally describing hidden proximal targets (pictures/objects in envelopes) or distant outbound targets (locations viewed by experimenters).",
+      "Feedback/reinforcement sessions: Subject reviews their drawings and descriptions against the actual targets to discern similarities, aiding in learning and calibration of perception.",
+      "Magnetic Resonance Imaging (MRI) scan of the brain for structural analysis, particularly of potential anomalies in regions correlated with remote viewing."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Remote viewing may be enhanced by complex experimentally generated magnetic fields designed to interact with the neuromagnetic 'binding factor' of consciousness.",
+      "page": "1"
+    },
+    {
+      "text": "We contend that mystical assumptions or implicit references to nonphysical or spiritual explanations are not required to study parapsychological experiences.",
+      "page": "1"
+    },
+    {
+      "text": "Electroencephalographic recording during Mr. Swann's behavior that he labeled as remote viewing was associated with bursts of paroxysmal 7-Hz spike and slow wave-like activity over the occipital regions but not over the prefrontal and temporal lobes.",
+      "page": "6"
+    },
+    {
+      "text": "There were statistically significant (p<.05) positive correlations between the congruence between pictures or objects and their drawings and the total numbers of seconds containing 7-Hz spikes, the percentage of these spikes per trial, and the numbers of separate episodes of trains of these spikes per trial.",
+      "page": "13"
+    },
+    {
+      "text": "The physical mechanism by which information at a distance could be discerned would require a holographic-like representation within space rather than the propagation of information that would be attenuated over space. The information might be contained within the geomagnetic field itself and would be associated with processes within and around the energy now described as flux lines.",
+      "page": "19"
+    },
+    {
+      "text": "This same region was associated with anomalous signals within the white matter, as discerned by Magnetic Resonance Imaging completed within two days after the last experimental tests.",
+      "page": "17"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant for understanding scientific approaches to anomalous cognition, particularly remote viewing. It deviates significantly from traditional esoteric or occult frameworks by proposing purely neurophysiological and biophysical mechanisms, challenging non-physical or spiritual explanations. It attempts to bridge the gap between subjective 'paranormal' experiences and measurable scientific phenomena, contributing to discussions on consciousness, perception, and the role of electromagnetic fields in biological systems. For esotericism, it represents an alternative, materialist interpretation of phenomena often attributed to magical or psychic abilities, potentially influencing how such experiences are viewed or studied within a more scientifically-aligned magical paradigm.",
+    "target_audience": "Academic researchers and practitioners in neuroscience, parapsychology, cognitive psychology, and biophysics. Individuals interested in the scientific investigation of anomalous phenomena like remote viewing. While not directly aimed at occultists or magicians, it offers a scientific perspective on abilities often categorized as 'magical,' which might be of interest for comparative study or critical evaluation of esoteric claims regarding the mechanisms of perception."
+  }
+}

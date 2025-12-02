@@ -1,0 +1,107 @@
+{
+  "header": {
+    "title": "WEHMAN’S FORTUNE TELLING WITH CARDS",
+    "authors": [
+      "Madame Camille Le Normand",
+      "Henry J. Wehman"
+    ],
+    "category": "Western Esotericism",
+    "keywords": [
+      "Fortune Telling",
+      "Cards",
+      "Divination",
+      "Cartomancy",
+      "Esotericism",
+      "Occult Practices",
+      "Le Normand System"
+    ]
+  },
+  "central_thesis": "The book presents a comprehensive, rule-based system for fortune-telling using standard playing cards, rooted in historical cartomancy traditions and adapted by Madame Camille Le Normand. It aims to provide clear, systematic methods for interpreting individual cards and their combinations to reveal past, present, and future events, as well as to answer specific personal questions.",
+  "structure_content": [
+    {
+      "chapter_title": "Introductory Remarks",
+      "summary": "This section introduces the historical context and alleged 'scientific' basis of cartomancy, emphasizing its efficacy as a method of divination and its distinction from mere games of chance. It aims to legitimize the practice within a broader esoteric framework."
+    },
+    {
+      "chapter_title": "Observations on Method of Dealing",
+      "summary": "Details the fundamental procedures for preparing the cards, including shuffling and cutting, and outlines general principles for arranging cards in various spreads to ensure accurate readings for the 'consultant' (the querent)."
+    },
+    {
+      "chapter_title": "Value and Primary Signification of the Cards",
+      "summary": "Provides exhaustive interpretations for each playing card (from Ace to King across all four suits), detailing their primary meanings when appearing in both 'upright' and 'reversed' positions. These significations cover persons, events, qualities, and abstract concepts."
+    },
+    {
+      "chapter_title": "Signification of Two/Three/Five/Twenty-one Cards when Found Side by Side",
+      "summary": "Explains how the meaning of individual cards is modified and enriched when they appear in combination with other specific cards, or when multiple cards of the same rank appear together. This forms the core of complex interpretive readings within the system."
+    },
+    {
+      "chapter_title": "Explanation of Twenty-One Cards Deals",
+      "summary": "Describes specific card layouts and spreads, such as the 'Oracle of Thirteen Cards' or 'Deal of Twenty-One Cards', providing step-by-step instructions for performing these readings and interpreting the overall narrative formed by the placed cards."
+    },
+    {
+      "chapter_title": "List of One Hundred Principal Questions",
+      "summary": "Offers a practical guide for using the divination system to answer common inquiries related to love, career, health, and personal destiny. Each question likely corresponds to a specific method of dealing or a particular focus of interpretation."
+    },
+    {
+      "chapter_title": "Chiromancy; or, The Elements of Palmistry",
+      "summary": "While primarily a card divination manual, the inclusion of a section on palmistry broadens the scope of the book, suggesting a holistic approach to understanding fate and personality through multiple divinatory arts."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Cartomancy",
+      "definition": "The art of divination or fortune-telling using a deck of playing cards, where each card holds specific symbolic meanings."
+    },
+    {
+      "term": "Upright/Reversed",
+      "definition": "The orientation of a card in a spread; 'upright' signifying one set of meanings, and 'reversed' (or inverted) signifying a modified or opposing set of meanings, often negative or delayed."
+    },
+    {
+      "term": "Consultant (Querent)",
+      "definition": "The individual for whom the card reading is being performed, whose questions and circumstances guide the interpretation of the oracle."
+    },
+    {
+      "term": "Oracle",
+      "definition": "In this context, it refers to the entire system of divination or the specific reading derived from the card layout, intended to reveal hidden truths or future events."
+    },
+    {
+      "term": "Signification",
+      "definition": "The ascribed meaning or symbolic value of an individual card, a card's orientation (upright/reversed), or a combination of cards, forming the basis for interpretation."
+    }
+  ],
+  "practical_system": {
+    "description": "The practical system is a deterministic form of cartomancy utilizing a standard deck of 52 playing cards. It relies on a fixed lexicon of meanings for each card, both upright and reversed, and a set of predefined spreads (layouts) that dictate the positional significance of the cards. The system aims for unambiguous interpretations, with instructions for combining card meanings based on their adjacency, suit, and numerical value. It posits that by following these precise rules, one can accurately 'read' the past, present, and future, and gain insight into specific questions.",
+    "tools": [
+      "One standard deck of 52 playing cards."
+    ],
+    "rituals": [
+      "Shuffling and cutting the deck in a prescribed manner to consecrate it for the reading.",
+      "Laying out cards in specific patterns, such as the 'Oracle of Thirteen Cards' or 'Deal of Twenty-One Cards', each designed for different types of inquiries.",
+      "Interpreting individual cards based on their upright or reversed orientation and their designated 'signification'.",
+      "Synthesizing the meanings of adjacent cards and significant combinations to form a coherent narrative or answer to the consultant’s question.",
+      "Focusing the mind on the specific question or individual for whom the reading is being performed to attune the oracle."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "WEHMAN’S FORTUNE TELLING WITH CARDS",
+      "page": "1"
+    },
+    {
+      "text": "© Copyright 2003",
+      "page": "1"
+    },
+    {
+      "text": "THIS IS FOR PERSONAL USE. NOT FOR RESALE.",
+      "page": "1"
+    },
+    {
+      "text": "THIS BOOK IS BEING RE-PUBLISHED BY ECDBOOKS PUBLISHING IN HARDBACK AND PAPERBACK VERSION. ALL RIGHTS RESERVED.",
+      "page": "1"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "Wehman’s Fortune Telling with Cards stands as a significant artifact within the popular occult literature of its time, providing a window into how cartomancy was systematized and marketed to a broader public. Its attribution to Madame Camille Le Normand, even if loosely, connects it to a powerful lineage of professional diviners, lending it a veneer of historical authority. The emphasis on detailed, fixed significations for each card, including upright and reversed meanings, reflects a common approach in traditional cartomancy aimed at demystifying and standardizing interpretation. While not a grimoire in the traditional sense, it operates as a practical manual for a specific divinatory 'art,' mirroring the desire to codify esoteric knowledge into accessible systems. Its primary relevance today is historical, illustrating the popularization of esoteric practices and the evolution of divination manuals.",
+    "target_audience": "The target audience is primarily the general public, including individuals new to divination or those seeking simple, accessible methods for personal fortune-telling. The clear, prescriptive instructions make it suitable for beginners or hobbyists rather than advanced occult practitioners seeking deep magical theory or complex ceremonial rituals. The emphasis on 'personal use' and 'not for resale' (though a modern disclaimer on the OCR page, likely echoing original intent for private amusement) suggests it was intended for individual consultation and entertainment rather than professional client work or advanced magical operations."
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "header": {
+    "title": "So, You Think You’re Psychic?",
+    "authors": [
+      "William M. Briggs"
+    ],
+    "category": "Skeptical Inquiry, Parapsychology, Statistics",
+    "keywords": [
+      "psychic testing",
+      "paranormal",
+      "telepathy",
+      "clairvoyance",
+      "precognition",
+      "psychokinesis",
+      "dowsing",
+      "astrology",
+      "seances",
+      "magick",
+      "skepticism",
+      "probability",
+      "sensory leakage",
+      "cold reading",
+      "experimentation"
+    ]
+  },
+  "central_thesis": "The book aims to equip readers with simple, practical, and rigorously designed experiments to scientifically test claims of psychic and spiritual powers. It emphasizes critical thinking, statistical probability, and the identification of non-paranormal explanations (such as chance, sensory leakage, experimenter effect, and cheating) to determine the validity of these phenomena, rather than accepting them based on anecdotes or faith.",
+  "structure_content": [
+    {
+      "chapter_title": "Chapter 1. Why Test Psychic And Spiritual Powers?",
+      "summary": "Introduces the concept of paranormal phenomena (psi or Ψ) and the author's purpose: to provide methods for testing psychic abilities with the same rigor as professional parapsychological laboratories. It highlights common pitfalls in parapsychological research, particularly cheating, and sets a skeptical tone, stressing the need for reproducible evidence."
+    },
+    {
+      "chapter_title": "Chapter 2. How Testing Is Done",
+      "summary": "Explains the foundational principles of scientific testing, probability, and statistical interpretation crucial for evaluating paranormal claims. Key concepts like 'probability score,' 'coincidences' (including the Law of Truly Large Numbers), and 'sensory leakage' are defined. It stresses the importance of avoiding bias, especially the 'experimenter effect,' and maintaining a detailed notebook for all results."
+    },
+    {
+      "chapter_title": "Chapter 3. Telepathy",
+      "summary": "Details experiments to test telepathy, such as card tests (using ordinary and Zener cards) and the elaborate Ganzfeld experiment. It focuses on experimental setup, proper scoring using probability tables, and extensive discussion of 'what could go wrong,' particularly regarding feedback mechanisms that can skew results."
+    },
+    {
+      "chapter_title": "Chapter 4. Clairvoyance",
+      "summary": "Presents tests for clairvoyance, defined as perceiving objects or events in the present without normal senses, distinct from mind-reading. Experiments include card tests, a book test, and a remote location test. The chapter rigorously addresses the issue of 'multiple endpoints' and the dangers of post-hoc interpretation of results, emphasizing precise definitions of a 'hit'."
+    },
+    {
+      "chapter_title": "Chapter 5. Precognition",
+      "summary": "Explores precognition, the ability to foretell future events. It critiques vague prophecies (like Nostradamus') and proposes simple tests such as dice rolls and the 'Horse Test' (betting on races or stocks). The chapter highlights issues of randomization, 'gambler's fallacy,' and the importance of predicting events *before* they happen, with clear scoring mechanisms."
+    },
+    {
+      "chapter_title": "Chapter 6. Psychokinesis",
+      "summary": "Examines psychokinesis (pk), the ability to influence physical systems with the mind. Tests include dice throws (macro-pk) and attempting to influence cotton balls. It addresses the historical problem of cheating in pk experiments (e.g., spoon bending) and critically evaluates the use of pseudo-random number generators in micro-pk research, asserting their meaninglessness due to determinism."
+    },
+    {
+      "chapter_title": "Chapter 7. Auras",
+      "summary": "Investigates the concept of auras, colorful energy fields around the body. The 'Screen Test' is introduced to test the ability to perceive auras while the subject is concealed. The chapter discusses sensory leakage and the 'experimenter effect,' drawing parallels to the debunking of 'Therapeutic Touch' by Emily Rosa, emphasizing the need for blind testing and consistent reproducibility."
+    },
+    {
+      "chapter_title": "Chapter 8. Astrology",
+      "summary": "Analyzes astrology from a skeptical viewpoint, questioning its basis in astronomy and the validity of horoscopes. Tests involve evaluating newspaper/magazine horoscopes and professional readings. The chapter demonstrates how general statements can appear accurate (cold reading) and the critical need to remove identifying information and avoid feedback during evaluation."
+    },
+    {
+      "chapter_title": "Chapter 9. Dowsing",
+      "summary": "Explores dowsing, the practice of finding hidden objects (like water) with a rod or stick. It debunks the common belief that dowsing for ubiquitous substances (like underground water) is proof of psychic ability. A controlled test involving hidden water glasses under opaque bags is described, focusing on eliminating sensory leakage and the 'ideomotor effect'."
+    },
+    {
+      "chapter_title": "Chapter 10. Astral Projection",
+      "summary": "Discusses astral projection, the concept of a spirit body leaving the physical body and observing surroundings. A simple test is proposed where a friend writes information on a paper for the 'astral projector' to observe remotely. The chapter emphasizes the need for exact observation and debunks 'close enough' interpretations and subjective feelings as evidence."
+    },
+    {
+      "chapter_title": "Chapter 11. Psychometry",
+      "summary": "Analyzes psychometry, the reading of past events or personalities from objects. Tests involve identifying the owner of a personal object or discerning a remote location an object has visited. It addresses sensory leakage (e.g., marks on objects) and the difficulty of blind testing, especially when 'meaningful' objects are used."
+    },
+    {
+      "chapter_title": "Chapter 12. Seances & Spirit Communication",
+      "summary": "Examines seances and claims of communication with the dead, referencing historical debunkers like Houdini. It details the mechanics of 'cold reading' used by mediums to create convincing, yet fraudulent, impressions. The chapter provides guidelines for testing a spiritualist's claims by asking for specific, unknown information and stresses the importance of never volunteering information."
+    },
+    {
+      "chapter_title": "Chapter 13. Other Tests",
+      "summary": "Covers diverse phenomena like Near Death Experiences, Lie Detectors, Alternative Medicines & Faith Healing, and Magick. Each is approached with skepticism, explaining how normal biological or psychological mechanisms, or the placebo effect, account for reported effects. The 'magick' section suggests testing spells for repeatable outcomes, but frames it within the difficulty of rigorous scientific control."
+    },
+    {
+      "chapter_title": "Chapter 14. Final Final Word",
+      "summary": "Reiterates the book's core message of skepticism and the inevitability of error in experiments. It consolidates common flaws: improper design, bad randomization, sensory leakage, experimenter effect, cheating ('file drawer problem'), and the 'It’s Not My Fault' syndrome. It stresses that scientific theories require verifiable predictions, not just plausible explanations, and the importance of an 'open mind' willing to change beliefs based on evidence."
+    },
+    {
+      "chapter_title": "Chapter 15. References",
+      "summary": "Provides a list of recommended web sites and books for further reading on skepticism, parapsychology, probability, and critical thinking. It explicitly advises avoiding 'fluff' and 'little substance' and focusing on sources that promote rigorous scientific inquiry."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "paranormal",
+      "definition": "Events or occurrences that cannot be explained by standard biological, physical, or scientific theories; events said to be caused by people with psychic or spiritual powers. Events like these are sometimes noted by the shorthand psi, or symbol Ψ."
+    },
+    {
+      "term": "testing",
+      "definition": "The art of deciding whether something is true or not. Also, the steps, procedures, or experiments used to gain evidence of the truth or falsity of a claim."
+    },
+    {
+      "term": "probability",
+      "definition": "A number between 0 and 1 that represents the degree of uncertainty an event has. Used as a measure of surprise; a low probability score for a given result (assuming no psychic powers) indicates greater surprise and thus indirect evidence for psi."
+    },
+    {
+      "term": "frequentist interpretation",
+      "definition": "If an event has probability p, it means that, in a large number of trials, approximately 100p% successes will occur."
+    },
+    {
+      "term": "subjective probability",
+      "definition": "Reflects one's best internal judgment or confidence that an event will occur, typically used when a large number of trials doesn't exist."
+    },
+    {
+      "term": "Law of Truly Large Numbers",
+      "definition": "No matter how unlikely an event seems in isolation, given a positive probability of occurring and a truly large number of chances to occur, the event will eventually happen."
+    },
+    {
+      "term": "multiple endpoints",
+      "definition": "The apparent explosion of possible relevant and surprising events that makes it impossible to assign a probability score because accurately counting the set of conceivable results can’t be done. This refers to post-hoc redefinition of success."
+    },
+    {
+      "term": "Law of Unsurprising Surprises",
+      "definition": "There is always a way to examine a set of data that will find at least one event that looks surprising to at least one person."
+    },
+    {
+      "term": "sensory leakage",
+      "definition": "Commonplace, but not necessarily noticed, physical sensory signals that allow one to falsely conclude that a subject displayed paranormal abilities, eliminating opportunities for normal sensory information transfer is crucial."
+    },
+    {
+      "term": "experimenter effect",
+      "definition": "When the experimenter influences the outcome of the experiment in the direction he expects or desires it to go, consciously or unconsciously."
+    },
+    {
+      "term": "double-blinding",
+      "definition": "An experiment conducted so that neither the subject nor the immediate researcher knows what the outcome should be, or what 'treatments' are being given to whom, to eliminate experimenter bias."
+    },
+    {
+      "term": "telepathy",
+      "definition": "The ability to gather information about someone else’s thoughts through non-verbal, non-sensory means. Sometimes known as mind-reading or extra-sensory perception (ESP)."
+    },
+    {
+      "term": "ganzfeld",
+      "definition": "A technique to create a uniform and minimal sensory field (e.g., ping-pong balls over eyes with red light, white noise through headphones) to reduce distractions and facilitate psychic reception in telepathy experiments."
+    },
+    {
+      "term": "clairvoyance",
+      "definition": "The ability to see or to know about things without the aid of the normal senses, specifically seeing an object or event in the present without reading someone’s mind."
+    },
+    {
+      "term": "precognition",
+      "definition": "The ability to see or know things before they happen, i.e. a premonition. Distinct from clairvoyance, which relates to events in the present."
+    },
+    {
+      "term": "psychokinesis (pk)",
+      "definition": "The ability to move or influence physical systems using only powers from the mind. Sometimes known as telekinesis, psi powers, or simply pk. Divided into macro-pk (large scale) and micro-pk (subtle, often statistical effects)."
+    },
+    {
+      "term": "aura",
+      "definition": "A colorful field of energy that envelops the body, or emanates from it, projecting several inches beyond a person’s skin. The color of this field is said to vary with the quality and internal emotional or psychic state of the person."
+    },
+    {
+      "term": "dowsing",
+      "definition": "The process of finding hidden objects with a specialized rod or stick. Also known as water-witching. Explained often by the ideomotor effect."
+    },
+    {
+      "term": "ideomotor effect",
+      "definition": "Unconscious manipulation of a dowsing apparatus or planchette, causing it to move and mistakenly attribute the movement to an external force or psychic ability."
+    },
+    {
+      "term": "astral projection",
+      "definition": "Where the spirit body, consciousness in raw form, perhaps the soul, exits the physical body and can travel large distances. As the spirit body travels it can sense and record its surroundings. Also known as an out-of-body experience or remote viewing."
+    },
+    {
+      "term": "psychometry",
+      "definition": "The reading of personalities or the seeing of past events by reading 'vibrations' and 'psychic imprints' left on some object that was owned by someone or that took part in some past, possibly traumatic, event."
+    },
+    {
+      "term": "seance",
+      "definition": "A ceremony where a group of people gather and attempt to communicate with the dead. The person leading the ceremony is called a spiritualist or psychic medium."
+    },
+    {
+      "term": "cold reading",
+      "definition": "The method of fortune-telling, in which the psychic, or reader, approaches the client, or sitter, 'cold', knowing little or nothing about the individual, who usually is a stranger. Involves observation, deduction, and formulaic statements that seem specific but are generally applicable."
+    },
+    {
+      "term": "skepticism",
+      "definition": "The cautious attitude of questioning and healthy doubt that should be the first reaction on hearing an extraordinary claim."
+    },
+    {
+      "term": "file drawer problem",
+      "definition": "When a researcher decides only to report the positive results of an experiment, ignoring negative results, which unfairly skews the perceived success rate of phenomena."
+    }
+  ],
+  "practical_system": {
+    "description": "This book does not present a 'magical system' in the occult sense. Instead, it offers a robust methodological framework for empirically testing the existence and efficacy of various paranormal claims. The core of this system is to design experiments that minimize bias, eliminate sensory leakage, ensure proper randomization, and use statistical analysis to differentiate genuine effects from chance or trickery. The author provides 'cookbook-form' procedures for specific psychic abilities, emphasizing precise definitions of 'success' (hits) and the calculation of 'probability scores' to quantify the astonishing nature of results under the assumption that no psychic ability exists. Repeatability is paramount, and post-hoc reinterpretation of data is strictly forbidden.",
+    "tools": [
+      "Deck of ordinary playing cards (52 cards, no jokers)",
+      "Zener cards (25 cards, 5 unique symbols)",
+      "Notebook and pen for recording data",
+      "Die (fair, high-quality recommended)",
+      "Plastic drinking cup (for tossing die)",
+      "Friends (for sender/receiver roles, judges, or as test subjects)",
+      "Ping-pong balls (sawn in half)",
+      "Cotton balls",
+      "Red tissue paper and flashlight (for uniform visual field)",
+      "Headphones with white-noise generator (sleep aid)",
+      "Watches (synchronized)",
+      "Tape recorder (for Ganzfeld, to record impressions)",
+      "Opaque envelopes",
+      "Money (for horse betting, optional for real stakes)",
+      "Opaque bags (for dowsing)",
+      "Glasses (one with water for dowsing)",
+      "Personal objects (for psychometry)",
+      "Newspaper/magazine astrology columns",
+      "Professional astrological readings/psychic readings"
+    ],
+    "rituals": [
+      "**Card Test (Telepathy/Clairvoyance):** Sender concentrates on a card, receiver guesses. No feedback. Repeat for a full deck (52 cards). Score based on probability tables for 'n or more hits'.",
+      "**Zener Card Test (Telepathy):** Sender concentrates on Zener card symbols, receiver guesses. No feedback. Repeat for 25 cards. Score based on probability tables.",
+      "**Ganzfeld Test (Telepathy):** Receiver in a sensory-deprived environment (ping-pong balls over eyes, white noise) freely vocalizes impressions. Sender concentrates on a target image in another room. Receiver later chooses target from a set of foils. Multiple trials. Score based on correct impressions.",
+      "**Dice Test (Precognition/Psychokinesis):** Predict outcome of a die roll *before* it happens (precognition) or try to influence the outcome (psychokinesis). Repeat 20-36 times. Score based on probability tables for 'n or more correct matches' or 'deviation from expected distribution'.",
+      "**Dream Test (Precognition):** Sleep and dream, then immediately record a prediction for a die roll later in the day. Roll the die and note hits. Reward for correct guesses. Repeat for 20 nights. Score using precognition tables.",
+      "**Horse Test (Precognition):** Predict winning horses (or rising stocks) *before* the race/market closes, without knowledge of posted odds. Record wins/losses. Repeat 20 times. Score based on probability tables for 'n or more correct matches'.",
+      "**Screen Test (Auras):** A 'subject' with a strong aura stands behind a screen or not. A 'guesser' tries to discern their presence/absence by sensing their aura. Coin toss for randomization. No visual/auditory leakage. Repeat 20 times. Score based on correct matches.",
+      "**Testing for Dowsing:** A friend hides a water-filled glass (or other target object) under one of six opaque bags, with location randomized by a die roll. The 'dowser' attempts to identify the correct bag without sensory cues. Repeat 20 times. Score based on correct matches.",
+      "**Astral Projection Test:** Friend writes obscure information on paper in their room. Project consciousness to observe and record information. Confirm next morning. Emphasizes exact detail and reproducibility.",
+      "**Personal Psychometry Test:** Five friends hold identical objects for days to 'absorb vibrations'. Objects are then placed in numbered envelopes. The 'psychometrist' guesses which object belongs to which person. Scoring requires a high number of perfect matches across multiple runs.",
+      "**Professional Reading Test (Astrology/Spirit Communication):** Obtain a 'professional' reading (astrology, mediumistic). Remove identifying information. Have multiple friends (not sharing birth sign/deceased relative) rate its accuracy for themselves. If many friends find it highly accurate, the reading is generic ('cold reading').",
+      "**Magick (Spell Testing):** Prepare two versions of a spell (actual vs. null/opposite effect). Apply to a repeatable outcome (e.g., lottery). Track results for both versions over many trials to test efficacy, accounting for placebo effects."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, paranormal, normal, or otherwise, without prior written permission of the author.",
+      "page": "2"
+    },
+    {
+      "text": "This book contains simple, practical procedures that anyone can use to test for the existence of several different paranormal abilities. Most tests can be performed using ordinary items found around the home. The tests, while modest and uncomplicated, are designed to resemble experiments carried out in professional parapsychological laboratories.",
+      "page": "9"
+    },
+    {
+      "text": "The goal of these experiments is to ascertain whether or not psychic powers are real. Each experiment results in a score and that score is reached because you manifested psychic powers or because of simple randomness.",
+      "page": "17"
+    },
+    {
+      "text": "In innumerable historically-published parapsychological experiments, cheating has turned out to have been an enormous problem.",
+      "page": "14"
+    },
+    {
+      "text": "Experimental protocols, or the rules, guidelines, and milieu under which the test operate, must insure there is no opportunity to cheat. If it can be conclusively demonstrated that there was no way to cheat on a test it will be a million times easier to convince the public that the results are valid.",
+      "page": "14"
+    },
+    {
+      "text": "I cannot stop you from cheating on these tests. You’ll be doing these experiments on your own turf, away from prying eyes and overly strict men in white lab coats. It will be oh so easy to take a peek every now and then so that you get a good result. But the only person you’re harming is yourself. Because if you want anyone to believe your results you’ll have to be able to replicate the effect at a later time. And then you won’t be able to cheat.",
+      "page": "15"
+    },
+    {
+      "text": "Sensory leakage is devilishly difficult to eliminate. For example, in designing an experiment to detect telepathy (using one person as a sender and another as a receiver) the researcher must be utterly certain that the receiver cannot get verbal or physical feedback on the correctness of her guesses.",
+      "page": "28"
+    },
+    {
+      "text": "The simplest solution is to eliminate feedback.",
+      "page": "42"
+    },
+    {
+      "text": "The point to remember is that, with feedback the probability of getting a certain number of hits is higher than without, thus making the possibility of telepathy less likely.",
+      "page": "49"
+    },
+    {
+      "text": "It is crucial that all results, positive, negative, and incorrect are recorded in a journal or notebook. A well-organized notebook is far better place to collect and maintain testing results than on some piece of scrap paper or on the back of a napkin where the possibility of making a mistake is enormous.",
+      "page": "41"
+    },
+    {
+      "text": "One final word on how important sensory leakage is to avoid. Go to Las Vegas and talk to some of the regular poker players. In order to gain a competitive advantage professional bettors say that they look for the tell of the other players.",
+      "page": "40"
+    },
+    {
+      "text": "The problem with the Ouija board is that you cannot be certain that the answers generated by the movement of the planchette were generated by spirits or, knowingly or not, by the seance participants.",
+      "page": "167"
+    },
+    {
+      "text": "Skeptics focus on the possible deficits of parapsychological experiments. There is nothing wrong with being skeptical. Paranormal phenomena are often treated as if they must be believed wholesale and that these beliefs should not be questioned.",
+      "page": "192"
+    },
+    {
+      "text": "Ultimately, however, an isolated low probability score may not be interesting or valuable because we expect that some experiments will produce low probability scores. The Coincidence Table can show why that is true.",
+      "page": "34"
+    },
+    {
+      "text": "The key to learning is, as most popular accounts of parapsychology note, to keep an open mind. Let’s agree with this, and let’s agree strongly. But what does keeping an open mind mean? One thing: letting evidence modify your beliefs.",
+      "page": "189"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "From an esoteric or occult perspective, this book is primarily relevant as a manual for scientific debunking and critical analysis of claims that often overlap with occult practices. It provides methodologies to rigorously test alleged psychic abilities like telepathy, clairvoyance, precognition, psychokinesis, dowsing, and spirit communication, which are frequently central to various esoteric traditions. While it does not offer a system for *performing* magic, it implicitly offers a 'counter-system' for evaluating the *validity* of such claims. An occultist could use the book to strengthen their own discernment, identify potential fraud in spiritualist circles, or even apply rigorous self-evaluation to their own practices. The detailed explanations of probability, sensory leakage, experimenter effect, and cold reading are invaluable for understanding how easily one can be deceived, whether by others or by oneself, in pursuits that often rely on subjective experience or anecdotal evidence. It challenges the occultist to move beyond 'faith' and provide 'solid reproducible evidence' for their claims, if they wish to bridge the gap between esoteric belief and scientific acceptance.",
+    "target_audience": "The book's explicit target audience is individuals interested in exploring psychic, spiritual, and paranormal phenomena on a detailed and in-depth level, particularly those who wish to conduct simple, practical scientific tests themselves or understand the scientific critique of such claims. This includes individuals skeptical of paranormal claims, those who believe they or others possess psychic abilities and want to test them rigorously, and those interested in parapsychological research methodology. For an expert in Western Esotericism and Occultism, the book serves as a vital resource for understanding the scientific paradigm's approach to their field, offering tools to scrutinize phenomena rather than to practice them. It is for the occultist who wishes to understand rational objections, avoid self-deception, and rigorously evaluate the efficacy of their own or others' claims through an empirical lens."
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "header": {
+    "title": "THE REVISION OF BABYLONIAN ANTI-WITCHCRAFT INCANTATIONS: THE CRITICAL ANALYSIS OF INCANTATIONS IN THE CEREMONIAL SERIES MAQLÛ",
+    "authors": [
+      "Tzvi Abusch"
+    ],
+    "category": "Ancient Mesopotamian Magic and Textual Criticism",
+    "keywords": [
+      "Maqlû",
+      "Babylonian incantations",
+      "anti-witchcraft",
+      "textual revision",
+      "interpolation",
+      "Wiederaufnahme",
+      "demons",
+      "witchcraft literature",
+      "Mesopotamian magic"
+    ]
+  },
+  "central_thesis": "Many Akkadian anti-witchcraft incantations, particularly within the *Maqlû* series, underwent significant revision and expansion over time. This process involved the secondary insertion of lengthy lists (of witches, demons, evils, ritual actions) into an earlier, shorter textual core. These interpolations frequently introduced internal inconsistencies and were often marked by repetitive resumptions (Wiederaufnahme) used by redactors to re-establish disrupted textual coherence. Such textual evolution reflects broader developments in religious thought and literary norms, including an expanded understanding of the witch's powers and the subordination of demonic forces.",
+  "structure_content": [
+    {
+      "chapter_title": "Introduction",
+      "summary": "This section outlines the methodological approach for identifying textual revisions in Akkadian incantations, primarily through extant variant forms and internal textual tensions. It introduces *Maqlû* as a prime example of a composition that evolved through sequential changes, often involving the expansion of shorter forms via interpolated lists and the use of 'Wiederaufnahme' (repetitive resumption). Examples from Maqlû III, V, and VII are cited to demonstrate how manuscript evidence and critical analysis support the theory of textual insertions and revisions."
+    },
+    {
+      "chapter_title": "Analysis of Maqlû Tablet II 19–75",
+      "summary": "A detailed critical analysis of this incantation reveals its hymnic invocation of the fire god Girra, followed by the victim's appeal for judgment and ritual action. The core ritual statement, involving the burning of bronze figurines representing witches, is shown to be extensively expanded by secondary interpolations. These include long lists enumerating various types of witches, demons, and illnesses, along with summary descriptions of the harm caused. The strategic placement of 'Wiederaufnahme' in lines 37/70 is identified as a redactor's device to reconnect the ritual's disrupted elements, supporting the argument for the secondary nature and complex layering of these lists. The inclusion of demons suggests an expansion of the perceived scope of a witch's powers."
+    },
+    {
+      "chapter_title": "Analysis of Maqlû Tablet IV 1–79",
+      "summary": "This section analyzes another *Maqlû* incantation, demonstrating similar patterns of expansion. The original kernel, likely focused on binding witches and delivering them to Girra, is heavily augmented by an extensive catalogue of witchcraft activities (lines 10–73). Each listed act is typically followed by an antiphon ('You have performed against me... may Girra release'). The repetition of the binding statement from lines 7-8 to 74-75 acts as a 'Wiederaufnahme,' serving to re-establish the textual connection disrupted by the lengthy series of interpolations. This expansion aims to present a comprehensive enumeration of the witch's malevolent capabilities, reflecting a generalization of their power."
+    },
+    {
+      "chapter_title": "Conclusion",
+      "summary": "The paper concludes by affirming that the analyzed *Maqlû* incantations are products of extensive textual expansion and secondary additions, though it acknowledges the theoretical possibility of initial composite authorship. It reiterates that when evidence points to redaction, repetitive resumptions serve as key indicators of revision. The study highlights that these ancient magical texts exemplify a dynamic interplay of continuity and innovation within the Mesopotamian magical tradition, showing how practices and beliefs evolved through textual adaptation."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Akkadian Incantations",
+      "definition": "Ancient Mesopotamian magical spells and formulas, often used in ritual contexts, such as anti-witchcraft rites."
+    },
+    {
+      "term": "Maqlû",
+      "definition": "A major Mesopotamian anti-witchcraft ceremonial series, meaning 'Burning,' whose text served as the script for a ceremonial performance designed to combat witchcraft. The series contains almost one hundred incantations."
+    },
+    {
+      "term": "Textual Revision/Expansion",
+      "definition": "The process by which ancient incantations were altered, modified, or enlarged over time, often through the insertion of new material, reflecting evolving religious and literary norms. This contrasts with texts remaining 'static'."
+    },
+    {
+      "term": "Internal Tensions/Inconsistencies",
+      "definition": "Logical, syntactic, or thematic breaks, repetitions, or awkward passages within a text that suggest the presence of secondary additions or alterations rather than a single, coherent composition."
+    },
+    {
+      "term": "Wiederaufnahme",
+      "definition": "A technical term (repetitive resumption) referring to a literary device where a redactor repeats identical or similar words from an earlier part of a text after a digression or interpolation. Its function is to re-establish connections sundered by the inserted material, refocusing the narrative or ritual sequence."
+    },
+    {
+      "term": "Lists/Enumerations",
+      "definition": "A common form of interpolated material found in revised incantations, used to detail various categories of witches, demons, illnesses, or specific malevolent magical actions, often disrupting the original logical flow."
+    },
+    {
+      "term": "Kaššāpu/Kaššāptu",
+      "definition": "Akkadian terms for 'warlock' (male witch) and 'witch' (female witch), respectively, representing human practitioners of malevolent magic."
+    },
+    {
+      "term": "Girra",
+      "definition": "The Mesopotamian fire god, a central deity invoked in anti-witchcraft rituals like *Maqlû*. He is depicted as 'the burner, the scorcher, the binder, the vanquisher of witches' and is appealed to for judgment and the destruction of witchcraft."
+    },
+    {
+      "term": "Figurines (șalmū)",
+      "definition": "Ritual effigies, often made of bronze, clay, wax, or other materials, used symbolically in magical practices. In *Maqlû*, they represent the witch and warlock and are subjected to burning to counter their magic."
+    }
+  ],
+  "practical_system": {
+    "description": "The paper analyzes the ancient Babylonian anti-witchcraft magical system as documented in the *Maqlû* series. This system is designed to counteract malevolent magic by ritually identifying, binding, and destroying witches (and associated evils) through the invocation of powerful deities. The underlying philosophy suggests that witchcraft is a tangible force that can be symbolically manipulated and neutralized through divine intervention and ritual actions. Over time, the scope of this system expanded to encompass a wider array of perceived threats, reflecting a developing understanding of the witch's capabilities to dispatch not only human-originated magic but also demonic forces and illnesses.",
+    "tools": [
+      "Crisscrossed bronze figurines (șalmī siparri etgurūti) of the warlock and witch.",
+      "Sulfur (kibrītu elletu) used in the burning ritual.",
+      "Fire (implicitly represented by the deity Girra and the act of burning).",
+      "Incantation tablets/texts (the *Maqlû* series itself) as ritual scripts."
+    ],
+    "rituals": [
+      "Hymnic invocation of the fire god Girra, recognized as 'perfect lord' and judge, to illuminate and decide cases.",
+      "Seizing the hem of Girra and other deities (personal god/goddess, city god/goddess) to appeal for divine assistance.",
+      "Fashioning and presenting 'crisscrossed bronze figurines' (șalmī siparri etgurūti) that symbolically represent the warlock and witch.",
+      "Binding these figurines and delivering them over to Girra, 'the burner, the scorcher, the binder, the vanquisher of witches'.",
+      "Burning and scorching the figurines in 'pure sulfur' (kibrītu elletu) as the central act of destruction.",
+      "Reciting extensive lists enumerating specific types of witches, malevolent actions (e.g., handing the victim over to dead entities, performing *zikurrudâ* magic, bewitching via food/drink, causing social rejection), demons (e.g., Utukku, Alû, Ețemmu, Lamaštu), and illnesses (e.g., Ahhāzu, Bennu-epilepsy, Antašubba-epilepsy).",
+      "Requesting divine intervention to 'uproot them' (evils/demons) from the victim's body and 'release their evil witchcraft' (kišpīšunu lemnūti)."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "Individual incantations were not static and often took on more than one form.",
+      "page": "1"
+    },
+    {
+      "text": "The reconstruction of stages of development of an incantation through critical analysis starts from the premise that an incantation should and will normally exhibit a coherence of thought and congruence between its parts.",
+      "page": "2"
+    },
+    {
+      "text": "This term refers to the fact that when a digression of a thematic or generic nature had sundered connections in a text, a redactor might repeat in identical or similar words lines of the text that preceded the break created by the interpolation.",
+      "page": "3"
+    },
+    {
+      "text": "The inclusion of the list of demons indicates a growth of power on the part of the witch. Demons were originally independent beings, but over time the witch became able to control non-human demonic forces in addition to other human beings.",
+      "page": "18"
+    },
+    {
+      "text": "Perhaps, then, the expansion reflects an attempt to present a full catalogue of all malevolent ritual activities that the witch could perform and thus to present her not as the limited force that she had previously been but as an almost universally powerful being.",
+      "page": "28"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper is highly relevant to the study of Western Esotericism and Occultism as it provides a robust academic methodology for analyzing the historical evolution of magical texts. By meticulously demonstrating how ancient Mesopotamian incantations, akin to early 'grimoires' in their ritual function, were revised and expanded over time, Abusch illuminates the dynamic rather than static nature of magical traditions. The concept of 'Wiederaufnahme' as a redactional tool offers a valuable framework for discerning layers of textual development in other historical magical works. This challenges simplistic notions of an unchanging 'original' magical current and emphasizes the adaptive and accretive processes inherent in the transmission of magical knowledge, offering insights into how magical philosophies and practices themselves evolve through textual reinterpretation and expansion.",
+    "target_audience": "The primary target audience consists of academic researchers and students in Ancient Near Eastern studies, Assyriology, Religious Studies, and the History of Magic and Ritual. Scholars focused on textual criticism, redaction history, and the development of magical literature will find the detailed analysis particularly pertinent. Additionally, serious occult practitioners and scholars of Western Esotericism who are interested in the historical roots and textual evolution of magical practices, and who seek to understand the academic methods of source criticism applied to ancient grimoire-like traditions, would find this work valuable for its methodological rigor rather than for direct practical application."
+  }
+}

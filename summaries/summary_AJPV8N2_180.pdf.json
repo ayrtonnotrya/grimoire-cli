@@ -1,0 +1,110 @@
+{
+  "header": {
+    "title": "Predicting the Ostensible Paranormal Experiences Canvassed in the Inventory of Childhood Memories and Imaginings (Form C)",
+    "authors": [
+      "MICHAEL A. THALBOURNE"
+    ],
+    "category": "Parapsychology / Esotericism (Psychological Correlates)",
+    "keywords": [
+      "paranormal belief",
+      "ICMIC",
+      "transliminality"
+    ]
+  },
+  "central_thesis": "This study re-analyzes existing data to determine which psychological variables, including personality traits, religiosity, and potential psychopathology, can predict self-reported 'paranormal experiences' and beliefs, as measured by specific items from the Inventory of Childhood Memories and Imaginings (ICMIC, Form C) and the Rasch Australian Sheep-Goat Scale. It concludes that these experiences share a single underlying factor, and transliminality is the most consistent and powerful predictor.",
+  "structure_content": [
+    {
+      "chapter_title": "Abstract",
+      "summary": "The paper describes a re-analysis of data to predict five ICMIC 'paranormal' items using 18 variables, including Eysenck Personality Questionnaire (EPQ-R) measures and others like transliminality and religiosity. It found all five paranormal items (ghosts, precognition, veridical hunches, OBEs, reincarnation belief) and the Rasch Australian Sheep-Goat Scale correlated positively and significantly, yielding a single 'Paranormal Experience' factor. Multiple regression showed Psychoticism predicted some experiences, and transliminality was the best overall predictor."
+    },
+    {
+      "chapter_title": "Introduction",
+      "summary": "This section provides historical context, linking fantasy-proneness to psychic experiences. It introduces the ICMIC and its five paranormal items, discusses the debate on unidimensional vs. multifactorial paranormal belief, and previous research on personality traits (Extraversion, Neuroticism) and paranormal belief. It outlines the two sets of predictor variables: four Eysenck variables and 14 other psychological, religiosity, and psychopathology-related measures, including gender, for subsequent regression analyses."
+    },
+    {
+      "chapter_title": "Method - Participants",
+      "summary": "The study involved 244 participants, predominantly psychology students from the University of Adelaide, with 28% male. Their ages ranged from 17 to 63 years, with a mean of 25 years (SD = 9.93), showing a skew towards younger individuals."
+    },
+    {
+      "chapter_title": "Method - Procedure",
+      "summary": "Data collection involved two primary methods: two-thirds of participants completed questionnaires as volunteers in an hour time-slot after psychology lectures, while the remaining one-third completed them as part of a computing and statistics course on their own time."
+    },
+    {
+      "chapter_title": "Method - Materials",
+      "summary": "The study utilized five verbatim items from the ICMIC (Apparition, OBE, Precognition, Veridical hunch, Reincarnation). Predictor variables included four from the EPQ-R (Extraversion, Neuroticism, Psychoticism, Lie Scale) and 13 other measures: the Revised Transliminality Scale, General Belief in Life After Death, Haraldsson's Religiosity Scale (and three specific items), Manic Experience Scale, Depressive Experience Scale, Riley's Questionnaire on Experiences of Dissociation, Magical Ideation Scale, Launay-Slade Hallucination Proneness Scale, STA Scale for schizotypal personality, a shortened Unusual Experiences subscale, and gender. The Rasch Australian Sheep-Goat Scale was also administered but not used in regression analyses, serving as a general measure of paranormal belief."
+    },
+    {
+      "chapter_title": "Results - Frequency Data",
+      "summary": "38% of the sample reported sensing a ghost, 24% an OBE, 63% precognition, 57% a veridical hunch, and 44% believed in reincarnation. Regarding religiosity, 35% claimed a vivid spiritual/religious experience, 5% read the Bible often (48% never), and 6% read about Eastern religions often (39% never)."
+    },
+    {
+      "chapter_title": "Results - Correlational Data and Factor Analysis",
+      "summary": "Inter-correlations among the five ICMIC items and the Rasch Australian Sheep-Goat Scale were all positive and significant (p < .001). A principal components factor analysis indicated good sampling adequacy (Kaiser-Meyer-Olkin = 0.80) and appropriate data (Bartlett's test significant). A single factor, termed 'Paranormal Experience,' emerged with an Eigenvalue of 2.83, accounting for 47.1% of the variance. Factor loadings ranged from .612 to .846."
+    },
+    {
+      "chapter_title": "Results - Standard Multiple Regression Analyses - The Four Eysenck Variables",
+      "summary": "Eysenck variables were generally poor predictors. Psychoticism (P) significantly predicted Out-of-Body Experiences (beta = .29, p = .012), Precognition (beta = .24, p = .043), and Veridical Hunch (beta = .29, p = .014). Extraversion and Neuroticism were not significant for any of the six analyses (individual ICMIC items or the overall factor score)."
+    },
+    {
+      "chapter_title": "Results - Standard Multiple Regression Analyses - The 12 Remaining Predictor Variables",
+      "summary": "These variables collectively predicted the paranormal items more strongly. Apparition was predicted by Vivid Spiritual or Religious Experience, with Transliminality and Belief in Life After Death being marginally significant. OBE was predicted by Vivid Spiritual or Religious Experience, low experience of Mania, and Transliminality. Precognition and Veridical Hunch were primarily predicted by Transliminality. Reincarnation was predicted by Magical Ideation, Belief in General Life After Death, and rarely/never reading the Bible. The overall 'Paranormal Experience' factor was best predicted by Transliminality, Vivid Spiritual or Religious Experience, Magical Ideation, and Belief in Life After Death."
+    },
+    {
+      "chapter_title": "Discussion",
+      "summary": "The findings confirm that the five ICMIC paranormal items and general paranormal belief share a single underlying factor, 'Paranormal Experience,' which contradicts a multifactorial view. Psychoticism (P) was a predictor for some experiences, interpreted as unconventionality potentially linked to bipolar disorder. Magical Ideation predicted reincarnation belief. Transliminality emerged as the most consistent and powerful predictor across most paranormal experiences and the overall factor score, despite competition from other variables. Gender was not a significant predictor."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "ICMIC (Inventory of Childhood Memories and Imaginings, Form C)",
+      "definition": "A 48-item questionnaire, a shortened version of the original ICMI, used to identify characteristics of fantasy-prone individuals. This study focused on five specific items within it that pertain to paranormal experiences or beliefs."
+    },
+    {
+      "term": "Paranormal Experience (Factor)",
+      "definition": "A single, underlying psychological factor identified through principal components factor analysis. It encapsulates the shared variance among self-reported experiences of ghosts, out-of-body experiences (OBEs), precognition, veridical hunches, belief in reincarnation, and scores on the Rasch Australian Sheep-Goat Scale."
+    },
+    {
+      "term": "Transliminality",
+      "definition": "A psychological construct positing a heightened permeability of mental boundaries, leading to increased access to unconscious material, external stimuli, and experiences often deemed paranormal. The Revised Transliminality Scale was found to be the best predictor of most paranormal experiences in this study."
+    },
+    {
+      "term": "Psychoticism (EPQ-R)",
+      "definition": "A personality dimension from the Eysenck Personality Questionnaire-Revised, associated with unconventionality, non-conformity, impulsivity, and potentially linked to schizotypy or aspects of bipolar disorder. It was found to significantly predict out-of-body experiences, precognition, and veridical hunches."
+    },
+    {
+      "term": "Magical Ideation Scale",
+      "definition": "A psychological scale measuring schizotypal personality traits related to unusual beliefs and perceptions. It was identified as a significant predictor for belief in reincarnation and contributed to the overall 'Paranormal Experience' factor."
+    },
+    {
+      "term": "Rasch Australian Sheep-Goat Scale (ASGS)",
+      "definition": "A unidimensional scale designed to measure belief in and alleged experience of extrasensory perception (ESP) and psychokinesis (PK). It was included in the factor analysis as a general measure of paranormal belief alongside the ICMIC items."
+    }
+  ],
+  "practical_system": {
+    "description": "This academic paper is a psychological study, not a practical manual for magic or esotericism. It analyzes the psychological correlates and predictors of self-reported paranormal experiences but does not provide instructions for ritual, spellcasting, or any form of operative magical practice. Its utility for a magician lies in understanding potential individual predispositions to such experiences rather than offering a system for their deliberate cultivation.",
+    "tools": [],
+    "rituals": []
+  },
+  "relevant_quotes": [
+    {
+      "text": "It seems fitting to name the factor “Paranormal Experience”.",
+      "page": "7"
+    },
+    {
+      "text": "Transliminality appeared as a significant predictor on five out of six occasions.",
+      "page": "10"
+    },
+    {
+      "text": "The first finding to note is that all five of the ICMIC items evidently share the same underlying factor: that is, they are all variants of (or participants in) the common factor Paranormal Experience.",
+      "page": "9"
+    },
+    {
+      "text": "high Psychoticism was correlated with higher belief in the paranormal in three of the six analyses, namely, those for out-of-the-body experience, veridical hunch and precognition.",
+      "page": "8"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "This paper offers a critical psychological perspective on phenomena frequently discussed within Western Esotericism and Occultism. By statistically demonstrating that disparate 'paranormal experiences' (ghosts, OBEs, precognition, reincarnation belief) are linked by a single underlying factor, 'Paranormal Experience,' it suggests a common psychological predisposition rather than distinct, unrelated occurrences. The identification of transliminality as a primary predictor provides a crucial link between psychological openness to anomalous information and the reporting of such experiences. For esoteric practitioners, this research implies that a practitioner's inherent 'transliminality' might be a key factor in their susceptibility to various mystical or magical experiences, potentially informing how individuals are selected for or predisposed to certain magical workings or initiatory paths. While not a grimoire, it provides a scientific 'map' of the psychological landscape underlying what many consider magical reality, allowing practitioners to contextualize subjective experiences within a broader psychological framework.",
+    "target_audience": "Academic researchers in parapsychology, psychology of religion, personality psychology, and consciousness studies. Also, a niche but highly relevant audience of practitioners and theorists within Western Esotericism, Occultism, and magic who seek to understand the psychological and individual difference factors contributing to paranormal and mystical experiences, bridging the gap between subjective gnosis and objective psychological correlates."
+  }
+}

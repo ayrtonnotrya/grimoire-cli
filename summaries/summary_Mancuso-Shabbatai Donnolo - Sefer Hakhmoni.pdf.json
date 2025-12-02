@@ -1,0 +1,147 @@
+{
+  "header": {
+    "title": "Shabbatai Donnolo's Sefer Hakhmoni: Introduction, Critical Text, and Annotated English Translation",
+    "authors": [
+      "Piergabriele Mancuso",
+      "Shabbatai Donnolo"
+    ],
+    "category": "Western Esotericism, Jewish Mysticism, Qabalah, History of Science",
+    "keywords": [
+      "Shabbatai Donnolo",
+      "Sefer Hakhmoni",
+      "Sefer Yetzirah",
+      "Jewish mysticism",
+      "Medieval Qabalah",
+      "Neoplatonism",
+      "Medieval astrology",
+      "Cosmology",
+      "Micro-macrocosm",
+      "Hebrew letters",
+      "Golem"
+    ]
+  },
+  "central_thesis": "Piergabriele Mancuso's critical edition and annotated English translation of Shabbatai Donnolo's Sefer Hakhmoni presents a foundational work in medieval Jewish thought. Donnolo's text integrates Greco-Roman scientific traditions (astrology, medicine) with rabbinic Judaism, offering a unique Neoplatonic interpretation of Sefer Yetzirah and Genesis 1:26 to explain divine creation and the profound correspondences between the macrocosm and microcosm.",
+  "structure_content": [
+    {
+      "chapter_title": "Preface",
+      "summary": "Introduces Shabbatai Donnolo (912–982) as a polymath, physician, and astrologer from early medieval Italy. Highlights Sefer Hakhmoni as a significant Hebrew scientific work and justifies the necessity of a new, more reliable critical edition given the errors and limited manuscript base of previous editions."
+    },
+    {
+      "chapter_title": "Historical Introduction (Part One)",
+      "summary": "Details the historical context of Apulian Jewry, including the Roman conquest, Byzantine rule, and periods of persecution (Basil I, Romanus I). Traces the Hebrew linguistic renaissance in southern Italy, exemplified by liturgical poetry and scientific-philosophical works like Donnolo’s. Biographical details of Donnolo, including his birth in Oria, enslavement by Muslims, ransom, and studies under a Babylonian scholar, are presented, drawing from his preface to SH and the Life of Saint Nilus of Rossano. Donnolo’s diverse literary production, including medical and astrological works, is briefly outlined."
+    },
+    {
+      "chapter_title": "Donnolo's 'Library'",
+      "summary": "Examines Donnolo's linguistic and intellectual influences, noting his knowledge of Hebrew, Aramaic, Greek, Latin, and Italian vernacular, but likely not Arabic. Identifies primary sources: Ptolemy's Tetrabiblos for astronomy/astrology, the Hippocratic-Galenic corpus and Asaf ha-rofé for medicine, and rabbinic literature (Talmud, Midrashim, Avot de-Rabbi Natan) and Wisdom of Solomon for philosophical/theological ideas. Discusses Donnolo's Neoplatonism, which is influenced by Christian Patristic works like Gregory of Nyssa and Nemesius, particularly regarding the micro-macrocosm correspondence."
+    },
+    {
+      "chapter_title": "Shabbatai Donnolo and Sefer Yetzirah",
+      "summary": "Contextualizes Donnolo's commentary on Sefer Yetzirah (SY) within the exegetical tradition, comparing his Neoplatonic approach to the rationalistic interpretations of Sa'adiah Gaon and Dunash ibn Tamim. Notes Donnolo's departure from Sa'adiah's view by not seeing SY as a symbolic representation but as describing actual metaphysical creation, and his integration of SY with biblical Genesis."
+    },
+    {
+      "chapter_title": "Commentary on Genesis 1:26 (Sefer Hakhmoni)",
+      "summary": "Analyzes Donnolo's interpretation of Genesis 1:26, focusing on the concept of man created in God's image and the micro-macrocosmic correspondence. Donnolo argues that man cannot grasp God's 'de mut' (true countenance) but can perceive His 'kavod' (glory). He elaborates extensively on the parallelism between human anatomy (organs, humors) and the elements/celestial bodies of the universe, rooted in Hippocratic-Galenic medicine and Ptolemaic melothesia. Emphasizes man’s moral behavior as key to fulfilling his role as ruler of the created world."
+    },
+    {
+      "chapter_title": "Introduction to the Commentary on Sefer Yetzirah",
+      "summary": "Explores Donnolo's assertion that the Torah pre-existed Creation and that God arranged all elements by combining Torah letters. Introduces the concept of 'teshuvah' (repentance) as pre-ordained, reconciling human free will with divine predestination. Justifies the study of astrology as a legitimate Jewish discipline for understanding God's works, especially for the 'unwise generation' of his time, emphasizing a return to Jewish intellectual traditions."
+    },
+    {
+      "chapter_title": "Commentary on Sefer Yetzirah (Book One)",
+      "summary": "Focuses on the ten 'sefirot of belimah,' which Donnolo defines as incomprehensible depths of beginning and end, fixed in God’s 'great might.' These sefirot are created through the permutation of Hebrew letters (yod, he, waw) and govern the six edges of the world. It ties the abstract concept of sefirot to concrete cosmic and human attributes, emphasizing God's sole creative power without material substance."
+    },
+    {
+      "chapter_title": "Commentary on Sefer Yetzirah (Book Two)",
+      "summary": "Explains the 'seven double letters' (bet, gimel, dalet, kaph, pe, resh, taw), characterized by their dual (soft/hard) pronunciation. These letters correspond to the seven planets, days of the week, and human orifices, embodying opposing qualities (life/death, peace/war, wisdom/folly). Donnolo provides a permutation chart demonstrating how these letters generate numerous words and linguistic possibilities, linking sound, speech, and creation."
+    },
+    {
+      "chapter_title": "Commentary on Sefer Yetzirah (Book Three)",
+      "summary": "Elaborates on the 'twelve simple letters' (he, waw, zayin, het, tet, yod, lamed, nun, samekh, 'ayin, sade, qof), linking them to the twelve zodiacal constellations, months of the year, and principal human organs. A significant element is the complex analysis of the 'Dragon' (tli), which acts as an axis mundi and a celestial creature governing planetary movements, showing Gnostic influences. Donnolo corrects SY's astrological details to align with Ptolemaic principles, integrating traditional science with Jewish mystical thought."
+    }
+  ],
+  "key_concepts": [
+    {
+      "term": "Sefer Hakhmoni",
+      "definition": "Shabbatai Donnolo's principal work, a comprehensive philosophical and cosmological commentary on Sefer Yetzirah and Genesis 1:26, integrating Jewish mystical traditions with Greco-Roman astrology and medicine, completed around 946 CE."
+    },
+    {
+      "term": "Sefer Yetzirah (SY)",
+      "definition": "A foundational, laconic, and enigmatic Jewish mystical text (3rd-6th century CE Palestine) that describes the divine creation of the universe through ten Sefirot and twenty-two Hebrew letters. It serves as the primary subject of Donnolo's commentary."
+    },
+    {
+      "term": "Sefirot (in Donnolo's context)",
+      "definition": "Ten 'profound' entities that represent the 'depth of beginning and end' of the world, fixed in God's 'great might.' Donnolo's interpretation views them as actual metaphysical conditions for empirical reality, distinct from earlier mathematical or later emanational Kabbalistic understandings."
+    },
+    {
+      "term": "Micro-macrocosm Correspondence",
+      "definition": "A central cosmological principle in Donnolo's philosophy, asserting a direct and systematic parallelism between the human body (microcosm) and the entire universe (macrocosm), including its elements, planets, and constellations. This connection informs his exegesis of Genesis 1:26."
+    },
+    {
+      "term": "Tli (Dragon)",
+      "definition": "A complex astrological concept identified with lunar nodes (points where the Moon's orbit intersects the ecliptic) and the 'axis mundi.' Donnolo describes it as a large sea monster or writhing serpent set in the fourth firmament, governing celestial bodies and their movements, possibly influenced by Gnostic traditions."
+    },
+    {
+      "term": "Hebrew Letters (Mothers, Doubles, Simples)",
+      "definition": "The twenty-two letters of the Hebrew alphabet are the fundamental building blocks of creation. They are categorized into three Mothers (aleph, mem, shin), seven Double letters (bet, gimel, dalet, kaph, pe, resh, taw), and twelve Simple letters, each with specific creative and associative powers linked to the universe, year, and human body."
+    },
+    {
+      "term": "Creatio ex-nihilo (Donnolo's view)",
+      "definition": "God's act of creating the world from nothing, where the Sefirot and letter permutations are the necessary ontological processes in the metaphysical realm that precede and enable the empirical manifestation of reality, as described in Genesis."
+    },
+    {
+      "term": "Teshuvah (Repentance)",
+      "definition": "Donnolo's concept of repentance, which is elaborated beyond its traditional Jewish meaning, drawing from Christian Neoplatonic ideas of 'reditus' (return). It signifies a process of restoring the world and its creatures to their proper state, harmonizing divine necessity and human free will."
+    },
+    {
+      "term": "Planetary Rulership",
+      "definition": "An astrological system where planets govern specific hours of the day and night, days of the week, and have particular influences on human character and fate. Donnolo systematically reconfigures SY's planetary assignments to align with classical Ptolemaic astrology."
+    },
+    {
+      "term": "Golem",
+      "definition": "The term golem appears in SH for the first time with the meaning of a 'lifeless corpse' or 'man-made anthropoid' animated by divine power or a divine name on parchment, representing the human body's inert form before the breath of life."
+    }
+  ],
+  "practical_system": {
+    "description": "Donnolo's system, as expounded in Sefer Hakhmoni, is primarily a philosophical and cosmological framework for understanding the divine creative process and the universe's structure. It is less a manual for direct magical operations and more a contemplative system for discerning God's 'wisdom' through the ordered creation. The 'operative' side lies in profound intellectual engagement with divine principles, aiming for a deep understanding of the cosmos (macrocosm) and human nature (microcosm) as reflections of God's design. This understanding, in turn, is meant to guide human moral conduct and a 'return' (teshuvah) to the divine will.",
+    "tools": [
+      "The 22 Hebrew Letters: Divided into Mothers (Aleph, Mem, Shin), Doubles (Bet, Gimel, Dalet, Kaph, Pe, Resh, Taw), and Simples, serving as the foundational 'substance' for contemplation and permutation.",
+      "Astrological Charts and Tables: Used for calculating planetary positions, lunar nodes ('tli'), and zodiacal constellations to understand celestial influences and divine ordering.",
+      "Knowledge of Ptolemaic Astrology: Provides the scientific framework for interpreting celestial mechanics and their effects on the terrestrial world.",
+      "Knowledge of Hippocratic-Galenic Medicine: Used to understand human physiology and pathology, drawing parallels to cosmic structures.",
+      "Measuring Instruments (e.g., 'Jacob-staff'): Referenced for astronomical observations, enabling empirical verification of celestial angles and shadows for timekeeping and forecasting (though not for direct magical energy manipulation).",
+      "Philosophical Contemplation: The primary 'tool' for the practitioner, involving rigorous intellectual inquiry into the 'secrets' of Torah and creation, distinct from blind faith."
+    ],
+    "rituals": [
+      "Contemplation of the divine creative process through the Sefer Yetzirah's letters and Sefirot, seeking to grasp God's 'great might' and wisdom.",
+      "Intellectual meditation on the micro-macrocosm correspondences between human anatomy (organs, senses) and cosmic elements (planets, constellations), aimed at internalizing the divine order.",
+      "Study and understanding of planetary hours and astrological influences to discern propitious and unpropitious times, guiding daily actions.",
+      "Engagement with the principles of letter permutations, as described in Sefer Yetzirah, for understanding the generation of all things and languages (though not detailed for human verbal magic)."
+    ]
+  },
+  "relevant_quotes": [
+    {
+      "text": "I, Shabbatai, son of Abraham, called Donnolo the doctor, with the help of the ever-living God who grants wisdom, understanding and knowledge, have sought to discover valuable things, taking pains to write many books. I undertook to seek and search out by wisdom that which the seasons have brought about. Oria, the land of my birth, was conquered by Muslim soldiers, on Monday, at the fourth hour of the day under the planet of Mars, on the ninth day of the month of Tammuz, in the year 4685 since the Creation of the world.",
+      "page": "224"
+    },
+    {
+      "text": "I copied out for myself the books of the early Jewish scholars—blessed be their memory—but throughout these lands I did not find [even] one Jewish scholar who understood them. Rather, some of them would say of the astronomical books written by Jews that there is no substance in them, because they did not understand them at all; and they would say that the books on the science of the constellations and planets were the preserve of the gentiles, that they do not correspond to the knowledge [contained in] the [astronomical] books of the Jews, and that the science of the constellations is quite different from the science contained in these Jewish books. [...] I encountered a Gentile scholar from Babylon by the name of B-g-d-t who had profound knowledge of the science of the planets and constellations, and who also knew how to make calculations in order to gain a true understanding of what had been and what was to be, as well as how to observe the constellations and the planets. His wisdom entirely agreed with the Barayta of Samuel, as well as with all the Jewish books and all the books of the Greeks and the Macedonians. Yet, the wisdom of that gentile was clear and very lucid.",
+      "page": "228, 230"
+    },
+    {
+      "text": "David did not pronounce these verses only in order to instruct the generations that lived after him and before us, since they were all people of good name, but also for the [benefit of the] base, contemptible, and unwise generation of our time, in the year 4742 since the Creation of the world, which is the eleventh year of the 250th cycle.",
+      "page": "241"
+    },
+    {
+      "text": "Just as God created the Dragon in the world and stretched it out in the firmament from east to west, from end to end, with the planets, the constellations and everything else in the world attached to it, so He created in man’s body the white cord of the brain inside the vertebrae of the spinal column, which stretches from the top of the brain in the head down to the sacrum, with the twelve parts of the body, the ribs and all the limbs attached to it on either side.",
+      "page": "270"
+    },
+    {
+      "text": "The Dragon in the world is like a King upon his throne. The sphere in the year is like a king in his kingdom. The heart in the body is like a king at war. The explanation [of this is as follows]: the Dragon is like a king over the two luminaries, the five planets, and everything that takes place in the world, whether good or bad.",
+      "page": "354"
+    }
+  ],
+  "critical_analysis": {
+    "relevance": "Shabbatai Donnolo's Sefer Hakhmoni is a cornerstone text in the study of early medieval Jewish mysticism and the history of science. It uniquely demonstrates the synthesis of rabbinic Jewish thought with advanced Greco-Roman astronomical, astrological, and medical knowledge in a Byzantine context. Its distinct Neoplatonic interpretation of Sefer Yetzirah, particularly regarding the sefirot and micro-macrocosmic correspondences, provides crucial insights into the pre-Kabbalistic intellectual landscape. The work's detailed cosmological and physiological models, though often corrective of SY's original claims, underscore the sophisticated attempt to rationalize and integrate diverse knowledge systems, making it invaluable for tracing the development of Jewish esotericism and its interactions with broader intellectual currents.",
+    "target_audience": "This critical edition is essential for academic researchers and advanced students in Jewish Studies, Western Esotericism, History of Science (particularly medieval astronomy, astrology, and medicine), Byzantine Studies, and Comparative Philosophy. Practitioners of Qabalah or Hermetic traditions interested in the historical and philosophical foundations of their systems will also find it invaluable, though it is not a practical 'how-to' guide in the modern sense of magical instruction."
+  }
+}
