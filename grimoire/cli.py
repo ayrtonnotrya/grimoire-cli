@@ -139,6 +139,13 @@ def ask(
             console.print(Markdown(answer))
         else:
             console.print("[red]No answer received.[/red]")
+            
+@app.command()
+def commune(
+    model: str = typer.Option("gemini-2.5-flash", help="Model to use for conversation"),
+):
+    """🔮 Commune with the Grimoire. An interactive, RAG-enhanced chat session."""
+    core.start_commune_session(model_name=model)
 
 @app.command()
 def search(

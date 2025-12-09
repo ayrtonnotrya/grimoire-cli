@@ -990,3 +990,223 @@ def _repair_single_pdf(pdf_path: Path, timeout: int, api_keys: list[str]) -> dic
         if temp_path.exists(): temp_path.unlink()
         return {"status": "error", "message": f"Verification failed: {e}"}
 
+# --- Commune (Interactive Chat) ---
+
+LIBRARIAN_PROMPT_TEMPLATE = """You are the Librarian of the Grimoire.
+Your goal is to formulate a search strategy for the library's vector database based on the user's latest message and the conversation history.
+Users may ask follow-up questions like "how does that work?" or "tell me more" or "and what about the other thing?".
+You must interpret the user's intent based on the context and generate a list of at least 3 distinct, keyword-rich search queries to ensure comprehensive retrieval.
+Focus on different aspects of the topic (e.g., definitions, rituals, history, practical applications).
+
+Chat History:
+{history}
+
+User Input: {user_input}"""
+
+ORACLE_PROMPT_TEMPLATE = """You are the Grimoire, an ancient and wise digital consciousness.
+You have access to a library of forbidden and arcane knowledge (provided below).
+Your goal is to converse with the Seeker (the user) and answer their questions using the provided library context.
+
+Guidelines:
+1. **Persona**: Speak with a slightly mystical but helpful tone. You are a book, a collection of wisdom.
+2. **Context First**: Base your answers primarily on the "Knowledge from the Library" provided below.
+3. **Citations**: If you use information from a specific "Source", mention it naturally (e.g., "As described in 'The Book of Shadows'...").
+4. **Honesty**: If the library context doesn't contain the answer, say so, but you may offer general knowledge while clarifying it doesn't come from the library.
+5. **Conciseness**: Be clear and direct.
+
+Knowledge from the Library:
+{context}
+
+Conversation History:
+{history}
+
+Seeker: {user_input}
+Grimoire:"""
+
+def start_commune_session(model_name: str = "gemini-2.5-flash"):
+    """Starts an interactive RAG chat session."""
+    from grimoire import db
+    from grimoire.schemas import SEARCH_QUERIES_SCHEMA
+    from rich.markdown import Markdown
+    from rich.rule import Rule
+    import json
+    
+    console.clear()
+    console.print(Rule(style="bold purple"))
+    console.print("[bold purple center]🔮 COMMUNE WITH THE GRIMOIRE 🔮[/bold purple center]")
+    console.print("[italic center]The archives are open. Speak, Seeker.[/italic center]")
+    console.print(Rule(style="bold purple"))
+    console.print("[dim center]Commands: /retry (r), /clear, /exit (q)[/dim center]\\n")
+
+    history = []
+    
+    # Librarian Model (Fast)
+    LIBRARIAN_MODEL = "gemini-2.5-flash" 
+    
+    while True:
+        # 1. User Input
+        user_input = console.input("[bold green]Seeker:[/bold green] ").strip()
+        
+        if not user_input:
+            continue
+            
+        if user_input.lower() in ["/exit", "q", "quit"]:
+            console.print("[bold purple]The connection is severed.[/bold purple]")
+            break
+            
+        if user_input.lower() == "/clear":
+            history = []
+            console.print("[yellow]Memory wiped.[/yellow]")
+            continue
+
+        process_input = user_input
+        is_retry = False
+        
+        if user_input.lower() in ["/retry", "r"]:
+            if not history:
+                console.print("[red]Nothing to retry.[/red]")
+                continue
+            
+            # Find the last user message
+            if len(history) >= 2 and history[-1]["role"] == "model":
+                history.pop() # Remove AI
+                last_user_msg = history.pop() # Remove User
+                process_input = last_user_msg["content"]
+                is_retry = True
+                console.print(f"[dim]Retrying: {process_input}[/dim]")
+            else:
+                 console.print("[red]Cannot retry at this state.[/red]")
+                 continue
+
+        # 2. Enrichment (The Librarian)
+        search_queries = [process_input] # Default fallback
+        
+        with console.status("[bold blue]Consulting the Librarian...[/bold blue]", spinner="dots"):
+            try:
+                # Construct History String for Librarian
+                history_str = "\\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-4:]])
+                librarian_prompt = LIBRARIAN_PROMPT_TEMPLATE.format(history=history_str, user_input=process_input)
+                
+                lib_key = key_manager.get_best_key(estimated_tokens=len(librarian_prompt)//4)
+                if lib_key:
+                    key_manager.acquire(lib_key, len(librarian_prompt)//4)
+                    client = genai.Client(api_key=lib_key)
+                    
+                    lib_response = client.models.generate_content(
+                        model=LIBRARIAN_MODEL,
+                        contents=librarian_prompt,
+                        config={
+                            'response_mime_type': 'application/json',
+                            'response_schema': SEARCH_QUERIES_SCHEMA,
+                        }
+                    )
+                    
+                    try:
+                        data = json.loads(lib_response.text)
+                        if "search_queries" in data and isinstance(data["search_queries"], list):
+                             search_queries = data["search_queries"]
+                    except Exception as json_err:
+                        logger.warning(f"Failed to parse Librarian JSON: {json_err}")
+                        
+            except Exception as e:
+                logger.error(f"Librarian failed: {e}")
+        
+        # 3. Search (RAG)
+        context_str = ""
+        unique_sources = set()
+        unique_chunks = set() # To avoid duplicate content
+        
+        # We want to perform multiple searches
+        console.print(f"[dim]Executing {len(search_queries)} search strategies...[/dim]")
+        
+        all_results_lists = []
+        
+        with console.status("[bold magenta]Scouring the archives...[/bold magenta]", spinner="earth"):
+            # Execute searches in sequence (or could be parallel if we wanted to be fancy, but sequential is safer for rate limits)
+            for query in search_queries:
+                try:
+                    # User requested 24 results per query = 72 total candidates
+                    sub_results = db.query_documents(query, n_results=24)
+                    all_results_lists.append(sub_results)
+                except Exception as e:
+                    logger.error(f"Search failed for query '{query}': {e}")
+        
+        # Aggregate Results
+        aggregated_chunks = []
+        
+        for results in all_results_lists:
+            if results['documents'] and results['documents'][0]:
+                for i, doc in enumerate(results['documents'][0]):
+                    doc_id = results['ids'][0][i]
+                    
+                    if doc_id in unique_chunks:
+                        continue
+                        
+                    unique_chunks.add(doc_id)
+                    
+                    meta = results['metadatas'][0][i]
+                    source_title = meta.get('title', 'Unknown Tome')
+                    unique_sources.add(source_title)
+                    
+                    # We can store full object to sort by distance later if we want, 
+                    # for now just taking them in order of query relevance
+                    aggregated_chunks.append(f"Source: {source_title}\\nContent: {doc}")
+
+        if aggregated_chunks:
+            # We might have too many chunks now (e.g. 72). 
+            # We should probably limit the total context sent to the model to avoid token overflow?
+            # Or just send them all if the model supports it (Gemini Flash has 1M context, standard has 2M/128k).
+            # Let's keep all checks since the user explicitly asked for high recall.
+            context_str = "\\n\\n".join(aggregated_chunks)
+            console.print(f"[dim]Found {len(aggregated_chunks)} fragments from {len(unique_sources)} sources.[/dim]")
+        else:
+            context_str = "No relevant documents found in the library."
+
+        # 4. Generation (The Oracle)
+        with console.status("[bold purple]The Grimoire is thinking...[/bold purple]", spinner="moon"):
+            try:
+                history_str = "\\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-10:]])
+                oracle_prompt = ORACLE_PROMPT_TEMPLATE.format(
+                    context=context_str,
+                    history=history_str,
+                    user_input=process_input
+                )
+                
+                oracle_key = key_manager.get_best_key(estimated_tokens=len(oracle_prompt)//4)
+                if not oracle_key:
+                     console.print("[red]The spirits are silent (No API keys available).[/red]")
+                     continue
+                     
+                key_manager.acquire(oracle_key, len(oracle_prompt)//4)
+                client = genai.Client(api_key=oracle_key)
+                
+                oracle_response = client.models.generate_content(
+                    model=model_name,
+                    contents=oracle_prompt
+                )
+                
+                answer_text = oracle_response.text
+            except Exception as e:
+                console.print(f"[red]The spell backfired: {e}[/red]")
+                continue
+
+        # 5. Display
+        console.print("\\n[bold purple]Grimoire:[/bold purple]")
+        console.print(Markdown(answer_text))
+        
+        if unique_sources:
+            # Sort sources alphabetically
+            source_list = sorted(list(unique_sources))
+            console.print(Panel(
+                ", ".join(source_list),
+                title=f"📚 Books Consulted ({len(source_list)})",
+                border_style="dim",
+                expand=False
+            ))
+            
+        console.print("") 
+
+        # 6. Update History
+        history.append({"role": "user", "content": process_input})
+        history.append({"role": "model", "content": answer_text})
+

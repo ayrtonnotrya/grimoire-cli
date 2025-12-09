@@ -171,3 +171,14 @@ CONSTRUCTED_RITUAL_SCHEMA = {
     },
     "required": ["title", "intent", "timing", "tools", "steps", "closing", "expected_result"]
 }
+
+SEARCH_QUERIES_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "search_queries": {
+            "type": "ARRAY",
+            "items": {"type": "STRING"},
+        }
+    },
+    "required": ["search_queries"]
+}
