@@ -993,10 +993,10 @@ def _repair_single_pdf(pdf_path: Path, timeout: int, api_keys: list[str]) -> dic
 # --- Commune (Interactive Chat) ---
 
 LIBRARIAN_PROMPT_TEMPLATE = """Você é o Bibliotecário do Grimório.
-Seu objetivo é formular uma estratégia de busca para o banco de dados vetorial da biblioteca com base na última mensagem do usuário e no histórico da conversa.
-Os usuários podem fazer perguntas de acompanhamento como "como isso funciona?" ou "me conte mais" ou "e sobre a outra coisa?".
-Você deve interpretar a intenção do usuário com base no contexto e gerar uma lista de pelo menos 3 consultas de busca distintas e ricas em palavras-chave para garantir uma recuperação abrangente.
-Foque em diferentes aspectos do tópico (ex: definições, rituais, história, aplicações práticas).
+Seu objetivo é formular uma estratégia de busca COMPLETA E INTENSIVA para o banco de dados vetorial da biblioteca.
+O usuário quer EXAURIR o conhecimento disponível sobre o tópico. Não economize em buscas.
+Você deve interpretar a intenção do usuário com base no contexto e gerar uma lista de PELO MENOS {min_queries} consultas de busca distintas, ricas e variadas.
+Varie os termos, sinônimos, e ângulos de abordagem (histórico, prático, teórico, ritualístico, simbólico).
 
 Histórico do Chat:
 {history}
@@ -1024,7 +1024,7 @@ Histórico da Conversa:
 Buscador: {user_input}
 Grimório:"""
 
-def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: bool = False):
+def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: bool = False, min_queries: int = 5, results_per_query: int = 40):
     """Starts an interactive RAG chat session."""
     from grimoire import db
     from grimoire.schemas import SEARCH_QUERIES_SCHEMA
@@ -1086,7 +1086,7 @@ def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: boo
             try:
                 # Construct History String for Librarian
                 history_str = "\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-4:]])
-                librarian_prompt = LIBRARIAN_PROMPT_TEMPLATE.format(history=history_str, user_input=process_input)
+                librarian_prompt = LIBRARIAN_PROMPT_TEMPLATE.format(history=history_str, user_input=process_input, min_queries=min_queries)
                 
                 lib_key = key_manager.get_best_key(estimated_tokens=len(librarian_prompt)//4)
                 if lib_key:
@@ -1126,8 +1126,8 @@ def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: boo
             # Execute searches in sequence (or could be parallel if we wanted to be fancy, but sequential is safer for rate limits)
             for query in search_queries:
                 try:
-                    # User requested 24 results per query = 72 total candidates
-                    sub_results = db.query_documents(query, n_results=24)
+                    # User requested comprehensive results
+                    sub_results = db.query_documents(query, n_results=results_per_query)
                     all_results_lists.append(sub_results)
                 except Exception as e:
                     logger.error(f"Search failed for query '{query}': {e}")
