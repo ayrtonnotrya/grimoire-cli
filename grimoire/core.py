@@ -1164,32 +1164,58 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
             context_str = "No relevant documents found in the library."
 
         # 4. Generation (The Oracle)
-        with console.status("[bold purple]The Grimoire is thinking...[/bold purple]", spinner="moon"):
+        while True: # Retry loop
             try:
-                history_str = "\\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-10:]])
+                history_str = "\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-10:]])
                 oracle_prompt = ORACLE_PROMPT_TEMPLATE.format(
                     context=context_str,
                     history=history_str,
                     user_input=process_input
                 )
                 
-                oracle_key = key_manager.get_best_key(estimated_tokens=len(oracle_prompt)//4)
-                if not oracle_key:
-                     console.print("[red]The spirits are silent (No API keys available).[/red]")
-                     continue
-                     
-                key_manager.acquire(oracle_key, len(oracle_prompt)//4)
-                client = genai.Client(api_key=oracle_key)
-                
-                oracle_response = client.models.generate_content(
-                    model=model_name,
-                    contents=oracle_prompt
-                )
-                
-                answer_text = oracle_response.text
+                with console.status("[bold purple]The Grimoire is thinking...[/bold purple]", spinner="moon"):
+                    oracle_key = key_manager.get_best_key(estimated_tokens=len(oracle_prompt)//4)
+                    if not oracle_key:
+                        raise Exception("The spirits are silent (No API keys available).")
+                         
+                    key_manager.acquire(oracle_key, len(oracle_prompt)//4)
+                    client = genai.Client(api_key=oracle_key)
+                    
+                    oracle_response = client.models.generate_content(
+                        model=model_name,
+                        contents=oracle_prompt
+                    )
+                    
+                    answer_text = oracle_response.text
+                    break # Success, exit retry loop
+
             except Exception as e:
-                console.print(f"[red]The spell backfired: {e}[/red]")
-                continue
+                logger.error(f"Oracle generation failed: {e}")
+                console.print(f"\n[bold red]The connection to the ethereal plane was interrupted.[/bold red]")
+                console.print(f"[red]Error: {str(e)}[/red]")
+                
+                console.print("\n[bold yellow]Options:[/bold yellow]")
+                console.print("[bold cyan][R][/bold cyan]etry connection")
+                console.print("[bold cyan][P][/bold cyan]rint spell components (debug prompt)")
+                console.print("[bold cyan][C][/bold cyan]ancel ritual (skip turn)")
+                
+                choice = console.input("\n[bold yellow]Choice > [/bold yellow]").strip().lower()
+                
+                if choice == 'p':
+                    console.print(Rule(style="bold yellow", title="SPELL COMPONENTS (PROMPT)"))
+                    console.print(oracle_prompt)
+                    console.print(Rule(style="bold yellow"))
+                    console.input("[annotated]Press Enter to continue options...[/annotated]")
+                    continue # Re-show options/retry
+                elif choice == 'c':
+                    answer_text = None # Signal to skip display
+                    break # Exit retry loop
+                else: # Default is Retry ('r' or anything else)
+                    console.print("[dim]Retrying ritual...[/dim]")
+                    continue
+
+        if not answer_text and choice == 'c':
+             continue # Skip to next main loop iteration
 
         # 5. Display
         console.print("\\n[bold purple]Grimoire:[/bold purple]")
