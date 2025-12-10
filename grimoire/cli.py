@@ -143,9 +143,10 @@ def ask(
 @app.command()
 def commune(
     model: str = typer.Option("gemini-2.5-flash", help="Model to use for conversation"),
+    only_prompt: bool = typer.Option(False, "--only-prompt", help="Print the Oracle prompt and skip generation. Useful for external use.")
 ):
     """🔮 Commune with the Grimoire. An interactive, RAG-enhanced chat session."""
-    core.start_commune_session(model_name=model)
+    core.start_commune_session(model_name=model, only_prompt=only_prompt)
 
 @app.command()
 def search(

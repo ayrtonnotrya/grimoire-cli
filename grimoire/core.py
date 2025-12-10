@@ -1024,7 +1024,7 @@ Histórico da Conversa:
 Buscador: {user_input}
 Grimório:"""
 
-def start_commune_session(model_name: str = "gemini-2.5-flash"):
+def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: bool = False):
     """Starts an interactive RAG chat session."""
     from grimoire import db
     from grimoire.schemas import SEARCH_QUERIES_SCHEMA
@@ -1037,7 +1037,7 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
     console.print("[bold purple center]🔮 COMMUNE WITH THE GRIMOIRE 🔮[/bold purple center]")
     console.print("[italic center]The archives are open. Speak, Seeker.[/italic center]")
     console.print(Rule(style="bold purple"))
-    console.print("[dim center]Commands: /retry (r), /clear, /exit (q)[/dim center]\\n")
+    console.print("[dim center]Commands: /retry (r), /clear, /exit (q)[/dim center]\n")
 
     history = []
     
@@ -1085,7 +1085,7 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
         with console.status("[bold blue]Consulting the Librarian...[/bold blue]", spinner="dots"):
             try:
                 # Construct History String for Librarian
-                history_str = "\\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-4:]])
+                history_str = "\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-4:]])
                 librarian_prompt = LIBRARIAN_PROMPT_TEMPLATE.format(history=history_str, user_input=process_input)
                 
                 lib_key = key_manager.get_best_key(estimated_tokens=len(librarian_prompt)//4)
@@ -1151,14 +1151,14 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
                     
                     # We can store full object to sort by distance later if we want, 
                     # for now just taking them in order of query relevance
-                    aggregated_chunks.append(f"Source: {source_title}\\nContent: {doc}")
+                    aggregated_chunks.append(f"Source: {source_title}\nContent: {doc}")
 
         if aggregated_chunks:
             # We might have too many chunks now (e.g. 72). 
             # We should probably limit the total context sent to the model to avoid token overflow?
             # Or just send them all if the model supports it (Gemini Flash has 1M context, standard has 2M/128k).
             # Let's keep all checks since the user explicitly asked for high recall.
-            context_str = "\\n\\n".join(aggregated_chunks)
+            context_str = "\n\n".join(aggregated_chunks)
             console.print(f"[dim]Found {len(aggregated_chunks)} fragments from {len(unique_sources)} sources.[/dim]")
         else:
             context_str = "No relevant documents found in the library."
@@ -1172,6 +1172,13 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
                     history=history_str,
                     user_input=process_input
                 )
+                
+                if only_prompt:
+                    console.print(Rule(style="bold yellow", title="SPELL COMPONENTS (PROMPT)"))
+                    console.print(oracle_prompt)
+                    console.print(Rule(style="bold yellow"))
+                    answer_text = None
+                    break # Skip execution
                 
                 with console.status("[bold purple]The Grimoire is thinking...[/bold purple]", spinner="moon"):
                     oracle_key = key_manager.get_best_key(estimated_tokens=len(oracle_prompt)//4)
@@ -1192,7 +1199,6 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
             except Exception as e:
                 logger.error(f"Oracle generation failed: {e}")
                 console.print(f"\n[bold red]The connection to the ethereal plane was interrupted.[/bold red]")
-                console.print(f"[red]Error: {str(e)}[/red]")
                 
                 console.print("\n[bold yellow]Options:[/bold yellow]")
                 console.print("[bold cyan][R][/bold cyan]etry connection")
@@ -1214,11 +1220,14 @@ def start_commune_session(model_name: str = "gemini-2.5-flash"):
                     console.print("[dim]Retrying ritual...[/dim]")
                     continue
 
+        if only_prompt:
+            continue # Loop back to input
+            
         if not answer_text and choice == 'c':
              continue # Skip to next main loop iteration
 
         # 5. Display
-        console.print("\\n[bold purple]Grimoire:[/bold purple]")
+        console.print("\n[bold purple]Grimoire:[/bold purple]")
         console.print(Markdown(answer_text))
         
         if unique_sources:
