@@ -36,13 +36,14 @@ def process(
     sequential: bool = typer.Option(False, "--sequential", "-s", help="🔄 Process files sequentially (default is random order)"),
     index: bool = typer.Option(True, help="⚡ Auto-index summaries for instant searchability"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 See the magic happen in real-time"),
-    delay: float = typer.Option(6.0, "--delay", "-d", help="⏱️ Minimum delay (seconds) between API calls to avoid burst limits")
+    delay: float = typer.Option(6.0, "--delay", "-d", help="⏱️ Minimum delay (seconds) between API calls to avoid burst limits"),
+    model: str = typer.Option(None, "--model", "-m", help="Gemini Model to use (overrides config)")
 ):
     """🎭 Unleash the power of AI! Process entire libraries, extracting deep summaries and insights from every book. Watch as wisdom is distilled and made searchable."""
     console.print(f"Processing library from: {list_file}")
     if exclude:
         console.print(f"Excluding files from: {exclude}")
-    core.process_library(list_file, exclude_file_path=exclude, sequential=sequential, verbose=verbose, delay=delay)
+    core.process_library(list_file, exclude_file_path=exclude, sequential=sequential, verbose=verbose, delay=delay, model_name=model)
     
     if index:
         console.print("[bold]Starting indexing...[/bold]")

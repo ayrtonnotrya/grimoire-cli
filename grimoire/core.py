@@ -69,7 +69,7 @@ def parse_library_list(file_path: Path) -> list[Path]:
                 continue
             
             # Check if line ends with .pdf
-            if line.endswith(".pdf"):
+            if line.lower().endswith(".pdf"):
                 pdf_path = Path(line)
                 pdf_paths.append(pdf_path)
     
@@ -91,7 +91,7 @@ def process_single_file(pdf_path: Path, verbose: bool = False) -> dict:
 
     return generate_summary(pdf_path, api_keys)
 
-def process_library(list_file_path: str, exclude_file_path: str = None, sequential: bool = False, verbose: bool = False, delay: float = 6.0):
+def process_library(list_file_path: str, exclude_file_path: str = None, sequential: bool = False, verbose: bool = False, delay: float = 6.0, model_name: str = None):
     """Main processing function."""
     file_path = Path(list_file_path)
     
@@ -184,7 +184,7 @@ def process_library(list_file_path: str, exclude_file_path: str = None, sequenti
             try:
                 for i, pdf_path in enumerate(pdfs_to_process):
                     # Pass ALL keys to the worker, let it manage retries
-                    future = executor.submit(generate_summary, pdf_path, api_keys, rate_limiter)
+                    future = executor.submit(generate_summary, pdf_path, api_keys, rate_limiter, model_name)
                     future_to_path[future] = pdf_path
                 
                 for future in concurrent.futures.as_completed(future_to_path):
@@ -223,7 +223,7 @@ def process_library(list_file_path: str, exclude_file_path: str = None, sequenti
                      progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                      break
 
-                result = generate_summary(pdf_path, api_keys, rate_limiter)
+                result = generate_summary(pdf_path, api_keys, rate_limiter, model_name)
                 progress.advance(task_id)
                 _print_process_result(progress.console, result, verbose=verbose)
 
@@ -310,7 +310,7 @@ def handle_api_error(error: Exception, api_key: str, file_name: str) -> tuple[Ac
     # Default fallback
     return Action.ABORT, f"Erro desconhecido: {error_str}"
 
-def generate_summary(pdf_path: Path, api_keys: list[str], rate_limiter: Optional['GlobalRateLimiter'] = None) -> dict:
+def generate_summary(pdf_path: Path, api_keys: list[str], rate_limiter: Optional['GlobalRateLimiter'] = None, model_name: str = None) -> dict:
     """Generates a summary for the given PDF using Gemini, with retry and rotation logic."""
     import random
     
@@ -349,7 +349,7 @@ def generate_summary(pdf_path: Path, api_keys: list[str], rate_limiter: Optional
             # Count tokens (Best effort)
             try:
                 token_count_resp = client.models.count_tokens(
-                    model=config.model_name,
+                    model=model_name or config.model_name,
                     contents=[
                         types.Part.from_bytes(data=pdf_data, mime_type='application/pdf'),
                         prompt_text
@@ -369,7 +369,7 @@ def generate_summary(pdf_path: Path, api_keys: list[str], rate_limiter: Optional
 
             # Generate content
             response = client.models.generate_content(
-                model=config.model_name,
+                model=model_name or config.model_name,
                 contents=[
                     types.Part.from_bytes(data=pdf_data, mime_type='application/pdf'),
                     prompt_text
