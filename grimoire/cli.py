@@ -148,7 +148,52 @@ def commune(
     results: int = typer.Option(40, "--results", "-r", help="Number of results per query")
 ):
     """🔮 Commune with the Grimoire. An interactive, RAG-enhanced chat session."""
-    core.start_commune_session(model_name=model, only_prompt=only_prompt, min_queries=min_queries, results_per_query=results)
+    core.start_commune_session(
+        model_name=model, 
+        only_prompt=only_prompt, 
+        min_queries=min_queries, 
+        results_per_query=results,
+        session_type="commune"
+    )
+
+@app.command()
+def tarot(
+    question: str = typer.Argument(None, help="The question for the cards (optional, can be entered interactively)"),
+    deck: str = typer.Option("Rider-Waite-Smith", "--deck", "-d", help="The Tarot deck used"),
+    spread: str = typer.Option("Celtic Cross", "--spread", "-s", help="The spread or technique used"),
+    cards: str = typer.Option(None, "--cards", "-c", help="Comma-separated list of cards drawn (optional)"),
+    model: str = typer.Option("gemini-2.5-flash", help="Model to use for conversation"),
+    only_prompt: bool = typer.Option(False, "--only-prompt", help="Print the Oracle prompt and skip generation."),
+    min_queries: int = typer.Option(5, "--min-queries", "-mq", help="Minimum number of search queries to generate"),
+    results: int = typer.Option(40, "--results", "-r", help="Number of results per query")
+):
+    """🃏 Consult the Tarot through the lens of the Grimoire. Specialized for divination."""
+    console.print(Panel.fit(f"[bold magenta]🔮 TAROT READING[/bold magenta]\nDeck: {deck}\nSpread: {spread}", border_style="magenta"))
+    
+    if question:
+        console.print(f"[bold green]Seeker:[/bold green] {question}")
+        # Pre-seed history via context or modifies start_commune to take initial input?
+        # start_commune_session interacts via input() loop. 
+        # For simplicity, we just start the session and let the user re-type or just CopyPaste if they want, 
+        # OR we can pass it as initial 'user_input' if we refactored start_commune_session further.
+        # But wait, start_commune_session is a loop.
+        # Let's just enter the loop. The first "input" is what triggers the first search.
+        console.print("[dim]Please re-enter your question to begin the reading session...[/dim]")
+
+    context = {
+        "deck": deck,
+        "spread": spread,
+        "cards": cards or "Not specified (User will provide)"
+    }
+
+    core.start_commune_session(
+        model_name=model,
+        only_prompt=only_prompt,
+        min_queries=min_queries,
+        results_per_query=results,
+        session_type="tarot",
+        context_variables=context
+    )
 
 @app.command()
 def search(

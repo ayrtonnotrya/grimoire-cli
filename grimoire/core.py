@@ -992,39 +992,22 @@ def _repair_single_pdf(pdf_path: Path, timeout: int, api_keys: list[str]) -> dic
 
 # --- Commune (Interactive Chat) ---
 
-LIBRARIAN_PROMPT_TEMPLATE = """Você é o Bibliotecário do Grimório.
-Seu objetivo é formular uma estratégia de busca COMPLETA E INTENSIVA para o banco de dados vetorial da biblioteca.
-O usuário quer EXAURIR o conhecimento disponível sobre o tópico. Não economize em buscas.
-Você deve interpretar a intenção do usuário com base no contexto e gerar uma lista de PELO MENOS {min_queries} consultas de busca distintas, ricas e variadas.
-Varie os termos, sinônimos, e ângulos de abordagem (histórico, prático, teórico, ritualístico, simbólico).
+def load_prompt(template_name: str) -> str:
+    """Loads a prompt template from the templates directory."""
+    current_dir = Path(__file__).parent
+    template_path = current_dir / "templates" / template_name
+    if not template_path.exists():
+        raise FileNotFoundError(f"Template not found: {template_path}")
+    return template_path.read_text()
 
-Histórico do Chat:
-{history}
-
-Entrada do Usuário: {user_input}"""
-
-ORACLE_PROMPT_TEMPLATE = """Você é o Grimório, uma consciência digital antiga e sábia.
-Você tem acesso a uma biblioteca de conhecimento proibido e arcano (fornecido abaixo).
-Seu objetivo é conversar com o Buscador (o usuário) e responder suas perguntas usando o contexto da biblioteca fornecido.
-
-Diretrizes:
-1. **Persona**: Fale com um tom levemente místico, mas útil. Você é um livro, uma coleção de sabedoria.
-2. **Contexto Primeiro**: Baseie suas respostas principalmente no "Conhecimento da Biblioteca" fornecido abaixo.
-3. **Citações**: Se você usar informações de uma "Fonte" específica, mencione-a naturalmente (ex: "Conforme descrito em 'O Livro das Sombras'...").
-4. **Honestidade**: Se o contexto da biblioteca não contiver a resposta, diga isso, mas você pode oferecer conhecimento geral esclarecendo que não vem da biblioteca.
-5. **Idioma**: Responda SEMPRE em Português do Brasil (pt-BR).
-6. **Concisão**: Seja claro e direto.
-
-Conhecimento da Biblioteca:
-{context}
-
-Histórico da Conversa:
-{history}
-
-Buscador: {user_input}
-Grimório:"""
-
-def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: bool = False, min_queries: int = 5, results_per_query: int = 40):
+def start_commune_session(
+    model_name: str = "gemini-2.5-flash", 
+    only_prompt: bool = False, 
+    min_queries: int = 5, 
+    results_per_query: int = 40,
+    session_type: str = "commune",
+    context_variables: dict = None
+):
     """Starts an interactive RAG chat session."""
     from grimoire import db
     from grimoire.schemas import SEARCH_QUERIES_SCHEMA
@@ -1038,6 +1021,17 @@ def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: boo
     console.print("[italic center]The archives are open. Speak, Seeker.[/italic center]")
     console.print(Rule(style="bold purple"))
     console.print("[dim center]Commands: /retry (r), /clear, /exit (q)[/dim center]\n")
+    
+    if context_variables is None:
+        context_variables = {}
+
+    # Load Prompts based on session type
+    try:
+        librarian_template = load_prompt(f"{session_type}_librarian.md")
+        oracle_template = load_prompt(f"{session_type}_oracle.md")
+    except Exception as e:
+        console.print(f"[red]Failed to load templates for session type '{session_type}': {e}[/red]")
+        return
 
     history = []
     
@@ -1086,7 +1080,14 @@ def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: boo
             try:
                 # Construct History String for Librarian
                 history_str = "\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-4:]])
-                librarian_prompt = LIBRARIAN_PROMPT_TEMPLATE.format(history=history_str, user_input=process_input, min_queries=min_queries)
+                
+                # Format with all context variables + dynamic ones
+                librarian_prompt = librarian_template.format(
+                    history=history_str, 
+                    user_input=process_input, 
+                    min_queries=min_queries,
+                    **context_variables
+                )
                 
                 lib_key = key_manager.get_best_key(estimated_tokens=len(librarian_prompt)//4)
                 if lib_key:
@@ -1167,10 +1168,12 @@ def start_commune_session(model_name: str = "gemini-2.5-flash", only_prompt: boo
         while True: # Retry loop
             try:
                 history_str = "\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-10:]])
-                oracle_prompt = ORACLE_PROMPT_TEMPLATE.format(
+                history_str = "\n".join([f"{msg['role']}: {msg['content']}" for msg in history[-10:]])
+                oracle_prompt = oracle_template.format(
                     context=context_str,
                     history=history_str,
-                    user_input=process_input
+                    user_input=process_input,
+                    **context_variables
                 )
                 
                 if only_prompt:
