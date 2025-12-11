@@ -1107,8 +1107,13 @@ def start_commune_session(
                         data = json.loads(lib_response.text)
                         if "search_queries" in data and isinstance(data["search_queries"], list):
                              search_queries = data["search_queries"]
+                             if len(search_queries) < min_queries:
+                                 console.print(f"[yellow]Warning: Librarian generated only {len(search_queries)} queries (requested {min_queries}).[/yellow]")
+                                 console.print(f"[dim]Queries: {search_queries}[/dim]")
                     except Exception as json_err:
                         logger.warning(f"Failed to parse Librarian JSON: {json_err}")
+                        console.print(f"[red]Failed to parse Librarian JSON. Raw response:[/red]\n{lib_response.text}") # Debug
+                        console.print(f"[dim]{json_err}[/dim]") # Debug
                         
             except Exception as e:
                 logger.error(f"Librarian failed: {e}")
