@@ -248,6 +248,15 @@ def update_document_path(filename: str, new_path: str):
         metadatas=metadatas_to_update
     )
 
+def get_existing_ids(filename: str) -> set[str]:
+    """Returns a set of IDs for all chunks associated with the given filename."""
+    collection = get_collection()
+    results = collection.get(
+        where={"filename": filename},
+        include=[] # Only need IDs
+    )
+    return set(results['ids'])
+
 
 def remove_duplicates() -> int:
     """Removes duplicate documents from the collection based on content hash."""

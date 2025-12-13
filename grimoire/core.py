@@ -475,7 +475,7 @@ def index_single_file(summary_path: Path, verbose: bool = False) -> dict:
     
     return _index_single_book(summary_path, api_keys)
 
-def index_summaries(verbose: bool = False):
+def index_summaries(verbose: bool = False, force: bool = False):
     """Reads all summary files and indexes them in ChromaDB."""
     from grimoire import db
     summaries_dir = config.summaries_dir
@@ -505,7 +505,7 @@ def index_summaries(verbose: bool = False):
     to_index = []
     
     for file_path in files:
-        if db.document_exists(file_path.name):
+        if not force and db.document_exists(file_path.name):
             # Check if path needs updating
             stored_path = db.get_document_path(file_path.name)
             full_path = str(file_path.absolute())
@@ -538,7 +538,7 @@ def index_summaries(verbose: bool = False):
             try:
                 for file_path in to_index:
                     # Pass ALL keys to the worker, let it manage retries
-                    futures.append(executor.submit(_index_single_book, file_path, api_keys))
+                    futures.append(executor.submit(_index_single_book, file_path, api_keys, force))
                 
                 for future in concurrent.futures.as_completed(futures):
                     try:
@@ -568,7 +568,7 @@ def index_summaries(verbose: bool = False):
                      progress.console.print(f"[red]Please check the logs for details: {config.log_file}[/red]")
                      break
 
-                result = _index_single_book(file_path, api_keys)
+                result = _index_single_book(file_path, api_keys, force)
                 progress.advance(task_id)
                 progress.refresh()
                 if verbose or result["status"] == "error" or result.get("path_updated"):
@@ -629,7 +629,7 @@ def _print_index_result(console, result, verbose: bool = False):
     else:
         logger.info(log_msg)
 
-def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
+def _index_single_book(file_path: Path, api_keys: list[str], force: bool = False) -> dict:
     from grimoire import db
     import random
     
@@ -645,7 +645,9 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     # Calculate absolute path for the summary file
     full_path = str(file_path.absolute())
 
-    if db.document_exists(file_path.name):
+    # Smart Check: If force is False, check existence generally.
+    # If force is True (or we want to be smart), we check specifically what is missing later.
+    if not force and db.document_exists(file_path.name):
         # Check if path needs updating
         stored_path = db.get_document_path(file_path.name)
         if stored_path != full_path:
@@ -713,8 +715,34 @@ def _index_single_book(file_path: Path, api_keys: list[str]) -> dict:
     metadatas.append({**base_metadata, "chunk_type": "critical_analysis"})
     ids.append(f"{pdf_name}_analysis")
 
-    if not documents:
-        return {"status": "skipped", "file": pdf_name, "message": "No documents to index"}
+    # Chunk 6: Relevant Quotes
+    if summary.relevant_quotes:
+        for i, quote in enumerate(summary.relevant_quotes):
+            content = f"Quote: \"{quote.text}\"\nPage: {quote.page}"
+            documents.append(content)
+            metadatas.append({**base_metadata, "chunk_type": "quote", "page": quote.page})
+            ids.append(f"{pdf_name}_quote_{i}")
+
+    # Filter out chunks that already exist
+    existing_ids = db.get_existing_ids(file_path.name)
+    
+    new_documents = []
+    new_metadatas = []
+    new_ids = []
+    
+    for i, doc_id in enumerate(ids):
+        if doc_id not in existing_ids:
+            new_documents.append(documents[i])
+            new_metadatas.append(metadatas[i])
+            new_ids.append(ids[i])
+            
+    if not new_documents:
+         return {"status": "skipped", "file": pdf_name, "message": "All chunks already indexed"}
+         
+    # Update lists to only include what needs to be added
+    documents = new_documents
+    metadatas = new_metadatas
+    ids = new_ids
 
     # Retry Loop for Embeddings
     max_retries = 3

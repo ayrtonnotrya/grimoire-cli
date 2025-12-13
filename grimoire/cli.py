@@ -51,11 +51,12 @@ def process(
 
 @app.command()
 def index(
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 Watch the indexing magic unfold")
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="🔍 Watch the indexing magic unfold"),
+    force: bool = typer.Option(False, "--force", "-f", help="Force re-indexing of all files")
 ):
     """🗂️ Transform summaries into a lightning-fast semantic search engine! Build a vector database that understands meaning, not just keywords."""
     console.print("[bold]Starting indexing...[/bold]")
-    core.index_summaries(verbose=verbose)
+    core.index_summaries(verbose=verbose, force=force)
 
 @app.command()
 def process_file(
